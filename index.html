@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,7 +30,7 @@
     </section>
     <section class="content" id="blog">
         <h2>Blog</h2>
-        {% for post in site.categories.blog limit:1 %}
+        {% for post in site.categories.blog limit:3 %}
         <h3>{{ post.title }}</h3>
         <p>{{ post.subtitle }}</p>
         {% endfor %}

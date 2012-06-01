@@ -540,6 +540,7 @@ body,
 }
 #main .meta {
   font-size: 13px;
+  margin-bottom: 20px;
 }
 #main .meta time {
   background: #c3c3c3;
@@ -596,7 +597,7 @@ body,
 }
 .post-list li {
   display: block;
-  padding: 10px 0px 7px 100px;
+  padding: 10px 0px 7px 20px;
   border-bottom: 1px dotted #ddd;
   text-align: right;
   cursor: pointer;
@@ -609,7 +610,7 @@ body,
 .post-list li a {
   font-family: RobotoThin, sans-serif;
   font-weight: 400;
-  font-size: 38px;
+  font-size: 32px;
   text-transform: uppercase;
   text-decoration: none;
   color: #c33823;
@@ -617,7 +618,7 @@ body,
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  padding: 0 10px;
+  padding: 0 20px;
   -webkit-transition: all 0.1s ease-in;
   -moz-transition: all 0.1s ease-in;
   -o-transition: all 0.1s ease-in;
@@ -625,6 +626,7 @@ body,
   margin-right: -10px;
 }
 .post-list li time {
+  display: none;
   position: absolute;
   top: 22px;
   left: 10px;

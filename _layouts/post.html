@@ -2,15 +2,17 @@
 layout: default
 ---
 <article>
-    <h2>{{ page.title }}</h2>
-    <div class="meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date_to_string }}</time>
-        <ul class="tags">
-            {% for tag in page.tags %}
-            <li><a href="#/tag/{{ tag }}">{{ tag }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
+    <header>
+        <h2>{{ page.title }}</h2>
+        <div class="meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date_to_string }}</time>
+            <ul class="tags">
+                {% for tag in page.tags %}
+                <li><a href="#/tag/{{ tag }}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </header>
     {{ content }}
     <footer>
         <span st_url="{{ page.url }}" class="st_facebook_hcount" displayText="Facebook"></span>
