@@ -1,0 +1,309 @@
+@import "reset";
+@import "mixins";
+
+@red: #c33823;
+@red2: #c63e2c;
+@red3: #c95547;
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('../fonts/Roboto-Light-webfont.eot');
+    src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Light-webfont.svg#RobotoLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('../fonts/Roboto-Condensed-webfont.eot');
+    src: url('../fonts/Roboto-Condensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Condensed-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Condensed-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Condensed-webfont.svg#RobotoCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoThin';
+    src: url('../fonts/Roboto-Thin-webfont.eot');
+    src: url('../fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Thin-webfont.svg#RobotoThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    background-color:#f4f4f4;
+}
+html {
+    height:100%;
+}
+body {
+    min-width:800px;
+    min-height:100%;
+}
+
+a {
+    color:#fafafa;
+    text-decoration:none;
+    &:hover { text-decoration:underline; }
+    &:visited { color:#fafafa; }
+}
+
+body, #sidebar {
+    background:url(../images/bg-sidebar.png) repeat-y;
+}
+
+@sidebarwidth: 340px;
+
+#sidebar {
+    padding:20px 40px 40px 20px;
+    width:@sidebarwidth - 60px;
+    background-color:@red;
+    float:left;
+    color:#f4f4f4;
+    text-align:center;
+    .logo {
+        .IR(240px, 180px, url(../images/grifo.png));
+        margin:0 auto;
+    }
+    .sub {
+        font-size:14px;
+        font-weight:400;
+        text-align:center;
+        font-family:RobotoLight, sans-serif;
+        padding:20px;
+    }
+    .twitter-follow-button {
+        color:transparent;
+        display: block;
+        margin:0 auto 20px;
+    }
+    .back {
+        .IR(118px, 31px, url(../images/btn-voltar.png));
+        padding-left:10px;
+        line-height:30px;
+        font-family:RobotoRegular, sans-serif;
+        font-size:14px;
+        color:#eee;
+        text-shadow:-1px -1px 0 #c00;
+        text-decoration:none;
+        .transition(text-shadow .2s);
+        &:hover {
+            color:#fff;
+            background-position:0 -31px;
+            text-shadow:-1px -1px 0 #c00, 0px 0px 8px rgba(255,240,240,0.9);
+        }
+        &:active {
+            position:relative;
+            top:-1px;
+            background-position:0 -62px;
+            line-height:32px;
+        }
+        margin-bottom:40px;
+    }
+    nav {
+        padding:40px 20px;
+        font-family:RobotoRegular, sans-serif;
+        li {
+            text-align:center;
+            border-bottom:1px solid darken(@red, 3);
+            border-top:1px solid lighten(@red2, 5);
+            padding:10px 0;
+        }
+        a {
+            color:#fafafa;
+            text-decoration:none;
+            &:hover {
+                color:#fff;
+                text-shadow:0 0 5px rgba(255,230,230,0.3);
+            }
+        }
+    }
+}
+
+#main {
+    padding:40px 40px 40px 380px;
+    color:#333;
+    text-rendering:optimizelegibility;
+    max-width:780px;
+    h2 {
+        font-family: RobotoCondensed, sans-serif;
+        font-weight:400;
+        font-size:36px;
+        padding-bottom:10px;
+        line-height:1.2;
+        text-transform:uppercase;
+    }
+    .meta {
+        font-size:13px;
+        time {
+            background:#c3c3c3;
+            .border-radius(4px);
+            padding:2px 3px;
+            color:#fafafa;
+            .inline-block();
+            margin-right:12px;
+        }
+        .tags {
+            display:inline;
+            li {
+                .inline-block();
+                margin-right:.8em;
+                line-height:22px;
+            }
+            a {
+                color:#c3c3c3;
+            }
+        }
+    }
+    article {
+        margin:20px 0 80px 0;
+        p {
+            margin:1em 0;
+            font-size:18px;
+            font-family:RobotoLight, Helvetica, sans-serif;
+            line-height:1.5;
+            //text-align:justify;
+        }
+    }
+    code {
+        background:#fafafa;
+        .border-radius(4px);
+        .box-shadow(0 2px 6px #ccc);
+        outline:5px solid rgba(200,200,200,0.1);
+        font-size:95%;
+    }
+}
+
+.post-list {
+    //margin-left:40px;
+    li {
+        display:block;
+        padding:10px 0px 7px 100px;
+        border-bottom:1px dotted #ddd;
+        text-align:right;
+        cursor:pointer;
+        position:relative;
+        a { 
+            font-family:RobotoThin, sans-serif;
+            font-weight:400;
+            font-size:38px;
+            text-transform:uppercase;
+            text-decoration:none;
+            color:@red;
+            .inline-block();
+            padding:0 10px;
+            .transition(all .1s ease-in);
+            margin-right:-10px;
+        }
+        time {
+            position:absolute;
+            top:22px;
+            left:10px;
+            font-family:RobotoRegular, sans-serif;
+            font-size:14px;
+            color:#bbb;
+        }
+        p {
+            position:relative;
+            top:10px;
+            height:0px;
+            overflow:hidden;
+            color:#666;
+            opacity:0;
+            padding-left:300px;
+            font-family:RobotoLight, sans-serif;
+            .transition(all .4s ease-out);
+            font-size:18px;
+        }
+        .transition(all .4s ease-out);
+        &:hover {
+            a { background:@red2; color:#fff; }
+            p { height:70px; opacity:1; }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #main {
+        h2 { font-size:36px; }
+        article p { font-size:16px; }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body { min-width:639px; }
+    #sidebar { width:@sidebarwidth - 110px; }
+    body, #sidebar { background-position:-50px 0; }
+    #main {
+        padding-left:290px;
+        h2 { font-size: 28px; }
+        article p { font-size:15px; }
+        pre code { font-size:80%; }
+    }
+}
+
+@media only screen and (max-width: 639px),
+only screen and (max-device-width: 480px),
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    body {
+        max-width:640px;
+        min-width:280px;
+        background-image:none;
+    }
+    #sidebar {
+        position:static;
+        float:none;
+        width:auto;
+        height:auto;
+        padding:5px 10px 15px;
+        background:@red url(../images/bg-top.png) repeat-x center bottom;
+        overflow:hidden;
+        .logo {
+            width:160px;
+            height:120px;
+            background-image:url(../images/grifo-small.png);
+        }
+        .sub { padding:10px 20px 10px; }
+        .twitter-follow-button { margin:10px auto;}
+        footer { display:none; }
+    }
+    #main {
+        padding:0px 20px 20px 20px;
+        article { margin-bottom:40px; }
+        pre code { font-size:80%; }
+        .meta { font-size:12px; }
+    }
+}
+
+@media only screen and (max-width:400px) {
+    #sidebar {
+        .sub { display:none; }
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    #sidebar .logo {
+        width:120px;
+        height:90px;
+        background-size:120px 90px;
+        background-image:url(../images/grifo.png);
+    }
+}
