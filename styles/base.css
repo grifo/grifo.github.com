@@ -609,6 +609,9 @@ body,
   -moz-box-shadow: none;
   box-shadow: none;
   font-size: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
 }
 #main article ul {
   list-style: disc inside;
