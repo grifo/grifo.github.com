@@ -16,11 +16,18 @@ Nosso HTML será composto por uma label que encapsula o input e o texto, desta f
 
 Veja o código:
 
-  <label for="radioButton1"><input type="radio" name="radioButton" id="radioButton1" /> Radio 1</label>
-  <label for="radioButton2"><input type="radio" name="radioButton" id="radioButton2" /> Radio 2</label>
-
-  <label for="checkbox1"><input type="checkbox" name="checkbox" id="checkbox1" /> Checkbox 1</label></div>
-  <label for="checkbox2"><input type="checkbox" name="checkbox" id="checkbox2" /> Checkbox 2</label></div>
+    <label for="radioButton1">
+        <input type="radio" name="radioButton" id="radioButton1" /> Radio 1
+    </label>
+    <label for="radioButton2">
+        <input type="radio" name="radioButton" id="radioButton2" /> Radio 2
+    </label>
+    <label for="checkbox1">
+        <input type="checkbox" name="checkbox" id="checkbox1" /> Checkbox 1
+    </label>
+    <label for="checkbox2">
+        <input type="checkbox" name="checkbox" id="checkbox2" /> Checkbox 2
+    </label>
 
 Através do CSS vamos ocultar os inputs e fazer a personalização sacana que o designer desenhou.
 

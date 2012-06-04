@@ -17,6 +17,7 @@ No meio tempo entre trabalho e palestras resolvi participar do [Code Golf](http:
 Neste post vamos ver como ficaram as soluções em PHP, e também em Javascript. Pra isso vamos utilizar o [JSDB](http://www.jsdb.org/), que interpreta Javascript usando a engine [SpiderMonkey](http://www.mozilla.org/js/spidermonkey/) da Mozilla e nos dá acesso ao sistema de arquivos, banco de dados e web. Ele roda em Linux, Mac e Windows e não exige instalação: é só baixar, descompactar e começar a usar. Vamos resolver também o problema da [Maratona IG](http://ignofisl.ig.com.br/2010/07/22/desafio-maratona-ig/) em menos de 15 minutos usando Javascript.
 
 > Soluções [1](#q1), [2](#q2), [3](#q3), [4](#q4) e [5](#q5) do Code Golf
+
 > [Solução da Maratona](#maratona)
 
 Vamos ao código:
@@ -24,8 +25,8 @@ Vamos ao código:
 <h2 id="q1">Questão 1</h2>
 **Dado o número de iterações exibir a sequência de Fibonacci até aquela iteração**
 
-> entrada: 6
-> saida: 1, 1, 2, 3, 5, 8
+    entrada: 6
+    saida: 1, 1, 2, 3, 5, 8
 
 ### PHP
 
@@ -58,14 +59,14 @@ Deixando o array – e a legibilidade do código – de lado, o resultado final 
 <h2 id="q2">Questão 2</h2>
 **Dado uma frase retornar se é um palíndrome ou não e listar os caracteres em ordem decrescente de número de incidências na mesma**
 
-> entrada: “A mala nada na lama”
-> saída:
->   Palíndrome
->   8 a
->   2 m
->   2 n
->   2 l
->   1 d
+    entrada: “A mala nada na lama”
+    saída:
+      Palíndrome
+      8 a
+      2 m
+      2 n
+      2 l
+      1 d
 
 ### PHP
 
@@ -106,8 +107,8 @@ E depois transformamos de novo isso tudo em uma linha ininteligível:
 <h2 id="q3">Questão 3</h2>
 **Dado um endereço IP e uma máscara de rede, retornar o endereço de broadcast e a conotação CIDR da rede**
 
-> entrada: 201.94.10.19 255.255.255.0
-> saída: 201.94.10.255 /24
+    entrada: 201.94.10.19 255.255.255.0
+    saída: 201.94.10.255 /24
 
 Essa é assustadora. Mas depois de consultar a Wikipedia sobre o assunto se descobre que a matemática é simples, e que [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) é uma gambiarra que inventaram pra usar um mesmo IP em mais de uma máquina, em redes internas. Temos que fazer o seguinte:
 
@@ -157,8 +158,8 @@ O resultado final é muito mais longo do que em PHP pelas várias chamadas de fu
 <h2 id="q4">Questão 4</h2>
 **Dados dois números naturais m e n e duas sequências ordenadas com m e n números inteiros, obter uma única sequência ordenada contendo todos os elementos das sequências originais sem repetição**
 
-> entrada: 1,5,6,10,12  2,5,9,29
-> saída: 1, 2, 5, 6, 9, 10, 12, 29
+    entrada: 1,5,6,10,12  2,5,9,29
+    saída: 1, 2, 5, 6, 9, 10, 12, 29
 
 Mais uma vez as funções nativas do PHP fazem todo o trabalho. Em Javascript é mais divertido.
 
@@ -200,16 +201,16 @@ Podemos pular algumas etapas pra encolher o código:
 <h2 id="q5">Questão 5</h2>
 **Escreva uma função que recebe uma matriz de caracteres 8×8 representando um tabuleiro de xadrez e calcula o valor total das peças do jogo. Espaços vazios do tabuleiro são codificados como casas com ‘v’ e têm valor 0 (zero). O valor das demais peças é dado de acordo com a tabela: Peão (p): 1, Cavalo (c): 3, Bispo (b): 3, Torre (t): 5, Rainha (a): 10, Rei (r): 50, Vazio: (v)**
 
-> entrada: 
->   tcbarbct
->   pppppppp
->   vvvvvvvv
->   vvvvvvvv
->   vvvvvvvv
->   vvvvvvvv
->   pppppppp
->   tcbarbct
-> saída: 180
+    entrada: 
+      tcbarbct
+      pppppppp
+      vvvvvvvv
+      vvvvvvvv
+      vvvvvvvv
+      vvvvvvvv
+      pppppppp
+      tcbarbct
+    saída: 180
 
 Não se preocupe com a idéia do tabuleiro, só precisamos traduzir o valor de cada caractere válido na string e ignorar o resto. Solução simples: fazer um loop com todos os caracteres e usar como chave pra buscar no array de valores. Em PHP nem isso precisa, a função count_chars() já faz a contagem:
 
@@ -265,13 +266,13 @@ Uma olhada rápida no arquivo de dados nos mostra que as mensagens variam entre 
 
 E temos o resultado:
 
-> Tweets Positivos: 35507
-> Tweets Negativos: 4307
+    Tweets Positivos: 35507
+    Tweets Negativos: 4307
 
 No [resultado da maratona](http://ignofisl.ig.com.br/2010/07/24/resultado-da-maratona/) podemos calcular os números ideais:
 
-> Positivos: 35322
-> Negativos: 4316
+    Positivos: 35322
+    Negativos: 4316
 
 A margem de erro do código acima é de 0.005% e 0.003% (positivos/negativos), e o código foi desenvolvido em menos de 15 minutos. A execução também é muito rápida, leva pouco mais de 5 segundos, e isso com SpiderMonkey que não é das engines JS mais rápidas.
 

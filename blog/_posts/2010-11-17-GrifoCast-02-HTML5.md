@@ -15,10 +15,12 @@ Agora contamos com melhores equipamentos e a edição está mais direta e com me
 
 E por favor, compartilhem com seus amigos e colegas de trabalho o GrifoCast para melhorarmos cada vez mais.
 
-**Participantes**
-Renatho Rosa – [@renatho](http://twitter.com/renatho)
-Ricardo Tomasi – [@ricardobeat](http://twitter.com/ricardobeat)
-Marcelo Oliveira – [@askoth](http://twitter.com/askoth)
+### Participantes
 
-**Edição**
-Filipe Medina – [@filipemedina](http://twitter.com/filipemedina)
+- Renatho Rosa – [@renatho](http://twitter.com/renatho)
+- Ricardo Tomasi – [@ricardobeat](http://twitter.com/ricardobeat)
+- Marcelo Oliveira – [@askoth](http://twitter.com/askoth)
+
+###Edição
+
+- Filipe Medina – [@filipemedina](http://twitter.com/filipemedina)

@@ -15,21 +15,21 @@ Sorte nossa é que a versão 9 suporta SVG. A solução que encontramos utiliza 
 
 **gradient.php**
 
-  <?php
-      header( 'Content-type: image/svg+xml' );
-      function _get($k){  echo $_GET[$k] ? $_GET[$k] : 'fff'; }
-  ?>
+    <?php
+        header( 'Content-type: image/svg+xml' );
+        function _get($k){  echo $_GET[$k] ? $_GET[$k] : 'fff'; }
+    ?>
 
-  <?xml version="1.0" standalone="no"?>
-  <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-          <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#<?php _get('from') ?>; stop-opacity:1"/>
-              <stop offset="100%" style="stop-color:#<?php _get('to') ?>; stop-opacity:1"/>
-          </linearGradient>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#grad)" />
-  </svg>
+    <?xml version="1.0" standalone="no"?>
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#<?php _get('from') ?>; stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#<?php _get('to') ?>; stop-opacity:1"/>
+            </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grad)" />
+    </svg>
 
 **CSS**
 

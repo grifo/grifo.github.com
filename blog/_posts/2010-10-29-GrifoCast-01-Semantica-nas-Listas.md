@@ -20,10 +20,12 @@ Bom, vamos ao que interessa, os tópicos do primeiro GrifoCast são:
 
 2) Sobre uso de ul ou ol em formulários: Qual o mais semântico? Qual o mais vantajoso?
 
-**Participantes**
-Renatho Rosa – [@renatho](http://twitter.com/renatho)
-Ricardo Tomasi – [@ricardobeat](http://twitter.com/ricardobeat)
-Marcelo Oliveira – [@askoth](http://twitter.com/askoth)
+### Participantes
 
-**Edição**
-Filipe Medina – [@filipemedina](http://twitter.com/filipemedina)
+- Renatho Rosa – [@renatho](http://twitter.com/renatho)
+- Ricardo Tomasi – [@ricardobeat](http://twitter.com/ricardobeat)
+- Marcelo Oliveira – [@askoth](http://twitter.com/askoth)
+
+### Edição
+
+- Filipe Medina – [@filipemedina](http://twitter.com/filipemedina)
