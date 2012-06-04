@@ -18,7 +18,11 @@ Hoje foi ao ar o projeto Rede Infinita baseado no conceito da Unisinos: Infinita
 
 O aplicativo tem como objetivo agrupar pessoas com interesses semelhantes – quanto mais próximo você estiver de pessoas como você, mais fácil será se comunicar e trocar informações para criar novas possibilidades para o mundo.
 
-<object width="500" height="375"><param name="movie" value="http://www.youtube.com/v/Vc2tNIWNMr0?version=3&amp;feature=oembed"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><div style="display: block; cursor: pointer; text-align: center; width: 500px; height: 375px; top: auto; left: auto; position: static; "><div style="-webkit-transition: opacity 150ms ease-out; background-image: url(chrome-extension://gofhjkjmkpinhpoiabjplobcaignabnl/icon_play.png); text-align: left; border: 1px solid rgb(0, 0, 0); width: 100%; height: 100%; background-color: rgba(193, 217, 244, 0.496094); opacity: 0.25; background-repeat: no-repeat no-repeat; "></div></div><embed src="http://www.youtube.com/v/Vc2tNIWNMr0?version=3&amp;feature=oembed" type="application/x-shockwave-flash" width="500" height="375" allowscriptaccess="always" allowfullscreen="true" style="display: none !important; "></object>
+<object width="500" height="375"><param name="movie" value="http://www.youtube.com/v/Vc2tNIWNMr0?version=3&amp;feature=oembed">
+    <param name="allowFullScreen" value="true">
+    <param name="allowscriptaccess" value="always">
+    <embed src="http://www.youtube.com/v/Vc2tNIWNMr0?version=3&amp;feature=oembed" type="application/x-shockwave-flash" width="500" height="375" allowscriptaccess="always" allowfullscreen="true" style="display: none !important; " />
+</object>
 
 Esse projeto foi desenvolvido em HTML5, onde a funcionalidade mais interessante é a visualização da rede (http://redeinfinita.unisinos.br/user/renatho). Quando iniciamos o projeto, começamos a avaliar qual seria a melhor tecnologia, pois a ferramenta precisa suportar um número muito grande de usuários. A performance dessa visualização era um ponto crítico, devido à lógica envolvida que requer uma série de cálculos em tempo real no cliente.
 
