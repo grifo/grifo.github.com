@@ -28,11 +28,13 @@
             <li class="js">Javascript</li>
         </ul>
     </section>
-    <section class="content" id="blog">
+    <section class="blog content" id="blog">
         <h2>Blog</h2>
         {% for post in site.categories.blog limit:2 %}
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p>{{ post.subtitle }}</p>
+        <a href="{{ post.url }}">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.subtitle }}</p>
+        </a>
         {% endfor %}
     </section>
     <section class="clientes" id="clientes">
@@ -53,7 +55,7 @@
             </ul>
         </div>
     </section>
-    <section class="content" id="o-que-fazemos">
+    <section class="o-que-fazemos content" id="o-que-fazemos">
         <h2>O que fazemos</h2>
 
         <h3>HTML5</h3>
@@ -75,7 +77,7 @@
         <p>Velocidade de desenvolvimento e menor custo</p>
     </section>
 
-    <section class="content" id="como-fazemos">
+    <section class="como-fazemos content" id="como-fazemos">
         <h2>Como fazemos</h2>
 
         <h3>Acessibilidade</h3>

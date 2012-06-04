@@ -1,6 +1,7 @@
 ---
 layout: post
 title: TweetRank.It
+subtitle: "Hoje a Grifo lançou um novo app para o Twitter, o TweetRank.It."
 tags:
     - projetos
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rede Infinita
-subtitle: Hoje foi ao ar o projeto baseado no conceito da Unisinos:Infinitas Possibilidades, criado pela agência Escala e desenvolvido pela Grifo
+subtitle: "Foi ao ar o projeto baseado no conceito da Unisinos: Infinitas Possibilidades, criado pela agência Escala e desenvolvido pela Grifo."
 tags:
     - canvas
     - excanvas
