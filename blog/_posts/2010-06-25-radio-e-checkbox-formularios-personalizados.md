@@ -10,7 +10,7 @@ tags:
 
 Neste post vou dar umas dicas de como personalizar campos de Radio e Checkbox, afinal os designers adoram nos sacanear. Quando terminar de ler aposto que você vai falar “como não pensei nisso antes?”, pois a solução além de super simples e óbvia, não perde acessibilidade, não perde usabilidade e foram utilizadas técnicas de javascript [não-obstrutivo](http://en.wikipedia.org/wiki/Unobtrusive_JavaScript).
 
-Você já deve saber o clique em um label que referencia algum campo (Ex.: <label for="idDoCampo">) tem a função de foco para este campo. E no caso dos checkbox e radios a função é o clique do campo (marcar / desmarcar). Esta é a essência da solução. Já começou cair a ficha né?
+Você já deve saber o clique em um label que referencia algum campo (Ex.: `<label for="idDoCampo">`) tem a função de foco para este campo. E no caso dos checkbox e radios a função é o clique do campo (marcar / desmarcar). Esta é a essência da solução. Já começou cair a ficha né?
 
 Nosso HTML será composto por uma label que encapsula o input e o texto, desta forma tudo que estiver dentro do label estará na área clicável.
 

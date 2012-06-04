@@ -28,7 +28,7 @@ Esse projeto foi desenvolvido em HTML5, onde a funcionalidade mais interessante 
 
 Iniciamos os testes utilizando SVG e VML, onde teríamos um amplo suporte dos navegadores. Mas quando começamos a cadastrar usuários vimos que a performance ia por água abaixo, pois com VML são criados muitos elementos no DOM. Com mil usuários o navegador já começava a travar.
 
-Nossa próxima tentativa seria utilizar tags <div> para fazer as bolinhas, como muitas ferramentas fazem em gráficos semelhantes a esse. Mas apesar de nada elegante também teríamos muitos elementos no DOM, então nossa segunda tentativa foi testar com canvas, mesmo sem ter bem definido qual seria a solução para o IE7 e 8 que não possuem suporte. Com o canvas ainda enfrentamos certa lentidão por estarmos desenhando as bolinhas com gradient.
+Nossa próxima tentativa seria utilizar tags `<div>` para fazer as bolinhas, como muitas ferramentas fazem em gráficos semelhantes a esse. Mas apesar de nada elegante também teríamos muitos elementos no DOM, então nossa segunda tentativa foi testar com canvas, mesmo sem ter bem definido qual seria a solução para o IE7 e 8 que não possuem suporte. Com o canvas ainda enfrentamos certa lentidão por estarmos desenhando as bolinhas com gradient.
 
 Para começar a melhorar a performance, resolvemos desenhar as bolinhas como imagem, pois temos uma variação de 6 cores. Dessa forma não precisaríamos montar um objeto para o gradiente a cada usuário cadastrado. Isso melhorou muito a situação. Também fizemos um carregamento “faseado” em 6 tipos de usuários: cada tipo carregando em seu tempo, o que aliviou bastante as iterações do loop que monta o gráfico.
 
