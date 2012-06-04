@@ -945,8 +945,11 @@ section h2 {
 .content ul {
   margin: 20px 0;
   line-height: 1.5;
-  max-width: 940px;
+  max-width: 640px;
   margin: 0 auto 20px;
+}
+.content p {
+  padding: 0 10px;
 }
 .content a:hover {
   background: #333;
@@ -976,7 +979,9 @@ section h2 {
   display: inline-block;
   *display: inline;
   *zoom: 1;
+  line-height: 34px;
   margin: 0 20px;
+  padding: 0;
 }
 @media only screen and (max-width: 800px) {
   .about li {
@@ -1011,9 +1016,7 @@ section h2 {
   text-shadow: none;
   -webkit-text-shadow: none;
   text-shadow: none;
-}
-@media only screen and (max-width: 600px) {
-  
+  max-width: 940px;
 }
 .clientes {
   text-align: center;
@@ -1089,7 +1092,6 @@ section h2 {
   }
   .work p {
     font-size: 18px;
-    padding: 0 10px;
   }
   .footer .map {
     float: none;

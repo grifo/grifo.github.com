@@ -150,8 +150,11 @@ section h2 {
     p, ul {
         margin:20px 0;
         line-height:1.5;
-        max-width:940px;
+        max-width:640px;
         margin:0 auto 20px;
+    }
+    p {
+        padding:0 10px;
     }
     a:hover {
         background:#333;
@@ -177,7 +180,9 @@ section h2 {
         font-family:RobotoRegular;
         .text-shadow(@redshadowlight);
         .inline-block();
+        line-height:34px;
         margin:0 20px;
+        padding:0;
         @media only screen and (max-width:800px) {
             font-size:28px;
         }
@@ -208,9 +213,7 @@ section h2 {
         font-size:24px;
         font-family:RobotoLight;
         .text-shadow(none);
-        @media only screen and (max-width:600px){
-
-        }
+        max-width:940px;
     }
 }
 
@@ -272,7 +275,7 @@ section h2 {
     }
     .work {
         margin-top:0;
-        p { font-size:18px; padding:0 10px; }
+        p { font-size:18px; }
     }
     .footer .map {
         float:none;
