@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GrifoCast #03/3"
+title: "GrifoCast #03/3 - Design para web"
 subtitle: Dicas de Design para web
 tags:
     - grifocast

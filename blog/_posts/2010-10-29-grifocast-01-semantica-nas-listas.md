@@ -1,7 +1,7 @@
 ---
 layout: post
-title: GrifoCast #01
-subtitle: Semântica nas Listas
+title: "GrifoCast #01 - Semântica em listas"
+subtitle: Semântica em listas
 tags:
     - html
     - semantica

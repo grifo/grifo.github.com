@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GrifoCast #02
+title: "GrifoCast #02 - HTML5"
 subtitle: HTML5
 tags:
     - grifocast
