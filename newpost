@@ -31,7 +31,7 @@ specialMap =
 normalize = (str) ->
     return str.replace special, (c) -> specialMap[c] || c
 
-filename = "#{postdate}-#{normalize(title).replace(/\s+/g, '-').replace(/[^\w-]/g, '')}"
+filename = "#{postdate}-#{normalize(title).toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}"
 
 contents = """
 ---
