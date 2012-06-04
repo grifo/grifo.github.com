@@ -602,6 +602,14 @@ body,
   font-family: RobotoLight, Helvetica, sans-serif;
   line-height: 1.5;
 }
+#main article p code,
+#main article ul code,
+#main article ol code {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 100%;
+}
 #main article ul {
   list-style: disc inside;
   margin-left: 2em;
@@ -645,8 +653,11 @@ body,
   -webkit-box-shadow: 0 2px 6px #cccccc;
   -moz-box-shadow: 0 2px 6px #cccccc;
   box-shadow: 0 2px 6px #cccccc;
-  outline: 5px solid rgba(200, 200, 200, 0.1);
-  font-size: 95%;
+  outline: 6px solid rgba(200, 200, 200, 0.15);
+  outline-radius: 4px;
+  font-size: 85%;
+  line-height: 1.3;
+  padding: 0.75em;
 }
 #main .related {
   background: #fafafa;
