@@ -919,7 +919,7 @@ section h2 {
   text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.6);
   -webkit-text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.6);
   text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.6);
-  color: #fafafa;
+  color: #fff;
   margin-bottom: 20px;
   min-height: 40px;
   line-height: 40px;
@@ -935,18 +935,22 @@ section h2 {
   max-width: 980px;
   padding: 20px;
   margin: 0 auto;
-  color: #fafafa;
+  color: #fcfcfc;
+  -webkit-text-shadow: 0px 2px 2px rgba(60, 0, 0, 0.3);
+  text-shadow: 0px 2px 2px rgba(60, 0, 0, 0.3);
+  -webkit-text-shadow: 0px 2px 2px rgba(60, 0, 0, 0.3);
+  text-shadow: 0px 2px 2px rgba(60, 0, 0, 0.3);
 }
 .content p,
 .content ul {
   margin: 20px 0;
   line-height: 1.5;
-  -webkit-text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.2);
-  text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.2);
-  -webkit-text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.2);
-  text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.2);
   max-width: 940px;
   margin: 0 auto 20px;
+}
+.content a:hover {
+  background: #333;
+  color: #fafafa;
 }
 .block {
   width: 100%;
@@ -1003,6 +1007,10 @@ section h2 {
 .work p {
   font-size: 24px;
   font-family: RobotoLight;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
 }
 @media only screen and (max-width: 600px) {
   
@@ -1071,4 +1079,24 @@ section h2 {
 }
 .footer p {
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 640px) {
+  .logo {
+    width: 100%;
+  }
+  .work {
+    margin-top: 0;
+  }
+  .work p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  .footer .map {
+    float: none;
+    clear: both;
+    width: auto;
+  }
+  .footer p {
+    margin: 20px 0;
+  }
 }
