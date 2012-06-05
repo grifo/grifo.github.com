@@ -32,7 +32,7 @@ Vamos ao código:
 
 Esse foi o código final (pra economizar espaço, colocamos tudo dentro de um for loop):
 
-    for($a=$c=0,$b=1;$c<$argv[1];
+    for($a=$c=0,$b=1;$c<$argv[1];$x=$a,$a=$b,$b+=$x)echo(!$c++?'':', ').$b;
 
 Começamos com 0 e 1 e somamos o último com o anterior até atingir o número de iterações. Em PHP é impossível fazer isso sem utilizar uma terceira variável. A solução mais simples em Javascript é utilizar um array:
 
