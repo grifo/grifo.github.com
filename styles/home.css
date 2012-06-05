@@ -1076,6 +1076,9 @@ section h2 {
     margin: 20px 70px;
   }
 }
+.notfound a {
+  text-decoration: underline;
+}
 .footer {
   color: #999;
 }
