@@ -914,6 +914,7 @@ header .logo {
 section h2 {
   font-size: 20px;
   font-family: RobotoThin;
+  font-weight: 400;
   text-transform: uppercase;
   -webkit-text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.6);
   text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.6);
@@ -1005,7 +1006,7 @@ section h2 {
 @media only screen and (max-width: 400px) {
   .about li {
     font-size: 16px;
-    margin: 0 5px;
+    margin: 0 5px 10px;
   }
 }
 .about li:before {
@@ -1073,7 +1074,7 @@ section h2 {
 }
 @media only screen and (max-width: 400px) {
   .clientes li {
-    margin: 20px 70px;
+    margin: 20px 30px;
   }
 }
 .notfound a {
