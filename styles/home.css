@@ -922,10 +922,13 @@ section h2 {
   text-shadow: -1px -1px 0 rgba(150, 0, 0, 0.6);
   color: #fff;
   margin-bottom: 20px;
-  min-height: 40px;
-  line-height: 40px;
+  min-height: 50px;
+  line-height: 50px;
   background: url(../images/bg-header.png) no-repeat center center;
   background-size: 100% 100%;
+}
+section h2 a:hover {
+  text-decoration: none !important;
 }
 @media only screen and (max-width: 600px) {
   section h2 {
@@ -955,13 +958,13 @@ section h2 {
 .content a:hover {
   text-decoration: underline;
 }
-.blog a {
+.blog article a {
   display: block;
   max-width: 640px;
   margin: 0 auto;
   padding: 10px 0;
 }
-.blog a:hover {
+.blog article a:hover {
   text-decoration: none;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 6px;

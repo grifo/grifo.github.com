@@ -133,10 +133,11 @@ section h2 {
     .text-shadow(@redshadow);
     color:#fff;
     margin-bottom:20px;
-    min-height:40px;
-    line-height:40px;
+    min-height:50px;
+    line-height:50px;
     background:url(../images/bg-header.png) no-repeat center center;
     background-size:100% 100%;
+    a:hover { text-decoration:none !important; }
     @media only screen and (max-width:600px){
         font-size:20px;
     }
@@ -163,17 +164,19 @@ section h2 {
 }
 
 .blog {
-    a {
-        display:block;
-        max-width:640px;
-        margin:0 auto;
-        padding:10px 0;
-    }
-    a:hover {
-        text-decoration:none;
-        background:rgba(255,255,255,0.05);
-        border-radius:6px;
-        outline:1px solid @red2;
+    article {
+        a {
+            display:block;
+            max-width:640px;
+            margin:0 auto;
+            padding:10px 0;
+        }
+        a:hover {
+            text-decoration:none;
+            background:rgba(255,255,255,0.05);
+            border-radius:6px;
+            outline:1px solid @red2;
+        }
     }
     p { margin-bottom:0; }
 }
