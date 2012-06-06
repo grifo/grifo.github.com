@@ -139,13 +139,13 @@
             </div>
         </div>
     </section>
-    <script>
-    if (document.querySelector){
+    <script>(function(){
+        if (!document.querySelector) return
         var links = document.querySelectorAll('a[rel=external]')
         ;[].slice.call(links).forEach(function(link){
             link.target = '_blank'
         })
-    }
+    })()
     </script>
 </body>
 </html>
