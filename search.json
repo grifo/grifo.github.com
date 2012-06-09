@@ -6,7 +6,7 @@
     "category": "blog",
     "title": "{{ item.title }}",
     "subtitle": "{{ item.subtitle }}",
-    "tags": "{{ item.tags }}",
+    "tags": ["{{ item.tags | join:'","' }}"],
     "date": "{{ item.date }}",
     "url": "{{ item.url }}"
 },{% endfor %}

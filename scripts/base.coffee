@@ -1,3 +1,36 @@
+# DOM Helpers
+$ = (sel) -> Array::slice.call document.querySelectorAll sel
+$$ = (sel) -> document.querySelector sel
+
+# XHR Request helper
+class Request
+    constructor: (method, url, callback, data) ->
+        @xhr = @createXHR()
+        @send.apply @, arguments
+
+    createXHR: ->
+        tries = [
+            -> new XMLHttpRequest
+            -> new ActiveXObject "Msxml2.XMLHTTP"
+            -> new ActiveXObject "Msxml3.XMLHTTP"
+            -> new ActiveXObject "Microsoft.XMLHTTP"
+        ]
+        for fn in tries
+            try return fn()
+        return false
+
+    send: (method, url, callback, data) ->
+        @xhr.open method, url, true
+        if data
+            @xhr.setRequestHeader 'Content-type', 'application/x-www-form-urlencoded'
+
+        @xhr.onreadystatechange = =>
+            if @xhr.readyState is 4 and @xhr.status is 200
+                callback @xhr.responseText
+
+        @xhr.send data
+
+# Drawing
 getDocHeight = ->
     D = document
     Math.max(
@@ -5,11 +38,6 @@ getDocHeight = ->
         Math.max D.body.offsetHeight, D.documentElement.offsetHeight
         Math.max D.body.clientHeight, D.documentElement.clientHeight
     )
-
-canvas = null
-
-if canvas.getContext and canvas.addEventListener and window.innerWidth > 1440
-    createCanvas()
 
 createCanvas = ->
     canvas = document.createElement 'canvas'
@@ -22,13 +50,15 @@ createCanvas = ->
         right: 0
     }
     document.body.appendChild canvas
+    return canvas
 
+drawingBoard = (canvas) ->
     ctx = canvas.getContext '2d'
     ctx.fillStyle = '#543'
     ctx.globalAlpha = 0.1
     ctx.globalCompositeOperation = 'lighter'
 
-    pos = [0,0]
+    pos = [-50,-50]
     running = true
 
     canvas.addEventListener 'mousemove', (e) ->
@@ -49,6 +79,11 @@ createCanvas = ->
             ctx.fill()
     , 1000/45
 
+canvas = createCanvas()
+
+if canvas.getContext and canvas.addEventListener and window.innerWidth > 1440
+    drawingBoard(canvas)
+
 window.onresize = ->
     if window.innerHeight > 1440
         if not canvas?
@@ -57,3 +92,37 @@ window.onresize = ->
             canvas.style.display 'block'
     else if canvas? and canvas.style.display is 'block'
         canvas.style.display = 'none'
+
+# Tag functionality
+if $$('.tag-list')
+    posts = []
+    new Request 'GET', '/search.json', (data) ->
+        posts = JSON.parse data
+        if currentTag = location.hash.split('#!')[1]
+            displayTag currentTag
+
+displayTag = (tag) ->
+
+    res = $$('.results')
+    if res? then res.parentNode.removeChild res
+
+    return if not tag
+
+    results = posts.filter (post) ->
+        post and tag in post.tags
+    items = results.map (post) ->
+        """
+        <li><a href="#{post.url}">#{post.title}</a></li>
+        """
+    $$('#main').innerHTML += """
+        <div class="results">
+            <h3>#{tag}</h3>
+            <ul>
+                #{items.join('')}
+            </ul>
+        </div>
+    """
+    return
+
+window.addEventListener 'hashchange', ->
+    displayTag location.hash.split('#!')[1]

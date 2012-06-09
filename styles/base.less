@@ -304,6 +304,24 @@ body, #sidebar {
     }
 }
 
+.tag-list {
+    li { display:inline; }
+    a {
+        background:#b3b3b3;
+        .border-radius(4px);
+        padding:3px 6px;
+        color:#fafafa;
+        font-size:18px;
+        .inline-block();
+        margin:0 6px 12px 0;
+        text-decoration:none;
+        text-shadow:-1px -1px 0 rgba(0,0,0,0.1);
+        &:hover {
+            background:#c3c3c3;
+        }
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     #main {
         h2 { font-size:36px; }
