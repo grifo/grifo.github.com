@@ -1130,6 +1130,10 @@ section h2 a:hover {
     float: none;
     clear: both;
     width: auto;
+    margin: 0;
+  }
+  .footer .map img {
+    max-width: 100%;
   }
   .footer p {
     margin: 20px 0;
