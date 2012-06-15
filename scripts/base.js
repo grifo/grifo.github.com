@@ -123,6 +123,8 @@
 
   if (canvas.getContext && canvas.addEventListener && window.innerWidth > 1440) {
     drawingBoard(canvas);
+  } else {
+    canvas.parentNode.removeChild(canvas);
   }
 
   window.onresize = function() {

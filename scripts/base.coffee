@@ -83,6 +83,8 @@ canvas = createCanvas()
 
 if canvas.getContext and canvas.addEventListener and window.innerWidth > 1440
     drawingBoard(canvas)
+else
+    canvas.parentNode.removeChild canvas
 
 window.onresize = ->
     if window.innerHeight > 1440

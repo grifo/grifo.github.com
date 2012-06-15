@@ -613,6 +613,12 @@ body,
   border: none;
   outline: none;
 }
+#main article img,
+#main article iframe,
+#main article embed,
+#main article object {
+  max-width: 100%;
+}
 #main article ul {
   list-style: disc inside;
   margin-left: 2em;
@@ -792,6 +798,9 @@ body,
   #sidebar {
     width: 230px;
   }
+  #sidebar .back {
+    margin-bottom: 20px;
+  }
   body,
   #sidebar {
     background-position: -50px 0;
@@ -835,6 +844,9 @@ body,
   #sidebar .twitter-follow-button {
     margin: 10px auto;
   }
+  #sidebar .back {
+    margin: 10px 0;
+  }
   #sidebar footer {
     display: none;
   }
@@ -849,6 +861,10 @@ body,
   }
   #main .meta {
     font-size: 12px;
+  }
+  .post-list li a {
+    font-family: RobotoLight;
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 400px) {

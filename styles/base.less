@@ -198,7 +198,9 @@ body, #sidebar {
                 outline:none;
             }
         }
-
+        img, iframe, embed, object {
+            max-width:100%;
+        }
         ul {
             list-style:disc inside;
             margin-left:2em;
@@ -331,7 +333,12 @@ body, #sidebar {
 
 @media only screen and (max-width: 800px) {
     body { min-width:639px; }
-    #sidebar { width:@sidebarwidth - 110px; }
+    #sidebar {
+        width:@sidebarwidth - 110px;
+        .back {
+            margin-bottom:20px;
+        }
+    }
     body, #sidebar { background-position:-50px 0; }
     #main {
         padding-left:290px;
@@ -365,6 +372,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
         }
         .sub { padding:10px 20px 10px; }
         .twitter-follow-button { margin:10px auto;}
+        .back { margin:10px 0; }
         footer { display:none; }
     }
     #main {
@@ -372,6 +380,12 @@ only screen and (min-device-pixel-ratio : 1.5) {
         article { margin-bottom:40px; }
         pre code { font-size:80%; }
         .meta { font-size:12px; }
+    }
+    .post-list {
+        li a {
+            font-family:RobotoLight;
+            font-size:16px;
+        }
     }
 }
 
