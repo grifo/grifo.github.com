@@ -52,7 +52,7 @@ No script que estamos disponilibizando também colocamos a funcionalidade de foc
 
 Como comentado no início do post, no caso do IE6 você pode criar hacks para alterar as cores do select para ficar mais próximo do desenho, mas não entraremos no mérito.
 
-Agora você precisa baixar o plugin desenvolvido pela Grifo neste link [styleCombobox](http://www.grifotecnologia.com.br/code/formulario-personalizado/jquery.styleCombobox.js) e importá-lo na sua página. A chamada fica dessa forma:
+Agora você precisa baixar o plugin desenvolvido pela Grifo neste link [styleCombobox](http://gri.fo/code/formulario-personalizado/jquery.styleCombobox.js) e importá-lo na sua página. A chamada fica dessa forma:
 
     $(".styleCombobox select").styleCombobox({
         classFocus:"comboboxFocus"
@@ -71,6 +71,6 @@ Para usuários com javascript desabilitado, vamos exibir os selects normais do b
 
 As técnicas mostradas foram testadas em IE6 (apesar de neste funcionar parcialmente) e superiores, Firefox 3.6, Chrome e Safari. Qualquer problema que encontrarem em outras versões de browser, mobile ou outros do gênero nos avisem para tentarmos aprimorar a técnica. Sugestões de melhoria também são bem-vindas.
 
-Veja um exemplo de [personalização de combobox](http://www.grifotecnologia.com.br/code/formulario-personalizado/jquery.styleCombobox.html) em funcionamento.
+Veja um exemplo de [personalização de combobox](http://gri.fo/code/formulario-personalizado/jquery.styleCombobox.html) em funcionamento.
 
 Abraços e até a próxima!

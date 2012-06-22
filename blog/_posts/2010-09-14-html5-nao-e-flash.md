@@ -7,7 +7,7 @@ tags:
     - mercado
 ---
 
-Estou muito feliz com o espaço que o HTML5 vem ganhando ultimamente. Através dele as pessoas estão COMEÇANDO dar o [devido valor ao client-side](http://www.grifotecnologia.com.br/blog/grifo/por-que-a-grifo-e-por-que-um-desenvolvimento-client-side-com-inteligencia/). Vejo muitos tweets com artigos e novidades do HTML5, mas ainda vejo muitas pessoas confusas sobre o que realmente é o HTML5. A maioria desses tweets são comparações como se o [HTML5](http://www.w3.org/TR/html5/) fosse o novo [Flash](http://upload.wikimedia.org/wikipedia/en/2/22/Flash_Pack.jpg), o que não é verdade.
+Estou muito feliz com o espaço que o HTML5 vem ganhando ultimamente. Através dele as pessoas estão COMEÇANDO dar o [devido valor ao client-side](http://gri.fo/blog/por-que-a-grifo/). Vejo muitos tweets com artigos e novidades do HTML5, mas ainda vejo muitas pessoas confusas sobre o que realmente é o HTML5. A maioria desses tweets são comparações como se o [HTML5](http://www.w3.org/TR/html5/) fosse o novo [Flash](http://upload.wikimedia.org/wikipedia/en/2/22/Flash_Pack.jpg), o que não é verdade.
 
 O HTML5 pode sim fazer muita coisa que hoje é feito erroneamente com o Flash, mas tem muitas outras funcionalidades interessantes e as pessoas devem ver isso. Antes de seguir o post, gostaria de desabafar um pouco explicando o porque mencionei a palavra “erroneamente”:
 

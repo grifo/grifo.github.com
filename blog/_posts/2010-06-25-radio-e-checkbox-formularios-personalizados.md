@@ -52,7 +52,7 @@ Através do CSS vamos ocultar os inputs e fazer a personalização sacana que o 
 
 Beleza! já tá funcionando, não está vendo ainda? Usuários cegos já, pois o código está acessível.
 
-Ok, vamos deixar acessível sem screen reader também. Para isso a Grifo fez um plugin do jquery <del>exclusivamente</del> para você, leitor do nosso blog. O plugin pode ser baixado neste link: [styleRadioCheckbox](http://www.grifotecnologia.com.br/code/formulario-personalizado/jquery.styleRadioCheckbox.js).
+Ok, vamos deixar acessível sem screen reader também. Para isso a Grifo fez um plugin do jquery <del>exclusivamente</del> para você, leitor do nosso blog. O plugin pode ser baixado neste link: [styleRadioCheckbox](http://gri.fo/code/formulario-personalizado/jquery.styleRadioCheckbox.js).
 
 O plugin trabalha com a estrutura HTML que citamos acima. Você precisará criar 2 classes além da classe para estado normal dos inputs: uma classe para ele marcado e outra para o foco.
 
@@ -96,6 +96,6 @@ Para solucionar este problema iremos inserir uma tag noscript que vai exibir os 
 
 As técnicas mostradas foram testadas em IE6 e superiores, Firefox 3.6, Chrome e Safari. Qualquer problema que encontrarem em outras versões de browser, mobile ou outros do gênero nos avisem para tentarmos aprimorar a técnica. Sugestões de melhoria também são bem-vindas.
 
-Veja um exemplo de [personalização de radio e checkbox](http://www.grifotecnologia.com.br/code/formulario-personalizado/jquery.styleRadioCheckbox.html) em funcionamento.
+Veja um exemplo de [personalização de radio e checkbox](http://gri.fo/code/formulario-personalizado/jquery.styleRadioCheckbox.html) em funcionamento.
 
 Abraços e até a próxima!

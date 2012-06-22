@@ -9,7 +9,7 @@ tags:
 ---
 
 
-Vamos para o último post da série formulários personalizados. Já mostramos como personalizar o [campos de radio e checkbox](http://www.grifotecnologia.com.br/blog/css/radio-e-checkbox-formularios-personalizados/) e também um elemento [select](http://www.grifotecnologia.com.br/blog/css/combobox-formularios-personalizados/). Hoje iremos mostrar como personalizar um campo de arquivo, que é o mais simples.
+Vamos para o último post da série formulários personalizados. Já mostramos como personalizar o [campos de radio e checkbox](http://gri.fo/blog/radio-e-checkbox-formularios-personalizados/) e também um elemento [select](http://gri.fo/blog/combobox-formularios-personalizados/). Hoje iremos mostrar como personalizar um campo de arquivo, que é o mais simples.
 
 As duas grandes sacadas para a personalização do input file são as seguintes:
 
@@ -57,7 +57,7 @@ Agora só falta exibir no span o valor selecionado no input. Isto é feito com p
         $(this).prev().html($(this).val());
     });
 
-E está pronto. Simples não? Conseguiu se segurar e montar antes de abrir o link de exemplo? Então agora acesse [personalização de input file](http://www.grifotecnologia.com.br/code/formulario-personalizado/input-file.html).
+E está pronto. Simples não? Conseguiu se segurar e montar antes de abrir o link de exemplo? Então agora acesse [personalização de input file](http://gri.fo/code/formulario-personalizado/input-file.html).
 
 As técnicas mostradas foram testadas em IE6 e superiores, Firefox 3.6, Chrome e Safari. Qualquer problema que encontrarem em outras versões de browser, mobile ou outros do gênero nos avisem para tentarmos aprimorar a técnica. Sugestões de melhoria também são bem-vindas.
 

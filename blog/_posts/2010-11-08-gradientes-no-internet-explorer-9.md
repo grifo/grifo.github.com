@@ -61,6 +61,6 @@ Só precisamos escrever isso no CSS:
       .gradient(#fcfcfc, #999999);
     }
 
-Exemplo [aqui](http://www.grifotecnologia.com.br/blog/examples/svg-gradient/CSS_SVG.html).
+Exemplo [aqui](http://gri.fo/code/svg-gradient/CSS_SVG.html).
 
 A limitação no momento é que só funcionam gradientes lineares verticais, mas é só alterar o código server-side que podemos gerar qualquer tipo de gradiente.
