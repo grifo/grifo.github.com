@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+	<title>Radio e Checkbox - Exemplos de personalização de formulário</title>
+	<style type="text/css">
+
+		.styleRadio input,
+		.styleCheckbox input {
+			cursor:pointer;
+			filter:alpha(opacity=0);
+			opacity:0;
+		}
+
+		.styleRadio,
+		.styleCheckbox {
+			cursor:pointer;
+			height:30px;
+			background:url(controls.gif) no-repeat;
+		}
+
+		.styleRadio {
+			background-position:0 -500px;
+		}
+		.inputRadioChecked {
+			background-position:-500px -500px;
+		}
+		.styleCheckbox {
+			background-position:0 0;
+		}
+		.inputCheckboxChecked {
+			background-position:-500px 0;
+		}
+		.inputFocus {
+			border:dotted 1px #CCC;
+		}
+	</style>
+</head>
+<body>
+	<noscript>
+		<style type="text/css">
+			.styleCheckbox input,
+			.styleRadio input {
+				filter:alpha(opacity=1);
+				opacity:1;
+			}
+		</style>
+	</noscript>
+
+	<div>
+		<label class="styleRadio" for="radioButton1"><input type="radio" name="radioButton" id="radioButton1" /> Radio 1</label>
+		<label class="styleRadio" for="radioButton2"><input type="radio" name="radioButton" id="radioButton2" /> Radio 2</label>
+
+		<br />
+		<br />
+		<br />
+
+		<label class="styleCheckbox" for="checkbox1"><input type="checkbox" name="checkbox" id="checkbox1" /> Checkbox 1</label>
+		<label class="styleCheckbox" for="checkbox2"><input type="checkbox" name="checkbox" id="checkbox2" /> Checkbox 2</label>
+
+		<br />
+		<br />
+		<br />
+
+		<a href="http://www.grifotecnologia.com.br/blog/css/radio-e-checkbox-formularios-personalizados/">Veja o post completo explicando o funcionamento</a>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"  type="text/javascript"></script>
+	<script type="text/javascript" src="jquery.styleRadioCheckbox.js"></script>
+
+	<script type="text/javascript">
+		$("input:checkbox").styleRadioCheckbox({
+			classChecked:"inputCheckboxChecked",
+			classFocus:"inputFocus"
+		});
+		$("input:radio").styleRadioCheckbox({
+			classChecked:"inputRadioChecked",
+			classFocus:"inputFocus"
+		});
+	</script>
+</body>
+</html>

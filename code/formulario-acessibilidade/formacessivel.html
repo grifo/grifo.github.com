@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"> 
+	<title>Teste de Menu aperfeicoado</title>
+	
+	<style>
+
+		#errorAlert { padding: 20px; background-color: #AA0000; }
+		#errorAlert h1,
+		#errorAlert h2,
+		#errorAlert h3,
+		#errorAlert h4,
+		#errorAlert h5,
+		#errorAlert h6 { font-weight: bold; font-size: 16px; text-transform: uppercase; color: #FFF; }
+		#errorAlert a { font-size: 16px; color: #FFF; }
+	
+		#form.error .required { border-color: red; }
+	
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+</head>
+
+<body>
+<h1>Formulario de exemplo</h1>
+<form action="." method="post" id="form">
+	<fieldset>
+		<legend>Informacoes</legend>
+		<p><label for="nome">Nome *</label><input type="text" name="nome" id="nome" class="required" /></p>
+		<p><label for="rua">Rua</label><input type="text" name="rua" id="rua" /></p>
+		<p><label for="email">E-mail</label><input type="email" name="email" id="email" /></p>
+		<p><label for="cidade">Cidade *</label><input type="text" name="cidade" id="cidade" class="required" /></p>
+		<p><input type="submit" id="submit" value="Ok Go!" /></p>
+	</fieldset>
+</form>
+
+<script>
+	
+	var form = $('#form'),
+		submit = $('#submit'),
+		inputs = form.find('input');
+
+	//This HTML must be written by javascript cause it should ONLY be in html IF the javascript validation fails
+	function writeError(requiredArray) {
+	
+		var errorAlert,
+			//Heading Level must be changing according to the html
+			errorHeading = $('<h2 id="errorHeading" />').html('<a href="#errorList">A validação das informações foi interrompida. Confira os campos listados abaixo.</a>'),
+			anchor,
+			ul;
+		
+		if ($('#errorAlert').length < 1) {
+			form.before('<div id="errorAlert" />');
+			$('#errorAlert').prepend(errorHeading).append($('<ul id="errorList" />'));
+		}
+		
+		errorAlert  = $('#errorAlert');
+		ul = errorAlert.find('ul');
+		ul.html('');
+		
+		
+		for (var i=0;i<requiredArray.length;i++) {
+		
+			//The idea is that 2 labels with same for attribute wont be read by a screen reader, now an anchor will work perfectly
+			anchor = $('<a />').attr('href', '#' + requiredArray[i][0]).html('<a href="#">O campo ' + requiredArray[i][1] + 'não foi preenchido corretamente.</a>').click(function(e) {
+				e.preventDefault();
+				
+				$($(this).attr('href')).focus();
+			
+			});
+			ul.append($('<li />').append(anchor));
+		
+		}
+		
+		errorHeading.find('a').focus();
+		
+	}
+		
+	submit.click(function(e) {
+	
+		var requiredArray = [];
+	
+		e.preventDefault();
+		
+		inputs.each(function() {
+		
+			var self = $(this);
+		
+			if (self.val().length < 1 && self.hasClass('required')) {
+				form.addClass('error');
+				requiredArray.push([self.attr('id'), self.siblings('label').text()]);
+			}
+		
+		});
+		$(this).blur();
+		writeError(requiredArray);
+	});
+	
+</script>
+</body>
+</html>
