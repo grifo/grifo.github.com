@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jquery serialize
+title: Jquery serialize state
 subtitle: "Plugin para manter estado dos objetos em páginas com manipulação de DOM"
 tags:
     - javascript
