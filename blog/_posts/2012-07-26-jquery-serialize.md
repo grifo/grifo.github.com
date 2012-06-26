@@ -9,7 +9,7 @@ tags:
     - renatho
 ---
 
-Hoje desenvolvemos um plugin que pode ser bem útil em projetos com funcionalidades de manipulação do DOM. A idéia do plugin é serializar o estados dos objetos, guardar em uma string e depois restaurar novamente. Este estado pode ficar guardado em location storage, cookie, ou até mesmo no objeto passado no [pushstate](https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history#The_pushState().C2.A0method).
+Hoje desenvolvemos um plugin que pode ser bem útil em projetos com funcionalidades de manipulação do DOM. A idéia do plugin é serializar o estados dos objetos, guardar em uma string e depois restaurar novamente. Este estado pode ficar guardado em location storage, cookie, ou até mesmo no objeto passado no [pushstate](https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history#The_pushState(\).C2.A0method).
 
 O plugin pode ser baixado no nosso [Git](https://github.com/grifo/grifo-jquery-plugins/blob/master/source/jquery.serializeState.js)
 
