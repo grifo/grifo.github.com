@@ -16,7 +16,7 @@ Agora você deve estar achando que é impossível fazer animações como slideUp
 	li { overflow: hidden; max-height: 500px; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
 	li.closed { max-height: 0; }
 
-Preste atenção no momento de escolher o tempo e o tipo (linear, ease, ease-in...) da animação utilizada para não ficar estranho, pois a animação será um pouco mais longa do que o usuário percebe. No nosso nosso exemplo do 0 ao 500, apesar de que o usuário só verá até a altura do conteúdo que poderá ser 100px, por exemplo.
+Preste atenção no momento de escolher o tempo e o tipo \(linear, ease, ease-in...) da animação utilizada para não ficar estranho, pois a animação será um pouco mais longa do que o usuário percebe. No nosso nosso exemplo do 0 ao 500, apesar de que o usuário só verá até a altura do conteúdo que poderá ser 100px, por exemplo.
 
 Mandem suas dúvidas e sugestões nos comentários.
 
