@@ -8,7 +8,6 @@ tags:
     - transition
     - renatho
 ---
-
 Quem já está se aventurando nos transitions do CSS3 já deve ter passado por um problema que é animar a altura de um elemento sem conhecer a altura final dele, ou seja, um container com conteúdo dinâmico. Isso não funciona porque o transition só funciona com valores estáticos, como animar de 0 para 100px.
 
 Agora você deve estar achando que é impossível fazer animações como slideUp e slideDown do jquery... Mas encontramos uma solução: o max-height. Ao invés de fazermos o transition no height, fazemos no max-height, pois a animação será feita de um valor estático para outro. Você só precisa cuidar para colocar uma altura segura que seu conteúdo nunca chegará.
