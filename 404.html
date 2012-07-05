@@ -24,6 +24,7 @@
     <script>
       var key = (document.location.pathname || document.location.href).match(/u?\/([0-9]+)\/?/)
       if (key) {
+        document.title = 'Grifo - encurtador de urls';
         setTimeout(function () {
           document.location = "//u.gri.fo/" + key[1]
         }, 3000);
