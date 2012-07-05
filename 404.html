@@ -25,8 +25,8 @@
       var key = (document.location.pathname || document.location.href).match(/u?\/([0-9]+)\/?/)
       if (key) {
         setTimeout(function () {
-          document.location = "\\u.gri.fo/" + key[1]
-        }, 1000);
+          document.location = "//u.gri.fo/" + key[1]
+        }, 3000);
       } else {
         document.write('<section class="content notfound"><p>Página não encontrada. Quem sabe o que você procura está na <a href="/">home</a>?</p></section>')
       }
