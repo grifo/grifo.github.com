@@ -266,6 +266,7 @@ body, #sidebar {
         cursor:pointer;
         position:relative;
         a { 
+            .transition(all .1s ease-in);
             font-family:RobotoThin, sans-serif;
             font-weight:400;
             font-size:32px;
@@ -273,9 +274,7 @@ body, #sidebar {
             text-decoration:none;
             color:@red;
             .inline-block();
-            padding:0 20px;
-            .transition(all .1s ease-in);
-            margin-right:-10px;
+            padding:0 10px;
         }
         time {
             display:none;
@@ -287,21 +286,20 @@ body, #sidebar {
             color:#bbb;
         }
         p {
-            position:relative;
-            top:10px;
-            height:0px;
+            .transition(all .4s ease-out);
+            max-height:0;
             overflow:hidden;
             color:#666;
             opacity:0;
             padding-left:300px;
+            position:relative;
+            top:10px; 
             font-family:RobotoLight, sans-serif;
-            .transition(all .4s ease-out);
             font-size:18px;
         }
-        .transition(all .4s ease-out);
         &:hover {
             a { background:@red2; color:#fff; }
-            p { height:70px; opacity:1; }
+            p { margin-bottom:10px;  max-height:100px; opacity:1; }
         }
     }
 }
