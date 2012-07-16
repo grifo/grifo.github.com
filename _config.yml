@@ -1,3 +1,24 @@
 markdown: rdiscount
 pygments: false
 permalink: /:categories/:title
+
+authors:
+    jean:
+        name: Jean Carlo Emer
+        twitter: @jcemer
+        gravatar: c5df370a883b65279af5a7ca94a5eed7
+        description: 'Graduando em <a href="\\inf.ufrgs.br">ciência da computação</a> e líder técnico na Grifo. Trabalha com desenvolvimento web há mais de seis anos e tem um <a href="//jcemer.com">site pessoal</a>.'
+    grifocast:
+        name: grifocast
+        image: /images/grifocast.png
+        description: "Canal de comunicação e entretenimento da Grifo. Em formato de videocast discutimos as mais recentes novidades e polêmicas do desenvovlimento client-side"
+    renatho:
+        name: Renatho de Carli
+        twitter: @renatho
+        gravatar: b918a107fbb56b751441afe7f48b3377
+        description: "Renatho é desenvolvedor especializado em client-side, fundador da Grifo e estudante de Sistemas de Informação na Unisinos. Trabalha com web há aproximadamente 8 anos."
+    ricardo:
+        name: Ricardo Tomasi
+        twitter: @ricardobeat
+        gravatar: 47923b1f334d8e3f7a00506ac3c7a636
+        description: ""

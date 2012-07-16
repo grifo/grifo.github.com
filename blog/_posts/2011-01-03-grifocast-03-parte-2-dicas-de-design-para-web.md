@@ -2,6 +2,7 @@
 layout: post
 title: "GrifoCast #03/2 - Design para web"
 subtitle: Dicas de Design para web
+author: grifocast
 tags:
     - grifocast
     - design

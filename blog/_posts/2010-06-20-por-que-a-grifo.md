@@ -2,10 +2,10 @@
 layout: post
 title: Por que a Grifo? E por que desenvolvimento client-side com inteligência?
 category: blog
+author: renatho
 tags:
     - standards
     - mercado
-    - renatho
 ---
 
 Estava pensando sobre qual assunto falaria no primeiro Post do blog, então resolvi começar falando um pouco da Grifo e a importância de um desenvolvimento client-side bem pensado e com qualidade.

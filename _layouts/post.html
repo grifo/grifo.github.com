@@ -14,6 +14,9 @@ layout: default
         </div>
     </header>
     {{ content }}
+
+    {% assign author = site.authors[page.author] %}
+    {% include blog/author.html %}
     <footer>
         <span st_url="{{ page.url }}" class="st_facebook_hcount" displayText="Facebook"></span>
         <span st_url="{{ page.url }}" class="st_twitter_hcount" displayText="Tweet"></span>

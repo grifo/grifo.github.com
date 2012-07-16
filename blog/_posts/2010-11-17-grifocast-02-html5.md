@@ -2,6 +2,7 @@
 layout: post
 title: "GrifoCast #02 - HTML5"
 subtitle: HTML5
+author: grifocast
 tags:
     - grifocast
     - html5

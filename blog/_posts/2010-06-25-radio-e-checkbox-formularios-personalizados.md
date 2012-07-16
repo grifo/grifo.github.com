@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Radio e Checkbox – Formulários personalizados
+author: renatho
 tags:
     - css
     - forms
     - javascript
-    - renatho
 ---
 
 Neste post vou dar umas dicas de como personalizar campos de Radio e Checkbox, afinal os designers adoram nos sacanear. Quando terminar de ler aposto que você vai falar “como não pensei nisso antes?”, pois a solução além de super simples e óbvia, não perde acessibilidade, não perde usabilidade e foram utilizadas técnicas de javascript [não-obstrutivo](http://en.wikipedia.org/wiki/Unobtrusive_JavaScript).

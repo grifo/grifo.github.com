@@ -2,12 +2,12 @@
 ---
 layout: post
 title: Solucionando o Code Golf + Maratona IG com Javascript
+author: ricardo
 tags:
     - code golf
     - javascript
     - php
     - FISL
-    - ricardo
 ---
 
 Semana passada Porto Alegre recebeu o [FISL](http://fisl.softwarelivre.org/), que reuniu mais de 8 mil pessoas no campus da PUC. Estivemos lá pra conferir as palestras envolvendo HTML5, CSS, Javascript, acessibilidade e novas tecnologias/projetos.

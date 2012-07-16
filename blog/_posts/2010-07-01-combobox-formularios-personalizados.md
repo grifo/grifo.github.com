@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Combobox – Formulários personalizados
+author: renatho
 tags:
     - html
     - css
     - forms
     - javascript
-    - renatho
 ---
 
 Dando sequencia à série de Posts de formulários personalizados, hoje falaremos do combobox (select). Esta é outra técnica que não perde acessibilidade, não perde usabilidade e utiliza [javascript não-obstrutivo](http://en.wikipedia.org/wiki/Unobtrusive_JavaScript).
