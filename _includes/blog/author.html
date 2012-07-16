@@ -1,0 +1,14 @@
+{% if author %}
+<aside class="author">
+    <h4>{{ author.name }}</h4>
+    {% if author.twitter %}
+    <a href="//twitter.com/{{ author.twitter }}" class="twitter">{{ author.twitter }}</a>
+    {% endif %}
+    {% if author.gravatar %}
+    <img src="//secure.gravatar.com/avatar/{{ author.gravatar }}?s=80" width="80" height="80" alt="{{ author.name }}">
+    {% elsif author.image %}
+    <img src="{{ author.image }}" width="80" height="80" alt="{{ author.name }}">
+    {% endif %}
+    <p>{{ author.description }}</p>
+</aside>
+{% endif %}
