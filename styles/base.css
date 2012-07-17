@@ -594,6 +594,13 @@ body,
 #main article {
   margin: 20px 0 40px 0;
 }
+#main article a[href*='//']:after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url('../images/external-link.png');
+}
 #main article p,
 #main article ul,
 #main article ol {
@@ -674,6 +681,9 @@ body,
   margin-top: 26px;
   padding: 30px 0 0 100px;
   border-top: 3px solid rgba(200, 200, 200, 0.15);
+}
+#main .author a[href*='//']:after {
+  display: none;
 }
 #main .author img {
   position: absolute;

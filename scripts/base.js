@@ -11,6 +11,16 @@
     return document.querySelector(sel);
   };
 
+  window.addEventListener('click', function(event) {
+    var url;
+    event.preventDefault();
+    url = event.target.href;
+    if (url && !url.match(/\/\/gri.fo/)) {
+      event.preventDefault();
+      return window.open(url);
+    }
+  });
+
   Request = (function() {
 
     function Request(method, url, callback, data) {

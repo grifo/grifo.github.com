@@ -185,6 +185,13 @@ body, #sidebar {
     }
     article {
         margin:20px 0 40px 0;
+        a[href*='//']:after {
+            content:'';
+            display:inline-block;
+            width:12px;
+            height:12px;
+            background:url('../images/external-link.png');
+        }
         p, ul, ol {
             margin:1em 0;
             font-size:18px;
@@ -241,6 +248,9 @@ body, #sidebar {
         margin-top:26px;
         padding:30px 0 0 100px;
         border-top:3px solid rgba(200, 200, 200, 0.15);
+        a[href*='//']:after {
+            display: none;
+        }
         img {
             position:absolute;
             top:34px;
