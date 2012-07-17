@@ -726,8 +726,8 @@ body,
   font-size: 14px;
   line-height: 2;
 }
-#main #disqus_thread a.dsq-subscribe-email,
-#main #disqus_thread a.dsq-subscribe-rss {
+#main #disqus_thread a.dsq-subscribe-email em,
+#main #disqus_thread a.dsq-subscribe-rss em {
   text-decoration: none !important;
 }
 .post-list li {
