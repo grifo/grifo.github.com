@@ -728,7 +728,7 @@ body,
 }
 #main #disqus_thread a.dsq-subscribe-email em,
 #main #disqus_thread a.dsq-subscribe-rss em {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 #main #disqus_thread a.dsq-subscribe-email:hover em,
 #main #disqus_thread a.dsq-subscribe-rss:hover em {
