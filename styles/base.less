@@ -285,8 +285,13 @@ body, #sidebar {
         }
     }
     #disqus_thread {
-        a.dsq-subscribe-email em, a.dsq-subscribe-rss em {
-            text-decoration:none !important;
+        a.dsq-subscribe-email, a.dsq-subscribe-rss {
+            em {
+                text-decoration:none !important;
+            }
+            &:hover em {
+                 text-decoration:underline;
+            }
         }
     }
 }

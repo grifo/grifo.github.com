@@ -730,6 +730,10 @@ body,
 #main #disqus_thread a.dsq-subscribe-rss em {
   text-decoration: none !important;
 }
+#main #disqus_thread a.dsq-subscribe-email:hover em,
+#main #disqus_thread a.dsq-subscribe-rss:hover em {
+  text-decoration: underline;
+}
 .post-list li {
   display: block;
   padding: 10px 0px 7px 20px;
