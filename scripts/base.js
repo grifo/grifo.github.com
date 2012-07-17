@@ -13,7 +13,6 @@
 
   window.addEventListener('click', function(event) {
     var url;
-    event.preventDefault();
     url = event.target.href;
     if (url && !url.match(/\/\/gri.fo/)) {
       event.preventDefault();

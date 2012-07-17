@@ -4,7 +4,6 @@ $$ = (sel) -> document.querySelector sel
 
 # External
 window.addEventListener 'click', (event) ->
-    event.preventDefault();
     url = event.target.href
     if url and !url.match /\/\/gri.fo/
         event.preventDefault()
