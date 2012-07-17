@@ -726,6 +726,10 @@ body,
   font-size: 14px;
   line-height: 2;
 }
+#main #disqus_thread a.dsq-subscribe-email,
+#main #disqus_thread a.dsq-subscribe-rss {
+  text-decoration: none !important;
+}
 .post-list li {
   display: block;
   padding: 10px 0px 7px 20px;
