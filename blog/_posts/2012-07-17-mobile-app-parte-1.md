@@ -65,12 +65,11 @@ Um detalhe é que precisamos adicionar ``content:''`` para que o pseudo elemento
 
 <br>
 
-**Update:**<br>
-Um feedback que recebi é que o post estava sem nenhum exemplo.<br>
+Confira uma demonstração.<br>
 <a href="//codepen.io/jcemer/pen/nBlog" class="btn">Demo</a>
 
 <br>
 
-Por enquanto é só. A série continua em breve, espero que seja útil.
+Por enquanto é só. A série continua em breve.
 
 
