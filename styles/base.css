@@ -682,6 +682,44 @@ body,
   line-height: 1.3;
   padding: 0.75em;
 }
+#main .btn {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 2px 6px #cccccc;
+  -moz-box-shadow: 0 2px 6px #cccccc;
+  box-shadow: 0 2px 6px #cccccc;
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cf3a24), to(#b73b27));
+  background-image: -webkit-linear-gradient(top, #cf3a24, #b73b27);
+  background-image: -moz-linear-gradient(top, #cf3a24, #b73b27);
+  background-image: -ms-linear-gradient(top, #cf3a24, #b73b27);
+  background-image: -o-linear-gradient(top, #cf3a24, #b73b27);
+  background-image: linear-gradient(to bottom, #cf3a24, #b73b27);
+  display: inline-block;
+  padding: 6px 14px;
+  color: white !important;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+#main .btn:after {
+  display: none !important;
+}
+#main .btn:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0 2px 6px #cccccc, inset 0 2px 20px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 6px #cccccc, inset 0 2px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px #cccccc, inset 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+#main .btn:active {
+  -webkit-box-shadow: 0 2px 6px #cccccc, inset 0 2px 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 6px #cccccc, inset 0 2px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 6px #cccccc, inset 0 2px 20px rgba(0, 0, 0, 0.4);
+}
 #main .author {
   position: relative;
   min-height: 90px;
