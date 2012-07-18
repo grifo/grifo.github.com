@@ -56,16 +56,21 @@ Adicionar mais um múltiplo background e mexer no mixin não me parece prudente,
 	#gradient .radial(rgba(255, 255, 0, .3), rgba(255, 255, 0, 0));
 	position: absolute;
 	width: 100%;
-	height: 520px;
+	height: 100%;
 	content: '';
 	top: 0;
 }</code></pre>
 
 Um detalhe é que precisamos adicionar ``content:''`` para que o pseudo elemento seja renderizado. Outro ponto importante é que não terei este background na parcela de conteúdo com dimensões maiores que a do viewport. Para nossa app isto não será problema. ;)
 
+<br>
+
+**Update:**<br>
+Um feedback que recebi é que o post estava sem nenhum exemplo.<br>
+<a href="//codepen.io/jcemer/pen/nBlog" class="btn">Demo</a>
 
 <br>
-<br>
+
 Por enquanto é só. A série continua em breve, espero que seja útil.
 
 
