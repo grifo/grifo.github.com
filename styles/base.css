@@ -419,15 +419,12 @@ td {
   font-weight: normal;
   font-style: normal;
 }
-html,
-body {
-  background-color: #f4f4f4;
-}
 html {
   height: 100%;
+  background: #f4f4f4 url(../images/bg-sidebar.png) repeat-y;
+  background-attachment: fixed;
 }
 body {
-  min-width: 800px;
   min-height: 100%;
 }
 a {
@@ -441,14 +438,12 @@ a:hover {
   color: #44c;
   text-decoration: underline;
 }
-body,
-#sidebar {
-  background: url(../images/bg-sidebar.png) repeat-y;
-}
 #sidebar {
   padding: 20px 40px 40px 20px;
   width: 280px;
-  background-color: #c33823;
+  position: fixed;
+  top: 0;
+  left: 0;
   float: left;
   color: #f4f4f4;
   text-align: center;
@@ -740,7 +735,7 @@ body,
   padding: 0;
 }
 #main .author p {
-  width: 400px;
+  max-width: 400px;
   font-size: 16px;
 }
 #main .related {
@@ -822,7 +817,7 @@ body,
   overflow: hidden;
   color: #666;
   opacity: 0;
-  padding-left: 300px;
+  padding-left: 30%;
   position: relative;
   top: 10px;
   font-family: RobotoLight, sans-serif;
@@ -833,7 +828,7 @@ body,
   color: #fff;
 }
 .post-list li:hover p {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   max-height: 100px;
   opacity: 1;
 }
@@ -863,26 +858,31 @@ body,
   background: #c3c3c3;
 }
 @media only screen and (max-width: 1024px) {
-  #main h2 {
-    font-size: 36px;
-  }
   #main article p {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 800px) {
-  body {
-    min-width: 639px;
+  html {
+    background-position: -70px 0;
   }
   #sidebar {
-    width: 230px;
+    width: 200px;
   }
   #sidebar .back {
     margin-bottom: 20px;
   }
-  body,
-  #sidebar {
-    background-position: -50px 0;
+  #sidebar .logo {
+    width: 120px;
+    height: 90px;
+    background-size: 100% 100%;
+    background-image: url(../images/grifo.png);
+  }
+  .post-list li p {
+    max-height: 100%;
+    opacity: 1;
+    margin: -20px 0 0 0 !important;
+    padding: 15px 10px;
   }
   #main {
     padding-left: 290px;
@@ -897,10 +897,8 @@ body,
     font-size: 80%;
   }
 }
-@media only screen and (max-width: 639px), only screen and (max-device-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  body {
-    max-width: 640px;
-    min-width: 280px;
+@media only screen and (max-width: 639px), only screen and (max-device-width: 480px) {
+  html {
     background-image: none;
   }
   #sidebar {
@@ -949,13 +947,5 @@ body,
 @media only screen and (max-width: 400px) {
   #sidebar .sub {
     display: none;
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  #sidebar .logo {
-    width: 120px;
-    height: 90px;
-    background-size: 120px 90px;
-    background-image: url(../images/grifo.png);
   }
 }

@@ -46,14 +46,12 @@
     font-style: normal;
 }
 
-html, body {
-    background-color:#f4f4f4;
-}
 html {
     height:100%;
+    background:#f4f4f4 url(../images/bg-sidebar.png) repeat-y;
+    background-attachment:fixed;
 }
 body {
-    min-width:800px;
     min-height:100%;
 }
 
@@ -64,16 +62,13 @@ a {
     &:hover { color: #44c; text-decoration:underline; }
 }
 
-body, #sidebar {
-    background:url(../images/bg-sidebar.png) repeat-y;
-}
-
 @sidebarwidth: 340px;
 
 #sidebar {
     padding:20px 40px 40px 20px;
     width:@sidebarwidth - 60px;
-    background-color:@red;
+    position:fixed;
+    top:0; left:0;
     float:left;
     color:#f4f4f4;
     text-align:center;
@@ -286,7 +281,7 @@ body, #sidebar {
             padding:0;
         }
         p {
-            width: 400px;
+            max-width: 400px;
             font-size: 16px;
         }
     }
@@ -322,7 +317,6 @@ body, #sidebar {
 }
 
 .post-list {
-    //margin-left:40px;
     li {
         display:block;
         padding:10px 0px 7px 20px;
@@ -356,7 +350,7 @@ body, #sidebar {
             overflow:hidden;
             color:#666;
             opacity:0;
-            padding-left:300px;
+            padding-left:30%;
             position:relative;
             top:10px; 
             font-family:RobotoLight, sans-serif;
@@ -364,7 +358,7 @@ body, #sidebar {
         }
         &:hover {
             a { background:@red2; color:#fff; }
-            p { margin-bottom:10px;  max-height:100px; opacity:1; }
+            p { margin-bottom:15px;  max-height:100px; opacity:1; }
         }
     }
 }
@@ -389,20 +383,30 @@ body, #sidebar {
 
 @media only screen and (max-width: 1024px) {
     #main {
-        h2 { font-size:36px; }
         article p { font-size:16px; }
     }
 }
 
 @media only screen and (max-width: 800px) {
-    body { min-width:639px; }
+    html { background-position:-70px 0; }
     #sidebar {
-        width:@sidebarwidth - 110px;
+        width:@sidebarwidth - 140px;
         .back {
             margin-bottom:20px;
         }
+        .logo {
+            width:120px;
+            height:90px;
+            background-size:100% 100%;
+            background-image:url(../images/grifo.png);
+        }
     }
-    body, #sidebar { background-position:-50px 0; }
+    .post-list li p {
+        max-height:100%;
+        opacity:1;
+        margin:-20px 0 0 0 !important;
+        padding:15px 10px;
+    }
     #main {
         padding-left:290px;
         h2 { font-size: 28px; }
@@ -412,12 +416,8 @@ body, #sidebar {
 }
 
 @media only screen and (max-width: 639px),
-only screen and (max-device-width: 480px),
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-    body {
-        max-width:640px;
-        min-width:280px;
+only screen and (max-device-width: 480px) {
+    html {
         background-image:none;
     }
     #sidebar {
@@ -455,15 +455,5 @@ only screen and (min-device-pixel-ratio : 1.5) {
 @media only screen and (max-width:400px) {
     #sidebar {
         .sub { display:none; }
-    }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-    #sidebar .logo {
-        width:120px;
-        height:90px;
-        background-size:120px 90px;
-        background-image:url(../images/grifo.png);
     }
 }
