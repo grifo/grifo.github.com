@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mobile App - parte 1
-subtitle: "Passo a passo de desenvolvimento de uma mobile wep app"
+subtitle: "Lidando com largura de tela e background"
 author: jean
 tags:
     - css3
