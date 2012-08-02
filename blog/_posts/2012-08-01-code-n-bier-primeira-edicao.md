@@ -79,7 +79,7 @@ As ideias que surgiram de desafio foram as seguintes:
 
 Os primeiros dois desafiados tentaram programar no interpretador do [Node](//nodejs.org) e não conseguiram finalizar o desafio. 
 
-A platéia resolveu dar uma segunda chance para eles e [@jmurowaniecki](//twitter.com/jmurowaniecki) resolveu [fibonacci](//gist.github.com/3236557) e xxx fez o famoso [fizzbuzz](https://gist.github.com/3236557) e emplacaram o desafio.
+A platéia resolveu dar uma segunda chance para eles e [@jmurowaniecki](//twitter.com/jmurowaniecki) resolveu [fibonacci](//gist.github.com/3236557) e [estamos buscando o contato ;)] fez o famoso [fizzbuzz](https://gist.github.com/3236557) e emplacaram o desafio.
 
 <a href="//gist.github.com/3236557" class="btn">Soluções dos desafios</a>
 
