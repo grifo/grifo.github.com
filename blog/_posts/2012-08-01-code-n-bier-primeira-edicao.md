@@ -9,7 +9,7 @@ tags:
     - Code n' Bier
 ---
 
-Na noite de ontem (01/08/2012) rolou a primeira edição do [Code n' Bier](//codenbier.com). Um projeto que tem como intenção levar programação e pessoas para dentro de um bar com o objetivo de promover aprendizado, intergração e diversão.
+Na noite de ontem (01/08/2012) rolou a primeira edição do [Code n' Bier](//codenbier.com). Um projeto que tem como intenção levar programação e pessoas para dentro de um bar com o objetivo de promover aprendizado, integração e diversão.
 
 <img src="http://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/558426_487435217951964_1110157710_n.jpg" alt="Foto início do evento">
 
