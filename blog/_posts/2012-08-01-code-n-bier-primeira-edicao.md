@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Code n' Bier - Primeira edição
-subtitle: "Post dedicado a noite de 01/08/2012, estreia do Code n'Bier, primeiro Dojo de programação em um bar"
+subtitle: "Post dedicado a noite de 01.08.2012, estreia do Code n'Bier, primeiro Dojo de programação em um bar"
 author: jean
 tags:
     - dojo
@@ -9,11 +9,11 @@ tags:
     - Code n' Bier
 ---
 
-Na noite de ontem (01/08/2012) rolou a primeira edição do [Code n' Bier](//codenbier.com). Um projeto que tem como intenção levar programação e pessoas para dentro de um bar com o objetivo de promover aprendizado, integração e diversão.
+Na noite de ontem (01.08.2012), rolou a primeira edição do [Code n' Bier](//codenbier.com). Um projeto que tem como intenção levar programação e pessoas para dentro de um bar com o objetivo de promover aprendizado, integração e diversão.
 
 <img src="http://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/558426_487435217951964_1110157710_n.jpg" alt="Foto início do evento">
 
-As fotos do evento de ontem já estão na página da [Grifo no Facebook](//www.facebook.com/grifotecnologia).
+As fotos do evento já estão na página da [Grifo no Facebook](//www.facebook.com/grifotecnologia).
 
 ### Dojo
 A atração principal desta primeira edição foi um [Dojo](//codingdojo.org). Se você ainda não teve contato com Dojos, [confira a apresentação inicial](//speakerdeck.com/u/jcemer/p/dojo-grifo).
@@ -88,6 +88,6 @@ A platéia resolveu dar uma segunda chance para eles e [@jmurowaniecki](//twitte
 
 <img src="http://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-snc7/292999_487434904618662_479875027_n.jpg" alt="preliminares do eventos">
 
-Sintam-se a vontade em nos mandar sugestões de temas que podemos abordar futuramente e idéias para o próximo Code n' Bier!
+Sinta-se à vontade para nos mandar sugestões de temas e ideias para o próximo Code n' Bier!
 
 Obrigado pela participação de todos e até a próxima edição.
