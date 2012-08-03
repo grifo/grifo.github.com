@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Mobile App - parte 2
-subtitle: "Altura da tela, imagens, sprites e fontes"
+title: Mobile App - Tela, Sprites e Fontes
+subtitle: "Altura da tela, qualidade das imagens, sprites e fontes"
 author: jean
 tags:
     - css3
     - html5
     - mobile
+    - sprites
+    - fontes
 ---
 
 Segundo post da série em que construímos do zero uma mobile web app.<br> É aconselhável conferir o [primeiro post](//gri.fo/blog/mobile-app-parte-1) para ficar por dentro dos primeiros passos.

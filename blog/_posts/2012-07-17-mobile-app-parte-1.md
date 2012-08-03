@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Mobile App - parte 1
-subtitle: "Lidando com largura de tela e background"
+title: Mobile App - Background
+subtitle: "Lidando com largura de tela, background com gradiente e background com noise"
 author: jean
 tags:
     - css3
     - html5
     - mobile
+    - background
+    - gradiente
 ---
 
 Este é o primeiro de uma série de posts que irão mostrar na prática o desenvolvimento de uma mobile web app. O objetivo final é que nossa app funcione em iPhone, iPad e Android usando apenas html5 e css3. A distribuição do aplicativo precisará apenas de uma interface *web view* nativa.
@@ -35,7 +37,7 @@ Só precisei adicionar ``@colorStop`` e já tenho meu conjunto de [mixins](//gis
 O código acima indica que a transição entre as cores terminará em 520px e que o restante será preenchido com a segunda cor.
 
 
-### Background noise
+### Background Noise
 
 Outro detalhe do fundo da app é que ele tem *noise*. Googlada rápida e logo encontro [alguém com o mesmo problema](//forrst.com/posts/Create_alpha_PNGs_of_noise-zm3). Vou precisar usar [background múltiplo](//www.css3.info/preview/multiple-backgrounds) e aplicar a imagem que eu gerar em <http://noisepng.com> em cima do meu gradiente.
 
@@ -70,6 +72,6 @@ Confira uma demonstração.<br>
 
 <br>
 
-Por enquanto é só. A série continua em breve.
+Leia o próximo [post da série](//gri.fo/blog/mobile-app-parte-2).
 
 
