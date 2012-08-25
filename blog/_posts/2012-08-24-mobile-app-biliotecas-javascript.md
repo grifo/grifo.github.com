@@ -12,7 +12,7 @@ tags:
     - bordas
 ---
 
-Utilizar frameworks javascript no desenvolvimento front-end já é uma prática comum há algum tempo. Quando comecei a me interessar pelo assunto a [Prototypejs](http://prototypejs.org) era bastante popular e já gerava [filhos](http://script.aculo.us). Logo depois ouvi falar em [jQuery](http://jquery.com), [YUI](http://yuilibrary.com)...
+Utilizar bibliotecas e frameworks javascript no desenvolvimento front-end já é uma prática comum há algum tempo. Quando comecei a me interessar pelo assunto a [Prototypejs](http://prototypejs.org) era bastante popular e já gerava [filhos](http://script.aculo.us). Logo depois ouvi falar em [jQuery](http://jquery.com), [MooTools](http://mootools.net), [YUI](http://yuilibrary.com)...
 
 E quando começamos a falar em mobile app, quais as possibilidades?
 
