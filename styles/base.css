@@ -419,6 +419,9 @@ td {
   font-weight: normal;
   font-style: normal;
 }
+/* ---*---  ---*---  ---*---  ---*---
+     CORE \o/
+---*---  ---*---  ---*---  ---*--- */
 html {
   height: 100%;
   background: #f4f4f4 url(../images/bg-sidebar.png) repeat-y;
@@ -438,6 +441,9 @@ a:hover {
   color: #44c;
   text-decoration: underline;
 }
+/* ---*---  ---*---  ---*---  ---*---
+     SIDEBAR
+---*---  ---*---  ---*---  ---*--- */
 #sidebar {
   padding: 20px 40px 40px 20px;
   width: 280px;
@@ -520,6 +526,9 @@ a:hover {
   color: #fff;
   text-shadow: 0 0 5px rgba(255, 230, 230, 0.3);
 }
+/* ---*---  ---*---  ---*---  ---*---
+     MAIN
+---*---  ---*---  ---*---  ---*--- */
 #main {
   padding: 40px 40px 40px 380px;
   color: #333;
@@ -774,6 +783,9 @@ a:hover {
 #main #disqus_thread a.dsq-subscribe-rss:hover em {
   text-decoration: underline;
 }
+/* ---*---  ---*---  ---*---  ---*---
+     POST LIST
+---*---  ---*---  ---*---  ---*--- */
 .post-list {
   clear: both;
 }
@@ -841,6 +853,9 @@ a:hover {
   background: #c63e2c;
   color: #fff;
 }
+/* ---*---  ---*---  ---*---  ---*---
+     BRAZIL JS
+---*---  ---*---  ---*---  ---*--- */
 .braziljs-special,
 .braziljs-list {
   background: #FAFAFA;
@@ -917,6 +932,9 @@ a:hover {
     max-width: 100%;
   }
 }
+/* ---*---  ---*---  ---*---  ---*---
+     TAGS
+---*---  ---*---  ---*---  ---*--- */
 .tag-list li {
   display: inline;
 }
@@ -942,6 +960,9 @@ a:hover {
 .tag-list a:hover {
   background: #c3c3c3;
 }
+/* ---*---  ---*---  ---*---  ---*---
+     RESPONSIVE
+---*---  ---*---  ---*---  ---*--- */
 @media only screen and (max-width: 1024px) {
   #main article p {
     font-size: 16px;
