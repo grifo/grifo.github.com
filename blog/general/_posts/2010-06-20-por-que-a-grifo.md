@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Por que a Grifo? E por que desenvolvimento client-side com inteligência?
-category: blog
 author: renatho
 tags:
     - standards

@@ -13,6 +13,17 @@ layout: default
             </ul>
         </div>
     </header>
+
+    {% if page.categories contains 'braziljs' %}
+    <div class="braziljs-special">
+        <div>
+            <h1>Cobertura do evento</h1>
+            <a href="/braziljs">Confira o que está rolando no evento</a>
+        </div>
+        <img src="/images/logo-braziljs-small.png" alt="Brazil JS">
+    </div>
+    {% endif %}
+
     {{ content }}
 
     {% assign author = site.authors[page.author] %}

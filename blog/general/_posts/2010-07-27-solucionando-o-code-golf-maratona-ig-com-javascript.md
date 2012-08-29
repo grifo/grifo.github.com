@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Solucionando o Code Golf + Maratona IG com Javascript

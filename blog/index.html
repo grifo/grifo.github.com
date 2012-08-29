@@ -3,13 +3,17 @@ layout: default
 title: blog da Grifo
 ---
 <ul class="post-list">
-{% for post in site.categories.blog %}
+{% for post in site.posts %}
+{% unless post.typing %}
     <li>
-        <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
-        <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date_to_string }}</time>
-        {% if post.subtitle %}
-        <p>{{ post.subtitle }}</p>
-        {% endif %}
+        <a href="{{ post.url }}">
+            <strong>{{ post.title }}</strong>
+            <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date_to_string }}</time>
+            {% if post.subtitle %}
+            <p>{{ post.subtitle }}</p>
+            {% endif %}
+        </a>
     </li>
+{% endunless %}
 {% endfor %}
 </ul>

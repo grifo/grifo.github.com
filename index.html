@@ -41,18 +41,20 @@
         <ul>
             <li class="html">HTML5</li>
             <li class="css">CSS3</li>
-            <li class="js">Javascript</li>
+            <li class="js">JavaScript</li>
         </ul>
     </section>
     <section class="blog content" id="blog">
         <h2><a href="/blog">Blog</a></h2>
-        {% for post in site.categories.blog limit:2 %}
+        {% for post in site.categories.general limit:2  %}
+        {% unless post.typing %}
         <article>
             <a href="{{ post.url }}">
                 <h3>{{ post.title }}</h3>
                 <p>{{ post.subtitle }}</p>
             </a>
         </article>
+        {% endunless %}
         {% endfor %}
     </section>
     <section class="clientes" id="clientes">

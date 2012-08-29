@@ -774,15 +774,20 @@ a:hover {
 #main #disqus_thread a.dsq-subscribe-rss:hover em {
   text-decoration: underline;
 }
+.post-list {
+  clear: both;
+}
 .post-list li {
   display: block;
-  padding: 10px 0px 7px 20px;
+  padding: 20px 0px;
   border-bottom: 1px dotted #ddd;
-  text-align: right;
-  cursor: pointer;
   position: relative;
 }
-.post-list li a {
+.post-list li strong,
+.post-list li p {
+  margin-right: 100px;
+}
+.post-list li strong {
   -webkit-transition: all 0.1s ease-in;
   -moz-transition: all 0.1s ease-in;
   -o-transition: all 0.1s ease-in;
@@ -792,45 +797,97 @@ a:hover {
   font-size: 32px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #c33823;
+  color: #AAA;
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
   *zoom: 1;
   padding: 0 10px;
 }
-.post-list li time {
-  display: none;
-  position: absolute;
-  top: 22px;
-  left: 10px;
-  font-family: RobotoRegular, sans-serif;
-  font-size: 14px;
-  color: #bbb;
-}
 .post-list li p {
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-  max-height: 0;
-  overflow: hidden;
-  color: #666;
-  opacity: 0;
-  padding-left: 30%;
-  position: relative;
-  top: 10px;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: #DDD;
   font-family: RobotoLight, sans-serif;
   font-size: 18px;
 }
-.post-list li:hover a {
+.post-list li time {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  font-family: RobotoRegular, sans-serif;
+  font-size: 14px;
+  color: #bbb;
+  background: #c3c3c3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  padding: 2px 3px;
+  color: #fafafa;
+}
+.post-list li a strong {
+  color: #c33823;
+}
+.post-list li a p {
+  color: #888;
+}
+.post-list li a:hover {
+  text-decoration: none;
+}
+.post-list li a:hover strong {
   background: #c63e2c;
   color: #fff;
 }
-.post-list li:hover p {
-  margin-bottom: 15px;
-  max-height: 100px;
-  opacity: 1;
+.braziljs-special,
+.braziljs-list {
+  background: #FAFAFA;
+  -webkit-box-shadow: 0 2px 6px #cccccc;
+  -moz-box-shadow: 0 2px 6px #cccccc;
+  box-shadow: 0 2px 6px #cccccc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  outline: 6px solid rgba(200, 200, 200, 0.15);
+  height: 100px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+.braziljs-special h1,
+.braziljs-list h1 {
+  line-height: 100px;
+  font-family: RobotoLight, sans-serif;
+  text-transform: uppercase;
+  font-size: 34px;
+  color: #666;
+  float: left;
+  font-weight: 400;
+}
+.braziljs-special img,
+.braziljs-list img {
+  float: right;
+}
+.braziljs-special {
+  height: 50px;
+  margin: 40px 0;
+}
+.braziljs-special div {
+  float: left;
+}
+.braziljs-special h1 {
+  float: none;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 5px;
+}
+.braziljs-special .btn {
+  float: left;
+  font-size: 14px;
 }
 .tag-list li {
   display: inline;
