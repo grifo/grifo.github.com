@@ -2,7 +2,7 @@
 layout: default
 title: blog da Grifo - BrazilJS
 ---
-<header class="braziljs-list">
+<header class="braziljs-list clearfix">
     <h1>Cobertura do evento</h1>
     <img src="/images/logo-braziljs.png" alt="Brazil JS">
 </header>
@@ -11,7 +11,7 @@ title: blog da Grifo - BrazilJS
 {% unless post.typing %}
     <li>
         <a href="{{ post.url }}">
-            <strong>{{ post.title }}</strong>
+            <strong>{{ post.title | replace: 'BrazilJS - ', '' }}</strong>
             <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date_to_string }}</time>
             {% if post.subtitle %}
             <p>{{ post.subtitle }}</p>
@@ -24,7 +24,7 @@ title: blog da Grifo - BrazilJS
 {% for post in site.categories.braziljs %}
 {% if post.typing %}
     <li>
-        <strong>{{ post.title }}</strong>
+        <strong>{{ post.title | replace: 'BrazilJS - ', '' }}</strong>
         <time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date_to_string }}</time>
         {% if post.subtitle %}
         <p>{{ post.subtitle }}</p>

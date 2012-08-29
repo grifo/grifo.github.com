@@ -381,11 +381,10 @@ a {
     .box-shadow(0 2px 6px #CCC);
     .border-radius(4px);
     outline:6px solid rgba(200, 200, 200, 0.15);
-    height:100px;
     margin-bottom:40px;
     padding:20px;
     h1 {
-        line-height:100px;
+        margin-top:28px;
         font-family:RobotoLight, sans-serif;
         text-transform:uppercase;
         font-size:34px;
@@ -400,7 +399,6 @@ a {
 }
 
 .braziljs-special {
-    height:50px;
     margin:40px 0;
     div {
         float:left;
@@ -409,13 +407,41 @@ a {
         float:none;
         font-size:24px;
         line-height:28px;
+        margin-top:0;
         margin-bottom:5px;
     }
-    .btn {
-        float:left;
-        font-size:14px;
+}
+
+@media only screen and (max-width: 1120px) {
+    .braziljs-list {
+        h1 {
+            margin-top:6px;
+            width:200px;
+        }
     }
 }
+
+@media only screen and (max-width: 940px) {
+    .braziljs-special,
+    .braziljs-list {
+        padding:10px;
+        h1, img, div {
+            float:none;
+            display:block;
+        }
+        h1 {
+            font-size:18px;
+            margin:0;
+            width:auto;
+        }
+        img {
+            margin-top:10px;
+            width:150px;
+            max-width:100%;
+        }
+    }
+}
+
 
 .tag-list {
     li { display:inline; }
@@ -470,6 +496,7 @@ a {
     }
 }
 
+
 @media only screen and (max-width: 639px),
 only screen and (max-device-width: 480px) {
     html {
@@ -504,6 +531,10 @@ only screen and (max-device-width: 480px) {
             font-family:RobotoLight;
             font-size:16px;
         }
+    }
+    .braziljs-special,
+    .braziljs-list {
+        margin-top:20px;
     }
 }
 
