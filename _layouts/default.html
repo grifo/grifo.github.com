@@ -37,7 +37,7 @@
 <body>
 {% endif %}
     <header id="sidebar">
-        {% if page.date %}
+        {% if page.date or page.blog %}
         <a href="/blog" class="back">home do blog</a>
         {% else %}
         <a href="/" class="back">http://gri.fo</a>

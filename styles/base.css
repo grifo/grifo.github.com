@@ -798,6 +798,7 @@ a:hover {
 .post-list li strong,
 .post-list li p {
   margin-right: 100px;
+  margin-left: 10px;
 }
 .post-list li strong {
   -webkit-transition: all 0.1s ease-in;
@@ -814,11 +815,9 @@ a:hover {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  padding: 0 10px;
 }
 .post-list li p {
   margin-top: 5px;
-  margin-left: 10px;
   color: #DDD;
   font-family: RobotoLight, sans-serif;
   font-size: 18px;
@@ -839,6 +838,10 @@ a:hover {
   background-clip: padding-box;
   padding: 2px 3px;
   color: #fafafa;
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 .post-list li a strong {
   color: #c33823;
@@ -985,12 +988,6 @@ a:hover {
     background-size: 100% 100%;
     background-image: url(../images/grifo.png);
   }
-  .post-list li p {
-    max-height: 100%;
-    opacity: 1;
-    margin: -20px 0 0 0 !important;
-    padding: 15px 10px;
-  }
   #main {
     padding-left: 290px;
   }
@@ -1002,6 +999,15 @@ a:hover {
   }
   #main pre code {
     font-size: 80%;
+  }
+  .post-list li strong,
+  .post-list li p {
+    margin: 0;
+    padding: 0;
+  }
+  .post-list li time {
+    position: static;
+    margin-bottom: 5px;
   }
 }
 @media only screen and (max-width: 639px), only screen and (max-device-width: 480px) {
@@ -1045,10 +1051,6 @@ a:hover {
   }
   #main .meta {
     font-size: 12px;
-  }
-  .post-list li a {
-    font-family: RobotoLight;
-    font-size: 16px;
   }
   .braziljs-special,
   .braziljs-list {

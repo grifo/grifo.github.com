@@ -338,6 +338,7 @@ a {
 
         strong, p {
             margin-right:100px;
+            margin-left:10px;
         }
         strong { 
             .transition(all .1s ease-in);
@@ -348,11 +349,9 @@ a {
             text-decoration:none;
             color:#AAA;
             .inline-block();
-            padding:0 10px;
         }
         p {
             margin-top:5px;
-            margin-left:10px;
             color:#DDD;
             font-family:RobotoLight, sans-serif;
             font-size:18px;
@@ -369,6 +368,7 @@ a {
             .border-radius(4px);
             padding:2px 3px;
             color:#fafafa;
+            .inline-block();
         }
 
         a {
@@ -503,17 +503,21 @@ a {
             background-image:url(../images/grifo.png);
         }
     }
-    .post-list li p {
-        max-height:100%;
-        opacity:1;
-        margin:-20px 0 0 0 !important;
-        padding:15px 10px;
-    }
     #main {
         padding-left:290px;
         h2 { font-size: 28px; }
         article p { font-size:15px; }
         pre code { font-size:80%; }
+    }
+    .post-list li {
+        strong, p { 
+            margin:0;
+            padding:0;
+        }
+        time {
+            position:static;
+            margin-bottom:5px;
+        }
     }
 }
 
@@ -546,12 +550,6 @@ only screen and (max-device-width: 480px) {
         article { margin-bottom:40px; }
         pre code { font-size:80%; }
         .meta { font-size:12px; }
-    }
-    .post-list {
-        li a {
-            font-family:RobotoLight;
-            font-size:16px;
-        }
     }
     .braziljs-special,
     .braziljs-list {
