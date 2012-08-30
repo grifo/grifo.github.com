@@ -38,10 +38,10 @@ A plataforma mobile é recheada de tamanhos de tela diferentes, densidade de pix
 
 Podemos utilizar remote web inspector atualmente disponível para browsers mais modernos, Adobe Shadow além de:
 
-*Use o telefone dos amigos
-*[mobilexweb.com/emulators](mobilexweb.com/emulators)
-*[perfectmobile.com](perfectmobile.com)
-*[deviceanywhere.com](deviceanywhere.com)
+* Use o telefone dos amigos
+* [mobilexweb.com/emulators](mobilexweb.com/emulators)
+* [perfectmobile.com](perfectmobile.com)
+* [deviceanywhere.com](deviceanywhere.com)
 
 ### Futuro
 
