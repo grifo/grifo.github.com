@@ -7,7 +7,7 @@ tags:
 - JavaScript
 - BrazilJS
 ---
-Arranhando um pouco de português, Mike inicia a sua apresentação mostrando o início da história do Opera na TV através dos consoles da Nintendo, e posteriormente em várias SmartTvs.
+Muito bem humorado e arranhando português, Mike inicia a sua apresentação mostrando o início da história do Opera na TV através dos consoles da Nintendo, e posteriormente em várias SmartTvs.
 
 Inicialmente ele levantou algumas preocupações que devemos tomar quando pensamos em desenvolver aplicativos para televisão. A principal delas é garantir que o conteúdo apareça na área central do televisor, visto que alguns modelos possuem uma margem externa à área visível que é utilizada para outros recursos.
 
