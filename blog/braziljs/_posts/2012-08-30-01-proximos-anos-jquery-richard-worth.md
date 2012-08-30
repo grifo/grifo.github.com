@@ -1,7 +1,6 @@
 ---
 layout: post
-title: BrazilJS - Próximos anos da jQuery por Richard D. Worth
-subtitle: Com muito humor, comida, música e futebol, Richard Worth promove a jQuery e a sua comunidade
+title: BrazilJS - Próximos anos da jQuery por Richard ele promove a jQuery e a sua comunidade
 author: jean
 tags:
 - JavaScript
@@ -18,10 +17,8 @@ John Resig lançou a biblioteca em 2006 e a primeira reação da comunidade foi 
 
 Worh deixa claro que sua intenção é desenvolver ainda mais esta comunidade. Ele convida a todos para que apoiem o projeto através do e-mail membership@jquery.org.
 
-<br>
-
 O espaço aberto a perguntas logo levanta o assunto polêmico: jQuery 2.0 não dará suporte para IE 6/7/8. Worth explica que haverá um desenvolvimento em paralelo da versão 1.9 para estes navegadores. Sobre a situação da jQuery UI, não haverá versão específica.
 
 A cooperação com Firefox OS, Mozilla, Apple, Microsoft e outras comunidades também uma das intenções da jQuery Foundation.
 
-> jQuery precisa existir porque a API do DOM é horrível!
+> jQuery precisa existir porque a API do DOM é horrível! - Richard
