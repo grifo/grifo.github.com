@@ -1,11 +1,12 @@
 ---
 layout: post
 title: BrazilJS - Próximos anos da jQuery por Richard D. Worth
-subtitle: Próximos cinco anos da jQuery
+subtitle: Com muito humor, comida, música e futebol, Richard Worth promove a jQuery e a sua comunidade
 author: jean
 tags:
 - JavaScript
 - BrazilJS
+- jQuery
 ---
 Richard inicia a palestra em português com muito bom humor contando um pouco de sua trajetória pelo Brasil.
 
