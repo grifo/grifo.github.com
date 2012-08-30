@@ -6,7 +6,7 @@ author: leandro
 tags:
 - JavaScript
 - BrazilJS
-- CPA
+- Chrome Packaged Apps
 ---
 Renato é engenheiro do Google alocado no Brasil e um dos responsáveis na gigante por levar o melhor da experiência nativa para um contexto web. 
 
@@ -15,6 +15,7 @@ O meio são as *Chrome Packaged Apps* que oferencem APIs com acesso a aspectos a
 As CPA invertem a mentalidade de desenvolver *online first* e depois adaptar para offline. A prática atual é custosa e inviável e as CPAs vem para tentar resolver isto.
 
 As principais vantagens das CPAs são:
+
 * Out of browser - executa independente do browser
 * Look and Feel nativo
 * Mais *poder* para o desenvolvedor
