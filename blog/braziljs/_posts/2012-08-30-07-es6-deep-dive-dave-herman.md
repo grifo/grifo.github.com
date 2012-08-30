@@ -63,8 +63,8 @@ As instruções acima indica que o arquivo *config.json* deve ser carregado e qu
 
 O *yield* opera disparando nossas *promises*. Uma possibilidade incrível é carregar uma série de arquivos e disparar uma *callback* apenas quando todos forem completamente carregados.
 
----
+<br>
 
-Como encerramento temos um *brainfuck* escrito em JavaScript. A explicação é um tanto engraçada e complicado, o mistério é relevado, o resultado do código é `javascript`.
+No encerramento temos um *brainfuck* escrito em JavaScript. A explicação é um tanto engraçada, o mistério é relevado, o resultado do código é `javascript`, brilhante.
 
 
