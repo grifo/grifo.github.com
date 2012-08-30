@@ -39,9 +39,9 @@ A plataforma mobile é recheada de tamanhos de tela diferentes, densidade de pix
 Podemos utilizar remote web inspector atualmente disponível para browsers mais modernos, Adobe Shadow além de:
 
 * Use o telefone dos amigos
-* [mobilexweb.com/emulators](mobilexweb.com/emulators)
-* [perfectmobile.com](perfectmobile.com)
-* [deviceanywhere.com](deviceanywhere.com)
+* [mobilexweb.com/emulators](http://mobilexweb.com/emulators)
+* [perfectmobile.com](http://perfectmobile.com)
+* [deviceanywhere.com](http://deviceanywhere.com)
 
 ### Futuro
 
@@ -49,7 +49,7 @@ Podemos esperar para o futuro próximo, além da morte do Android 2.x, APIs web 
 
 ### Últimas dicas
 
-Max finalizou sua apresentação com alguns conselhos, como, não seja mais um na multidão, performance é importante, pratica boas práticas, não seja um fanática, seja multi plataforma e [futurefriend.ly](futurefriend.ly).
+Max finalizou sua apresentação com alguns conselhos, como, não seja mais um na multidão, performance é importante, pratica boas práticas, não seja um fanática, seja multi plataforma e [futurefriend.ly](http://futurefriend.ly).
 
 > Use jQuery com cuidade em mobile - Max
 
