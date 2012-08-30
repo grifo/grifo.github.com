@@ -8,7 +8,7 @@ tags:
 - BrazilJS
 - IHC
 ---
-Eduardo Lundgren, líder de desenvolvimento na Liferay, começou sua palestra falando sobre IHC e Realidade aumentada. Utilizou alguns exemplos de hardware que já são mais conhecidos, como Kinect, PS Move e Wii.
+Eduardo Lundgren, líder de desenvolvimento na Liferay, iniciou sua palestra falando sobre IHC e Realidade aumentada. Utilizou alguns exemplos de hardware que já são mais conhecidos, como Kinect, PS Move e Wii.
 
 Eduardo apresentou uma API que está desenvolvendo em JavaScript para rastrear objetos em imagens da câmera do usuário. Sua utilização não depende de nenhum plugin e parece bem simples de se utilizar (em browsers modernos, obviamente).
 
