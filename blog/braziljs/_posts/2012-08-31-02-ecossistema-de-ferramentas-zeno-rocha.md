@@ -6,6 +6,9 @@ author: ricardop
 tags:
 - JavaScript
 - BrazilJS
+- Ferramentas
+- HTML
+- CSS
 ---
 
 Zeno Rocha é Fron-end Engineer na Liferay e um dos criadores do projeto jQuery Boilerplate. Vale a pena conferir o [Wormz](http://html5-pro.com/wormz/), experimento que Zeno desenvolveu usando canvas e foi destaque no chrome experiments!
@@ -18,15 +21,15 @@ Abaixo algumas opções por categorias:
 
 Uma boa opção para começar projetos são os boilerplates, entre eles: html5 boilerplate, mobile boilerplate, backbone boilerplate e o jQuery boilerplate, que fornece uma base para a criação de um plugin jQuery. A dica é que você crie seu próprio boilerplate!
 
-### Pré processadores HTML
+### Pré-processadores HTML
 
 Haml, Markdown e Jade
 
-### Pré processadores CSS
+### Pré-processadores CSS
 
 Less e Sass, com eles você pode usar variáveis e muito mais em seus projetos.
 
-### Pré processadores JavaScript
+### Pré-processadores JavaScript
 
 CoffeeScript e Dart
 
