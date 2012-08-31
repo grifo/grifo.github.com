@@ -8,6 +8,9 @@ tags:
 - BrazilJS
 - Testes
 ---
+
+<a href="http://www.slideshare.net/leobalter/testing-sucks" class="btn">Slides</a>
+
 Rolou há pouco a palestra do Léo Balter sobre testes unitários em JS.
 
 Ele falou sobre a importância dos testes unitários nas aplicações e o quanto eles podem ser exaustivos quando executados em um projeto já desenvolvido.
