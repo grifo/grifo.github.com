@@ -1,6 +1,5 @@
 ---
 layout: post
-typing: true
 title: BrazilJS - Kit de sobrevivência por Zeno Rocha
 subtitle: Um panorama sobre o ecossistema de ferramentas voltadas ao desenvolvimento front-end
 author: ricardop
@@ -11,50 +10,46 @@ tags:
 
 Zeno Rocha é Fron-end Engineer na Liferay e um dos criadores do projeto jQuery Boilerplate. Vale a pena conferir o [Wormz](http://html5-pro.com/wormz/), experimento que Zeno desenvolveu usando canvas e foi destaque no chrome experiments!
 
-Temos um grande número de bibliotecas e ferramentas, qual estudar e utilizar?
+Em sua apresentação, Zeno mostrou diversas ferramentas que podem ser utilizadas para iniciar, agilizar e otimizar o desenvolvimento de um projeto. Existem muitas opções, mas qual devemos utilizar? Bom, isto só depende de você e da sua necessidade!
 
-Só para começar nossos projetos temos Boilerplates, Bootstraps, Backbone, ... crie seu próprio Boilerplate!
+Abaixo algumas opções por categorias:
 
-Confira também o jQuery Boilerplate, base para plugin jquery, criado pelo Zeno e Addy Osmani .
+### Começar um projeto
 
-font awesome, ftpm (font package manager)
+Uma boa opção para começar projetos são os boilerplates, entre eles: html5 boilerplate, mobile boilerplate, backbone boilerplate e o jQuery boilerplate, que fornece uma base para a criação de um plugin jQuery. A dica é que você crie seu próprio boilerplate!
 
-pre processadores: 
-html: haml, markdown, jade
+### Pré processadores HTML
 
-css: less, sass
-mostrando uso de variaveis no css4
+Haml, Markdown e Jade
 
-javascript: 
+### Pré processadores CSS
 
-coffeescript, dart
+Less e Sass, com eles você pode usar variáveis e muito mais em seus projetos.
 
-devtools: firebug, dragonfly
+### Pré processadores JavaScript
 
-ferramentas processo de desenvolvimento (alt tab, browser f5): livereloadr, 
-tincr: mudança no browser direto do editor
+CoffeeScript e Dart
 
-mobile: adobe shadow, phonegap
+### Devtools
 
-firefox os: sistema em html5 (demo)
+Firebug e Opera Dragonfly
 
-TESTES
-jasmine, qunit, dojo js, zombie js, phantomjs,
+### Processo de desenvolvimento
 
-demo do phantom
+Livereloadr e o tincr. Elas possibilitam o live reload do seu código, facilitando muito o processo de desenvolvimento, já que você não precisa reescrever no seu editor aquilo que alterou diretamente no browser.
 
-build tools, compressors, pimpmyjs, grunt, yeoman (usando grunt)
+### Mobile
 
-yeoman demo: criando base para projeto, com scripts, 404, pagina de testes, compila os scripts concatenando performance
+Adobe shadow e phonegap.
 
-editores: notepad++, texmate, sublime
+### Editores
 
-html bizarro
+Notepad++, Texmate e Sublime Text. 
 
-voltando aos tempos do dinossauros com participacao do maujor que usou
-grandes ferranentas como o FRONTPAGE, dreamweaver + fireworks
+### Testes
 
-> geeks love to fight! Rasmus (php)
+Zeno citou ferramentas de testes como Jasmine, QUnit e a Zombie JS e também build tools.
 
+No fim tivemos a sessão *voltando ao tempo dos dinossauros* com participação do lendário Maujor, que falou como começou na web e nos fez relembrar *grandes ferramentas* como o Frontpage e Dreamweaver.
 
-
+> O sucesso da aplicação não depende da ferramenta e sim em como ela é aplicada

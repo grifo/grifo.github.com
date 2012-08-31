@@ -70,5 +70,3 @@ Luma definitivamente conquistou a platéia com bons experimentos de uso de CSS, 
 <br>
 
 Eu já tinha conferido os slides desta palestra, que havia sido apresentada na [QConSP](http://qconsp.com), e foi uma satisfação ve-la ao vivo, ótimo palestrante!
-
-
