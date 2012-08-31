@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "BrazilJS - A próxima geração de consoles será a última por Michal Budzynski"
-subtitle: The next console generation will be the last
+subtitle: O Polonês do CSS Nyan Cat encoraja o desenvolvimento de games em HTML5
 author: vitor
 tags:
 - JavaScript
