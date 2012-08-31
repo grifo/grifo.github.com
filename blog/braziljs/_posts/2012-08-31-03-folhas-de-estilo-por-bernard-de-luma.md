@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BrazilJS - CSS por Bernard de Luma
+title: BrazilJS - CSS por Bernard de Luna
 subtitle: Estilizando Folhas de Estilo com Estilo
 author: jean
 tags:
@@ -17,7 +17,7 @@ O principal argumento é de que o *CSS* é muito fácil e qualquer um consegue f
 
 ### Performance
 
-> Não perca tempo discutindo entre usar CLASS ou ID - Luma
+> Não perca tempo discutindo entre usar CLASS ou ID - Luna
 
 Quando falamos de performance, *Key selector* logo vem a mente. Toda seleção de CSS começa a ser avaliada da direita, um detalhe que muitos não dão atenção. Quanto menos itens usarmos na seleção, melhor a performance.
 
@@ -65,7 +65,7 @@ E as dicas finais de modularização são: documente seu código, crie uma [pág
 
 > Brinque mais, surpreenda, reeinvente! - Bernard
 
-Luma definitivamente conquistou a platéia com bons experimentos de uso de CSS, vale conferir o [post do Zeno que explica como fizeram o Old Radio](http://blog.zenorocha.com/post/27569632629/como-fizemos-o-oldradio). 
+Luna definitivamente conquistou a platéia com bons experimentos de uso de CSS, vale conferir o [post do Zeno que explica como fizeram o Old Radio](http://blog.zenorocha.com/post/27569632629/como-fizemos-o-oldradio). 
 
 <br>
 
