@@ -55,7 +55,7 @@ Bernard lista algumas das metodologias para escrita de estilo:
 
 #### LESS / SASS
 
-Particularmente não consigo ver o desenvolvimento frontend sem base em um bom pré-processador de CSS, seja ele qual for. As principais vantagens são as possibilidades de armazenar variáveis, fontes, espaçamentos além do uso de *mixins* [para driblar *vendor-prefixed properties*](http://lesselements.com.
+Particularmente não consigo ver o desenvolvimento frontend sem base em um bom pré-processador de CSS, seja ele qual for. As principais vantagens são as possibilidades de armazenar variáveis para nomes de fontes, cores e espaçamentos, além do uso de *mixins* [para driblar *vendor-prefixed properties*](http://lesselements.com.
 
 <br>
 
@@ -67,7 +67,7 @@ As dicas finais de modularização são: documente seu código, crie uma [págin
 
 > Brinque mais, surpreenda, reeinvente! - Bernard
 
-Luna definitivamente conquistou a platéia com bons experimentos de uso de CSS, vale conferir o [post do Zeno que explica como fizeram o Old Radio](http://blog.zenorocha.com/post/27569632629/como-fizemos-o-oldradio). 
+Luna definitivamente conquistou a platéia com bons experimentos usando CSS, vale conferir o [post do Zeno que explica como fizeram o Old Radio](http://blog.zenorocha.com/post/27569632629/como-fizemos-o-oldradio). 
 
 <br>
 
