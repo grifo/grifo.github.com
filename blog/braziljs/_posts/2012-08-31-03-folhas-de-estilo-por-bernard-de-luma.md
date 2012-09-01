@@ -29,7 +29,7 @@ Outro vilão é o `@import`, que bloqueia o processamento da folha de estilo a e
 
 Seletores CSS3 podem influenciar sua performance, evite `:first-child`, `:nth-child`, `:only-child` entre outros. 
 
-> [...] Considere usar classes específicas na marcação. - David Hyatt
+> Considere usar classes específicas na marcação. - David Hyatt
 
 Por incrível que pareça, `border-radius` possui custo de renderização maior que sombras e gradientes.
 
