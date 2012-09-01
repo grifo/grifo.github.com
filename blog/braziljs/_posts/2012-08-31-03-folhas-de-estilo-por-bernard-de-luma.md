@@ -9,6 +9,8 @@ tags:
 - CSS
 ---
 
+<a href="http://bernarddeluna.com/talks/estilizando" class="btn">Slides</a>
+
 Bernard trabalha como diretor criativo da Melt, empresa de compra de mídia em tempo real. Sua palestra é muito descolada e cheia de citações próprias
 
 > Desenvolvedores não sabem CSS. Nem **Deus** sabe CSS - Bernard
