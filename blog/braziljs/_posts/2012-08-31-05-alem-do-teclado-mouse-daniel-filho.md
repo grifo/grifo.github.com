@@ -2,6 +2,7 @@
 layout: post
 title: BrazilJS - Além do teclado e mouse por Daniel Filho
 subtitle: E se fosse possível em um jogo, controlar uma nave com movimentos da sua cabeça? E reconhecer cores através de objetos mostrados para a webcam?
+author: ricardop
 tags:
 - JavaScript
 - BrazilJS
@@ -11,7 +12,7 @@ tags:
 
 <a href="http://danielfilho.info/presentations/gum/slides/" class="btn">Slides</a>
 
-Daniel Filho trabalha no IG como desenvolvedor front-end, colaborou com os projeto [Move the Web Forward](http://movethewebforward.org), [Colour Grab](http://colourgrab.com/) e recentemente desenvolveu o Mditor (editor markdown).
+Daniel Filho trabalha no IG como desenvolvedor front-end, colaborou com os projeto [Move the Web Forward](http://movethewebforward.org), [Color Grep](http://lab.danielfilho.info/color-grep/) e recentemente desenvolveu o Mditor (editor markdown).
 
 Em sua apresentação, Daniel falou sobre webRTC (Web Real-Time Communication), um projeto que através de APIs JavaScript permite a comunicação em tempo real através do browser.
 
