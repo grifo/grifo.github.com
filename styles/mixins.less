@@ -5,6 +5,12 @@
     *display:inline;
     *zoom:1;
 }
+.box-sizing(@s){
+    -webkit-box-sizing:@s;
+       -moz-box-sizing:@s;
+        -ms-box-sizing:@s;
+            box-sizing:@s;
+}
 .min-height(@height) {
     min-height: @height;
     height: auto !important;

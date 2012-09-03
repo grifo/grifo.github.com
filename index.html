@@ -46,7 +46,7 @@
     </section>
     <section class="blog content" id="blog">
         <h2><a href="/blog">Blog</a></h2>
-        {% for post in site.categories.general limit:2  %}
+        {% for post in site.posts limit:2  %}
         {% unless post.typing %}
         <article>
             <a href="{{ post.url }}">

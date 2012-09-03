@@ -11,6 +11,11 @@ tags:
 
 <a href="http://bernarddeluna.com/talks/estilizando" class="btn">Slides</a>
 
+<figure>
+  <img src="/images/braziljs-2012/bernard-de-luna.jpg" alt="Jean Carlo e Bernard de Luna" width="300">
+  <figcaption>Jean Carlo e Bernard de Luna</figcaption>
+</figure>
+
 Bernard trabalha como diretor criativo da Melt, empresa de compra de mídia em tempo real. Sua palestra é muito descolada e cheia de citações próprias
 
 > Desenvolvedores não sabem CSS. Nem **Deus** sabe CSS - Bernard
