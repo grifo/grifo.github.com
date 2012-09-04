@@ -708,6 +708,10 @@ a:hover {
   text-align: center;
   padding-bottom: 10px;
 }
+#main figure.full {
+  float: none;
+  margin-left: 0;
+}
 #main .btn {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
