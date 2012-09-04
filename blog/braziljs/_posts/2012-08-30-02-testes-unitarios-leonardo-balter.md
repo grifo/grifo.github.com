@@ -11,6 +11,11 @@ tags:
 
 <a href="http://www.slideshare.net/leobalter/testing-sucks" class="btn">Slides</a>
 
+<figure>
+  <img src="/images/braziljs-2012/leonardo-balter.jpg" alt="Cynthia Zanoni e Leonardo Balter" width="300">
+  <figcaption>Cynthia Zanoni e Leonardo Balter</figcaption>
+</figure>
+
 Rolou há pouco a palestra do Léo Balter sobre testes unitários em JS.
 
 Ele falou sobre a importância dos testes unitários nas aplicações e o quanto eles podem ser exaustivos quando executados em um projeto já desenvolvido.

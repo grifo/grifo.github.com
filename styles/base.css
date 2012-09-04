@@ -993,6 +993,13 @@ a:hover {
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 950px) {
+  #main figure {
+    float: none;
+    display: inline-block;
+    margin: 0;
+  }
+}
 @media only screen and (max-width: 800px) {
   html {
     background-position: -70px 0;
