@@ -16,9 +16,9 @@ tags:
   <figcaption>Jean Carlo e Bernard de Luna</figcaption>
 </figure>
 
-Bernard trabalha como diretor criativo da Melt, empresa de compra de mídia em tempo real. Sua palestra é muito descolada e cheia de citações próprias
+Bernard trabalha como diretor criativo da Melt, empresa de compra de mídia em tempo real. Sua palestra é muito descolada e cheia de citações próprias.
 
-> Desenvolvedores não sabem CSS. Nem **Deus** sabe CSS - Bernard
+Dentre as mais marcantes, desenvolvedores não sabem CSS e nem **Deus** sabe CSS.
 
 O principal argumento é de que o *CSS* é muito fácil e qualquer um consegue fazer. Toda a iteração acaba sendo baseada em tentativa e erro até o ponto em que temos um *stylesheet*.
 
