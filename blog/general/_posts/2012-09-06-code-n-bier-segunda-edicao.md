@@ -12,6 +12,8 @@ tags:
 
 Mais de cem inscritos, três palestrantes, um jogo usando websockets e ainda competir a atenção com o jogo do Grêmio. Foi dada a largada para a segunda edição do Code n' Bier!
 
+<img src="/code/codenbier/edition-02.jpg" alt="Foto início do evento">
+
 Após a primeira edição, abrimos um [espaço para sugestões](http://bit.ly/RgriR3). Mas claro, como a gente sabe que programador é tímido por natureza, tivemos poucas sugestões.
 
 > Gostaria de ver algo sobre websockets e nodeJS - Guilherme Severo
