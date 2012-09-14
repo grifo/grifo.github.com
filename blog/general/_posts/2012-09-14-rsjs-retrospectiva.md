@@ -104,7 +104,7 @@ Além disso, ele apresentou vários exemplos práticos para personalização de 
   <figcaption>Felipe Moura</figcaption>
 </figure>
 
-Assim como performance, acessibilidade é assunto que sempre gera uma grande discussão sobre a sua importância e, em alguns casos, o que é a acessibilidade aplicada em um projeto web e por que não há preocupação com ela.
+Assim como performance, acessibilidade é um assunto que sempre gera uma grande discussão sobre a sua importância e, em alguns casos, o que é a acessibilidade aplicada em um projeto web e por que não há preocupação com ela.
 
 Felipe trouxe conceitos, números e ferramentas bem interessantes sobre acessibilidade, apresentou vários tipos de interfaces, como uma maçaneta e até um fogão! Esses objetos representam a função de uma interface, que é o "meio do caminho", entre aquilo que você quer e aquilo que você irá fazer para obter isso.
 
