@@ -87,7 +87,7 @@ O paradigma de orientação à eventos é controlada por um fluxo guiado por ind
   <figcaption>Renatho de Carli Rosa</figcaption>
 </figure>
 
-Entre as diversas formas de referenciar um problema cotidiano, que é o risco de nossos scripts não serem renderizados  e consequentemente comprometer todo o seu funcionamento de nossas aplicações, Renatho fala sobre o JavaScript não obstrutivo. Durante a palestra, em alguns momentos ele comparou este risco que corremos em JavaScript com paraquedismo.
+Entre as diversas formas de referenciar um problema cotidiano, que é o risco de nossos scripts não serem renderizados  e consequentemente comprometer o  funcionamento de nossas aplicações, Renatho fala sobre o JavaScript não obstrutivo. Durante a palestra, em alguns momentos ele comparou este risco que corremos em JavaScript com paraquedismo.
 
 “Na web a gente tem o Javascript não obstrutivo, que equivale ao procedimento de emergência [no paraquedismo], uma forma de tratar o conteúdo e contornar o problema, caso não abra o JavaScript principal”.
 
@@ -104,7 +104,7 @@ Além disso, ele apresentou vários exemplos práticos para personalização de 
   <figcaption>Felipe Moura</figcaption>
 </figure>
 
-Acessibilidade é assunto que sempre gera uma grande discussão sobre a sua importância e, em alguns casos, o que é a acessibilidade aplicada em um projeto web e por que não há preocupação com ela.
+Assim como performance, acessibilidade é assunto que sempre gera uma grande discussão sobre a sua importância e, em alguns casos, o que é a acessibilidade aplicada em um projeto web e por que não há preocupação com ela.
 
 Felipe trouxe conceitos, números e ferramentas bem interessantes sobre acessibilidade, apresentou vários tipos de interfaces, como uma maçaneta e até um fogão! Esses objetos representam a função de uma interface, que é o "meio do caminho", entre aquilo que você quer e aquilo que você irá fazer para obter isso.
 
@@ -123,7 +123,7 @@ Durante a palestra, Felipe apresentou exemplos práticos de como é o comportame
 
 Juan fala sobre a história do Haskell e apresenta alguns exemplos práticos utilizando a sintaxe desta linguagem, que ao seu ponto de vista é uma linguagem que visa proporcionar a simplicidade e limpeza nos códigos JavaScript.
 
-*"Haskell é uma linguagem que, apesar de parecer dinâmica, ou algo assim, é uma linguagem estaticamente tipada* - Juan Maiz
+*"Haskell é uma linguagem que, apesar de parecer dinâmica, ou algo assim, é uma linguagem estaticamente tipada"* - Juan Maiz
 
 <a href="http://youtu.be/-fHsbYboNJA" class="btn">Vídeo</a>
 <a href="http://haskell-4-js-devs.heroku.com" class="btn">Slides</a>
