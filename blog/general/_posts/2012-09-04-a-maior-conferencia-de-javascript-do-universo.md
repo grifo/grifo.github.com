@@ -5,7 +5,7 @@ subtitle: "Um pequeno resumo"
 author: filipe
 tags:
     - braziljs
-    - js
+    - javascript
     - moviegames
 ---
 
