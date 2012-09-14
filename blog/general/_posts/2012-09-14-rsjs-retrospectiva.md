@@ -25,7 +25,7 @@ Para relembrar e registrar o evento, reunimos os slides e vídeos, se você não
 
 Felipe fala sobre animações rotate e keyframe e efeitos de manipulação de elementos como shadow e distorção para simular 3D com CSS3.
 
-O CSS3 nos permite criar experiências interativas e realistas, porém temos alguns fatores importantes que não podem ser deixados de lado na hora criarmos nossas aplicações: performance e renderização nos browsers.
+O CSS3 nos permite criar experiências interativas e realistas, porém temos alguns fatores importantes que não podem ser deixados de lado na hora de criarmos nossas aplicações, como performance e renderização nos browsers.
 
 <a href="http://youtu.be/kxEYwkKLJxk" class="btn">Vídeo</a>
 <a href="http://felipenmoura.org/projects/lectures/css3-animation" class="btn">Slides</a>
@@ -57,7 +57,7 @@ A partir desta premissa, Jaydson apresenta um estudo  explanado sobre a importâ
 
 Ricardo fez uma super palestra sobre CoffeScript, contando sobre sua origem, sintaxe e utilização em aplicações mais complexas.
 
-Defende fortemente o uso de frameworks para "simplificar" o desenvolvimento em JavaScript.
+Ele defende fortemente o uso de frameworks para "simplificar" o desenvolvimento em JavaScript.
 
 *"A idéia é pegar as partes boas do JS e torná-las mais acessíveis."*
 
@@ -108,7 +108,7 @@ Assim como performance, acessibilidade é um assunto que sempre gera uma grande 
 
 Felipe trouxe conceitos, números e ferramentas bem interessantes sobre acessibilidade, apresentou vários tipos de interfaces, como uma maçaneta e até um fogão! Esses objetos representam a função de uma interface, que é o "meio do caminho", entre aquilo que você quer e aquilo que você irá fazer para obter isso.
 
-Acredito que a abordagem desta palestra nos faz perceber que podemos perder usuários ou prejudicar a entrega de conteúdo, quando nosso site não é amigável ou não se adapta as necessidades básicas de um usuário para navegar.
+A abordagem desta palestra nos faz perceber que podemos perder usuários ou prejudicar a entrega de conteúdo, quando nosso site não é amigável ou não se adapta as necessidades básicas de um usuário para navegar.
 Durante a palestra, Felipe apresentou exemplos práticos de como é o comportamento de um leitor de tela perante uma interface.
 
 <a href="http://youtu.be/PHsIYJfLq3E" class="btn">Vídeo</a>
