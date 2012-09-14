@@ -11,7 +11,7 @@ tags:
 
 No dia três de março rolou o RSJS, um encontro promovido pela Grifo em parceria com os curadores do BrazilJS, Felipe Moura e Jaydson Gomes, para desenvolvedores compartilharem conhecimento e experiências.
 
-O evento era uma prévia para o BrazilJS e os palestrantes trouxeram vários temas interessantes com uma abordagem prática e simplificada e exemplos de aplicações reais. Os temas vão de acessibilidade, performance, boas práticas, animações, frameworks para desenvolvimento JavaScript e Haskell!
+O evento era uma prévia para o BrazilJS e os palestrantes trouxeram vários temas interessantes com uma abordagem prática e simplificada com exemplos de aplicações reais. Os temas vão de acessibilidade, performance, boas práticas, animações, frameworks para desenvolvimento JavaScript e até Haskell!
 
 Para relembrar e registrar o evento, reunimos os slides e vídeos, se você não conseguiu participar ou gostaria de rever as palestras, aproveite! :)
 
@@ -40,7 +40,7 @@ O CSS3 nos permite criar experiências interativas e realistas, porém temos alg
 
 Falar em performance e boas práticas, sempre gera uma grande discusão entre os desenvolvedores, ao ponto de levantar a questão: *"Performance importa?"*
 
-Fatores como o perfil e o tempo de desenvolvimento do projeto são fatores determinantes no que diz respeito à performance em Front-end, pois a atenção está mais focada ao desempenho e funcionamento no Back-end, buscando ter facilidade na geração de conteúdo/html.
+Fatores como o perfil e o tempo de desenvolvimento do projeto são determinantes no que diz respeito à performance em Front-end, pois a atenção está mais focada ao desempenho e funcionamento no Back-end, buscando ter facilidade na geração de conteúdo/html.
 
 A partir desta premissa, Jaydson apresenta um estudo  explanado sobre a importância das boas práticas para performance Front-end.
 
@@ -55,7 +55,7 @@ A partir desta premissa, Jaydson apresenta um estudo  explanado sobre a importâ
   <figcaption>Ricardo Tomasi</figcaption>
 </figure>
 
-Ricardo fez uma super palestra sobre CoffeScript, contando sua origem e sintaxe à aplicações mais complexas.
+Ricardo fez uma super palestra sobre CoffeScript, contando sobre sua origem, sintaxe e utilização em aplicações mais complexas.
 
 Defende fortemente o uso de frameworks para "simplificar" o desenvolvimento em JavaScript.
 
