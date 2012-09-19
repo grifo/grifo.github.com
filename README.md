@@ -1,1 +1,3 @@
-# Gri.fo\nhttp://gri.fo
+# Gri.fo
+
+http://gri.fo
