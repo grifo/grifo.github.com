@@ -9,6 +9,11 @@ tags:
 - Grunt
 ---
 
+<figure>
+  <img src="/images/braziljs-2012/benjamin-alman.jpg" alt="Jean Carlo e Benjamin e Alman" width="300">
+  <figcaption>Jean Carlo e Benjamin e Alman</figcaption>
+</figure>
+
 Benjamin Alman colabora com o core da jQuery e escreveu uma infinidade de plugins para a biblioteca. Trabalha na [Bocoup](http://www.bocoup.com) e é criador do *Grunt*, um gerenciador de tarefas operado através da linha de comando.
 
 Cowboy, como gosta de ser chamado, começou usando [Jake](http://github.com/mde/jake) para automatizar tarefas utilizando JavaScript.

@@ -9,6 +9,12 @@ tags:
 - ECMAScript
 - Brendan
 ---
+
+<figure class="full">
+  <img src="/images/braziljs-2012/brendan-eich.jpg" alt="Renatho de Carli, Jean Carlo, Brendan Eich, Vitor Carlos, Leandro Barbosa e Filipe Medina">
+  <figcaption>Renatho de Carli, Jean Carlo, <b>Brendan Eich</b>, Vitor Carlos, Leandro Barbosa e Filipe Medina</figcaption>
+</figure>
+
 Para fechar o BrazilJS com chave de ouro, a palestra mais esperada da noite, sem dúvida: [Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich), o "Deus" do JavaScript.
 
 Brendan Eich, cofundador da mozilla.org, criou o JavaScript no ano de 1995, chamando-o de "Mocha" e logo depois "LiveScript". Hoje, Brendan é CTO na Mozilla Corporation.

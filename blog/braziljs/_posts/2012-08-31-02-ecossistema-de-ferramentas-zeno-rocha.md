@@ -13,6 +13,11 @@ tags:
 
 <a href="http://talks.zenorocha.com/2012/braziljs/" class="btn">Slides</a>
 
+<figure>
+  <img src="/images/braziljs-2012/zeno-rocha.jpg" alt="Ricardo Pareja e Zeno Rocha" width="300">
+  <figcaption>Ricardo Pareja e Zeno Rocha</figcaption>
+</figure>
+
 Zeno Rocha é Fron-end Engineer na Liferay e um dos criadores do projeto jQuery Boilerplate. Vale a pena conferir o [Wormz](http://html5-pro.com/wormz/), experimento que Zeno desenvolveu usando canvas e foi destaque no chrome experiments!
 
 Em sua apresentação, Zeno mostrou diversas ferramentas que podem ser utilizadas para iniciar, agilizar e otimizar o desenvolvimento de um projeto. Existem muitas opções, mas qual devemos utilizar? Bom, isto só depende de você e da sua necessidade!

@@ -11,9 +11,14 @@ tags:
 
 <a href="http://bernarddeluna.com/talks/estilizando" class="btn">Slides</a>
 
-Bernard trabalha como diretor criativo da Melt, empresa de compra de mídia em tempo real. Sua palestra é muito descolada e cheia de citações próprias
+<figure>
+  <img src="/images/braziljs-2012/bernard-de-luna.jpg" alt="Jean Carlo e Bernard de Luna" width="300">
+  <figcaption>Jean Carlo e Bernard de Luna</figcaption>
+</figure>
 
-> Desenvolvedores não sabem CSS. Nem **Deus** sabe CSS - Bernard
+Bernard trabalha como diretor criativo da Melt, empresa de compra de mídia em tempo real. Sua palestra é muito descolada e cheia de citações próprias.
+
+Dentre as mais marcantes, desenvolvedores não sabem CSS e nem **Deus** sabe CSS.
 
 O principal argumento é de que o *CSS* é muito fácil e qualquer um consegue fazer. Toda a iteração acaba sendo baseada em tentativa e erro até o ponto em que temos um *stylesheet*.
 

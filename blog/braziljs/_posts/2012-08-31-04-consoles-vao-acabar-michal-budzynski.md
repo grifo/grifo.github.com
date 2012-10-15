@@ -8,6 +8,11 @@ tags:
 - BrazilJS
 ---
 
+<figure>
+  <img src="/images/braziljs-2012/michal-budzynski.jpg" alt="Vitor Carlos e Michal Budzynski" width="300">
+  <figcaption>Vitor Carlos e Michal Budzynski</figcaption>
+</figure>
+
 Como dito no site do BrazilJS, Michal é um Polonês conhecido por seus experimentos excêntricos, como o CSS Nyan Cat e o AYABABTU. Através de sua apresentação e com os contatos externos durante o evento, percebi que isso é reflexo de sua personalidade espirituosa e debochada. Apesar das princadeiras, ele é um dos principais desenvolvedores do Firefox OS e é também o curador do OnGameStart, uma conferência de games em HTML5 que começou na Polônia e que agora está se expandindo para outros países.
 
 Michal começou o seu talk brincando com a paixão brasileira por futebol. Ele levantou o fato que a Polônia ganhou do Brasil em 1974 por 1 x 0, e que só assim reconheceríamos o país. Logo depois ele explicou que o título da palestra na verdade é uma frase dita por Cevat Yerli, da Crytek

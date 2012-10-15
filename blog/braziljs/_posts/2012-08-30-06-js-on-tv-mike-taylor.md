@@ -7,6 +7,12 @@ tags:
 - JavaScript
 - BrazilJS
 ---
+
+<figure>
+  <img src="/images/braziljs-2012/mike-taylor.jpg" alt="Vitor Carlos e Mike Taylor" width="300">
+  <figcaption>Vitor Carlos e Mike Taylor</figcaption>
+</figure>
+
 Muito bem humorado e arranhando português, Mike inicia a sua apresentação mostrando o início da história do Opera na TV através dos consoles da Nintendo, e posteriormente em várias SmartTvs.
 
 Inicialmente ele levantou algumas preocupações que devemos tomar quando pensamos em desenvolver aplicativos para televisão. A principal delas é garantir que o conteúdo apareça na área central do televisor, visto que alguns modelos possuem uma margem externa à área visível que é utilizada para outros recursos.

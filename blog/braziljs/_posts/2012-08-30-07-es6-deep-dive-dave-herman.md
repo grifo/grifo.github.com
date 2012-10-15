@@ -8,6 +8,9 @@ tags:
 - BrazilJS
 - ES6
 ---
+
+<a href="https://speakerdeck.com/u/dherman/p/es6-deep-dive" class="btn">Slides</a>
+
 Dave Herman trabalha no Mozilla Research com tecnologias que serão lançadas em alguns anos. O início da palestra é marcado com o anúncio exclusivo do livro *Effective JavaScript* que será lançado em dezembro.
 
 ### Symbols

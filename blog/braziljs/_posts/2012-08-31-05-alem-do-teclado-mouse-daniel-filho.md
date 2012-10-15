@@ -12,6 +12,11 @@ tags:
 
 <a href="http://danielfilho.info/presentations/gum/slides/" class="btn">Slides</a>
 
+<figure>
+  <img src="/images/braziljs-2012/daniel-filho.jpg" alt="Ricardo Pareja e Daniel Filho" width="300">
+  <figcaption>Ricardo Pareja e Daniel Filho</figcaption>
+</figure>
+
 Daniel Filho trabalha no IG como desenvolvedor front-end, colaborou com os projeto [Move the Web Forward](http://movethewebforward.org), [Color Grep](http://lab.danielfilho.info/color-grep/) e recentemente desenvolveu o Mditor (editor markdown).
 
 Em sua apresentação, Daniel falou sobre webRTC (Web Real-Time Communication), um projeto que através de APIs JavaScript permite a comunicação em tempo real através do browser.

@@ -8,6 +8,12 @@ tags:
 - BrazilJS
 - jQuery
 ---
+
+<figure>
+  <img src="/images/braziljs-2012/richard-worth.jpg" alt="Jean Carlo e Richard D. Worth" width="300">
+  <figcaption>Jean Carlo e Richard D. Worth</figcaption>
+</figure>
+
 Richard inicia a palestra em português com muito bom humor contando um pouco de sua trajetória pelo Brasil.
 
 Comida, música e futebol. Richard tenta provar que tudo isto é menos popular que jQuery segundo o [Google Trends](http://www.google.com/trends). Nem os times de futebol se salvaram: Botafogo, Fluminense, Internacional e Grêmio.

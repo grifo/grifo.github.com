@@ -9,6 +9,8 @@ tags:
 - performance
 ---
 
+<a href="http://fellipe.com/slides/performance-javascript" class="btn">Slides</a>
+
 Iniciando o ciclo de palestras do dia, temos Davidson Fellipe, frontend da globo.com, que trabalha no projeto [Futpédia](http://futpedia.globo.com).
 
 Fellipe inicia sua apresentação falando da importância de uma boa *performance* em um website.
