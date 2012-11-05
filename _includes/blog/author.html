@@ -1,6 +1,10 @@
 {% if author %}
 <aside class="author">
+    {% if author.googleplus %}
+    <h4><a href="https://plus.google.com/{{ author.googleplus }}?rel=author">{{ author.name }}</a></h4>
+    {% else %}
     <h4>{{ author.name }}</h4>
+    {% endif %}
     {% if author.twitter %}
     <a href="//twitter.com/{{ author.twitter }}" class="twitter">{{ author.twitter }}</a>
     {% endif %}
