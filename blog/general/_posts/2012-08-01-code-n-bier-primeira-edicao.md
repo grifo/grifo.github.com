@@ -18,7 +18,7 @@ As fotos do evento já estão na página da [Grifo no Facebook](//www.facebook.c
 ### Dojo
 A atração principal desta primeira edição foi um [Dojo](//codingdojo.org). Se você ainda não teve contato com Dojos, [confira a apresentação inicial](//speakerdeck.com/u/jcemer/p/dojo-grifo).
 
-Nosso problema era construir uma lista de múltiplos. A definição completa, resolução e frameworks de teste utilizados já estão no [repositório git](//github.com/grifo/codenbier/tree/dojo-2012-08-01) do evento, confira.
+Nosso problema era construir uma lista de múltiplos. A definição completa, resolução e frameworks de teste utilizados já estão no [repositório git](//github.com/grifo/code-n-bier/tree/dojo-2012-08-01) do evento, confira.
 
 Como é de praxe em todo Dojo, vamos a retrospectiva:
 
@@ -59,7 +59,7 @@ Como é de praxe em todo Dojo, vamos a retrospectiva:
 * mais code n bier
 * melhorar o algoritmo de comparar números inteiros
 
-<a href="//github.com/grifo/codenbier/tree/dojo-2012-08-01" class="btn">Repositório Git do Dojo</a>
+<a href="//github.com/grifo/code-n-bier/tree/dojo-2012-08-01" class="btn">Repositório Git do Dojo</a>
 
 <br>
 
