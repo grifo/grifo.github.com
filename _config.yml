@@ -7,11 +7,13 @@ authors:
         name: Cynthia Menezes Zanoni
         twitter: @cynthia_zanoni
         gravatar: 86c173b9d8f3415c171b16bd86fdb12b
+        googleplus: 106620997426722706872
         description: 'Cynthia é desenvolvora web na Grifo e graduanda no curso de <a href="//www.tecnodohms.org.br/curso-sistemas-para-internet.aspx">Sistemas para internet</a>.Trabalha com desenvolvimento web há aproximadamente três anos e é entusiasta de Marketing Digital, possui um <a href="//cynthiazanoni.blogspot.com">blog sobre search</a>.'
     filipe:
         name: Filipe Medina
         twitter: @filipemedina
         gravatar: 45978236f61478b7d18e232ad600cf4b
+        googleplus: 113589003183684314739
         description: 'Publicitário formado pela PUCRS. Foi desenvolvedor front-end por 7 anos e há 2 trabalha como Gerente de Projetos na Grifo.'
     jean:
         name: Jean Carlo Emer
@@ -47,4 +49,5 @@ authors:
         name: Vitor Carlos
         twitter: @vitor42
         gravatar: 3c8477165b27ce7f4928ed5cf48ebbd7
+        googleplus: 107791644312460228676
         description: 'Front-End Web Developer na Grifo, Bacharel em Sistemas de Informação, trabalha há mais de 8 anos com desenvolvimento web e gosta de groselha.'
