@@ -26,7 +26,7 @@ Após o aquecimento, foi a hora do Lucas Fialho Zawacki apresentar o [MateHacker
 
 ### KingHost
 
-Então foi a hora da [KingHost](http://www.kinghost.com.br) subir no palco e anunciar seu evento, o Conexão KingHost dia 29 de novembro e de quebra lançar um desafio para o pessoal: Descobrir um easter-egg no site da empresa. Após alguns minutos quebrando a cabeça, descobrimos que era um Konami code escondido.
+Então foi a hora da apoiadora do evento, [KingHost](http://www.kinghost.com.br) subir no palco e anunciar seu evento, o Conexão KingHost dia 29 de novembro e de quebra lançar um desafio para o pessoal: Descobrir um easter-egg no site da empresa. Após alguns minutos quebrando a cabeça, descobrimos que era um Konami code escondido.
 
 ### Cesar e os Romanos
 
@@ -34,4 +34,4 @@ Então foi a hora da [KingHost](http://www.kinghost.com.br) subir no palco e anu
 
 Com o clima bem descontraído e a liberação de cerveja e batatas-fritas por parte de nosso querido apoiador, foi a hora de curtir um Rock n' roll de qualidade. Contando com um repertório repleto de clássicos, a banda Cesar e os Romanos detonaram no palco do Dhomba.
 
-Uma noite certamente memorável. Voltaremos em 2013, se o mundo não acabar antes!
+Uma noite certamente memorável. Agradecemos mais uma vez a KingHost por apoiar essa iniciativa. Voltaremos em 2013 com força total e muitas novidades, se o mundo não acabar antes!
