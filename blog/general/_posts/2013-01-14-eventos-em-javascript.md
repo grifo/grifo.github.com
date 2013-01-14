@@ -8,7 +8,7 @@ tags:
     - Javascript
 ---
 
-Eventos são a base das interfaces web modernas. Muito além do simples clique, a cada novo dispositivo, novas formas de intereção surgem, como controle de orientação ou interpretação de movimentos de dedos.
+Eventos são a base das interfaces web modernas. Muito além do simples clique, a cada novo dispositivo, novas formas de interação surgem, como controle de orientação ou interpretação de movimentos de dedos.
 
 Ainda assim, os eventos são muito mais *baixo nível* que isto. Em Javascript, [não temos ainda nenhuma implementação nativa para cuidar deles](http://ricardo.cc/2012/08/09/Its-time-for-a-native-EventEmitter.html), mas não faltam bibliotecas com a inteção de preencher esta lacuna. Uma delas é a biblioteca [Rye](http://ryejs.com) que tem co-autoria do [Jean Carlo Emer](http://jcemer.com) nosso líder técnico aqui na Grifo.
 
