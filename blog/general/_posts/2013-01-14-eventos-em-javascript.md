@@ -31,7 +31,7 @@ Você pode criar quantos *emitters* quiser. O ideal é que você crie um para ca
 
 Caso você precise compartilhar eventos entre seus componentes, é melhor usar o padrão de [publish/subscribe](http://msdn.microsoft.com/en-us/magazine/hh201955.aspx) já [oferecido pela biblioteca](http://ryejs.com/#events-ryesubscribe). É importante lembrar que, neste caso, todos os componentes poderão ver a troca de mensagens.
 
-    Rye.subscrive('open', function(){
+    Rye.subscribe('open', function(){
         console.log('open')
     }) 
 
@@ -60,7 +60,7 @@ A Rye introduz um jeito mais simples ainda. Basta apenas informar o descendente 
 
 #### Múltiplos listeners
 
-Por consequência da sintaxe usada no *delegate*, cada evento deve ter seu *listener* declarado individualmenete. Isto signigica que você não pode escrever `.on('mouseenter mouseleave', fn)`. O jeito correto é: `.on('mouseenter', fn)` e depois `.on('mouseleave', fn)`, ou ainda:
+Por consequência da sintaxe usada no *delegate*, cada evento deve ter seu *listener* declarado individualmente. Isto significa que você não pode escrever `.on('mouseenter mouseleave', fn)`. O jeito correto é: `.on('mouseenter', fn)` e depois `.on('mouseleave', fn)`, ou ainda:
 
     Rye(document).on({
         'click .a': fn
