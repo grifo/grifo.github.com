@@ -25,7 +25,7 @@ Atualmente temos vários jogos desenvolvidos em HTML5, mas a maioria deles ainda
 
 Nas perguntas, surgiu uma dúvida sobre a performance do WebGL. Michal enfatizou que cada vez mais ele é uma opção viável e performática para todos os tipos de jogos.
 
-## Links da apresentação
+## Links da apresentação 
 
 Segue abaixo um copy-pasta dos links da paletra:
 
