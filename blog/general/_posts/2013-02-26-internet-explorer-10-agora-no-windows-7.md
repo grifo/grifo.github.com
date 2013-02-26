@@ -6,7 +6,7 @@ author: leandro
 tags:
     - Browser
     - Microsoft
-	- Navegador
+    - Navegador
 ---
 
 O Internet Explorer sempre foi uma grande *rocha* no sapato dos desenvolvedores Web, desde a remota versão inicial até culminar com a apocalíptica versão 6. O navegador de Redmond, carinhosamente chamado de "Internerd Exploder 6", "IE Sucks", "IE Lixo" e outros nomes impróprios para publicação finalmente começou a tomar a forma de um *browser* de verdade a partir da versão 7, ainda assim com muitos bugs e padrões quase inexistentes, melhorando pouca coisa com o lançamento da versão 8.
