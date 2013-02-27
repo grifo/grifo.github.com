@@ -25,6 +25,8 @@ Claro, nem tudo são rosas. Ainda temos que aturar os velhos dinossauros de semp
 
 Para estes, não há esperança.
 
+Faça o download do Internet Explorer 10 no [site mais belo da Web](http://www.beautyoftheweb.com/download). Desmarque a caixinha logo abaixo do botão se você não curte o Bing ou a MSN. Eu particularmente até acho o Bing legal.
+
 Você pode ler mais a respeito do lançamento oficial do Internet Explorer 10 [no blog oficial](http://blogs.msdn.com/b/ie/archive/2013/02/26/ie10-for-windows-7-globally-available-for-consumers-and-businesses.aspx) e também descobrir mais sobre os padrões suportados por esta versão [nesta página da MSDN](http://msdn.microsoft.com/en-us/library/ie/hh673549%28v=vs.85%29.aspx).
 
 E como ninguém é de ferro, seja feliz jogando "cartuchos" do Atari repensados para a Web no site [Atari Arcade](http://www.atari.com/arcade). Vale dizer que em todos os browsers há exibição de publicidade entre os jogos, *MENOS* quando acessado com o Internet Explorer 9 e superior.
