@@ -1053,6 +1053,7 @@ section h2 a:hover {
 }
 .clientes ul {
   max-width: 980px;
+  width: 770px;
   margin: 0 auto;
   padding: 0;
 }
