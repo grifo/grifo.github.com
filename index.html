@@ -29,5 +29,128 @@
         <h1><img class="logo" src="images/logo-grifo.png" alt="Grifo" /></h1>
         <h2>Front-end inteligente</h2>
     </header>
+    <section class="work content">
+        <p>Somos um time formado por pessoas criativas e inteligentes que estão sempre em busca de soluções e novidades. Adoramos inovar, amamos enfrentar desafios, nos sentimos o máximo tornando possível o que parecia impossível. Nossa especialidade: <strong>Front-end</strong>!</p>
+    </section>
+    <nav hidden>
+        <ul id="menu">
+            <li><a href="index.html" class="button">Blog</a></li>
+        </ul>
+    </nav>
+    <section class="about content">
+        <ul>
+            <li class="html">HTML5</li>
+            <li class="css">CSS3</li>
+            <li class="js">JavaScript</li>
+        </ul>
+    </section>
+    <section class="blog content" id="blog">
+        <h2><a href="/blog">Blog</a></h2>
+        {% for post in site.posts limit:2  %}
+        {% unless post.typing %}
+        <article>
+            <a href="{{ post.url }}">
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.subtitle }}</p>
+            </a>
+        </article>
+        {% endunless %}
+        {% endfor %}
+    </section>
+    <section class="clientes" id="clientes">
+        <div class="block">
+            <h2>Nossos clientes</h2>
+            <ul>
+                <li><a href="http://www.terra.com.br" rel="external"><img src="images/clientes/clientes-terra.png" alt="Terra Networks" /></a></li>
+                <li><a href="http://www.ag2.com.br" rel="external"><img src="images/clientes/clientes-ag2.png" alt="AG2 Publicis Modem" /></a></li>
+                <li><a href="http://cubo.cc" rel="external"><img src="images/clientes/clientes-cubocc.png" alt="Cubocc" /></a></li>
+                <li><a href="http://www.escalamk.com.br" rel="external"><img src="images/clientes/clientes-escala.png" alt="Escala" /></a></li>
+                <li><a href="http://www.unisinos.br" rel="external"><img src="images/clientes/clientes-unisinos.png" alt="Unisinos" /></a></li>
+                <li><a href="http://www.3yz.com.br" rel="external"><img src="images/clientes/clientes-3yz.png" alt="3yz" /></a></li>
+                <li><a href="http://www.gadbrivia.com.br" rel="external"><img src="images/clientes/clientes-gadbrivia.png" alt="GAD'Brivia" /></a></li>
+                <li><a href="http://www.box3.com.br" rel="external"><img src="images/clientes/clientes-box3.png" alt="Box3" /></a></li>
+                <li><a href="http://www.redder.com.br" rel="external"><img src="images/clientes/clientes-red.png" alt="RED" /></a></li>
+                <li><a href="http://www.mmda.com.br" rel="external"><img src="images/clientes/clientes-mmda.png" alt="MMDA" /></a></li>
+                <li><a href="http://www.dbrinterativa.com" rel="external"><img src="images/clientes/clientes-dbr.png" alt="DBR Interativa" /></a></li>
+                <li><a href="http://coredotcontinuum.com" rel="external"><img src="images/clientes/clientes-corecontinuum.png" alt="Core Continuum" /></a></li>
+                <li><a href="http://www.agenciayo.com.br" rel="external"><img src="images/clientes/clientes-yo.png" alt="Agência YO" /></a></li>
+                <li><a href="http://boca.as" rel="external"><img src="images/clientes/clientes-boca.png" alt="Boca" /></a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="o-que-fazemos content" id="o-que-fazemos">
+        <h2>O que fazemos</h2>
+
+        <h3>HTML5</h3>
+        <p>Sites leves e semânticos</p>
+
+        <h3>CSS3 + Less</h3>
+        <p>Apresentação organizada e dinâmica</p>
+
+        <h3>Javascript</h3>
+        <p>Comportamento com leveza e suavidade</p>
+
+        <h3>Desktop + Mobile + Tablet</h3>
+        <p>Projetos em diversos dispositivos</p>
+
+        <h3>NodeJS</h3>
+        <p>Aplicações real-time com ótima performance</p>
+
+        <h3>Wordpress</h3>
+        <p>Velocidade de desenvolvimento e menor custo</p>
+    </section>
+
+    <section class="como-fazemos content" id="como-fazemos">
+        <h2>Como fazemos</h2>
+
+        <h3>Acessibilidade</h3>
+        <p>Sempre pensando em acessibilidade para todos</p>
+
+        <h3>SEO</h3>
+        <p>Otimizados para mecanismos de busca</p>
+
+        <h3>Performance</h3>
+        <p>Velozes no carregamento e ágeis para interagir</p>
+
+        <h3>Usabilidade</h3>
+        <p>Fácil e intuitiva navegação</p>
+        
+        <h3>Boas práticas</h3>
+        <p>Manutenção rápida e simplificada</p>
+    </section>
+
+    <section class="vagas content" id="vagas">
+        <h2>Faça parte da Grifo</h2>
+        <p>Estamos sempre em busca de desenvolvedores front-end com um nível avançado em javascript, acessibilidade, performance, SEO e usabilidade.</p>
+        <p>Se você adora novos desafios, vive em busca de soluções, é comunicativo e gosta de trabalhar em equipe, então é você que estamos procurando. Envie seu currículo para: <a href="mailto:vagas@gri.fo">vagas@gri.fo</a></p>
+
+    <p>Benefícios: CLT com salário a combinar, VR, VT e plano de saúde.</p>
+    </section>
+
+    <section class="footer" id="contato">
+        <h2 class="vhidden">Contato</h2>
+        <div class="block">
+            <div class="address">
+                <a href="https://www.google.com.br/maps?q=grifo+Av.+Carlos+Gomes,+1610&hl=pt-BR&ie=UTF8&ll=-30.034659,-51.176634&spn=0.011183,0.019162&sll=-30.034678,-51.177063&sspn=0.011183,0.019162&hq=grifo&hnear=Av.+Carlos+Gomes,+1610+-+Tr%C3%AAs+Figueiras,+Porto+Alegre+-+Rio+Grande+do+Sul,+90480-002&t=m&z=16&iwloc=A" class="map" rel="external">
+                    <img src="images/mapa.gif" />
+                </a>
+                <p><a href="mailto:contato@gri.fo">contato@gri.fo</a></p>
+                <p>
+                    Av. Carlos Gomes, 1610/203<br/>
+                    Porto Alegre, RS<br/>
+                    CEP 90480-002
+                </p>
+                <p>+55 51 3084-7760</p>
+            </div>
+        </div>
+    </section>
+    <script>(function(){
+        if (!document.querySelector) return
+        var links = document.querySelectorAll('a[rel=external]')
+        ;[].slice.call(links).forEach(function(link){
+            link.target = '_blank'
+        })
+    })()
+    </script>
 </body>
 </html>
