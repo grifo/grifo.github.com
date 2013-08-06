@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>Mobile App - Tela, Sprites e Fontes | blog da Grifo</title>
+    
+    <meta name="viewport" content="width=device-width" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta property="og:description" content="Mobile App - Tela, Sprites e Fontes" />
+    <meta property="og:image" content="http://gri.fo/images/fb.png" />
+    <meta property="og:url" content="/blog/mobile-app-parte-2" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="alternate" href="http://gri.fo/blog/atom.xml" title="blog da Grifo" type="application/atom+xml" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" title="GitHub Syntax Highlight" href="/styles/github.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24598886-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body class="page">
+
+    <header id="sidebar">
+        
+        <a href="/blog" class="back">home do blog</a>
+        
+        <hgroup>
+            <h1><a class="logo" href="/" title="página inicial">Grifo</a></h1>
+            <p class="sub">Blog de desenvolvimento da Grifo. Técnicas de front-end, node.js, CSS3, HTML5 e design</p>
+            <a href="https://twitter.com/grifotecnologia" class="twitter-follow-button" id="twitter-follow-button" data-show-count="false" data-lang="en" data-size="small">Follow @grifotecnologia</a>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fgrifotecnologia&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=326273014110834" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        </hgroup>
+    </header>
+    
+    <section id="main">
+        <article>
+    <header>
+        <h2>Mobile App - Tela, Sprites e Fontes</h2>
+        <div class="meta">
+            <time datetime="2012-07-20T00:00:00-03:00" pubdate>20 Jul 2012</time>
+            <ul class="tags">
+                
+                <li><a href="/tags/#!css3">css3</a></li>
+                
+                <li><a href="/tags/#!html5">html5</a></li>
+                
+                <li><a href="/tags/#!mobile">mobile</a></li>
+                
+                <li><a href="/tags/#!sprites">sprites</a></li>
+                
+                <li><a href="/tags/#!fontes">fontes</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    
+
+    <p>Segundo post da série em que construímos do zero uma mobile web app.<br> É aconselhável conferir o <a href="//gri.fo/blog/mobile-app-parte-1">primeiro post</a> para ficar por dentro dos primeiros passos.</p>
+
+<h3>Altura da tela</h3>
+
+<p>Chegamos no ponto de pensar na altura da app. Até agora eu estava aplicando o fundo no <code>html</code> e <code>body</code>. Se o conteúdo crescer, <a href="http://jsbin.com/apotoz/1">meu background recomeça ao fim do viewport</a>. A solução é aplicar</p>
+
+<pre><code>html, body { height: 100%; }
+</code></pre>
+
+<p>E além disso, vou precisar de outro container com css <code>min-height: 100%</code>. <a href="http://jsbin.com/apotoz/2">Nele é que vou aplicar os fundos</a>.</p>
+
+<h3>Imagens</h3>
+
+<p>A tática que adotamos até o momento é desenvolver para a resolução de <strong>640px</strong> e forçar os dispositivos a escalar esta medida para a largura total de suas telas. Tudo funciona bem para dispositivos com largura inferior a medida, mas para os contrários, as imagens ficam com baixa qualidade.</p>
+
+<p>Duas soluções me parecem possíveis: salvar as imagens em um formato vetorial ou aumentar a resolução/tamanho do bitmap. A primeira me parece um tanto complicada e desconhecida, nem todas as imagens que usarei possuem porte para vetor.</p>
+
+<p>Adotei a segunda solução e passei a salvar as imagens com o dobro do tamanho. Quando estas imagens compõe <code>background</code>, precisei adicionar ao css <code>background-size: 100% 100%</code>.</p>
+
+<h4>Sprites</h4>
+
+<p>Para <a href="http://css-tricks.com/css-sprites">sprites</a> algumas regras adicionais precisaram ser seguidas. Neste caso, adotei dimensões quadradas de <strong>100x100</strong> para cada item do sprite e utilizarei um item abaixo do outro.</p>
+
+<p>O resultado é que sempre terei uma imagem com largura de <strong>100px</strong>. E isto é que irá determinar o tamanho de meu background através da regra <code>background-size: 100% auto;</code>. A posição também é calculada com base no número de itens que compõe o sprite, assim posso aplicar minhas imagens em qualquer container quadrado (e até retangular).</p>
+
+<h5>Sprites em LESS</h5>
+
+<p>Repare na medida de <strong>50px</strong> nos <em>mixins</em> abaixo. Lembre-se que estamos trabalhando com imagens com no mínimo o dobro de tamanho.</p>
+
+<pre><code class="no-highlight">@sprite-lenght: 8;
+.sprite() {
+    width: 50px;
+    height: 50px;
+    background: url('../images/sprite.png');
+    background-size: 100% auto;
+}
+.sprite-pos(@num) {
+    @calc: (100% / @sprite-lenght) * @num;
+    background-position: 0 @calc, 0 0;
+}</code></pre>
+
+
+<h5>Sprites em CSS</h5>
+
+<p>O resultado é próximo de:</p>
+
+<pre><code class="no-highlight">.icon {
+    width: 50px;
+    height: 50px;
+    background: url('../images/sprite.png');
+    background-size: 100% auto;
+}
+.icon01 { background-position: 0 0%; }
+.icon02 { background-position: 0 12.5%; }
+...
+.icon07 { background-position: 0 75%; }
+.icon08 { background-position: 0 87.5%, }</code></pre>
+
+
+<h3>Fontes</h3>
+
+<p>A fonte usada na app está no <a href="http://www.google.com/webfonts">Google Web Fonts</a>. Aplicar usando a tag <code>link</code> quando se tem livre acesso ao html é mais <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import">performático</a>. É isto que iremos fazer. Outra abordagem interessante quando se utiliza <em>Less</em> é criar variáveis com o nome da fonte. Cheked!</p>
+
+
+    
+    
+<aside class="author">
+    
+    <h4><a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></h4>
+    
+    
+    <a href="//twitter.com/@jcemer" class="twitter">@jcemer</a>
+    
+    
+    <img src="//secure.gravatar.com/avatar/c5df370a883b65279af5a7ca94a5eed7?s=80" width="80" height="80" alt="Jean Carlo Emer">
+    
+    <p>Graduando em <a href="//inf.ufrgs.br">ciência da computação</a> e líder técnico na Grifo. Trabalha com desenvolvimento web há mais de seis anos e tem um <a href="//jcemer.com">site pessoal</a>.</p>
+</aside>
+
+    <footer>
+        <span st_url="http://gri.fo/blog/mobile-app-parte-2" class="st_facebook_hcount" displayText="Facebook"></span>
+        <span st_url="http://gri.fo/blog/mobile-app-parte-2" class="st_twitter_hcount" displayText="Tweet"></span>
+    </footer>
+</article>
+
+
+<aside class="related">
+    <h3>Leia também:</h3>
+    <ul class="posts">
+    
+        <li><a href="/blog/internet-explorer-10-agora-no-windows-7">Internet Explorer 10 agora no Windows 7</a></li>
+    
+        <li><a href="/blog/eventos-em-javascript">Eventos em Javascript</a></li>
+    
+        <li><a href="/blog/google-maps-parou-de-funcionar">O Google Maps parou de funcionar em seu site?</a></li>
+    
+        <li><a href="/blog/code-n-bier-season-finale">Code n' Bier - Season Finale</a></li>
+    
+        <li><a href="/blog/rsjs-retrospectiva">RSJS 2012 - Retrospectiva</a></li>
+    
+        <li><a href="/blog/code-n-bier-segunda-edicao">Code n' Bier - Segunda edição</a></li>
+    
+        <li><a href="/blog/a-maior-conferencia-de-javascript-do-universo">A Maior Conferência de JavaScript do Universo</a></li>
+    
+        <li><a href="/blog/07-o-javascript-brendan-eich">BrazilJS - O estado do JavaScript por Brendan Eich</a></li>
+    
+        <li><a href="/blog/06-grunt-benjamin-alman">BrazilJS - Grunt por Benjamin E Alman</a></li>
+    
+    </ul>
+</aside>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blogdagrifo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+    </section>
+
+    <script src="/scripts/highlight.pack.js"></script>
+    <script>
+        hljs.tabReplace = '    '
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="/scripts/base.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-52b580d3-a4a0-7663-2c94-4cce560bca24"}); </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>(function(){
+        function trackOutbound(){
+            window._gaq && _gaq.push ['_trackEvent', 'Outbound Link', this.href]
+        }
+        var links = document.getElementsByTagName('a')
+        for (var i = 0, link; link = links[i]; i++){
+            if (~link.href.indexOf(document.domain)) continue;
+            if (link.addEventListener) link.addEventListener('mousedown', trackOutbound, null);
+            else if (link.attachEvent) link.attachEvent('mousedown', trackOutbound);
+        }
+    })()
+    </script>
+</body>
+</html>

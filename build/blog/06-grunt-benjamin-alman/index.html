@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>BrazilJS - Grunt por Benjamin E Alman | blog da Grifo</title>
+    
+    <meta name="viewport" content="width=device-width" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta property="og:description" content="BrazilJS - Grunt por Benjamin E Alman" />
+    <meta property="og:image" content="http://gri.fo/images/fb.png" />
+    <meta property="og:url" content="/blog/06-grunt-benjamin-alman" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="alternate" href="http://gri.fo/blog/atom.xml" title="blog da Grifo" type="application/atom+xml" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" title="GitHub Syntax Highlight" href="/styles/github.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24598886-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body class="page">
+
+    <header id="sidebar">
+        
+        <a href="/blog" class="back">home do blog</a>
+        
+        <hgroup>
+            <h1><a class="logo" href="/" title="página inicial">Grifo</a></h1>
+            <p class="sub">Blog de desenvolvimento da Grifo. Técnicas de front-end, node.js, CSS3, HTML5 e design</p>
+            <a href="https://twitter.com/grifotecnologia" class="twitter-follow-button" id="twitter-follow-button" data-show-count="false" data-lang="en" data-size="small">Follow @grifotecnologia</a>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fgrifotecnologia&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=326273014110834" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        </hgroup>
+    </header>
+    
+    <section id="main">
+        <article>
+    <header>
+        <h2>BrazilJS - Grunt por Benjamin E Alman</h2>
+        <div class="meta">
+            <time datetime="2012-08-31T00:00:00-03:00" pubdate>31 Aug 2012</time>
+            <ul class="tags">
+                
+                <li><a href="/tags/#!JavaScript">JavaScript</a></li>
+                
+                <li><a href="/tags/#!BrazilJS">BrazilJS</a></li>
+                
+                <li><a href="/tags/#!Grunt">Grunt</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    
+    <div class="braziljs-special clearfix">
+        <div>
+            <h1>Cobertura do evento</h1>
+            <a href="/braziljs">Confira o que rolou no evento</a>
+        </div>
+        <img src="/images/logo-braziljs-small.png" alt="Brazil JS">
+    </div>
+    
+
+    <p><figure>
+  <img src="/images/braziljs-2012/benjamin-alman.jpg" alt="Jean Carlo e Benjamin e Alman" width="300">
+  <figcaption>Jean Carlo e Benjamin e Alman</figcaption>
+</figure></p>
+
+<p>Benjamin Alman colabora com o core da jQuery e escreveu uma infinidade de plugins para a biblioteca. Trabalha na <a href="http://www.bocoup.com">Bocoup</a> e é criador do <em>Grunt</em>, um gerenciador de tarefas operado através da linha de comando.</p>
+
+<p>Cowboy, como gosta de ser chamado, começou usando <a href="http://github.com/mde/jake">Jake</a> para automatizar tarefas utilizando JavaScript.</p>
+
+<p>O projeto <em>Grunt</em> surgiu da necessidade de automatizar facilmente a repetição de tarefas comuns do dia-a-dia de manter uma série de cerca de 76 projetos públicos, em todos os sistemas, que Alman mantêm em <a href="https://github.com/cowboy/grunt">seu GitHub</a>.</p>
+
+<p>Muito popular, o <em>Grunt</em> está marcado por três mil usuários no <a href="https://github.com/cowboy/grunt">GitHub</a> e tem mais de duas centenas de <em>forks</em>. Para usar, basta ter o <a href="http://nodejs.org/">NodeJS</a> e <a href="http://www.npmjs.org">npm</a>.</p>
+
+<pre><code>npm install -g grunt
+</code></pre>
+
+<p>Juntar arquivos, <em>minify</em>, executar rotinas de teste <a href="http://docs.jquery.com/QUnit">QUnit</a>, validar o código com <a href="http://www.jshint.com">JSHint</a> e iniciar um servidor de arquivos são apenas algumas das tarefas possíveis com o <em>Grunt</em>.</p>
+
+<p>Outra grande funcionalidade é usar <em>watch</em> para executar tarefas baseado na alterações no sistema de arquivos. A configuração é simples e pode ser feita através do arquivo <code>grunt.js</code> armazenado na raiz dos projetos.</p>
+
+<p>Além disso, é possível estender as tarefas criando rotinas que sejam úteis e específicas para cada projeto.</p>
+
+<p>Usar <em>Grunt</em> facilita a colaboração da comunidade <em>open source</em> e muitas bibliotecas, como jQuery já o adontam como padrão.</p>
+
+
+    
+    
+<aside class="author">
+    
+    <h4><a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></h4>
+    
+    
+    <a href="//twitter.com/@jcemer" class="twitter">@jcemer</a>
+    
+    
+    <img src="//secure.gravatar.com/avatar/c5df370a883b65279af5a7ca94a5eed7?s=80" width="80" height="80" alt="Jean Carlo Emer">
+    
+    <p>Graduando em <a href="//inf.ufrgs.br">ciência da computação</a> e líder técnico na Grifo. Trabalha com desenvolvimento web há mais de seis anos e tem um <a href="//jcemer.com">site pessoal</a>.</p>
+</aside>
+
+    <footer>
+        <span st_url="http://gri.fo/blog/06-grunt-benjamin-alman" class="st_facebook_hcount" displayText="Facebook"></span>
+        <span st_url="http://gri.fo/blog/06-grunt-benjamin-alman" class="st_twitter_hcount" displayText="Tweet"></span>
+    </footer>
+</article>
+
+
+<aside class="related">
+    <h3>Leia também:</h3>
+    <ul class="posts">
+    
+        <li><a href="/blog/internet-explorer-10-agora-no-windows-7">Internet Explorer 10 agora no Windows 7</a></li>
+    
+        <li><a href="/blog/eventos-em-javascript">Eventos em Javascript</a></li>
+    
+        <li><a href="/blog/google-maps-parou-de-funcionar">O Google Maps parou de funcionar em seu site?</a></li>
+    
+        <li><a href="/blog/code-n-bier-season-finale">Code n' Bier - Season Finale</a></li>
+    
+        <li><a href="/blog/rsjs-retrospectiva">RSJS 2012 - Retrospectiva</a></li>
+    
+        <li><a href="/blog/code-n-bier-segunda-edicao">Code n' Bier - Segunda edição</a></li>
+    
+        <li><a href="/blog/a-maior-conferencia-de-javascript-do-universo">A Maior Conferência de JavaScript do Universo</a></li>
+    
+        <li><a href="/blog/07-o-javascript-brendan-eich">BrazilJS - O estado do JavaScript por Brendan Eich</a></li>
+    
+        <li><a href="/blog/05-alem-do-teclado-mouse-daniel-filho">BrazilJS - Além do teclado e mouse por Daniel Filho</a></li>
+    
+    </ul>
+</aside>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blogdagrifo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+    </section>
+
+    <script src="/scripts/highlight.pack.js"></script>
+    <script>
+        hljs.tabReplace = '    '
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="/scripts/base.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-52b580d3-a4a0-7663-2c94-4cce560bca24"}); </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>(function(){
+        function trackOutbound(){
+            window._gaq && _gaq.push ['_trackEvent', 'Outbound Link', this.href]
+        }
+        var links = document.getElementsByTagName('a')
+        for (var i = 0, link; link = links[i]; i++){
+            if (~link.href.indexOf(document.domain)) continue;
+            if (link.addEventListener) link.addEventListener('mousedown', trackOutbound, null);
+            else if (link.attachEvent) link.attachEvent('mousedown', trackOutbound);
+        }
+    })()
+    </script>
+</body>
+</html>

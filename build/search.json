@@ -1,0 +1,348 @@
+[
+
+{
+    "category": "blog",
+    "title": "Internet Explorer 10 agora no Windows 7",
+    "subtitle": "O browser que você sempre adorou odiar agora seguindo cada vez mais padrões web",
+    "tags": ["Browser","Microsoft","Navegador"],
+    "date": "Tue Feb 26 00:00:00 -0300 2013",
+    "url": "/blog/internet-explorer-10-agora-no-windows-7"
+},
+{
+    "category": "blog",
+    "title": "Eventos em Javascript",
+    "subtitle": "Uma nova biblioteca surge e com ela novas maneiras de se gerenciar eventos do DOM",
+    "tags": ["Eventos","Javascript"],
+    "date": "Mon Jan 14 00:00:00 -0200 2013",
+    "url": "/blog/eventos-em-javascript"
+},
+{
+    "category": "blog",
+    "title": "O Google Maps parou de funcionar em seu site?",
+    "subtitle": "A gigante anunciou há poucos dias que irá descontinuar a versão 2 de sua API para mapas",
+    "tags": ["Google Maps","Google Maps API"],
+    "date": "Wed Jan 09 00:00:00 -0200 2013",
+    "url": "/blog/google-maps-parou-de-funcionar"
+},
+{
+    "category": "blog",
+    "title": "Code n' Bier - Season Finale",
+    "subtitle": "Cerveja, fritas e Rock n' Roll",
+    "tags": ["Mate Hacker","Code n' Bier","Cesar e os Romanos"],
+    "date": "Thu Nov 08 00:00:00 -0200 2012",
+    "url": "/blog/code-n-bier-season-finale"
+},
+{
+    "category": "blog",
+    "title": "RSJS 2012 - Retrospectiva",
+    "subtitle": "Primeiro evento de JavaScript do estado que foi uma prévia para o BrazilJS",
+    "tags": ["JavaScript","Haskell","css3"],
+    "date": "Fri Sep 14 00:00:00 -0300 2012",
+    "url": "/blog/rsjs-retrospectiva"
+},
+{
+    "category": "blog",
+    "title": "Code n' Bier - Segunda edição",
+    "subtitle": "Live Coding, JavaScript, Node, CoffeeScript, Parser Generator e Design Patterns",
+    "tags": ["Node","JavaScript","Live Coding","Code n' Bier"],
+    "date": "Thu Sep 06 00:00:00 -0300 2012",
+    "url": "/blog/code-n-bier-segunda-edicao"
+},
+{
+    "category": "blog",
+    "title": "A Maior Conferência de JavaScript do Universo",
+    "subtitle": "Um pequeno resumo",
+    "tags": ["braziljs","javascript","moviegames"],
+    "date": "Tue Sep 04 00:00:00 -0300 2012",
+    "url": "/blog/a-maior-conferencia-de-javascript-do-universo"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - O estado do JavaScript por Brendan Eich",
+    "subtitle": "Criador do Javascript fala sobre as extensões mais recentes da linguagem que estão sendo padronizadas como ES6",
+    "tags": ["JavaScript","BrazilJS","ECMAScript","Brendan"],
+    "date": "Fri Aug 31 00:00:00 -0300 2012",
+    "url": "/blog/07-o-javascript-brendan-eich"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - Grunt por Benjamin E Alman",
+    "subtitle": "Grunt: uma ferramenta de build para JavaScript baseado em tarefas",
+    "tags": ["JavaScript","BrazilJS","Grunt"],
+    "date": "Fri Aug 31 00:00:00 -0300 2012",
+    "url": "/blog/06-grunt-benjamin-alman"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - Além do teclado e mouse por Daniel Filho",
+    "subtitle": "E se fosse possível em um jogo, controlar uma nave com movimentos da sua cabeça? E reconhecer cores através de objetos mostrados para a webcam?",
+    "tags": ["JavaScript","BrazilJS","RTC","IHC"],
+    "date": "Fri Aug 31 00:00:00 -0300 2012",
+    "url": "/blog/05-alem-do-teclado-mouse-daniel-filho"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - A próxima geração de consoles será a última por Michal Budzynski",
+    "subtitle": "O Polonês do CSS Nyan Cat encoraja o desenvolvimento de games em HTML5",
+    "tags": ["JavaScript","BrazilJS"],
+    "date": "Fri Aug 31 00:00:00 -0300 2012",
+    "url": "/blog/04-consoles-vao-acabar-michal-budzynski"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - CSS por Bernard de Luna",
+    "subtitle": "Estilizando Folhas de Estilo com Estilo",
+    "tags": ["JavaScript","BrazilJS","CSS"],
+    "date": "Fri Aug 31 00:00:00 -0300 2012",
+    "url": "/blog/03-folhas-de-estilo-por-bernard-de-luma"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - Kit de sobrevivência por Zeno Rocha",
+    "subtitle": "Um panorama sobre o ecossistema de ferramentas voltadas ao desenvolvimento front-end",
+    "tags": ["JavaScript","BrazilJS","Ferramentas","HTML","CSS"],
+    "date": "Fri Aug 31 00:00:00 -0300 2012",
+    "url": "/blog/02-ecossistema-de-ferramentas-zeno-rocha"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - Performance por Davidson Fellipe",
+    "subtitle": "Conheça formas de melhorar o desempenho de aplicações que usam JavaScript",
+    "tags": ["JavaScript","BrazilJS","performance"],
+    "date": "Fri Aug 31 00:00:00 -0300 2012",
+    "url": "/blog/01-alta-performance-davidson-fellipe"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - ECMAScript 6 por Dave Herman",
+    "subtitle": "Profundo mergulho em três das features favoritas do Dave Hermand no ES6",
+    "tags": ["JavaScript","BrazilJS","ES6"],
+    "date": "Thu Aug 30 00:00:00 -0300 2012",
+    "url": "/blog/07-es6-deep-dive-dave-herman"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - JS on TV por Mike Taylor",
+    "subtitle": "Panoroma de desenvolvimento de aplicativos para TV nos dias de hoje",
+    "tags": ["JavaScript","BrazilJS"],
+    "date": "Thu Aug 30 00:00:00 -0300 2012",
+    "url": "/blog/06-js-on-tv-mike-taylor"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - tracking.js por Eduardo Lundgren",
+    "subtitle": "O tracking.js traz pra web técnicas de rastreamento de elementos de uma cena real capturada pela câmera",
+    "tags": ["JavaScript","BrazilJS","IHC"],
+    "date": "Thu Aug 30 00:00:00 -0300 2012",
+    "url": "/blog/05-trackingjs-eduardo-lundgren"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - Web app ou aplicativo nativo por Renato Mangini",
+    "subtitle": "Mangini fala sobre Chrome Packaged Apps (CPA)",
+    "tags": ["JavaScript","BrazilJS","Chrome Packaged Apps"],
+    "date": "Thu Aug 30 00:00:00 -0300 2012",
+    "url": "/blog/04-web-app-ou-aplicativo-nativo-renato-mangini"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - Mobile HTML5 por Maximiliano Firtman",
+    "subtitle": "Ecosistema dos browsers mobile em 2012 e criação de aplicações para web browsers e apps híbridas",
+    "tags": ["JavaScript","BrazilJS","mobile"],
+    "date": "Thu Aug 30 00:00:00 -0300 2012",
+    "url": "/blog/03-mobile-html5-maximiliano-firman"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - Testes por Leonardo Balter",
+    "subtitle": "Mitos e realidade dos testes unitários em JavaScript, ambientes, cobertura de código e planos sustentáveis de desenvolvimento",
+    "tags": ["JavaScript","BrazilJS","Testes"],
+    "date": "Thu Aug 30 00:00:00 -0300 2012",
+    "url": "/blog/02-testes-unitarios-leonardo-balter"
+},
+{
+    "category": "blog",
+    "title": "BrazilJS - Próximos anos da jQuery por Richard D. Worth",
+    "subtitle": "Com muito humor, comida, música e futebol, Richard Worth promove a jQuery e a sua comunidade",
+    "tags": ["JavaScript","BrazilJS","jQuery"],
+    "date": "Thu Aug 30 00:00:00 -0300 2012",
+    "url": "/blog/01-proximos-anos-jquery-richard-worth"
+},
+{
+    "category": "blog",
+    "title": "Mobile App - Bibliotecas Javascript",
+    "subtitle": "Zepto, jQuery Mobile, xui, jQTouch e Sencha. O que escolher?",
+    "tags": ["css3","html5","mobile","buttons","tap highlight","bordas"],
+    "date": "Fri Aug 24 00:00:00 -0300 2012",
+    "url": "/blog/mobile-app-biliotecas-javascript"
+},
+{
+    "category": "blog",
+    "title": "Mobile App - Botões, bordas e sombras",
+    "subtitle": "Terceiro post da série que aborda técnicas práticas de estilização aplicando bordas e sombras além de comportamento para links e botões",
+    "tags": ["css3","html5","mobile","buttons","tap highlight","bordas"],
+    "date": "Fri Aug 03 00:00:00 -0300 2012",
+    "url": "/blog/mobile-app-links-botoes-bordas-e-sombras"
+},
+{
+    "category": "blog",
+    "title": "Code n' Bier - Primeira edição",
+    "subtitle": "Post dedicado a noite de 01.08.2012, estreia do Code n'Bier, primeiro Dojo de programação em um bar",
+    "tags": ["dojo","javascript","Code n' Bier"],
+    "date": "Wed Aug 01 00:00:00 -0300 2012",
+    "url": "/blog/code-n-bier-primeira-edicao"
+},
+{
+    "category": "blog",
+    "title": "Mobile App - Tela, Sprites e Fontes",
+    "subtitle": "Altura da tela, qualidade das imagens, sprites e fontes",
+    "tags": ["css3","html5","mobile","sprites","fontes"],
+    "date": "Fri Jul 20 00:00:00 -0300 2012",
+    "url": "/blog/mobile-app-parte-2"
+},
+{
+    "category": "blog",
+    "title": "Mobile App - Background",
+    "subtitle": "Lidando com largura de tela, background com gradiente e background com noise",
+    "tags": ["css3","html5","mobile","background","gradiente"],
+    "date": "Tue Jul 17 00:00:00 -0300 2012",
+    "url": "/blog/mobile-app-parte-1"
+},
+{
+    "category": "blog",
+    "title": "Grifo Boilerplate",
+    "subtitle": "Nossa base sólida para desenvolvimento",
+    "tags": ["css","html"],
+    "date": "Mon Jul 16 00:00:00 -0300 2012",
+    "url": "/blog/grifo-boilerplate"
+},
+{
+    "category": "blog",
+    "title": "CSS transition com height auto",
+    "subtitle": "Como fazer um transition na altura de um elemento quando não conhecemos a altura dele",
+    "tags": ["css","css3","transition"],
+    "date": "Wed Jun 27 00:00:00 -0300 2012",
+    "url": "/blog/css-transition-height-auto"
+},
+{
+    "category": "blog",
+    "title": "Jquery serialize state",
+    "subtitle": "Plugin para manter estado dos objetos em páginas com manipulação de DOM",
+    "tags": ["javascript","jquery","DOM"],
+    "date": "Tue Jun 26 00:00:00 -0300 2012",
+    "url": "/blog/jquery-serialize-state"
+},
+{
+    "category": "blog",
+    "title": "Rede Infinita",
+    "subtitle": "Foi ao ar o projeto baseado no conceito da Unisinos: Infinitas Possibilidades, criado pela agência Escala e desenvolvido pela Grifo.",
+    "tags": ["canvas","excanvas","flashcanvas","html5","javascript","performance","projetos"],
+    "date": "Mon Oct 31 00:00:00 -0200 2011",
+    "url": "/blog/rede-infinita"
+},
+{
+    "category": "blog",
+    "title": "TweetRank.It",
+    "subtitle": "Hoje a Grifo lançou um novo app para o Twitter, o TweetRank.It.",
+    "tags": ["projetos"],
+    "date": "Mon Jul 18 00:00:00 -0300 2011",
+    "url": "/blog/tweetrank-it"
+},
+{
+    "category": "blog",
+    "title": "GrifoCast #03/3 - Design para web",
+    "subtitle": "Dicas de Design para web",
+    "tags": ["grifocast","design"],
+    "date": "Fri Jan 14 00:00:00 -0200 2011",
+    "url": "/blog/grifocast-03-parte-3-dicas-de-design-para-web"
+},
+{
+    "category": "blog",
+    "title": "GrifoCast #03/2 - Design para web",
+    "subtitle": "Dicas de Design para web",
+    "tags": ["grifocast","design"],
+    "date": "Mon Jan 03 00:00:00 -0200 2011",
+    "url": "/blog/grifocast-03-parte-2-dicas-de-design-para-web"
+},
+{
+    "category": "blog",
+    "title": "GrifoCast #03/1 - Design para web",
+    "subtitle": "Dicas de Design para web",
+    "tags": ["grifocast","design"],
+    "date": "Fri Dec 24 00:00:00 -0200 2010",
+    "url": "/blog/grifocast-03-parte-1-dicas-de-design-para-web"
+},
+{
+    "category": "blog",
+    "title": "GrifoCast #02 - HTML5",
+    "subtitle": "HTML5",
+    "tags": ["grifocast","html5"],
+    "date": "Wed Nov 17 00:00:00 -0200 2010",
+    "url": "/blog/grifocast-02-html5"
+},
+{
+    "category": "blog",
+    "title": "Gradientes no IE9",
+    "subtitle": "",
+    "tags": ["ie","css3","svg"],
+    "date": "Mon Nov 08 00:00:00 -0200 2010",
+    "url": "/blog/gradientes-no-internet-explorer-9"
+},
+{
+    "category": "blog",
+    "title": "GrifoCast #01 - Semântica em listas",
+    "subtitle": "Semântica em listas",
+    "tags": ["html","semantica"],
+    "date": "Fri Oct 29 00:00:00 -0200 2010",
+    "url": "/blog/grifocast-01-semantica-nas-listas"
+},
+{
+    "category": "blog",
+    "title": "HTML5 não é Flash",
+    "subtitle": "",
+    "tags": ["flash","html5","mercado"],
+    "date": "Tue Sep 14 00:00:00 -0300 2010",
+    "url": "/blog/html5-nao-e-flash"
+},
+{
+    "category": "blog",
+    "title": "Input File - Formulários Personalizados",
+    "subtitle": "",
+    "tags": ["html","forms","css","javascript"],
+    "date": "Mon Aug 23 00:00:00 -0300 2010",
+    "url": "/blog/input-file-formularios-personalizados"
+},
+{
+    "category": "blog",
+    "title": "Solucionando o Code Golf + Maratona IG com Javascript",
+    "subtitle": "",
+    "tags": ["code golf","javascript","php","FISL"],
+    "date": "Tue Jul 27 00:00:00 -0300 2010",
+    "url": "/blog/solucionando-o-code-golf-maratona-ig-com-javascript"
+},
+{
+    "category": "blog",
+    "title": "Combobox – Formulários personalizados",
+    "subtitle": "",
+    "tags": ["html","css","forms","javascript"],
+    "date": "Thu Jul 01 00:00:00 -0300 2010",
+    "url": "/blog/combobox-formularios-personalizados"
+},
+{
+    "category": "blog",
+    "title": "Radio e Checkbox – Formulários personalizados",
+    "subtitle": "",
+    "tags": ["css","forms","javascript"],
+    "date": "Fri Jun 25 00:00:00 -0300 2010",
+    "url": "/blog/radio-e-checkbox-formularios-personalizados"
+},
+{
+    "category": "blog",
+    "title": "Por que a Grifo? E por que desenvolvimento client-side com inteligência?",
+    "subtitle": "",
+    "tags": ["standards","mercado"],
+    "date": "Sun Jun 20 00:00:00 -0300 2010",
+    "url": "/blog/por-que-a-grifo"
+},
+null
+]

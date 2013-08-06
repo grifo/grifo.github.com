@@ -5,19 +5,19 @@ permalink: /blog/:title
 authors:
     cynthia:
         name: Cynthia Menezes Zanoni
-        twitter: @cynthia_zanoni
+        twitter: cynthia_zanoni
         gravatar: 86c173b9d8f3415c171b16bd86fdb12b
         googleplus: 106620997426722706872
         description: 'Cynthia é desenvolvora web na Grifo e graduanda no curso de <a href="//www.tecnodohms.org.br/curso-sistemas-para-internet.aspx">Sistemas para internet</a>.Trabalha com desenvolvimento web há aproximadamente três anos e é entusiasta de Marketing Digital, possui um <a href="//cynthiazanoni.blogspot.com">blog sobre search</a>.'
     filipe:
         name: Filipe Medina
-        twitter: @filipemedina
+        twitter: filipemedina
         gravatar: 45978236f61478b7d18e232ad600cf4b
         googleplus: 113589003183684314739
         description: 'Publicitário formado pela PUCRS. Foi desenvolvedor front-end por 7 anos e há 2 trabalha como Gerente de Projetos na Grifo.'
     jean:
         name: Jean Carlo Emer
-        twitter: @jcemer
+        twitter: jcemer
         gravatar: c5df370a883b65279af5a7ca94a5eed7
         googleplus: 115177659661305654561
         description: 'Graduando em <a href="//inf.ufrgs.br">ciência da computação</a> e líder técnico na Grifo. Trabalha com desenvolvimento web há mais de seis anos e tem um <a href="//jcemer.com">site pessoal</a>.'
@@ -27,30 +27,30 @@ authors:
         description: 'Canal de comunicação e entretenimento da Grifo. Em formato de videocast discutimos as mais recentes novidades e polêmicas do desenvovlimento client-side.'
     leandro:
         name: Leandro Barbosa
-        twitter: @mutly
+        twitter: mutly
         gravatar: 7e39f81a8eaab16741feba50f1f4ade1
         googleplus: 104009478295751524862
         description: 'Leandro Rabello Barbosa é desenvolvedor web com foco em client-side'
     renatho:
         name: Renatho de Carli
-        twitter: @renatho
+        twitter: renatho
         gravatar: b918a107fbb56b751441afe7f48b3377
         googleplus: 112526646682115847631
         description: 'Renatho é desenvolvedor especializado em client-side, fundador da Grifo e estudante de Sistemas de Informação na Unisinos. Trabalha com web há aproximadamente 8 anos.'
     ricardo:
         name: Ricardo Tomasi
-        twitter: @ricardobeat
+        twitter: ricardobeat
         gravatar: 47923b1f334d8e3f7a00506ac3c7a636
         description: ''
     ricardop:
         name: Ricardo Pareja
-        twitter: @ricardopdj
+        twitter: ricardopdj
         gravatar: cf5c43a5651a13fbd064e2d73eeabf4b
         googleplus: 105626686844401882563
         description: 'Desenvolvedor web formado em Análise e Desenvolvimento de Sistemas.'
     vitor:
         name: Vitor Carlos
-        twitter: @vitor42
+        twitter: vitor42
         gravatar: 3c8477165b27ce7f4928ed5cf48ebbd7
         googleplus: 107791644312460228676
         description: 'Front-End Web Developer na Grifo, Bacharel em Sistemas de Informação, trabalha há mais de 8 anos com desenvolvimento web e gosta de groselha.'

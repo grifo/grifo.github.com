@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Grifo - Página não encontrada</title>
+    <script>
+      var key = (document.location.pathname || document.location.href).match(/u?\/([0-9]+)\/?/)
+      if (key) {
+        document.title = 'Grifo - redirecionando'
+        document.location = "//u.gri.fo/" + key[1]
+      }
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/styles/home.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24598886-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+<body>
+    <header>
+        <h1><img class="logo" src="/images/logo-grifo.png" alt="Grifo" /></h1>
+        <h2>Front-end inteligente</h2>
+    </header>
+    <section class="content notfound">
+      <p>Página não encontrada.  Quem sabe o que você procura está na <a href="/">home</a>?</p>
+    </section>
+</body>
+</html>

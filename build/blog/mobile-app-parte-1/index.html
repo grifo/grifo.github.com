@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>Mobile App - Background | blog da Grifo</title>
+    
+    <meta name="viewport" content="width=device-width" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta property="og:description" content="Mobile App - Background" />
+    <meta property="og:image" content="http://gri.fo/images/fb.png" />
+    <meta property="og:url" content="/blog/mobile-app-parte-1" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="alternate" href="http://gri.fo/blog/atom.xml" title="blog da Grifo" type="application/atom+xml" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" title="GitHub Syntax Highlight" href="/styles/github.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24598886-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body class="page">
+
+    <header id="sidebar">
+        
+        <a href="/blog" class="back">home do blog</a>
+        
+        <hgroup>
+            <h1><a class="logo" href="/" title="página inicial">Grifo</a></h1>
+            <p class="sub">Blog de desenvolvimento da Grifo. Técnicas de front-end, node.js, CSS3, HTML5 e design</p>
+            <a href="https://twitter.com/grifotecnologia" class="twitter-follow-button" id="twitter-follow-button" data-show-count="false" data-lang="en" data-size="small">Follow @grifotecnologia</a>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fgrifotecnologia&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=326273014110834" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        </hgroup>
+    </header>
+    
+    <section id="main">
+        <article>
+    <header>
+        <h2>Mobile App - Background</h2>
+        <div class="meta">
+            <time datetime="2012-07-17T00:00:00-03:00" pubdate>17 Jul 2012</time>
+            <ul class="tags">
+                
+                <li><a href="/tags/#!css3">css3</a></li>
+                
+                <li><a href="/tags/#!html5">html5</a></li>
+                
+                <li><a href="/tags/#!mobile">mobile</a></li>
+                
+                <li><a href="/tags/#!background">background</a></li>
+                
+                <li><a href="/tags/#!gradiente">gradiente</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    
+
+    <p>Este é o primeiro de uma série de posts que irão mostrar na prática o desenvolvimento de uma mobile web app. O objetivo final é que nossa app funcione em iPhone, iPad e Android usando apenas html5 e css3. A distribuição do aplicativo precisará apenas de uma interface <em>web view</em> nativa.</p>
+
+<h3>Largura da tela</h3>
+
+<p>Nossa app terá o mesmo layout tanto para iPad, Android e iPhone. A arte está com <strong>640px</strong> de largura, vou seguir esta medida no projeto.</p>
+
+<p>A primeira coisa que farei é adicionar no head a meta <code>&lt;meta name="viewport" content="width=640px"&gt;</code>. Assim os dispositivos vão preencher toda a tela com o conteúdo da app.</p>
+
+<p>Vou aproveitar e criar um <code>#wrapper</code> que define esta mesma largura. Por segurança, vou adicionar o css <code>margin:0 auto</code> ao <code>#wrapper</code> para os casos em que a meta tag não funcionar ou não for aplicável (<em>dispositivos convencionais</em>). Para estes, o conteúdo será mostrado centralizado.</p>
+
+<p>Vale lembrar que, para apps / websites com diferentes layouts com base em resolução, como é o caso deste blog, o ideal é usar <a href="//mediaqueri.es">Media Queries</a>. Em nosso projeto da app não usaremos.</p>
+
+<h3>Vertical Gradient Background</h3>
+
+<p>O app tem um fundo em gradiente vertical que começa no topo e se torna cor sólida a partir dos <strong>520px</strong> de altura. Usar gradiente como <code>background-image</code> é um tanto complicado. Diferentes versões do mesmo browser implementam diferentes sintaxes, além dos prefixos para atender todos os browsers.</p>
+
+<p>Uma referência que utilizo com frequência é o <a href="//twitter.github.com/bootstrap">bootstrap do twitter</a>. Ele já tem uns <a href="//github.com/twitter/bootstrap/blob/master/less/mixins.less#L360">mixins</a> em <a href="//lesscss.org">Less</a> com diferentes gradientes: horizontal, vertical, directional. vertical-three-colos, radial, striped.</p>
+
+<p>Só precisei adicionar <code>@colorStop</code> e já tenho meu conjunto de <a href="//gist.github.com/3130835">mixins</a>.</p>
+
+<pre><code class="no-highlight">#gradient .vertical(#F00, #0F0, 520px);</code></pre>
+
+
+<p>O código acima indica que a transição entre as cores terminará em 520px e que o restante será preenchido com a segunda cor.</p>
+
+<h3>Background Noise</h3>
+
+<p>Outro detalhe do fundo da app é que ele tem <em>noise</em>. Googlada rápida e logo encontro <a href="//forrst.com/posts/Create_alpha_PNGs_of_noise-zm3">alguém com o mesmo problema</a>. Vou precisar usar <a href="//www.css3.info/preview/multiple-backgrounds">background múltiplo</a> e aplicar a imagem que eu gerar em <a href="http://noisepng.com">http://noisepng.com</a> em cima do meu gradiente.</p>
+
+<p>Como <em>background-image</em> não tem <strong>+=</strong>, vou precisar criar outro mixin para adicionar <code>@noise,</code> no início de todas as propriedades.</p>
+
+<pre><code class="no-highlight">#gradient .vertical-noise(url('../images/noise.png'), #F00, #0F0, 520px);</code></pre>
+
+
+<p>Neste caso, browsers que não aceitam múltiplo background estão descartados, mas é sempre bom avaliar se isto não é problema.</p>
+
+<h3>Radial Gradient Background</h3>
+
+<p>Por fim (hehe), o fundo tem um gradiente circular por cima de todos os outros efeitos. O gradiente é composto da mesma cor interna e externamente mas com diferentes transparências. Já temos um <a href="//gist.github.com/3130835">mixin</a> e a transparência das cores iremos resolver usando <a href="//www.w3.org/TR/css3-color/#rgba-color">rgba</a>.</p>
+
+<p>Adicionar mais um múltiplo background e mexer no mixin não me parece prudente, tenho medo que fique complicado de depurar. Optei por aplicar o radial num pseudo elemento <code>:before</code> posicionado absolutamente em todos os extremos do viewport (top, right, bottom e left).</p>
+
+<pre><code class="no-highlight">#element:before {
+    #gradient .radial(rgba(255, 255, 0, .3), rgba(255, 255, 0, 0));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    top: 0;
+}</code></pre>
+
+
+<p>Um detalhe é que precisamos adicionar <code>content:''</code> para que o pseudo elemento seja renderizado. Outro ponto importante é que não terei este background na parcela de conteúdo com dimensões maiores que a do viewport. Para nossa app isto não será problema. ;)</p>
+
+<br>
+
+
+<p>Confira uma demonstração.<br>
+<a href="//codepen.io/jcemer/pen/nBlog" class="btn">Demo</a></p>
+
+<br>
+
+
+<p>Leia o próximo <a href="//gri.fo/blog/mobile-app-parte-2">post da série</a>.</p>
+
+
+    
+    
+<aside class="author">
+    
+    <h4><a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></h4>
+    
+    
+    <a href="//twitter.com/@jcemer" class="twitter">@jcemer</a>
+    
+    
+    <img src="//secure.gravatar.com/avatar/c5df370a883b65279af5a7ca94a5eed7?s=80" width="80" height="80" alt="Jean Carlo Emer">
+    
+    <p>Graduando em <a href="//inf.ufrgs.br">ciência da computação</a> e líder técnico na Grifo. Trabalha com desenvolvimento web há mais de seis anos e tem um <a href="//jcemer.com">site pessoal</a>.</p>
+</aside>
+
+    <footer>
+        <span st_url="http://gri.fo/blog/mobile-app-parte-1" class="st_facebook_hcount" displayText="Facebook"></span>
+        <span st_url="http://gri.fo/blog/mobile-app-parte-1" class="st_twitter_hcount" displayText="Tweet"></span>
+    </footer>
+</article>
+
+
+<aside class="related">
+    <h3>Leia também:</h3>
+    <ul class="posts">
+    
+        <li><a href="/blog/internet-explorer-10-agora-no-windows-7">Internet Explorer 10 agora no Windows 7</a></li>
+    
+        <li><a href="/blog/eventos-em-javascript">Eventos em Javascript</a></li>
+    
+        <li><a href="/blog/google-maps-parou-de-funcionar">O Google Maps parou de funcionar em seu site?</a></li>
+    
+        <li><a href="/blog/code-n-bier-season-finale">Code n' Bier - Season Finale</a></li>
+    
+        <li><a href="/blog/rsjs-retrospectiva">RSJS 2012 - Retrospectiva</a></li>
+    
+        <li><a href="/blog/code-n-bier-segunda-edicao">Code n' Bier - Segunda edição</a></li>
+    
+        <li><a href="/blog/a-maior-conferencia-de-javascript-do-universo">A Maior Conferência de JavaScript do Universo</a></li>
+    
+        <li><a href="/blog/07-o-javascript-brendan-eich">BrazilJS - O estado do JavaScript por Brendan Eich</a></li>
+    
+        <li><a href="/blog/06-grunt-benjamin-alman">BrazilJS - Grunt por Benjamin E Alman</a></li>
+    
+    </ul>
+</aside>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blogdagrifo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+    </section>
+
+    <script src="/scripts/highlight.pack.js"></script>
+    <script>
+        hljs.tabReplace = '    '
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="/scripts/base.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-52b580d3-a4a0-7663-2c94-4cce560bca24"}); </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>(function(){
+        function trackOutbound(){
+            window._gaq && _gaq.push ['_trackEvent', 'Outbound Link', this.href]
+        }
+        var links = document.getElementsByTagName('a')
+        for (var i = 0, link; link = links[i]; i++){
+            if (~link.href.indexOf(document.domain)) continue;
+            if (link.addEventListener) link.addEventListener('mousedown', trackOutbound, null);
+            else if (link.attachEvent) link.attachEvent('mousedown', trackOutbound);
+        }
+    })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>Code n' Bier - Segunda edição | blog da Grifo</title>
+    
+    <meta name="viewport" content="width=device-width" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta property="og:description" content="Code n' Bier - Segunda edição" />
+    <meta property="og:image" content="http://gri.fo/images/fb.png" />
+    <meta property="og:url" content="/blog/code-n-bier-segunda-edicao" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="alternate" href="http://gri.fo/blog/atom.xml" title="blog da Grifo" type="application/atom+xml" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" title="GitHub Syntax Highlight" href="/styles/github.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24598886-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body class="page">
+
+    <header id="sidebar">
+        
+        <a href="/blog" class="back">home do blog</a>
+        
+        <hgroup>
+            <h1><a class="logo" href="/" title="página inicial">Grifo</a></h1>
+            <p class="sub">Blog de desenvolvimento da Grifo. Técnicas de front-end, node.js, CSS3, HTML5 e design</p>
+            <a href="https://twitter.com/grifotecnologia" class="twitter-follow-button" id="twitter-follow-button" data-show-count="false" data-lang="en" data-size="small">Follow @grifotecnologia</a>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fgrifotecnologia&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=326273014110834" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        </hgroup>
+    </header>
+    
+    <section id="main">
+        <article>
+    <header>
+        <h2>Code n' Bier - Segunda edição</h2>
+        <div class="meta">
+            <time datetime="2012-09-06T00:00:00-03:00" pubdate>06 Sep 2012</time>
+            <ul class="tags">
+                
+                <li><a href="/tags/#!Node">Node</a></li>
+                
+                <li><a href="/tags/#!JavaScript">JavaScript</a></li>
+                
+                <li><a href="/tags/#!Live Coding">Live Coding</a></li>
+                
+                <li><a href="/tags/#!Code n' Bier">Code n' Bier</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    
+
+    <p>Mais de cem inscritos, três palestrantes, um jogo usando websockets e ainda competir a atenção com o jogo do Grêmio. Foi dada a largada para a segunda edição do Code n' Bier!</p>
+
+<p><img src="/code/codenbier/edition-02.jpg" alt="Foto início do evento"></p>
+
+<p>Após a primeira edição, abrimos um <a href="http://bit.ly/RgriR3">espaço para sugestões</a>. Mas claro, como a gente sabe que programador é tímido por natureza, tivemos poucas sugestões.</p>
+
+<blockquote><p>Gostaria de ver algo sobre websockets e nodeJS - Guilherme Severo</p></blockquote>
+
+<p><figure>
+  <img src="/code/codenbier/pong.png" alt="Telepong, seus pais jogavam">
+  <figcaption>Telepong, seus pais jogavam</figcaption>
+</figure></p>
+
+<p>Hmm, e por que não? Que tal um jogo usando canvas, <a href="http://socket.io">websockets</a> e <a href="http://nodejs.org">node</a>? Assim começaram nossos planos de fazer um <strong>live coding</strong> - um programador usando o telão e interagindo com a platéia para escrever um jogo em tempo real.</p>
+
+<p>Outra novidade foram os <strong>smalltaks</strong> (uma brincadeira com o nome da linguagem), palestras de dez minutos apresentadas pelos participantes sobre assuntos variados na área da programação.</p>
+
+<h3>Smalltalk - Design Patterns</h3>
+
+<p>A noite começou com uma <strong>smalltalk</strong> sobre design patterns do amigo <a href="http://cristianobecker.com">Cristiano Becker</a>. Becker falou do padrão proxy e explorou cada linha de código <a href="http://cristianobecker.com/codenbier">do seu exemplo</a>, uma excelente aula.</p>
+
+<h3>Live Coding parte 1/2 - Forever alone Pong</h3>
+
+<p>Nosso live coding foi escrever um jogo de Pong. Na primeira parte preparamos o HTML, organizamos uma <em>task</em> usando <a href="https://github.com/ricardobeat/cake-flour">Flour</a> para unir nossos arquivos JavaScript, implementamos o <em>game loop</em> usando <a href="https://github.com/jcemer/telepong/blob/codenbier/lib/utils.js#L3">requestAnimationFrame</a> e escrevemos código até o ponto em que deixamos o <em>puck</em> (bola) quicando na tela.</p>
+
+<h3>Smalltalk - CoffeScript</h3>
+
+<p>A segunda talk da noite foi liderada pelo <a href="http://ricardo.cc/">Ricardo Tomasi</a>, evangelista gaúcho de JavaScript, Node e afins. Descontraído, Ricardo fez piada com o gosto por café e falou sobre o que é <a href="http://coffeescript.org">Cofeescript</a>, linguagem de programação que compila para JavaScript, abastraindo apenas as partes boas da mesma.</p>
+
+<p>Para provar seu conceito, Tomasi portou uma parte do código do Pong para <em>CoffeeScript</em>, mostrando a sintaxe clara e objetiva da linguagem.</p>
+
+<h3>Live Coding parte 2/2 - Node Dual Screen Pong</h3>
+
+<p>Na segunda parte do live coding, uma breve introdução sobre <a href="http://expressjs.com/">express</a>, <a href="http://socket.io">socket.io</a> e a implementação em JavaScript no <a href="https://github.com/jcemer/telepong/blob/codenbier/server.js">servidor</a> responsável por receber e passar o <em>puck</em>. Na sequência o jogo foi adaptado para receber e enviar eventos da bola via websockets. Só faltava o <em>paddle</em> (bastão) e o jogo estaria completo.</p>
+
+<p>O resultado foi um pong com a área de jogo dividida em duas telas, nas quais dois jogadores rebatem o <em>puck</em> com o <em>paddle</em>. Quando o <em>puck</em> cruza o limite superior da tela, ele é <strong>tele</strong>transportado para o outro jogador. E este é o motivo pelo qual esta adaptação do clássico Tele-jogo recebeu o nome de <strong>TelePong</strong>.</p>
+
+<p><a href="https://github.com/jcemer/telepong/tree/codenbier" class="btn">Código final do TelePong no GitHub</a></p>
+
+<h3>Smalltalk - PEG.js</h3>
+
+<p>Guilherme Prá Vieira fechou o evento com uma talk sobre <a href="http://pegjs.majda.cz">PEG.js</a>, um gerador de <em>parser</em> escrito em JavaScript. Ele falou sobre expressões regulares e justificou o mau uso delas para processar HTML.</p>
+
+<p>Vieira também mostrou alguns exemplos de linguagens que podem ser *parseadas usando a biblioteca e o <a href="http://pegjs.majda.cz/online">live demo</a> que pode ser encontrado no website.</p>
+
+<h3>Retrospectiva</h3>
+
+<p>Tradicionalmente, no final do evento rolou um bate-papo para ouvir dos participantes quais os pontos positivos e a melhorar da edição, entre eles...</p>
+
+<h4>Positivos</h4>
+
+<ul>
+<li>Espaço para Smalltalks;</li>
+<li>Produto final - MVP;</li>
+<li>Live Coding;</li>
+<li>Exposição das tecnologias;</li>
+<li>Tecnologias e práticas <em>hypes</em>;</li>
+<li>Cerveja gelada.</li>
+</ul>
+
+
+<h4>A melhorar</h4>
+
+<ul>
+<li>Ter cerveja <em>free</em> (vamos pensar com carinho);</li>
+<li>Aumentar a participação da platéia;</li>
+<li>Voltar com os Dojos;</li>
+<li>Aumentar a playlist.</li>
+</ul>
+
+
+<br>
+
+
+<p>Agradecemos a participação de todos e até a próxima!</p>
+
+
+    
+    
+<aside class="author">
+    
+    <h4><a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></h4>
+    
+    
+    <a href="//twitter.com/@jcemer" class="twitter">@jcemer</a>
+    
+    
+    <img src="//secure.gravatar.com/avatar/c5df370a883b65279af5a7ca94a5eed7?s=80" width="80" height="80" alt="Jean Carlo Emer">
+    
+    <p>Graduando em <a href="//inf.ufrgs.br">ciência da computação</a> e líder técnico na Grifo. Trabalha com desenvolvimento web há mais de seis anos e tem um <a href="//jcemer.com">site pessoal</a>.</p>
+</aside>
+
+    <footer>
+        <span st_url="http://gri.fo/blog/code-n-bier-segunda-edicao" class="st_facebook_hcount" displayText="Facebook"></span>
+        <span st_url="http://gri.fo/blog/code-n-bier-segunda-edicao" class="st_twitter_hcount" displayText="Tweet"></span>
+    </footer>
+</article>
+
+
+<aside class="related">
+    <h3>Leia também:</h3>
+    <ul class="posts">
+    
+        <li><a href="/blog/internet-explorer-10-agora-no-windows-7">Internet Explorer 10 agora no Windows 7</a></li>
+    
+        <li><a href="/blog/eventos-em-javascript">Eventos em Javascript</a></li>
+    
+        <li><a href="/blog/google-maps-parou-de-funcionar">O Google Maps parou de funcionar em seu site?</a></li>
+    
+        <li><a href="/blog/code-n-bier-season-finale">Code n' Bier - Season Finale</a></li>
+    
+        <li><a href="/blog/rsjs-retrospectiva">RSJS 2012 - Retrospectiva</a></li>
+    
+        <li><a href="/blog/a-maior-conferencia-de-javascript-do-universo">A Maior Conferência de JavaScript do Universo</a></li>
+    
+        <li><a href="/blog/07-o-javascript-brendan-eich">BrazilJS - O estado do JavaScript por Brendan Eich</a></li>
+    
+        <li><a href="/blog/06-grunt-benjamin-alman">BrazilJS - Grunt por Benjamin E Alman</a></li>
+    
+        <li><a href="/blog/05-alem-do-teclado-mouse-daniel-filho">BrazilJS - Além do teclado e mouse por Daniel Filho</a></li>
+    
+    </ul>
+</aside>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blogdagrifo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+    </section>
+
+    <script src="/scripts/highlight.pack.js"></script>
+    <script>
+        hljs.tabReplace = '    '
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="/scripts/base.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-52b580d3-a4a0-7663-2c94-4cce560bca24"}); </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>(function(){
+        function trackOutbound(){
+            window._gaq && _gaq.push ['_trackEvent', 'Outbound Link', this.href]
+        }
+        var links = document.getElementsByTagName('a')
+        for (var i = 0, link; link = links[i]; i++){
+            if (~link.href.indexOf(document.domain)) continue;
+            if (link.addEventListener) link.addEventListener('mousedown', trackOutbound, null);
+            else if (link.attachEvent) link.attachEvent('mousedown', trackOutbound);
+        }
+    })()
+    </script>
+</body>
+</html>

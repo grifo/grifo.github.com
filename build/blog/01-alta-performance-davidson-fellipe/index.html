@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>BrazilJS - Performance por Davidson Fellipe | blog da Grifo</title>
+    
+    <meta name="viewport" content="width=device-width" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta property="og:description" content="BrazilJS - Performance por Davidson Fellipe" />
+    <meta property="og:image" content="http://gri.fo/images/fb.png" />
+    <meta property="og:url" content="/blog/01-alta-performance-davidson-fellipe" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="alternate" href="http://gri.fo/blog/atom.xml" title="blog da Grifo" type="application/atom+xml" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" title="GitHub Syntax Highlight" href="/styles/github.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24598886-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body class="page">
+
+    <header id="sidebar">
+        
+        <a href="/blog" class="back">home do blog</a>
+        
+        <hgroup>
+            <h1><a class="logo" href="/" title="página inicial">Grifo</a></h1>
+            <p class="sub">Blog de desenvolvimento da Grifo. Técnicas de front-end, node.js, CSS3, HTML5 e design</p>
+            <a href="https://twitter.com/grifotecnologia" class="twitter-follow-button" id="twitter-follow-button" data-show-count="false" data-lang="en" data-size="small">Follow @grifotecnologia</a>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fgrifotecnologia&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=326273014110834" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        </hgroup>
+    </header>
+    
+    <section id="main">
+        <article>
+    <header>
+        <h2>BrazilJS - Performance por Davidson Fellipe</h2>
+        <div class="meta">
+            <time datetime="2012-08-31T00:00:00-03:00" pubdate>31 Aug 2012</time>
+            <ul class="tags">
+                
+                <li><a href="/tags/#!JavaScript">JavaScript</a></li>
+                
+                <li><a href="/tags/#!BrazilJS">BrazilJS</a></li>
+                
+                <li><a href="/tags/#!performance">performance</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    
+    <div class="braziljs-special clearfix">
+        <div>
+            <h1>Cobertura do evento</h1>
+            <a href="/braziljs">Confira o que rolou no evento</a>
+        </div>
+        <img src="/images/logo-braziljs-small.png" alt="Brazil JS">
+    </div>
+    
+
+    <p><a href="http://fellipe.com/slides/performance-javascript" class="btn">Slides</a></p>
+
+<p>Iniciando o ciclo de palestras do dia, temos Davidson Fellipe, frontend da globo.com, que trabalha no projeto <a href="http://futpedia.globo.com">Futpédia</a>.</p>
+
+<p>Fellipe inicia sua apresentação falando da importância de uma boa <em>performance</em> em um website.</p>
+
+<blockquote><p>Esperar é chato - Davidson</p></blockquote>
+
+<p>Ele apresentou exemplos de websites conhecidos, como o Google e Amazom que com testes de carregamento mais lento (100 a 500ms), perdem até 20% da sua audiência. No caso da Amazon, isto ainda reverte em um decréscimo de 1% em suas vendas.</p>
+
+<blockquote><p>80-90% of the end-user response time is spent on the frontend - Steve Souders</p></blockquote>
+
+<h3>Mobile</h3>
+
+<p>Outro paradoxo abordado foi a evolução do hardware e o contra ponto da popularização de dispositivos móveis com baixo poder de processamente e capacidade de armazenar energia. Isto nos faz refletir e repensar a <em>performance</em> orientada a acessibilidade para todos os usuários.</p>
+
+<h3>Experiêcia UX</h3>
+
+<blockquote><p>Performance é o mais importante? - Davidson</p></blockquote>
+
+<p>Manutenção, modularidade, interface amigável, confiabilidade e extensibilidade estão corelacionados com a performance e não devem ser deixados de lado.</p>
+
+<blockquote><p>A interface não pode responder a entrada de um usuário em um tempo maior que 100ms - Jakob Nielsen</p></blockquote>
+
+<h3>Carregamento</h3>
+
+<p>Davidson falou sobre a integração com scripts externos que podem bloquear o carregamento da página. Um exemplo, é a integração com redes sociais.</p>
+
+<p>Muitas empresas possuem políticas restritas de acesso a redes sociais, restringindo o acesso a qualquer conteúdo de domínios relacionados, o que posterga impreterivelmente o carregamento de scripts oriundos destas comunidades. O resultado é uma grande demanda de requisições e uma entrega comprometida da aplicação.</p>
+
+<p>Devemos considerar scripts em modo defer e carregamento paralelo de scripts e execução ordenada com <a href="http://headjs.com">Head JS</a> para ganhos no carregamento.</p>
+
+<h3>UI Thread</h3>
+
+<p>Tags scripts em meio ao html da página, bloqueiam a renderização do conteúdo seguinte até que sejam completamente processadas.</p>
+
+<p>Um JavaScript demorado resulta em UI sem resposta.</p>
+
+<h3>Outros tópicos</h3>
+
+<p>Fiquei ligado:</p>
+
+<ul>
+<li>habilitar Chrome Frame</li>
+<li>tempo de renderização mobile</li>
+<li><a href="http://jsperf.com/jquery-selectors-context/2">testar performance de seletores jQuery</a></li>
+</ul>
+
+
+<p>Ferramentas:</p>
+
+<ul>
+<li><a href="http://jsperf.com">JsPerf</a></li>
+<li><a href="http://code.google.com/p/jslitmus">JsLitimus</a></li>
+<li><a href="http://www.webpagetest.org">Web Pagetest</a></li>
+<li><a href="http://developer.yahoo.com/yslow">YSlow</a></li>
+<li><a href="http://pagespeed.googlelabs.com">Page Speed Google</a></li>
+</ul>
+
+
+<br>
+
+
+<p>Uma ótima palestra e com certeza uma grande contribuição para a comunidade.</p>
+
+
+    
+    
+<aside class="author">
+    
+    <h4><a href="https://plus.google.com/106620997426722706872?rel=author">Cynthia Menezes Zanoni</a></h4>
+    
+    
+    <a href="//twitter.com/@cynthia_zanoni" class="twitter">@cynthia_zanoni</a>
+    
+    
+    <img src="//secure.gravatar.com/avatar/86c173b9d8f3415c171b16bd86fdb12b?s=80" width="80" height="80" alt="Cynthia Menezes Zanoni">
+    
+    <p>Cynthia é desenvolvora web na Grifo e graduanda no curso de <a href="//www.tecnodohms.org.br/curso-sistemas-para-internet.aspx">Sistemas para internet</a>.Trabalha com desenvolvimento web há aproximadamente três anos e é entusiasta de Marketing Digital, possui um <a href="//cynthiazanoni.blogspot.com">blog sobre search</a>.</p>
+</aside>
+
+    <footer>
+        <span st_url="http://gri.fo/blog/01-alta-performance-davidson-fellipe" class="st_facebook_hcount" displayText="Facebook"></span>
+        <span st_url="http://gri.fo/blog/01-alta-performance-davidson-fellipe" class="st_twitter_hcount" displayText="Tweet"></span>
+    </footer>
+</article>
+
+
+<aside class="related">
+    <h3>Leia também:</h3>
+    <ul class="posts">
+    
+        <li><a href="/blog/internet-explorer-10-agora-no-windows-7">Internet Explorer 10 agora no Windows 7</a></li>
+    
+        <li><a href="/blog/eventos-em-javascript">Eventos em Javascript</a></li>
+    
+        <li><a href="/blog/google-maps-parou-de-funcionar">O Google Maps parou de funcionar em seu site?</a></li>
+    
+        <li><a href="/blog/code-n-bier-season-finale">Code n' Bier - Season Finale</a></li>
+    
+        <li><a href="/blog/rsjs-retrospectiva">RSJS 2012 - Retrospectiva</a></li>
+    
+        <li><a href="/blog/code-n-bier-segunda-edicao">Code n' Bier - Segunda edição</a></li>
+    
+        <li><a href="/blog/a-maior-conferencia-de-javascript-do-universo">A Maior Conferência de JavaScript do Universo</a></li>
+    
+        <li><a href="/blog/07-o-javascript-brendan-eich">BrazilJS - O estado do JavaScript por Brendan Eich</a></li>
+    
+        <li><a href="/blog/06-grunt-benjamin-alman">BrazilJS - Grunt por Benjamin E Alman</a></li>
+    
+    </ul>
+</aside>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blogdagrifo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+    </section>
+
+    <script src="/scripts/highlight.pack.js"></script>
+    <script>
+        hljs.tabReplace = '    '
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="/scripts/base.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-52b580d3-a4a0-7663-2c94-4cce560bca24"}); </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>(function(){
+        function trackOutbound(){
+            window._gaq && _gaq.push ['_trackEvent', 'Outbound Link', this.href]
+        }
+        var links = document.getElementsByTagName('a')
+        for (var i = 0, link; link = links[i]; i++){
+            if (~link.href.indexOf(document.domain)) continue;
+            if (link.addEventListener) link.addEventListener('mousedown', trackOutbound, null);
+            else if (link.attachEvent) link.attachEvent('mousedown', trackOutbound);
+        }
+    })()
+    </script>
+</body>
+</html>

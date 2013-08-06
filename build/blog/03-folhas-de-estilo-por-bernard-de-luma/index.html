@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>BrazilJS - CSS por Bernard de Luna | blog da Grifo</title>
+    
+    <meta name="viewport" content="width=device-width" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta property="og:description" content="BrazilJS - CSS por Bernard de Luna" />
+    <meta property="og:image" content="http://gri.fo/images/fb.png" />
+    <meta property="og:url" content="/blog/03-folhas-de-estilo-por-bernard-de-luma" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="alternate" href="http://gri.fo/blog/atom.xml" title="blog da Grifo" type="application/atom+xml" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" title="GitHub Syntax Highlight" href="/styles/github.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24598886-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body class="page">
+
+    <header id="sidebar">
+        
+        <a href="/blog" class="back">home do blog</a>
+        
+        <hgroup>
+            <h1><a class="logo" href="/" title="página inicial">Grifo</a></h1>
+            <p class="sub">Blog de desenvolvimento da Grifo. Técnicas de front-end, node.js, CSS3, HTML5 e design</p>
+            <a href="https://twitter.com/grifotecnologia" class="twitter-follow-button" id="twitter-follow-button" data-show-count="false" data-lang="en" data-size="small">Follow @grifotecnologia</a>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fgrifotecnologia&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=326273014110834" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        </hgroup>
+    </header>
+    
+    <section id="main">
+        <article>
+    <header>
+        <h2>BrazilJS - CSS por Bernard de Luna</h2>
+        <div class="meta">
+            <time datetime="2012-08-31T00:00:00-03:00" pubdate>31 Aug 2012</time>
+            <ul class="tags">
+                
+                <li><a href="/tags/#!JavaScript">JavaScript</a></li>
+                
+                <li><a href="/tags/#!BrazilJS">BrazilJS</a></li>
+                
+                <li><a href="/tags/#!CSS">CSS</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    
+    <div class="braziljs-special clearfix">
+        <div>
+            <h1>Cobertura do evento</h1>
+            <a href="/braziljs">Confira o que rolou no evento</a>
+        </div>
+        <img src="/images/logo-braziljs-small.png" alt="Brazil JS">
+    </div>
+    
+
+    <p><a href="http://bernarddeluna.com/talks/estilizando" class="btn">Slides</a></p>
+
+<p><figure>
+  <img src="/images/braziljs-2012/bernard-de-luna.jpg" alt="Jean Carlo e Bernard de Luna" width="300">
+  <figcaption>Jean Carlo e Bernard de Luna</figcaption>
+</figure></p>
+
+<p>Bernard trabalha como diretor criativo da Melt, empresa de compra de mídia em tempo real. Sua palestra é muito descolada e cheia de citações próprias.</p>
+
+<p>Dentre as mais marcantes, desenvolvedores não sabem CSS e nem <strong>Deus</strong> sabe CSS.</p>
+
+<p>O principal argumento é de que o <em>CSS</em> é muito fácil e qualquer um consegue fazer. Toda a iteração acaba sendo baseada em tentativa e erro até o ponto em que temos um <em>stylesheet</em>.</p>
+
+<h3>Performance</h3>
+
+<blockquote><p>Não perca tempo discutindo entre usar CLASS ou ID - Luna</p></blockquote>
+
+<p>Quando falamos de performance, <em>Key selector</em> logo vem a mente. Toda seleção de CSS começa a ser avaliada da direita, um detalhe que muitos não dão atenção, e quanto menos itens usarmos na seleção, melhor a performance.</p>
+
+<p>Evite usar o seletor universal <code>*</code>, pois ela obrigada o navegador a buscar por <strong>todas</strong> as tags do seu website. E ainda tome cuidado com o seletor universal invisível <code>body [type="text"]</code>.</p>
+
+<p>Outro vilão é o <code>@import</code>, que bloqueia o processamento da folha de estilo a espera das requisições complementares, não use, <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import">já blogava em 2009 Steve Souders</a>.</p>
+
+<p>Seletores CSS3 podem influenciar sua performance, evite <code>:first-child</code>, <code>:nth-child</code>, <code>:only-child</code> entre outros.</p>
+
+<blockquote><p>Considere usar classes específicas na marcação. - David Hyatt</p></blockquote>
+
+<p>Por incrível que pareça, <code>border-radius</code> possui custo de renderização maior que sombras e gradientes.</p>
+
+<p>E não se esqueça, defina o tamanho das imagens na sua folha de estilo, isto dá um ganho de performance e permite tornar seu site responsivo.</p>
+
+<h4>Reflow &amp; Repaint</h4>
+
+<p>Manipulações de tamanho e posição do objeto geram <em>reflow</em>, posicione os elementos absolutamente e evite que animações ativem este comportamento. Mais que isto - e aqui é dica minha - <strong>use transform</strong>.</p>
+
+<h3>Modularização</h3>
+
+<p>Infelizmente os desenvolvedores não seguem o básico, classes com nome dado pela aparência ou texto não são nada legais. Muito mais que isto, adote um padrão e evite abreviações desnecessárias.</p>
+
+<p>Bernard lista algumas das metodologias para escrita de estilo:</p>
+
+<p><strong>DRY CSS:</strong> a proposta do <em>não repita seu código</em> tem um grande <em>mistake</em>, vincular suas classes com o estilo dos elementos.</p>
+
+<p><strong>OOCSS</strong>: prega a separação da estrutura e do estilo e da criação de elementos globais.</p>
+
+<p><strong>SMACSS</strong>: categorização do CSS em base, <em>layout</em>, <em>modules</em>, <em>states</em> e <em>theme</em> tudo isto independente e, infelizmente, engessado e fechado.</p>
+
+<p><strong>BEM</strong>: módulos independentes, complexidade elevada e nomenclatura engessada e falha.</p>
+
+<h4>LESS / SASS</h4>
+
+<p>Particularmente não consigo ver o desenvolvimento frontend sem base em um bom pré-processador de CSS, seja ele qual for. As principais vantagens são as possibilidades de armazenar variáveis para nomes de fontes, cores e espaçamentos, além do uso de <em>mixins</em> [para driblar <em>vendor-prefixed properties</em>](http://lesselements.com.</p>
+
+<br>
+
+
+<p>Tratando-se de formulários, vale a pena conferir o projeto <a href="http://formee.org/">Formee</a>, framework de formulários criado pelo Bernard e outros membros da equipe da Petrobrás. Tremendo sucesso e com mais de trinta mil downloads, o framework é totalmente modularizado e acompanhado de uma completa gama de <em>grids</em> e objetos padronizados.</p>
+
+<p>As dicas finais de modularização são: documente seu código, crie uma <a href="http://twitter.github.com/bootstrap/base-css.html">página com objetos padrões</a> e sempre <strong>trabalhe em equipe</strong>!</p>
+
+<h3>Mágica</h3>
+
+<blockquote><p>Brinque mais, surpreenda, reeinvente! - Bernard</p></blockquote>
+
+<p>Luna definitivamente conquistou a platéia com bons experimentos usando CSS, vale conferir o <a href="http://blog.zenorocha.com/post/27569632629/como-fizemos-o-oldradio">post do Zeno que explica como fizeram o Old Radio</a>.</p>
+
+<br>
+
+
+<p>Eu já tinha conferido os slides desta palestra, que havia sido apresentada na <a href="http://qconsp.com">QConSP</a>, e foi uma satisfação vê-la ao vivo, ótimo palestrante!</p>
+
+
+    
+    
+<aside class="author">
+    
+    <h4><a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></h4>
+    
+    
+    <a href="//twitter.com/@jcemer" class="twitter">@jcemer</a>
+    
+    
+    <img src="//secure.gravatar.com/avatar/c5df370a883b65279af5a7ca94a5eed7?s=80" width="80" height="80" alt="Jean Carlo Emer">
+    
+    <p>Graduando em <a href="//inf.ufrgs.br">ciência da computação</a> e líder técnico na Grifo. Trabalha com desenvolvimento web há mais de seis anos e tem um <a href="//jcemer.com">site pessoal</a>.</p>
+</aside>
+
+    <footer>
+        <span st_url="http://gri.fo/blog/03-folhas-de-estilo-por-bernard-de-luma" class="st_facebook_hcount" displayText="Facebook"></span>
+        <span st_url="http://gri.fo/blog/03-folhas-de-estilo-por-bernard-de-luma" class="st_twitter_hcount" displayText="Tweet"></span>
+    </footer>
+</article>
+
+
+<aside class="related">
+    <h3>Leia também:</h3>
+    <ul class="posts">
+    
+        <li><a href="/blog/internet-explorer-10-agora-no-windows-7">Internet Explorer 10 agora no Windows 7</a></li>
+    
+        <li><a href="/blog/eventos-em-javascript">Eventos em Javascript</a></li>
+    
+        <li><a href="/blog/google-maps-parou-de-funcionar">O Google Maps parou de funcionar em seu site?</a></li>
+    
+        <li><a href="/blog/code-n-bier-season-finale">Code n' Bier - Season Finale</a></li>
+    
+        <li><a href="/blog/rsjs-retrospectiva">RSJS 2012 - Retrospectiva</a></li>
+    
+        <li><a href="/blog/code-n-bier-segunda-edicao">Code n' Bier - Segunda edição</a></li>
+    
+        <li><a href="/blog/a-maior-conferencia-de-javascript-do-universo">A Maior Conferência de JavaScript do Universo</a></li>
+    
+        <li><a href="/blog/07-o-javascript-brendan-eich">BrazilJS - O estado do JavaScript por Brendan Eich</a></li>
+    
+        <li><a href="/blog/06-grunt-benjamin-alman">BrazilJS - Grunt por Benjamin E Alman</a></li>
+    
+    </ul>
+</aside>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blogdagrifo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+    </section>
+
+    <script src="/scripts/highlight.pack.js"></script>
+    <script>
+        hljs.tabReplace = '    '
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="/scripts/base.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-52b580d3-a4a0-7663-2c94-4cce560bca24"}); </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>(function(){
+        function trackOutbound(){
+            window._gaq && _gaq.push ['_trackEvent', 'Outbound Link', this.href]
+        }
+        var links = document.getElementsByTagName('a')
+        for (var i = 0, link; link = links[i]; i++){
+            if (~link.href.indexOf(document.domain)) continue;
+            if (link.addEventListener) link.addEventListener('mousedown', trackOutbound, null);
+            else if (link.attachEvent) link.attachEvent('mousedown', trackOutbound);
+        }
+    })()
+    </script>
+</body>
+</html>

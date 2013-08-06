@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>BrazilJS - ECMAScript 6 por Dave Herman | blog da Grifo</title>
+    
+    <meta name="viewport" content="width=device-width" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta property="og:description" content="BrazilJS - ECMAScript 6 por Dave Herman" />
+    <meta property="og:image" content="http://gri.fo/images/fb.png" />
+    <meta property="og:url" content="/blog/07-es6-deep-dive-dave-herman" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="alternate" href="http://gri.fo/blog/atom.xml" title="blog da Grifo" type="application/atom+xml" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" title="GitHub Syntax Highlight" href="/styles/github.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24598886-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body class="page">
+
+    <header id="sidebar">
+        
+        <a href="/blog" class="back">home do blog</a>
+        
+        <hgroup>
+            <h1><a class="logo" href="/" title="página inicial">Grifo</a></h1>
+            <p class="sub">Blog de desenvolvimento da Grifo. Técnicas de front-end, node.js, CSS3, HTML5 e design</p>
+            <a href="https://twitter.com/grifotecnologia" class="twitter-follow-button" id="twitter-follow-button" data-show-count="false" data-lang="en" data-size="small">Follow @grifotecnologia</a>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fgrifotecnologia&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=326273014110834" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        </hgroup>
+    </header>
+    
+    <section id="main">
+        <article>
+    <header>
+        <h2>BrazilJS - ECMAScript 6 por Dave Herman</h2>
+        <div class="meta">
+            <time datetime="2012-08-30T00:00:00-03:00" pubdate>30 Aug 2012</time>
+            <ul class="tags">
+                
+                <li><a href="/tags/#!JavaScript">JavaScript</a></li>
+                
+                <li><a href="/tags/#!BrazilJS">BrazilJS</a></li>
+                
+                <li><a href="/tags/#!ES6">ES6</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    
+    <div class="braziljs-special clearfix">
+        <div>
+            <h1>Cobertura do evento</h1>
+            <a href="/braziljs">Confira o que rolou no evento</a>
+        </div>
+        <img src="/images/logo-braziljs-small.png" alt="Brazil JS">
+    </div>
+    
+
+    <p><a href="https://speakerdeck.com/u/dherman/p/es6-deep-dive" class="btn">Slides</a></p>
+
+<p>Dave Herman trabalha no Mozilla Research com tecnologias que serão lançadas em alguns anos. O início da palestra é marcado com o anúncio exclusivo do livro <em>Effective JavaScript</em> que será lançado em dezembro.</p>
+
+<h3>Symbols</h3>
+
+<p>As propriedades dos objetos no JavaScript são strings e esta liberdade de definir qualquer nome acabou por criar alguns padrões.</p>
+
+<p>A exemplo, temos o famoso <code>_</code> usado como indicativo de que a propriedade é privada. O problema desta abordagem é que na verdade não temos uma propriedade privada. Uma tentativa mais prática de se armazenar dados de forma privada é usando <em>closures</em>.</p>
+
+<p>ECMAScript 6 introduz o conceito de <em>symbols</em> que podem ser usados como chave de propriedades. Desta maneira é possível criar chaves únicas para nossas propriedades.</p>
+
+<pre><code>var sym = new Symbol('data');
+function Class() {
+    this[sym] = 'private data';
+}
+</code></pre>
+
+<h3>Structs</h3>
+
+<p>A intenção das <em>structs</em> é poder garantir maior controle para o desenvolvedor trabalhar com dados no JavaScript. Isto possibilita ter uma representação específica para vértices de uma figura tridimensional, por exemplo.</p>
+
+<pre><code>var Point = struct({
+    x: uint32,
+    y: uint32,
+    z: uint32,
+});
+var origin = new Point(0, 0, 0);
+</code></pre>
+
+<p>Compiladores operam muito melhor com variáveis tipadas. E as <em>structs</em> podem ser usadas para dados WebGL, arquivos e I/O de rede além de compilar outras linguagens para JavaScript.</p>
+
+<h3>Generators</h3>
+
+<pre><code>function eventNumbers() {
+    for (var next = 0; true; next += 2) {
+        yield next;
+    }
+}
+</code></pre>
+
+<p>A cada chamada da função, o retorno será incrementado em dois números. A implementação é muito próxima de Python.</p>
+
+<p>O uso de <em>yield</em> indica que temos uma grande pausa na execução de nossa rotina. Desta maneira, podemos esperar a requisição de informação ou a entrada de dados pelo usuário.</p>
+
+<p>Dave introduz <a href="http://taskjs.org">taskjs.org</a>, uma biblioteca que funciona apenas em browsers que implementam Generators.</p>
+
+<h4>Promises</h4>
+
+<pre><code>load('config.json')
+    .then(function doThat() { ... })
+    .then(function doThis() { ... })
+</code></pre>
+
+<p>As instruções acima indica que o arquivo <em>config.json</em> deve ser carregado e que logo após <em>doThat</em> e <em>doThis</em> deve ser executado.</p>
+
+<h4>Yield</h4>
+
+<p>O <em>yield</em> opera disparando nossas <em>promises</em>. Uma possibilidade incrível é carregar uma série de arquivos e disparar uma <em>callback</em> apenas quando todos forem completamente carregados.</p>
+
+<br>
+
+
+<p>No encerramento temos um <em>brainfuck</em> escrito em JavaScript. A explicação é um tanto engraçada, o mistério é relevado, o resultado do código é <code>javascript</code>, brilhante.</p>
+
+
+    
+    
+<aside class="author">
+    
+    <h4><a href="https://plus.google.com/115177659661305654561?rel=author">Jean Carlo Emer</a></h4>
+    
+    
+    <a href="//twitter.com/@jcemer" class="twitter">@jcemer</a>
+    
+    
+    <img src="//secure.gravatar.com/avatar/c5df370a883b65279af5a7ca94a5eed7?s=80" width="80" height="80" alt="Jean Carlo Emer">
+    
+    <p>Graduando em <a href="//inf.ufrgs.br">ciência da computação</a> e líder técnico na Grifo. Trabalha com desenvolvimento web há mais de seis anos e tem um <a href="//jcemer.com">site pessoal</a>.</p>
+</aside>
+
+    <footer>
+        <span st_url="http://gri.fo/blog/07-es6-deep-dive-dave-herman" class="st_facebook_hcount" displayText="Facebook"></span>
+        <span st_url="http://gri.fo/blog/07-es6-deep-dive-dave-herman" class="st_twitter_hcount" displayText="Tweet"></span>
+    </footer>
+</article>
+
+
+<aside class="related">
+    <h3>Leia também:</h3>
+    <ul class="posts">
+    
+        <li><a href="/blog/internet-explorer-10-agora-no-windows-7">Internet Explorer 10 agora no Windows 7</a></li>
+    
+        <li><a href="/blog/eventos-em-javascript">Eventos em Javascript</a></li>
+    
+        <li><a href="/blog/google-maps-parou-de-funcionar">O Google Maps parou de funcionar em seu site?</a></li>
+    
+        <li><a href="/blog/code-n-bier-season-finale">Code n' Bier - Season Finale</a></li>
+    
+        <li><a href="/blog/rsjs-retrospectiva">RSJS 2012 - Retrospectiva</a></li>
+    
+        <li><a href="/blog/code-n-bier-segunda-edicao">Code n' Bier - Segunda edição</a></li>
+    
+        <li><a href="/blog/a-maior-conferencia-de-javascript-do-universo">A Maior Conferência de JavaScript do Universo</a></li>
+    
+        <li><a href="/blog/07-o-javascript-brendan-eich">BrazilJS - O estado do JavaScript por Brendan Eich</a></li>
+    
+        <li><a href="/blog/06-grunt-benjamin-alman">BrazilJS - Grunt por Benjamin E Alman</a></li>
+    
+    </ul>
+</aside>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blogdagrifo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+    </section>
+
+    <script src="/scripts/highlight.pack.js"></script>
+    <script>
+        hljs.tabReplace = '    '
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="/scripts/base.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-52b580d3-a4a0-7663-2c94-4cce560bca24"}); </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>(function(){
+        function trackOutbound(){
+            window._gaq && _gaq.push ['_trackEvent', 'Outbound Link', this.href]
+        }
+        var links = document.getElementsByTagName('a')
+        for (var i = 0, link; link = links[i]; i++){
+            if (~link.href.indexOf(document.domain)) continue;
+            if (link.addEventListener) link.addEventListener('mousedown', trackOutbound, null);
+            else if (link.attachEvent) link.attachEvent('mousedown', trackOutbound);
+        }
+    })()
+    </script>
+</body>
+</html>

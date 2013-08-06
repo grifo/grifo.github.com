@@ -1,0 +1,61 @@
+#!/usr/bin/env coffee
+
+fs = require 'fs'
+cp = require 'child_process'
+
+title = process.argv[2..].join(' ')
+
+if not title
+    console.log "Please provide a title for your post."
+    process.exit 1
+    
+pad = (n, p=2) -> (n / Math.pow 10, p).toFixed(p).slice(2)
+
+today = new Date()
+postdate = "#{today.getFullYear()}-#{pad(today.getMonth()+1)}-#{pad(today.getDate())}"
+
+special = /[öäüÖÄÜáàâãéèêúùûóòôÁÀÂÉÈÊÚÙÛÓÒÔß]/g
+specialMap =
+    "ä": "a", "ö": "o", "ü": "u",
+    "Ä": "A", "Ö": "O", "Ü": "U",
+    "á": "a", "à": "a", "â": "a",
+    "é": "e", "è": "e", "ê": "e",
+    "ú": "u", "ù": "u", "û": "u",
+    "ó": "o", "ò": "o", "ô": "o",
+    "Á": "A", "À": "A", "Â": "A",
+    "É": "E", "È": "E", "Ê": "E",
+    "Ú": "U", "Ù": "U", "Û": "U",
+    "Ó": "O", "Ò": "O", "Ô": "O",
+    "ß": "s", "ã": "a"
+
+normalize = (str) ->
+    str
+        .replace(special, (c) -> specialMap[c] || c)
+        .replace(/[\s-_:.]+/g, '-')
+        .replace(/[^\w-]/g, '')
+
+filename = "#{postdate}-#{normalize(title).toLowerCase()}"
+
+contents = """
+---
+layout: post
+title: "#{title}"
+subtitle: ""
+tags:
+    - html5
+    - bacon
+---
+
+Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.
+
+"""
+
+path = "blog/_posts/#{filename}.md"
+
+fs.writeFile path, contents, (err) ->
+    if err
+        return console.log 'error'
+    else
+        console.log "Created post \"#{title}\""
+        cp.spawn 'subl', [path]
+        process.exit 0

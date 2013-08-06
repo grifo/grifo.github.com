@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>BrazilJS - JS on TV por Mike Taylor | blog da Grifo</title>
+    
+    <meta name="viewport" content="width=device-width" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta property="og:description" content="BrazilJS - JS on TV por Mike Taylor" />
+    <meta property="og:image" content="http://gri.fo/images/fb.png" />
+    <meta property="og:url" content="/blog/06-js-on-tv-mike-taylor" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="alternate" href="http://gri.fo/blog/atom.xml" title="blog da Grifo" type="application/atom+xml" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" title="GitHub Syntax Highlight" href="/styles/github.css" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24598886-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body class="page">
+
+    <header id="sidebar">
+        
+        <a href="/blog" class="back">home do blog</a>
+        
+        <hgroup>
+            <h1><a class="logo" href="/" title="página inicial">Grifo</a></h1>
+            <p class="sub">Blog de desenvolvimento da Grifo. Técnicas de front-end, node.js, CSS3, HTML5 e design</p>
+            <a href="https://twitter.com/grifotecnologia" class="twitter-follow-button" id="twitter-follow-button" data-show-count="false" data-lang="en" data-size="small">Follow @grifotecnologia</a>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fgrifotecnologia&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=326273014110834" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        </hgroup>
+    </header>
+    
+    <section id="main">
+        <article>
+    <header>
+        <h2>BrazilJS - JS on TV por Mike Taylor</h2>
+        <div class="meta">
+            <time datetime="2012-08-30T00:00:00-03:00" pubdate>30 Aug 2012</time>
+            <ul class="tags">
+                
+                <li><a href="/tags/#!JavaScript">JavaScript</a></li>
+                
+                <li><a href="/tags/#!BrazilJS">BrazilJS</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+    
+    <div class="braziljs-special clearfix">
+        <div>
+            <h1>Cobertura do evento</h1>
+            <a href="/braziljs">Confira o que rolou no evento</a>
+        </div>
+        <img src="/images/logo-braziljs-small.png" alt="Brazil JS">
+    </div>
+    
+
+    <p><figure>
+  <img src="/images/braziljs-2012/mike-taylor.jpg" alt="Vitor Carlos e Mike Taylor" width="300">
+  <figcaption>Vitor Carlos e Mike Taylor</figcaption>
+</figure></p>
+
+<p>Muito bem humorado e arranhando português, Mike inicia a sua apresentação mostrando o início da história do Opera na TV através dos consoles da Nintendo, e posteriormente em várias SmartTvs.</p>
+
+<p>Inicialmente ele levantou algumas preocupações que devemos tomar quando pensamos em desenvolver aplicativos para televisão. A principal delas é garantir que o conteúdo apareça na área central do televisor, visto que alguns modelos possuem uma margem externa à área visível que é utilizada para outros recursos.</p>
+
+<p>Ele também lembra que, diferente de computadores, as tvs possuem um local de destaque na sala. Sendo assim, é importante pensar em aplicativos sociais, que possam ser compartilhados com toda a família.</p>
+
+<p>O modo como interagimos com a aplicação também deve ser pensado. A especificação do DOM3 fala sobre alguns botões padrões para controles, que são as setas direcionais e o botão de enter. Ela também fala sobre teclas para as cores (amarelo, azul, vermelho e verde), mas ests são opcionais, então devemos testar a existência das mesmas antes de atribuir funções, bem como pensar em um fallback.</p>
+
+<blockquote><p>Use event listener or Rick Waldron vai vir te pegar! - Mike</p></blockquote>
+
+<p>Quanto ao CSS, Mike avisa que o media="tv" está praticamente abandonado, e considera a abordagem via media="screen" mais apropriada. Ele também recomendou o uso moderado de bibliotecas de JavaScript, lembrando de dois sites bem conhecidos por desenvolvedores: <a href="http://microjs.com/">microjs</a> e <a href="http://vanilla-js.com/">vanilla.js</a>. <em>//hehe :o)</em></p>
+
+<p>Além disso, Mike também não recomenda o uso de cookies em TV, pois o mesmo pode ser perdido ao desligar o aparelho. Mesmo assim, ele lembra que cookies podem ser um ótimo polyfill para local storage.</p>
+
+<p>Ele também mostra que não é necessário um televisor para desenvolvimento. A Opera disponibiliza duas ferramentas para fins de teste: o <a href="http://www.opera.com/business/tv/emulator/">Opera TV Emulator</a> e o <a href="http://www.opera.com/dragonfly/">Opera Dragonfly</a> para depuração. A Opera também disponibiliza templates e outras ferramentas específicas para televisores em <a href="dev.opera.com/tv/">Dev.Opera</a>.</p>
+
+
+    
+    
+<aside class="author">
+    
+    <h4><a href="https://plus.google.com/107791644312460228676?rel=author">Vitor Carlos</a></h4>
+    
+    
+    <a href="//twitter.com/@vitor42" class="twitter">@vitor42</a>
+    
+    
+    <img src="//secure.gravatar.com/avatar/3c8477165b27ce7f4928ed5cf48ebbd7?s=80" width="80" height="80" alt="Vitor Carlos">
+    
+    <p>Front-End Web Developer na Grifo, Bacharel em Sistemas de Informação, trabalha há mais de 8 anos com desenvolvimento web e gosta de groselha.</p>
+</aside>
+
+    <footer>
+        <span st_url="http://gri.fo/blog/06-js-on-tv-mike-taylor" class="st_facebook_hcount" displayText="Facebook"></span>
+        <span st_url="http://gri.fo/blog/06-js-on-tv-mike-taylor" class="st_twitter_hcount" displayText="Tweet"></span>
+    </footer>
+</article>
+
+
+<aside class="related">
+    <h3>Leia também:</h3>
+    <ul class="posts">
+    
+        <li><a href="/blog/internet-explorer-10-agora-no-windows-7">Internet Explorer 10 agora no Windows 7</a></li>
+    
+        <li><a href="/blog/eventos-em-javascript">Eventos em Javascript</a></li>
+    
+        <li><a href="/blog/google-maps-parou-de-funcionar">O Google Maps parou de funcionar em seu site?</a></li>
+    
+        <li><a href="/blog/code-n-bier-season-finale">Code n' Bier - Season Finale</a></li>
+    
+        <li><a href="/blog/rsjs-retrospectiva">RSJS 2012 - Retrospectiva</a></li>
+    
+        <li><a href="/blog/code-n-bier-segunda-edicao">Code n' Bier - Segunda edição</a></li>
+    
+        <li><a href="/blog/a-maior-conferencia-de-javascript-do-universo">A Maior Conferência de JavaScript do Universo</a></li>
+    
+        <li><a href="/blog/07-o-javascript-brendan-eich">BrazilJS - O estado do JavaScript por Brendan Eich</a></li>
+    
+        <li><a href="/blog/06-grunt-benjamin-alman">BrazilJS - Grunt por Benjamin E Alman</a></li>
+    
+    </ul>
+</aside>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blogdagrifo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+    </section>
+
+    <script src="/scripts/highlight.pack.js"></script>
+    <script>
+        hljs.tabReplace = '    '
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="/scripts/base.js"></script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "ur-52b580d3-a4a0-7663-2c94-4cce560bca24"}); </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>(function(){
+        function trackOutbound(){
+            window._gaq && _gaq.push ['_trackEvent', 'Outbound Link', this.href]
+        }
+        var links = document.getElementsByTagName('a')
+        for (var i = 0, link; link = links[i]; i++){
+            if (~link.href.indexOf(document.domain)) continue;
+            if (link.addEventListener) link.addEventListener('mousedown', trackOutbound, null);
+            else if (link.attachEvent) link.attachEvent('mousedown', trackOutbound);
+        }
+    })()
+    </script>
+</body>
+</html>

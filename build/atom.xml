@@ -1,0 +1,2346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Grifo Blog</title>
+ <link href="http://blog.gri.fo/atom.xml" rel="self"/>
+ <link href="http://blog.gri.fo"/>
+ <updated>2013-08-06T19:13:59-03:00</updated>
+ <id>http://blog.gri.fo/</id>
+ <author>Grifo (blog@gri.fo)</author>
+
+ 
+ <entry>
+   <title>Internet Explorer 10 agora no Windows 7</title>
+   <link href="http://blog.gri.fo/blog/internet-explorer-10-agora-no-windows-7"/>
+   <updated>2013-02-26T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/internet-explorer-10-agora-no-windows-7</id>
+   <content type="html">&lt;p&gt;O Internet Explorer sempre foi uma grande &lt;em&gt;rocha&lt;/em&gt; no sapato dos desenvolvedores Web, desde a remota versão inicial até culminar com a apocalíptica versão 6. O navegador de Redmond, carinhosamente chamado de &quot;Internerd Exploder 6&quot;, &quot;IE Sucks&quot;, &quot;IE Lixo&quot; e outros nomes impróprios para publicação finalmente começou a tomar a forma de um &lt;em&gt;browser&lt;/em&gt; de verdade a partir da versão 7, ainda assim com muitos bugs e padrões quase inexistentes, melhorando pouca coisa com o lançamento da versão 8.&lt;/p&gt;
+
+&lt;h3&gt;A New Hope&lt;/h3&gt;
+
+&lt;p&gt;Felizmente, com a entrada de Dean Hachamovitch como o manda-chuva do time que desenvolve o Internet Explorer, as coisas mudaram radicalmente na versão 9. &lt;em&gt;Standards compliant&lt;/em&gt;, &lt;em&gt;same markup&lt;/em&gt;, &lt;em&gt;better Javascript performance&lt;/em&gt; são as palavras de ordem no time, que entregou finalmente um browser de verdade para a Microsoft.&lt;/p&gt;
+
+&lt;p&gt;E agora, com o lançamento oficial da versão 10 para o Windows 7, a mesma versão que já vem &quot;de fábrica&quot; no Windows 8, as coisas melhoraram ainda mais, com suporte a animações, gradientes, flexbox, 3D-transforms, transitions, fonts... é a Microsoft levando os desenvolvedores ao nirvana.&lt;/p&gt;
+
+&lt;p&gt;Tudo isto acaba se traduzindo em melhores condições de desenvolvimento Web, menos tempo perdido (e dinheiro) solucionando bugs malucos do IE e muitos, muitos desenvolvedores felizes.&lt;/p&gt;
+
+&lt;h3&gt;The Empire Strikes Back&lt;/h3&gt;
+
+&lt;p&gt;Claro, nem tudo são rosas. Ainda temos que aturar os velhos dinossauros de sempre que ainda utilizam Windows XP em grandes empresas e também aquele usuário teimoso (ou pirata) que se recusa a fazer &lt;em&gt;updates&lt;/em&gt; necessários e depois reclama que a sua conta bancária foi &lt;em&gt;raqueada&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para estes, não há esperança.&lt;/p&gt;
+
+&lt;p&gt;Faça o download do Internet Explorer 10 no &lt;a href=&quot;http://www.beautyoftheweb.com/download&quot;&gt;site mais belo da Web&lt;/a&gt;. Desmarque a caixinha logo abaixo do botão se você não curte o Bing ou a MSN. Eu particularmente até acho o Bing legal.&lt;/p&gt;
+
+&lt;p&gt;Você pode ler mais a respeito do lançamento oficial do Internet Explorer 10 &lt;a href=&quot;http://blogs.msdn.com/b/ie/archive/2013/02/26/ie10-for-windows-7-globally-available-for-consumers-and-businesses.aspx&quot;&gt;no blog oficial&lt;/a&gt; e também descobrir mais sobre os padrões suportados por esta versão &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ie/hh673549%28v=vs.85%29.aspx&quot;&gt;nesta página da MSDN&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;E como ninguém é de ferro, seja feliz jogando &quot;cartuchos&quot; do Atari repensados para a Web no site &lt;a href=&quot;http://www.atari.com/arcade&quot;&gt;Atari Arcade&lt;/a&gt;. Vale dizer que em todos os browsers há exibição de publicidade entre os jogos, &lt;em&gt;MENOS&lt;/em&gt; quando acessado com o Internet Explorer 9 e superior.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Eventos em Javascript</title>
+   <link href="http://blog.gri.fo/blog/eventos-em-javascript"/>
+   <updated>2013-01-14T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/eventos-em-javascript</id>
+   <content type="html">&lt;p&gt;Eventos são a base das interfaces web modernas. Muito além do simples clique, a cada novo dispositivo, novas formas de interação surgem, como controle de orientação ou interpretação de movimentos de dedos.&lt;/p&gt;
+
+&lt;p&gt;Ainda assim, os eventos são muito mais &lt;em&gt;baixo nível&lt;/em&gt; que isto. Em Javascript, &lt;a href=&quot;http://ricardo.cc/2012/08/09/Its-time-for-a-native-EventEmitter.html&quot;&gt;não temos ainda nenhuma implementação nativa para cuidar deles&lt;/a&gt;, mas não faltam bibliotecas com a intenção de preencher esta lacuna. Uma delas é a biblioteca &lt;a href=&quot;http://ryejs.com&quot;&gt;Rye&lt;/a&gt; que tem co-autoria do &lt;a href=&quot;http://jcemer.com&quot;&gt;Jean Carlo Emer&lt;/a&gt;, o nosso líder técnico aqui na Grifo.&lt;/p&gt;
+
+&lt;h3&gt;Event Emitter na Rye&lt;/h3&gt;
+
+&lt;p&gt;O paradigma de &lt;em&gt;event emitter&lt;/em&gt; introduz um objeto especial a que chamamos &lt;em&gt;emitter&lt;/em&gt;. Este objeto tem a função de agregar funções que serão chamadas ao momento em que um evento for emitido.&lt;/p&gt;
+
+&lt;p&gt;A API de &lt;a href=&quot;http://ryejs.com/#eventemitter&quot;&gt;Event Emitter da Rye&lt;/a&gt; segue o mesmo modelo do &lt;a href=&quot;http://nodejs.org/api/events.html&quot;&gt;Node.js&lt;/a&gt;. Para criar um &lt;em&gt;emitter&lt;/em&gt; e começar a brincar com eventos, basta escrever:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var EventEmitter = Rye.require('Events').EventEmitter
+  , emitter = new EventEmitter()
+
+emitter.on('open', function(){
+    console.log('open')
+})
+
+emitter.emit('open')
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Você pode criar quantos &lt;em&gt;emitters&lt;/em&gt; quiser. O ideal é que você crie um para cada componente da sua aplicação.&lt;/p&gt;
+
+&lt;p&gt;Caso você precise compartilhar eventos entre seus componentes, é melhor usar o padrão de &lt;a href=&quot;http://msdn.microsoft.com/en-us/magazine/hh201955.aspx&quot;&gt;publish/subscribe&lt;/a&gt; já &lt;a href=&quot;http://ryejs.com/#events-ryesubscribe&quot;&gt;oferecido pela biblioteca&lt;/a&gt;. É importante lembrar que, neste caso, todos os componentes poderão ver a troca de mensagens.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Rye.subscribe('open', function(){
+    console.log('open')
+}) 
+
+Rye.publish('open')
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Eventos do DOM&lt;/h3&gt;
+
+&lt;p&gt;O DOM possui suporte para eventos desde muito cedo. O uso &quot;moderno&quot; é baseado na implementação de &lt;em&gt;DOM Level 2&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;document.addEventListener('click', fn)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bibliotecas como &lt;a href=&quot;http://jquery.com&quot;&gt;jQuery&lt;/a&gt; dão suporte para eventos &lt;em&gt;cross-browser&lt;/em&gt; com uma API bastante conhecida (os famosos &lt;code&gt;$(document).on&lt;/code&gt;, &lt;code&gt;$(document).off&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h3&gt;Eventos do DOM na Rye&lt;/h3&gt;
+
+&lt;p&gt;A &lt;a href=&quot;http://ryejs.com/#events&quot;&gt;API de eventos da Rye&lt;/a&gt; é semelhante a encontrada na jQuery. A principal diferença é que não existem métodos que são &lt;em&gt;aliases&lt;/em&gt; para tipos de eventos, como &lt;code&gt;.click()&lt;/code&gt; e &lt;code&gt;.hover()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para remover &lt;em&gt;listeners&lt;/em&gt;, temos apenas o método &lt;code&gt;.removeListener()&lt;/code&gt;, o que torna o código mais simples e claro.&lt;/p&gt;
+
+&lt;h4&gt;Delegate&lt;/h4&gt;
+
+&lt;p&gt;O uso de &lt;a href=&quot;http://api.jquery.com/delegate&quot;&gt;delegate&lt;/a&gt; é essencial para qualquer aplicação e a jQuery, em sua versão 1.7, introduziu uma maneira simples de declarar este tipo de &lt;em&gt;listener&lt;/em&gt; : &lt;code&gt;.on('click', 'button', fn)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A Rye introduz um jeito mais simples ainda. Basta apenas informar o descendente a ser filtrado junto ao tipo de evento: &lt;code&gt;.on('click button', fn)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4&gt;Múltiplos listeners&lt;/h4&gt;
+
+&lt;p&gt;Por consequência da sintaxe usada no &lt;em&gt;delegate&lt;/em&gt;, cada evento deve ter seu &lt;em&gt;listener&lt;/em&gt; declarado individualmente. Isto significa que você não pode escrever &lt;code&gt;.on('mouseenter mouseleave', fn)&lt;/code&gt;. O jeito correto é: &lt;code&gt;.on('mouseenter', fn)&lt;/code&gt; e depois &lt;code&gt;.on('mouseleave', fn)&lt;/code&gt;, ou ainda:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Rye(document).on({
+    'click .a': fn
+  , 'click': fn
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;DOM Event Emitter na Rye&lt;/h3&gt;
+
+&lt;p&gt;Apesar de não dar suporte a &lt;a href=&quot;http://docs.jquery.com/Namespaced_Events&quot;&gt;Namespaced Events&lt;/a&gt;, a Rye possui uma implementação para &lt;a href=&quot;http://ryejs.com/#domeventemitter&quot;&gt;DOM Event Emitter&lt;/a&gt;. A ideia é que cada componente possa criar seu próprio &lt;em&gt;event emitter&lt;/em&gt; interligado a um nodo do DOM. Assim, cada programador é restritamente responsável por seu componente.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var DOMEventEmitter = Rye.require('Events').DOMEventEmitter
+  , element = document.body
+  , DOMEmitter = new DOMEventEmitter(element)
+
+DOMEmitter.on({
+    'click .button': fn
+  , 'mouseover li': fn
+})
+
+DOMEmitter.on('mousedown .that', fn)
+
+// remove todos os eventos associados ao emitter
+DOMEmitter.destroy()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;br&gt;
+
+
+&lt;p&gt;Esta é apenas um dos &lt;em&gt;features&lt;/em&gt; da Rye, que é uma biblioteca de manipulação de DOM para navegadores modernos. Uma alternativa enxuta, leve e elegante a jQuery. ;)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>O Google Maps parou de funcionar em seu site?</title>
+   <link href="http://blog.gri.fo/blog/google-maps-parou-de-funcionar"/>
+   <updated>2013-01-09T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/google-maps-parou-de-funcionar</id>
+   <content type="html">&lt;p&gt;Já é sabido que o Google lançou a terceira versão de sua API Javascript de mapas com muitas melhorias.&lt;/p&gt;
+
+&lt;p&gt;A última novidade é que a gigante irá descontinuar a antiga versão até maio deste ano. Ou seja, os mapas dos sites que estiverem usando a versão dois não irão mais funcionar depois desta data.&lt;/p&gt;
+
+&lt;p&gt;A evolução de seu código Javascript para suportar a nova API depende da funcionalidade e complexidade da sua aplicação. A &lt;a href=&quot;http://gri.fo&quot;&gt;Grifo&lt;/a&gt; possui um time de profissionais qualificados que pode prontamente analisar seu site ou aplicativo e prover o apoio necessário para a reescrita do seu Javascript.&lt;/p&gt;
+
+&lt;p&gt;Fonte: &lt;a href=&quot;https://developers.google.com/maps/documentation/javascript/v2/reference&quot;&gt;https://developers.google.com/maps/documentation/javascript/v2/reference&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Code n' Bier - Season Finale</title>
+   <link href="http://blog.gri.fo/blog/code-n-bier-season-finale"/>
+   <updated>2012-11-08T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/code-n-bier-season-finale</id>
+   <content type="html">&lt;p&gt;Cerveja, fritas e muito rock n' roll marcaram a última edição do Code n' Bier neste ano. Na noite da última quarta-feira, dia 7 de novembro, foi possível rever amigos, tomar uma cerveja gelada e comemorar o sucesso do primeiro ano de evento.&lt;/p&gt;
+
+&lt;h3&gt;Retrospectiva&lt;/h3&gt;
+
+&lt;p&gt;O evento começou com uma retrospectiva, onde relembramos as atrações das edições anteriores e mostramos as soluções dos dois dojos e do live coding. Então foi a vez de revisitar os eventos de front-end que aconteceram e ver os números do ano, referente ao front-end no país e no resto do mundo.&lt;/p&gt;
+
+&lt;h3&gt;MateHackers&lt;/h3&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/code/codenbier/matehacker.png&quot; alt=&quot;MateHackers&quot;&gt;
+  &lt;figcaption&gt;Lucas Fialho e o MateHackers&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Após o aquecimento, foi a hora do Lucas Fialho Zawacki apresentar o &lt;a href=&quot;http://matehackers.org&quot;&gt;MateHackers&lt;/a&gt;, um hackerspace gaúcho que tem a missão de dispor de um local legal, onde possa ocorrer a troca de conhecimentos e criar projetos relevantes para a sociedade.&lt;/p&gt;
+
+&lt;h3&gt;KingHost&lt;/h3&gt;
+
+&lt;p&gt;Então foi a hora da apoiadora do evento, &lt;a href=&quot;http://www.kinghost.com.br&quot;&gt;KingHost&lt;/a&gt; subir no palco e anunciar seu evento, o Conexão KingHost dia 29 de novembro e de quebra lançar um desafio para o pessoal: Descobrir um easter-egg no site da empresa. Após alguns minutos quebrando a cabeça, descobrimos que era um Konami code escondido.&lt;/p&gt;
+
+&lt;h3&gt;Cesar e os Romanos&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/code/codenbier/cesar-e-os-romanos.jpg&quot; alt=&quot;Cesar e os Romanos&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Com o clima bem descontraído e a liberação de cerveja e batatas-fritas por parte de nosso querido apoiador, foi a hora de curtir um Rock n' roll de qualidade. Contando com um repertório repleto de clássicos, a banda Cesar e os Romanos detonaram no palco do Dhomba.&lt;/p&gt;
+
+&lt;p&gt;Uma noite certamente memorável. Agradecemos mais uma vez a KingHost por apoiar essa iniciativa. Voltaremos em 2013 com força total e muitas novidades, se o mundo não acabar antes!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>RSJS 2012 - Retrospectiva</title>
+   <link href="http://blog.gri.fo/blog/rsjs-retrospectiva"/>
+   <updated>2012-09-14T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/rsjs-retrospectiva</id>
+   <content type="html">&lt;p&gt;No dia três de março rolou o RSJS, um encontro promovido pela Grifo em parceria com os curadores do BrazilJS, Felipe Moura e Jaydson Gomes, para desenvolvedores compartilharem conhecimento e experiências.&lt;/p&gt;
+
+&lt;p&gt;O evento era uma prévia para o BrazilJS e os palestrantes trouxeram vários temas interessantes com uma abordagem prática e simplificada com exemplos de aplicações reais. Os temas vão de acessibilidade, performance, boas práticas, animações, frameworks para desenvolvimento JavaScript e até Haskell!&lt;/p&gt;
+
+&lt;p&gt;Para relembrar e registrar o evento, reunimos os slides e vídeos, se você não conseguiu participar ou gostaria de rever as palestras, aproveite! :)&lt;/p&gt;
+
+&lt;h3&gt;Animações e efeitos com CSS3&lt;/h3&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/rsjs-2012/felipe-moura.jpg&quot; alt=&quot;Felipe Moura&quot;&gt;
+  &lt;figcaption&gt;Felipe Moura&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Felipe fala sobre animações rotate e keyframe e efeitos de manipulação de elementos como shadow e distorção para simular 3D com CSS3.&lt;/p&gt;
+
+&lt;p&gt;O CSS3 nos permite criar experiências interativas e realistas, porém temos alguns fatores importantes que não podem ser deixados de lado na hora de criarmos nossas aplicações, como performance e renderização nos browsers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://youtu.be/kxEYwkKLJxk&quot; class=&quot;btn&quot;&gt;Vídeo&lt;/a&gt;
+&lt;a href=&quot;http://felipenmoura.org/projects/lectures/css3-animation&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Dicas práticas para reduzir o tempo de carregamento de uma aplicação web&lt;/h3&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/rsjs-2012/jaydson-gomes.jpg&quot; alt=&quot;Jaydson Gomes&quot;&gt;
+  &lt;figcaption&gt;Jaydson Gomes&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Falar em performance e boas práticas, sempre gera uma grande discusão entre os desenvolvedores, ao ponto de levantar a questão: &lt;em&gt;&quot;Performance importa?&quot;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Fatores como o perfil e o tempo de desenvolvimento do projeto são determinantes no que diz respeito à performance em Front-end, pois a atenção está mais focada ao desempenho e funcionamento no Back-end, buscando ter facilidade na geração de conteúdo/html.&lt;/p&gt;
+
+&lt;p&gt;A partir desta premissa, Jaydson apresenta um estudo  explanado sobre a importância das boas práticas para performance Front-end.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://youtu.be/o73xH52pFPY&quot; class=&quot;btn&quot;&gt;Vídeo&lt;/a&gt;
+&lt;a href=&quot;https://docs.google.com/a/gri.fo/presentation/d/1S7i_Z204o5LjaSBzQtxyrhDWfKH3UninQ1-EhaZaAPE/edit#slide=id.p&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;CoffeeScript x Node.js: Como e por que usá-los em aplicações web&lt;/h3&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/rsjs-2012/ricardo-tomasi.jpg&quot; alt=&quot;Ricardo Tomasi&quot;&gt;
+  &lt;figcaption&gt;Ricardo Tomasi&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Ricardo fez uma super palestra sobre CoffeScript, contando sobre sua origem, sintaxe e utilização em aplicações mais complexas.&lt;/p&gt;
+
+&lt;p&gt;Ele defende fortemente o uso de frameworks para &quot;simplificar&quot; o desenvolvimento em JavaScript.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&quot;A idéia é pegar as partes boas do JS e torná-las mais acessíveis.&quot;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://youtu.be/j5Lfedfm1Wk&quot; class=&quot;btn&quot;&gt;Vídeo&lt;/a&gt;
+&lt;a href=&quot;https://speakerdeck.com/u/ricardobeat/p/introducao-a-coffeescript&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Programação orientada a eventos: do simples ao objeto&lt;/h3&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/rsjs-2012/jean-carlo.jpg&quot; alt=&quot;Jean Carlo Emer&quot;&gt;
+  &lt;figcaption&gt;Jean Carlo Emer&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Nesta palestra são apresentados todos os eventos que podem ser manipulados por meio de JavaScript, tratadores de eventos, modelos de gerenciamento de eventos, bubbling e programação orientada a eventos.&lt;/p&gt;
+
+&lt;p&gt;O paradigma de orientação à eventos é controlada por um fluxo guiado por indicações externas e é executada em 2 grandes etapas, que são a detecção dos eventos e o tratamento dos eventos identificados.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://youtu.be/rGlF5OgD_c0&quot; class=&quot;btn&quot;&gt;Vídeo&lt;/a&gt;
+&lt;a href=&quot;http://speakerdeck.com/u/jcemer/p/eventos-do-simples-ao-objeto&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Javascript não obstrutivo, obstrusivo ou obtrusivo?&lt;/h3&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/rsjs-2012/renatho-rosa.jpg&quot; alt=&quot;Renatho de Carli Rosa&quot;&gt;
+  &lt;figcaption&gt;Renatho de Carli Rosa&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Entre as diversas formas de referenciar um problema cotidiano, que é o risco de nossos scripts não serem renderizados  e consequentemente comprometer o  funcionamento de nossas aplicações, Renatho fala sobre o JavaScript não obstrutivo. Durante a palestra, em alguns momentos ele comparou este risco que corremos em JavaScript com paraquedismo.&lt;/p&gt;
+
+&lt;p&gt;“Na web a gente tem o Javascript não obstrutivo, que equivale ao procedimento de emergência [no paraquedismo], uma forma de tratar o conteúdo e contornar o problema, caso não abra o JavaScript principal”.&lt;/p&gt;
+
+&lt;p&gt;Além disso, ele apresentou vários exemplos práticos para personalização de campos de formulário, scroll, tabs e carregamento de conteúdo de forma dinâmica.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://youtu.be/Jrx5gVfKZSA&quot; class=&quot;btn&quot;&gt;Vídeo&lt;/a&gt;
+&lt;a href=&quot;https://speakerdeck.com/u/grifo/p/javascript-nao-obstrutivo-obstrusivo-ou-obtrusivo&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Como usar o JavaScript para melhorar a acessibilidade de páginas web&lt;/h3&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/rsjs-2012/felipe-moura.jpg&quot; alt=&quot;Felipe Moura&quot;&gt;
+  &lt;figcaption&gt;Felipe Moura&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Assim como performance, acessibilidade é um assunto que sempre gera uma grande discussão sobre a sua importância e, em alguns casos, o que é a acessibilidade aplicada em um projeto web e por que não há preocupação com ela.&lt;/p&gt;
+
+&lt;p&gt;Felipe trouxe conceitos, números e ferramentas bem interessantes sobre acessibilidade, apresentou vários tipos de interfaces, como uma maçaneta e até um fogão! Esses objetos representam a função de uma interface, que é o &quot;meio do caminho&quot;, entre aquilo que você quer e aquilo que você irá fazer para obter isso.&lt;/p&gt;
+
+&lt;p&gt;A abordagem desta palestra nos faz perceber que podemos perder usuários ou prejudicar a entrega de conteúdo, quando nosso site não é amigável ou não se adapta as necessidades básicas de um usuário para navegar.
+Durante a palestra, Felipe apresentou exemplos práticos de como é o comportamento de um leitor de tela perante uma interface.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://youtu.be/PHsIYJfLq3E&quot; class=&quot;btn&quot;&gt;Vídeo&lt;/a&gt;
+&lt;a href=&quot;http://felipenmoura.org/projects/lectures/accessibility&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Haskell para desenvolvedores JavaScript&lt;/h3&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/rsjs-2012/juan-maiz.jpg&quot; alt=&quot;Juan Maiz&quot;&gt;
+  &lt;figcaption&gt;Juan Maiz&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Juan fala sobre a história do Haskell e apresenta alguns exemplos práticos utilizando a sintaxe desta linguagem, que ao seu ponto de vista é uma linguagem que visa proporcionar a simplicidade e limpeza nos códigos JavaScript.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&quot;Haskell é uma linguagem que, apesar de parecer dinâmica, ou algo assim, é uma linguagem estaticamente tipada&quot;&lt;/em&gt; - Juan Maiz&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://youtu.be/-fHsbYboNJA&quot; class=&quot;btn&quot;&gt;Vídeo&lt;/a&gt;
+&lt;a href=&quot;http://haskell-4-js-devs.heroku.com&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Code n' Bier - Segunda edição</title>
+   <link href="http://blog.gri.fo/blog/code-n-bier-segunda-edicao"/>
+   <updated>2012-09-06T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/code-n-bier-segunda-edicao</id>
+   <content type="html">&lt;p&gt;Mais de cem inscritos, três palestrantes, um jogo usando websockets e ainda competir a atenção com o jogo do Grêmio. Foi dada a largada para a segunda edição do Code n' Bier!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/code/codenbier/edition-02.jpg&quot; alt=&quot;Foto início do evento&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Após a primeira edição, abrimos um &lt;a href=&quot;http://bit.ly/RgriR3&quot;&gt;espaço para sugestões&lt;/a&gt;. Mas claro, como a gente sabe que programador é tímido por natureza, tivemos poucas sugestões.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Gostaria de ver algo sobre websockets e nodeJS - Guilherme Severo&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/code/codenbier/pong.png&quot; alt=&quot;Telepong, seus pais jogavam&quot;&gt;
+  &lt;figcaption&gt;Telepong, seus pais jogavam&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Hmm, e por que não? Que tal um jogo usando canvas, &lt;a href=&quot;http://socket.io&quot;&gt;websockets&lt;/a&gt; e &lt;a href=&quot;http://nodejs.org&quot;&gt;node&lt;/a&gt;? Assim começaram nossos planos de fazer um &lt;strong&gt;live coding&lt;/strong&gt; - um programador usando o telão e interagindo com a platéia para escrever um jogo em tempo real.&lt;/p&gt;
+
+&lt;p&gt;Outra novidade foram os &lt;strong&gt;smalltaks&lt;/strong&gt; (uma brincadeira com o nome da linguagem), palestras de dez minutos apresentadas pelos participantes sobre assuntos variados na área da programação.&lt;/p&gt;
+
+&lt;h3&gt;Smalltalk - Design Patterns&lt;/h3&gt;
+
+&lt;p&gt;A noite começou com uma &lt;strong&gt;smalltalk&lt;/strong&gt; sobre design patterns do amigo &lt;a href=&quot;http://cristianobecker.com&quot;&gt;Cristiano Becker&lt;/a&gt;. Becker falou do padrão proxy e explorou cada linha de código &lt;a href=&quot;http://cristianobecker.com/codenbier&quot;&gt;do seu exemplo&lt;/a&gt;, uma excelente aula.&lt;/p&gt;
+
+&lt;h3&gt;Live Coding parte 1/2 - Forever alone Pong&lt;/h3&gt;
+
+&lt;p&gt;Nosso live coding foi escrever um jogo de Pong. Na primeira parte preparamos o HTML, organizamos uma &lt;em&gt;task&lt;/em&gt; usando &lt;a href=&quot;https://github.com/ricardobeat/cake-flour&quot;&gt;Flour&lt;/a&gt; para unir nossos arquivos JavaScript, implementamos o &lt;em&gt;game loop&lt;/em&gt; usando &lt;a href=&quot;https://github.com/jcemer/telepong/blob/codenbier/lib/utils.js#L3&quot;&gt;requestAnimationFrame&lt;/a&gt; e escrevemos código até o ponto em que deixamos o &lt;em&gt;puck&lt;/em&gt; (bola) quicando na tela.&lt;/p&gt;
+
+&lt;h3&gt;Smalltalk - CoffeScript&lt;/h3&gt;
+
+&lt;p&gt;A segunda talk da noite foi liderada pelo &lt;a href=&quot;http://ricardo.cc/&quot;&gt;Ricardo Tomasi&lt;/a&gt;, evangelista gaúcho de JavaScript, Node e afins. Descontraído, Ricardo fez piada com o gosto por café e falou sobre o que é &lt;a href=&quot;http://coffeescript.org&quot;&gt;Cofeescript&lt;/a&gt;, linguagem de programação que compila para JavaScript, abastraindo apenas as partes boas da mesma.&lt;/p&gt;
+
+&lt;p&gt;Para provar seu conceito, Tomasi portou uma parte do código do Pong para &lt;em&gt;CoffeeScript&lt;/em&gt;, mostrando a sintaxe clara e objetiva da linguagem.&lt;/p&gt;
+
+&lt;h3&gt;Live Coding parte 2/2 - Node Dual Screen Pong&lt;/h3&gt;
+
+&lt;p&gt;Na segunda parte do live coding, uma breve introdução sobre &lt;a href=&quot;http://expressjs.com/&quot;&gt;express&lt;/a&gt;, &lt;a href=&quot;http://socket.io&quot;&gt;socket.io&lt;/a&gt; e a implementação em JavaScript no &lt;a href=&quot;https://github.com/jcemer/telepong/blob/codenbier/server.js&quot;&gt;servidor&lt;/a&gt; responsável por receber e passar o &lt;em&gt;puck&lt;/em&gt;. Na sequência o jogo foi adaptado para receber e enviar eventos da bola via websockets. Só faltava o &lt;em&gt;paddle&lt;/em&gt; (bastão) e o jogo estaria completo.&lt;/p&gt;
+
+&lt;p&gt;O resultado foi um pong com a área de jogo dividida em duas telas, nas quais dois jogadores rebatem o &lt;em&gt;puck&lt;/em&gt; com o &lt;em&gt;paddle&lt;/em&gt;. Quando o &lt;em&gt;puck&lt;/em&gt; cruza o limite superior da tela, ele é &lt;strong&gt;tele&lt;/strong&gt;transportado para o outro jogador. E este é o motivo pelo qual esta adaptação do clássico Tele-jogo recebeu o nome de &lt;strong&gt;TelePong&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jcemer/telepong/tree/codenbier&quot; class=&quot;btn&quot;&gt;Código final do TelePong no GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Smalltalk - PEG.js&lt;/h3&gt;
+
+&lt;p&gt;Guilherme Prá Vieira fechou o evento com uma talk sobre &lt;a href=&quot;http://pegjs.majda.cz&quot;&gt;PEG.js&lt;/a&gt;, um gerador de &lt;em&gt;parser&lt;/em&gt; escrito em JavaScript. Ele falou sobre expressões regulares e justificou o mau uso delas para processar HTML.&lt;/p&gt;
+
+&lt;p&gt;Vieira também mostrou alguns exemplos de linguagens que podem ser *parseadas usando a biblioteca e o &lt;a href=&quot;http://pegjs.majda.cz/online&quot;&gt;live demo&lt;/a&gt; que pode ser encontrado no website.&lt;/p&gt;
+
+&lt;h3&gt;Retrospectiva&lt;/h3&gt;
+
+&lt;p&gt;Tradicionalmente, no final do evento rolou um bate-papo para ouvir dos participantes quais os pontos positivos e a melhorar da edição, entre eles...&lt;/p&gt;
+
+&lt;h4&gt;Positivos&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Espaço para Smalltalks;&lt;/li&gt;
+&lt;li&gt;Produto final - MVP;&lt;/li&gt;
+&lt;li&gt;Live Coding;&lt;/li&gt;
+&lt;li&gt;Exposição das tecnologias;&lt;/li&gt;
+&lt;li&gt;Tecnologias e práticas &lt;em&gt;hypes&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;Cerveja gelada.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;A melhorar&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ter cerveja &lt;em&gt;free&lt;/em&gt; (vamos pensar com carinho);&lt;/li&gt;
+&lt;li&gt;Aumentar a participação da platéia;&lt;/li&gt;
+&lt;li&gt;Voltar com os Dojos;&lt;/li&gt;
+&lt;li&gt;Aumentar a playlist.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;br&gt;
+
+
+&lt;p&gt;Agradecemos a participação de todos e até a próxima!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>A Maior Conferência de JavaScript do Universo</title>
+   <link href="http://blog.gri.fo/blog/a-maior-conferencia-de-javascript-do-universo"/>
+   <updated>2012-09-04T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/a-maior-conferencia-de-javascript-do-universo</id>
+   <content type="html">&lt;p&gt;Nesta última quinta-feira, dia 30 de agosto, um marco na história do JavaScript foi criado: O &lt;a href=&quot;http://braziljs.com.br&quot;&gt;BrazilJS&lt;/a&gt;, a maior conferência de JavaScript do universo. Com mais de mil participantes, praticamente lotou o auditório do Teatro do Bourbon Country. O evento contou com a presença de nomes importantes na cena atual do desenvolvimento web.&lt;/p&gt;
+
+&lt;p&gt;O BrazilJS foi marcado pelo alto nível do conteúdo apresentado, organização e pelo &quot;networking&quot; entre os participantes. Aliás, o networking era um dos pontos fortes da conferência, em todos os intervalos era possível encontrar e conversar com os palestrantes, ou até conversar com profissionais de outros estados e trocar experiências.&lt;/p&gt;
+
+&lt;p&gt;O evento contou também com a participação de nomes consagrados como Maurício Samy Silva - o &lt;a href=&quot;&quot;&gt;Maujor&lt;/a&gt; e com os vídeos do &lt;a href=&quot;http://www.youtube.com/watch?v=yddeRmpoxio&quot;&gt;Fat&lt;/a&gt; e do &lt;a href=&quot;http://www.youtube.com/watch?v=HiY-XCxUqeU&quot;&gt;Paul Irish&lt;/a&gt; que não conseguiram comparecer.&lt;/p&gt;
+
+&lt;p&gt;Outra atração do evento foi o &lt;a href=&quot;http://moviegames.com.br&quot;&gt;MovieGames&lt;/a&gt;, que divertiu mais de 200 jogadores simultaneamente com questões referentes à linguagem JavaScript, arrancando aplausos no final de sua exibição que durou pouco mais de 10 minutos. No segundo dia, além de mais uma exibição, Renatho de Carli Rosa e Ricardo Tomasi, fizeram uma pocket palestra sobre o produto explicando seu funcionamento.&lt;/p&gt;
+
+&lt;p&gt;Considerando o nível das palestras, a estrutura, a organização e a quantidade de participantes, é fácil afirmar que sim, o BrazilJS é a maior conferência de JavaScript do universo.&lt;/p&gt;
+
+&lt;p&gt;Que venha o BrazilJS 2013!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - O estado do JavaScript por Brendan Eich</title>
+   <link href="http://blog.gri.fo/blog/07-o-javascript-brendan-eich"/>
+   <updated>2012-08-31T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/07-o-javascript-brendan-eich</id>
+   <content type="html">&lt;p&gt;&lt;figure class=&quot;full&quot;&gt;
+  &lt;img src=&quot;/images/braziljs-2012/brendan-eich.jpg&quot; alt=&quot;Renatho de Carli, Jean Carlo, Brendan Eich, Vitor Carlos, Leandro Barbosa e Filipe Medina&quot;&gt;
+  &lt;figcaption&gt;Renatho de Carli, Jean Carlo, &lt;b&gt;Brendan Eich&lt;/b&gt;, Vitor Carlos, Leandro Barbosa e Filipe Medina&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Para fechar o BrazilJS com chave de ouro, a palestra mais esperada da noite, sem dúvida: &lt;a href=&quot;http://en.wikipedia.org/wiki/Brendan_Eich&quot;&gt;Brendan Eich&lt;/a&gt;, o &quot;Deus&quot; do JavaScript.&lt;/p&gt;
+
+&lt;p&gt;Brendan Eich, cofundador da mozilla.org, criou o JavaScript no ano de 1995, chamando-o de &quot;Mocha&quot; e logo depois &quot;LiveScript&quot;. Hoje, Brendan é CTO na Mozilla Corporation.&lt;/p&gt;
+
+&lt;p&gt;A palestra foi iniciada com um vídeo descontraído do &quot;Watman&quot;. E logo depois passou ao seu assunto principal: ECMAScript 6.&lt;/p&gt;
+
+&lt;p&gt;O ECMASCript 6 tem como principal objetivo ser a melhor linguagem para:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Desenvolvimento de aplicações&lt;/li&gt;
+&lt;li&gt;Bibliotecas&lt;/li&gt;
+&lt;li&gt;Generators&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Algumas features citadas durante a palestra e referências para as mesmas: spread, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/for...of&quot;&gt;for...of&lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Map&quot;&gt;Map&lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Proxy&quot;&gt;proxy&lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/WeakMap&quot;&gt;WeakMap&lt;/a&gt;, etc.&lt;/p&gt;
+
+&lt;p&gt;O público estava ansioso por palestras técnicas e com código e foi exatamente o que Brendan trouxe. Bastante código! =)&lt;/p&gt;
+
+&lt;p&gt;Obrigado ao BrazilJS por proporcionar aos desenvolvedores brasileiros esta grande palestra!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - Grunt por Benjamin E Alman</title>
+   <link href="http://blog.gri.fo/blog/06-grunt-benjamin-alman"/>
+   <updated>2012-08-31T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/06-grunt-benjamin-alman</id>
+   <content type="html">&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/braziljs-2012/benjamin-alman.jpg&quot; alt=&quot;Jean Carlo e Benjamin e Alman&quot; width=&quot;300&quot;&gt;
+  &lt;figcaption&gt;Jean Carlo e Benjamin e Alman&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Benjamin Alman colabora com o core da jQuery e escreveu uma infinidade de plugins para a biblioteca. Trabalha na &lt;a href=&quot;http://www.bocoup.com&quot;&gt;Bocoup&lt;/a&gt; e é criador do &lt;em&gt;Grunt&lt;/em&gt;, um gerenciador de tarefas operado através da linha de comando.&lt;/p&gt;
+
+&lt;p&gt;Cowboy, como gosta de ser chamado, começou usando &lt;a href=&quot;http://github.com/mde/jake&quot;&gt;Jake&lt;/a&gt; para automatizar tarefas utilizando JavaScript.&lt;/p&gt;
+
+&lt;p&gt;O projeto &lt;em&gt;Grunt&lt;/em&gt; surgiu da necessidade de automatizar facilmente a repetição de tarefas comuns do dia-a-dia de manter uma série de cerca de 76 projetos públicos, em todos os sistemas, que Alman mantêm em &lt;a href=&quot;https://github.com/cowboy/grunt&quot;&gt;seu GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Muito popular, o &lt;em&gt;Grunt&lt;/em&gt; está marcado por três mil usuários no &lt;a href=&quot;https://github.com/cowboy/grunt&quot;&gt;GitHub&lt;/a&gt; e tem mais de duas centenas de &lt;em&gt;forks&lt;/em&gt;. Para usar, basta ter o &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; e &lt;a href=&quot;http://www.npmjs.org&quot;&gt;npm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install -g grunt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Juntar arquivos, &lt;em&gt;minify&lt;/em&gt;, executar rotinas de teste &lt;a href=&quot;http://docs.jquery.com/QUnit&quot;&gt;QUnit&lt;/a&gt;, validar o código com &lt;a href=&quot;http://www.jshint.com&quot;&gt;JSHint&lt;/a&gt; e iniciar um servidor de arquivos são apenas algumas das tarefas possíveis com o &lt;em&gt;Grunt&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Outra grande funcionalidade é usar &lt;em&gt;watch&lt;/em&gt; para executar tarefas baseado na alterações no sistema de arquivos. A configuração é simples e pode ser feita através do arquivo &lt;code&gt;grunt.js&lt;/code&gt; armazenado na raiz dos projetos.&lt;/p&gt;
+
+&lt;p&gt;Além disso, é possível estender as tarefas criando rotinas que sejam úteis e específicas para cada projeto.&lt;/p&gt;
+
+&lt;p&gt;Usar &lt;em&gt;Grunt&lt;/em&gt; facilita a colaboração da comunidade &lt;em&gt;open source&lt;/em&gt; e muitas bibliotecas, como jQuery já o adontam como padrão.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - Além do teclado e mouse por Daniel Filho</title>
+   <link href="http://blog.gri.fo/blog/05-alem-do-teclado-mouse-daniel-filho"/>
+   <updated>2012-08-31T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/05-alem-do-teclado-mouse-daniel-filho</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://danielfilho.info/presentations/gum/slides/&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/braziljs-2012/daniel-filho.jpg&quot; alt=&quot;Ricardo Pareja e Daniel Filho&quot; width=&quot;300&quot;&gt;
+  &lt;figcaption&gt;Ricardo Pareja e Daniel Filho&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Daniel Filho trabalha no IG como desenvolvedor front-end, colaborou com os projeto &lt;a href=&quot;http://movethewebforward.org&quot;&gt;Move the Web Forward&lt;/a&gt;, &lt;a href=&quot;http://lab.danielfilho.info/color-grep/&quot;&gt;Color Grep&lt;/a&gt; e recentemente desenvolveu o Mditor (editor markdown).&lt;/p&gt;
+
+&lt;p&gt;Em sua apresentação, Daniel falou sobre webRTC (Web Real-Time Communication), um projeto que através de APIs JavaScript permite a comunicação em tempo real através do browser.&lt;/p&gt;
+
+&lt;p&gt;Através das APIs apresentadas possibilitamos uma interação maior do usuário com a web, ao invés de usar apenas mouse e teclado podemos interagir através de audio e vídeo. Daniel mostrou diversos demos, dentre eles jogos que utilizam a câmera para detectar movimentos do usuário e diveros filtros de vídeo. Isso tudo desenvolvido em JavaScript!&lt;/p&gt;
+
+&lt;p&gt;Os demos mostrados podem ser encontrados em &lt;a href=&quot;http://shinydemos.com/getusermedia/&quot;&gt;http://shinydemos.com/getusermedia/&lt;/a&gt; e mais informações sobre o webRTCem &lt;a href=&quot;http://www.webrtc.org/&quot;&gt;http://www.webrtc.org/&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - A próxima geração de consoles será a última por Michal Budzynski</title>
+   <link href="http://blog.gri.fo/blog/04-consoles-vao-acabar-michal-budzynski"/>
+   <updated>2012-08-31T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/04-consoles-vao-acabar-michal-budzynski</id>
+   <content type="html">&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/braziljs-2012/michal-budzynski.jpg&quot; alt=&quot;Vitor Carlos e Michal Budzynski&quot; width=&quot;300&quot;&gt;
+  &lt;figcaption&gt;Vitor Carlos e Michal Budzynski&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Como dito no site do BrazilJS, Michal é um Polonês conhecido por seus experimentos excêntricos, como o CSS Nyan Cat e o AYABABTU. Através de sua apresentação e com os contatos externos durante o evento, percebi que isso é reflexo de sua personalidade espirituosa e debochada. Apesar das brincadeiras, ele é um dos principais desenvolvedores do Firefox OS e é também o curador do OnGameStart, uma conferência de games em HTML5 que começou na Polônia e que agora está se expandindo para outros países.&lt;/p&gt;
+
+&lt;p&gt;Michal começou o seu talk brincando com a paixão brasileira por futebol. Ele levantou o fato que a Polônia ganhou do Brasil em 1974 por 1 x 0, e que só assim reconheceríamos o país. Logo depois ele explicou que o título da palestra na verdade é uma frase dita por Cevat Yerli, da Crytek&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;The next console generation will be the last - Cevat&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;O que ele quis dizer é que o padrão dos gamers mudou. Aquele perfil do nerd gordinho hardcore gamer socado no quarto está virando exceção. O novo perfil de gamer é bem mais casual, impulsionado pela grande variedade de dispositivos móveis. Por uma questão de mercado, os novos jogos precisam atender a esse perfil de gamer. Sendo assim, devido à sua portabilidade, o HTML5 torna-se uma poderosa ferramenta para o desenvolvimento de jogos.&lt;/p&gt;
+
+&lt;p&gt;Atualmente temos vários jogos desenvolvidos em HTML5, mas a maioria deles ainda são experimentais. Ele demonstrou que através de ferramentas é possível desenvolver para praticamente todas as plataformas atuais. Ao longo da palestra Michal mostrou uma série de bibliotecas que disponibilizam recursos até mesmo para a geração de consoles atuais.&lt;/p&gt;
+
+&lt;p&gt;Nas perguntas, surgiu uma dúvida sobre a performance do WebGL. Michal enfatizou que cada vez mais ele é uma opção viável e performática para todos os tipos de jogos.&lt;/p&gt;
+
+&lt;h2&gt;Links da apresentação&lt;/h2&gt;
+
+&lt;p&gt;Segue abaixo um copy-pasta dos links da paletra:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;MOST IMPORTANT ONE!: http://en.wikipedia.org/wiki/FIFA_World_Cup_1974#Third-Place_Match&lt;/p&gt;
+
+&lt;p&gt;http://ongamestart.com
+https://developer.mozilla.org/en-US/demos/detail/css-nyan-cat
+http://mrcoles.com/tetris/
+http://dionyziz.kamibu.com/3d/tetris/
+http://fridek.github.com/Threejs-Tetris/
+https://developer.mozilla.org/en-US/demos/detail/tetris-css3-by-geoffray-warnants
+http://js1k.com/2010-first/demo/730
+http://jsbin.com/egiqul/49
+http://romancortes.com/ficheros/hanoi.html
+http://jsdo.it/usualoma/1Tgw
+http://jsdo.it/grfxdsgn/A3Fr
+http://jsdo.it/GeckoTang/4rXg
+http://jsdo.it/No_1026/bgpJ
+http://hexgl.bkcore.com/
+http://apps.playcanvas.com/playcanvas/scifi/latest
+http://pokki.com
+https://marketplace.mozilla.org
+http://www.marketjs.com/
+http://jurassic.codeplex.com/
+http://www.phoboslab.org/log/2012/04/javascript-on-the-xbox-360
+http://ouya.tv
+http://trackingjs.com
+https://github.com/kripken/emscripten
+http://www.syntensity.com/static/ammo.html
+http://soupeaucaillou.com/games/
+http://mzl.la/NvtXVM
+http://twitter.com/michalbe&lt;/p&gt;&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - CSS por Bernard de Luna</title>
+   <link href="http://blog.gri.fo/blog/03-folhas-de-estilo-por-bernard-de-luma"/>
+   <updated>2012-08-31T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/03-folhas-de-estilo-por-bernard-de-luma</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://bernarddeluna.com/talks/estilizando&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/braziljs-2012/bernard-de-luna.jpg&quot; alt=&quot;Jean Carlo e Bernard de Luna&quot; width=&quot;300&quot;&gt;
+  &lt;figcaption&gt;Jean Carlo e Bernard de Luna&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Bernard trabalha como diretor criativo da Melt, empresa de compra de mídia em tempo real. Sua palestra é muito descolada e cheia de citações próprias.&lt;/p&gt;
+
+&lt;p&gt;Dentre as mais marcantes, desenvolvedores não sabem CSS e nem &lt;strong&gt;Deus&lt;/strong&gt; sabe CSS.&lt;/p&gt;
+
+&lt;p&gt;O principal argumento é de que o &lt;em&gt;CSS&lt;/em&gt; é muito fácil e qualquer um consegue fazer. Toda a iteração acaba sendo baseada em tentativa e erro até o ponto em que temos um &lt;em&gt;stylesheet&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Performance&lt;/h3&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Não perca tempo discutindo entre usar CLASS ou ID - Luna&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Quando falamos de performance, &lt;em&gt;Key selector&lt;/em&gt; logo vem a mente. Toda seleção de CSS começa a ser avaliada da direita, um detalhe que muitos não dão atenção, e quanto menos itens usarmos na seleção, melhor a performance.&lt;/p&gt;
+
+&lt;p&gt;Evite usar o seletor universal &lt;code&gt;*&lt;/code&gt;, pois ela obrigada o navegador a buscar por &lt;strong&gt;todas&lt;/strong&gt; as tags do seu website. E ainda tome cuidado com o seletor universal invisível &lt;code&gt;body [type=&quot;text&quot;]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Outro vilão é o &lt;code&gt;@import&lt;/code&gt;, que bloqueia o processamento da folha de estilo a espera das requisições complementares, não use, &lt;a href=&quot;http://www.stevesouders.com/blog/2009/04/09/dont-use-import&quot;&gt;já blogava em 2009 Steve Souders&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Seletores CSS3 podem influenciar sua performance, evite &lt;code&gt;:first-child&lt;/code&gt;, &lt;code&gt;:nth-child&lt;/code&gt;, &lt;code&gt;:only-child&lt;/code&gt; entre outros.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Considere usar classes específicas na marcação. - David Hyatt&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Por incrível que pareça, &lt;code&gt;border-radius&lt;/code&gt; possui custo de renderização maior que sombras e gradientes.&lt;/p&gt;
+
+&lt;p&gt;E não se esqueça, defina o tamanho das imagens na sua folha de estilo, isto dá um ganho de performance e permite tornar seu site responsivo.&lt;/p&gt;
+
+&lt;h4&gt;Reflow &amp;amp; Repaint&lt;/h4&gt;
+
+&lt;p&gt;Manipulações de tamanho e posição do objeto geram &lt;em&gt;reflow&lt;/em&gt;, posicione os elementos absolutamente e evite que animações ativem este comportamento. Mais que isto - e aqui é dica minha - &lt;strong&gt;use transform&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Modularização&lt;/h3&gt;
+
+&lt;p&gt;Infelizmente os desenvolvedores não seguem o básico, classes com nome dado pela aparência ou texto não são nada legais. Muito mais que isto, adote um padrão e evite abreviações desnecessárias.&lt;/p&gt;
+
+&lt;p&gt;Bernard lista algumas das metodologias para escrita de estilo:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DRY CSS:&lt;/strong&gt; a proposta do &lt;em&gt;não repita seu código&lt;/em&gt; tem um grande &lt;em&gt;mistake&lt;/em&gt;, vincular suas classes com o estilo dos elementos.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OOCSS&lt;/strong&gt;: prega a separação da estrutura e do estilo e da criação de elementos globais.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SMACSS&lt;/strong&gt;: categorização do CSS em base, &lt;em&gt;layout&lt;/em&gt;, &lt;em&gt;modules&lt;/em&gt;, &lt;em&gt;states&lt;/em&gt; e &lt;em&gt;theme&lt;/em&gt; tudo isto independente e, infelizmente, engessado e fechado.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BEM&lt;/strong&gt;: módulos independentes, complexidade elevada e nomenclatura engessada e falha.&lt;/p&gt;
+
+&lt;h4&gt;LESS / SASS&lt;/h4&gt;
+
+&lt;p&gt;Particularmente não consigo ver o desenvolvimento frontend sem base em um bom pré-processador de CSS, seja ele qual for. As principais vantagens são as possibilidades de armazenar variáveis para nomes de fontes, cores e espaçamentos, além do uso de &lt;em&gt;mixins&lt;/em&gt; [para driblar &lt;em&gt;vendor-prefixed properties&lt;/em&gt;](http://lesselements.com.&lt;/p&gt;
+
+&lt;br&gt;
+
+
+&lt;p&gt;Tratando-se de formulários, vale a pena conferir o projeto &lt;a href=&quot;http://formee.org/&quot;&gt;Formee&lt;/a&gt;, framework de formulários criado pelo Bernard e outros membros da equipe da Petrobrás. Tremendo sucesso e com mais de trinta mil downloads, o framework é totalmente modularizado e acompanhado de uma completa gama de &lt;em&gt;grids&lt;/em&gt; e objetos padronizados.&lt;/p&gt;
+
+&lt;p&gt;As dicas finais de modularização são: documente seu código, crie uma &lt;a href=&quot;http://twitter.github.com/bootstrap/base-css.html&quot;&gt;página com objetos padrões&lt;/a&gt; e sempre &lt;strong&gt;trabalhe em equipe&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;h3&gt;Mágica&lt;/h3&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Brinque mais, surpreenda, reeinvente! - Bernard&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Luna definitivamente conquistou a platéia com bons experimentos usando CSS, vale conferir o &lt;a href=&quot;http://blog.zenorocha.com/post/27569632629/como-fizemos-o-oldradio&quot;&gt;post do Zeno que explica como fizeram o Old Radio&lt;/a&gt;.&lt;/p&gt;
+
+&lt;br&gt;
+
+
+&lt;p&gt;Eu já tinha conferido os slides desta palestra, que havia sido apresentada na &lt;a href=&quot;http://qconsp.com&quot;&gt;QConSP&lt;/a&gt;, e foi uma satisfação vê-la ao vivo, ótimo palestrante!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - Kit de sobrevivência por Zeno Rocha</title>
+   <link href="http://blog.gri.fo/blog/02-ecossistema-de-ferramentas-zeno-rocha"/>
+   <updated>2012-08-31T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/02-ecossistema-de-ferramentas-zeno-rocha</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://talks.zenorocha.com/2012/braziljs/&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/braziljs-2012/zeno-rocha.jpg&quot; alt=&quot;Ricardo Pareja e Zeno Rocha&quot; width=&quot;300&quot;&gt;
+  &lt;figcaption&gt;Ricardo Pareja e Zeno Rocha&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Zeno Rocha é Fron-end Engineer na Liferay e um dos criadores do projeto jQuery Boilerplate. Vale a pena conferir o &lt;a href=&quot;http://html5-pro.com/wormz/&quot;&gt;Wormz&lt;/a&gt;, experimento que Zeno desenvolveu usando canvas e foi destaque no chrome experiments!&lt;/p&gt;
+
+&lt;p&gt;Em sua apresentação, Zeno mostrou diversas ferramentas que podem ser utilizadas para iniciar, agilizar e otimizar o desenvolvimento de um projeto. Existem muitas opções, mas qual devemos utilizar? Bom, isto só depende de você e da sua necessidade!&lt;/p&gt;
+
+&lt;p&gt;Abaixo algumas opções por categorias:&lt;/p&gt;
+
+&lt;h3&gt;Começar um projeto&lt;/h3&gt;
+
+&lt;p&gt;Uma boa opção para começar projetos são os boilerplates, entre eles: html5 boilerplate, mobile boilerplate, backbone boilerplate e o jQuery boilerplate, que fornece uma base para a criação de um plugin jQuery. A dica é que você crie seu próprio boilerplate!&lt;/p&gt;
+
+&lt;h3&gt;Pré-processadores HTML&lt;/h3&gt;
+
+&lt;p&gt;Haml, Markdown e Jade&lt;/p&gt;
+
+&lt;h3&gt;Pré-processadores CSS&lt;/h3&gt;
+
+&lt;p&gt;Less e Sass, com eles você pode usar variáveis e muito mais em seus projetos.&lt;/p&gt;
+
+&lt;h3&gt;Pré-processadores JavaScript&lt;/h3&gt;
+
+&lt;p&gt;CoffeeScript e Dart&lt;/p&gt;
+
+&lt;h3&gt;Devtools&lt;/h3&gt;
+
+&lt;p&gt;Firebug e Opera Dragonfly&lt;/p&gt;
+
+&lt;h3&gt;Processo de desenvolvimento&lt;/h3&gt;
+
+&lt;p&gt;Livereloadr e o tincr. Elas possibilitam o live reload do seu código, facilitando muito o processo de desenvolvimento, já que você não precisa reescrever no seu editor aquilo que alterou diretamente no browser.&lt;/p&gt;
+
+&lt;h3&gt;Mobile&lt;/h3&gt;
+
+&lt;p&gt;Adobe shadow e phonegap.&lt;/p&gt;
+
+&lt;h3&gt;Editores&lt;/h3&gt;
+
+&lt;p&gt;Notepad++, Texmate e Sublime Text.&lt;/p&gt;
+
+&lt;h3&gt;Testes&lt;/h3&gt;
+
+&lt;p&gt;Zeno citou ferramentas de testes como Jasmine, QUnit e a Zombie JS e também build tools.&lt;/p&gt;
+
+&lt;p&gt;No fim tivemos a sessão &lt;em&gt;voltando ao tempo dos dinossauros&lt;/em&gt; com participação do lendário Maujor, que falou como começou na web e nos fez relembrar &lt;em&gt;grandes ferramentas&lt;/em&gt; como o Frontpage e Dreamweaver.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;O sucesso da aplicação não depende da ferramenta e sim em como ela é aplicada&lt;/p&gt;&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - Performance por Davidson Fellipe</title>
+   <link href="http://blog.gri.fo/blog/01-alta-performance-davidson-fellipe"/>
+   <updated>2012-08-31T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/01-alta-performance-davidson-fellipe</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://fellipe.com/slides/performance-javascript&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Iniciando o ciclo de palestras do dia, temos Davidson Fellipe, frontend da globo.com, que trabalha no projeto &lt;a href=&quot;http://futpedia.globo.com&quot;&gt;Futpédia&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Fellipe inicia sua apresentação falando da importância de uma boa &lt;em&gt;performance&lt;/em&gt; em um website.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Esperar é chato - Davidson&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Ele apresentou exemplos de websites conhecidos, como o Google e Amazom que com testes de carregamento mais lento (100 a 500ms), perdem até 20% da sua audiência. No caso da Amazon, isto ainda reverte em um decréscimo de 1% em suas vendas.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;80-90% of the end-user response time is spent on the frontend - Steve Souders&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;Mobile&lt;/h3&gt;
+
+&lt;p&gt;Outro paradoxo abordado foi a evolução do hardware e o contra ponto da popularização de dispositivos móveis com baixo poder de processamente e capacidade de armazenar energia. Isto nos faz refletir e repensar a &lt;em&gt;performance&lt;/em&gt; orientada a acessibilidade para todos os usuários.&lt;/p&gt;
+
+&lt;h3&gt;Experiêcia UX&lt;/h3&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Performance é o mais importante? - Davidson&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Manutenção, modularidade, interface amigável, confiabilidade e extensibilidade estão corelacionados com a performance e não devem ser deixados de lado.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;A interface não pode responder a entrada de um usuário em um tempo maior que 100ms - Jakob Nielsen&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;Carregamento&lt;/h3&gt;
+
+&lt;p&gt;Davidson falou sobre a integração com scripts externos que podem bloquear o carregamento da página. Um exemplo, é a integração com redes sociais.&lt;/p&gt;
+
+&lt;p&gt;Muitas empresas possuem políticas restritas de acesso a redes sociais, restringindo o acesso a qualquer conteúdo de domínios relacionados, o que posterga impreterivelmente o carregamento de scripts oriundos destas comunidades. O resultado é uma grande demanda de requisições e uma entrega comprometida da aplicação.&lt;/p&gt;
+
+&lt;p&gt;Devemos considerar scripts em modo defer e carregamento paralelo de scripts e execução ordenada com &lt;a href=&quot;http://headjs.com&quot;&gt;Head JS&lt;/a&gt; para ganhos no carregamento.&lt;/p&gt;
+
+&lt;h3&gt;UI Thread&lt;/h3&gt;
+
+&lt;p&gt;Tags scripts em meio ao html da página, bloqueiam a renderização do conteúdo seguinte até que sejam completamente processadas.&lt;/p&gt;
+
+&lt;p&gt;Um JavaScript demorado resulta em UI sem resposta.&lt;/p&gt;
+
+&lt;h3&gt;Outros tópicos&lt;/h3&gt;
+
+&lt;p&gt;Fiquei ligado:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;habilitar Chrome Frame&lt;/li&gt;
+&lt;li&gt;tempo de renderização mobile&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsperf.com/jquery-selectors-context/2&quot;&gt;testar performance de seletores jQuery&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Ferramentas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsperf.com&quot;&gt;JsPerf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/jslitmus&quot;&gt;JsLitimus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webpagetest.org&quot;&gt;Web Pagetest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.yahoo.com/yslow&quot;&gt;YSlow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pagespeed.googlelabs.com&quot;&gt;Page Speed Google&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;br&gt;
+
+
+&lt;p&gt;Uma ótima palestra e com certeza uma grande contribuição para a comunidade.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - ECMAScript 6 por Dave Herman</title>
+   <link href="http://blog.gri.fo/blog/07-es6-deep-dive-dave-herman"/>
+   <updated>2012-08-30T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/07-es6-deep-dive-dave-herman</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/u/dherman/p/es6-deep-dive&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dave Herman trabalha no Mozilla Research com tecnologias que serão lançadas em alguns anos. O início da palestra é marcado com o anúncio exclusivo do livro &lt;em&gt;Effective JavaScript&lt;/em&gt; que será lançado em dezembro.&lt;/p&gt;
+
+&lt;h3&gt;Symbols&lt;/h3&gt;
+
+&lt;p&gt;As propriedades dos objetos no JavaScript são strings e esta liberdade de definir qualquer nome acabou por criar alguns padrões.&lt;/p&gt;
+
+&lt;p&gt;A exemplo, temos o famoso &lt;code&gt;_&lt;/code&gt; usado como indicativo de que a propriedade é privada. O problema desta abordagem é que na verdade não temos uma propriedade privada. Uma tentativa mais prática de se armazenar dados de forma privada é usando &lt;em&gt;closures&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;ECMAScript 6 introduz o conceito de &lt;em&gt;symbols&lt;/em&gt; que podem ser usados como chave de propriedades. Desta maneira é possível criar chaves únicas para nossas propriedades.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var sym = new Symbol('data');
+function Class() {
+    this[sym] = 'private data';
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Structs&lt;/h3&gt;
+
+&lt;p&gt;A intenção das &lt;em&gt;structs&lt;/em&gt; é poder garantir maior controle para o desenvolvedor trabalhar com dados no JavaScript. Isto possibilita ter uma representação específica para vértices de uma figura tridimensional, por exemplo.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var Point = struct({
+    x: uint32,
+    y: uint32,
+    z: uint32,
+});
+var origin = new Point(0, 0, 0);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Compiladores operam muito melhor com variáveis tipadas. E as &lt;em&gt;structs&lt;/em&gt; podem ser usadas para dados WebGL, arquivos e I/O de rede além de compilar outras linguagens para JavaScript.&lt;/p&gt;
+
+&lt;h3&gt;Generators&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;function eventNumbers() {
+    for (var next = 0; true; next += 2) {
+        yield next;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A cada chamada da função, o retorno será incrementado em dois números. A implementação é muito próxima de Python.&lt;/p&gt;
+
+&lt;p&gt;O uso de &lt;em&gt;yield&lt;/em&gt; indica que temos uma grande pausa na execução de nossa rotina. Desta maneira, podemos esperar a requisição de informação ou a entrada de dados pelo usuário.&lt;/p&gt;
+
+&lt;p&gt;Dave introduz &lt;a href=&quot;http://taskjs.org&quot;&gt;taskjs.org&lt;/a&gt;, uma biblioteca que funciona apenas em browsers que implementam Generators.&lt;/p&gt;
+
+&lt;h4&gt;Promises&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;load('config.json')
+    .then(function doThat() { ... })
+    .then(function doThis() { ... })
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As instruções acima indica que o arquivo &lt;em&gt;config.json&lt;/em&gt; deve ser carregado e que logo após &lt;em&gt;doThat&lt;/em&gt; e &lt;em&gt;doThis&lt;/em&gt; deve ser executado.&lt;/p&gt;
+
+&lt;h4&gt;Yield&lt;/h4&gt;
+
+&lt;p&gt;O &lt;em&gt;yield&lt;/em&gt; opera disparando nossas &lt;em&gt;promises&lt;/em&gt;. Uma possibilidade incrível é carregar uma série de arquivos e disparar uma &lt;em&gt;callback&lt;/em&gt; apenas quando todos forem completamente carregados.&lt;/p&gt;
+
+&lt;br&gt;
+
+
+&lt;p&gt;No encerramento temos um &lt;em&gt;brainfuck&lt;/em&gt; escrito em JavaScript. A explicação é um tanto engraçada, o mistério é relevado, o resultado do código é &lt;code&gt;javascript&lt;/code&gt;, brilhante.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - JS on TV por Mike Taylor</title>
+   <link href="http://blog.gri.fo/blog/06-js-on-tv-mike-taylor"/>
+   <updated>2012-08-30T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/06-js-on-tv-mike-taylor</id>
+   <content type="html">&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/braziljs-2012/mike-taylor.jpg&quot; alt=&quot;Vitor Carlos e Mike Taylor&quot; width=&quot;300&quot;&gt;
+  &lt;figcaption&gt;Vitor Carlos e Mike Taylor&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Muito bem humorado e arranhando português, Mike inicia a sua apresentação mostrando o início da história do Opera na TV através dos consoles da Nintendo, e posteriormente em várias SmartTvs.&lt;/p&gt;
+
+&lt;p&gt;Inicialmente ele levantou algumas preocupações que devemos tomar quando pensamos em desenvolver aplicativos para televisão. A principal delas é garantir que o conteúdo apareça na área central do televisor, visto que alguns modelos possuem uma margem externa à área visível que é utilizada para outros recursos.&lt;/p&gt;
+
+&lt;p&gt;Ele também lembra que, diferente de computadores, as tvs possuem um local de destaque na sala. Sendo assim, é importante pensar em aplicativos sociais, que possam ser compartilhados com toda a família.&lt;/p&gt;
+
+&lt;p&gt;O modo como interagimos com a aplicação também deve ser pensado. A especificação do DOM3 fala sobre alguns botões padrões para controles, que são as setas direcionais e o botão de enter. Ela também fala sobre teclas para as cores (amarelo, azul, vermelho e verde), mas ests são opcionais, então devemos testar a existência das mesmas antes de atribuir funções, bem como pensar em um fallback.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Use event listener or Rick Waldron vai vir te pegar! - Mike&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Quanto ao CSS, Mike avisa que o media=&quot;tv&quot; está praticamente abandonado, e considera a abordagem via media=&quot;screen&quot; mais apropriada. Ele também recomendou o uso moderado de bibliotecas de JavaScript, lembrando de dois sites bem conhecidos por desenvolvedores: &lt;a href=&quot;http://microjs.com/&quot;&gt;microjs&lt;/a&gt; e &lt;a href=&quot;http://vanilla-js.com/&quot;&gt;vanilla.js&lt;/a&gt;. &lt;em&gt;//hehe :o)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Além disso, Mike também não recomenda o uso de cookies em TV, pois o mesmo pode ser perdido ao desligar o aparelho. Mesmo assim, ele lembra que cookies podem ser um ótimo polyfill para local storage.&lt;/p&gt;
+
+&lt;p&gt;Ele também mostra que não é necessário um televisor para desenvolvimento. A Opera disponibiliza duas ferramentas para fins de teste: o &lt;a href=&quot;http://www.opera.com/business/tv/emulator/&quot;&gt;Opera TV Emulator&lt;/a&gt; e o &lt;a href=&quot;http://www.opera.com/dragonfly/&quot;&gt;Opera Dragonfly&lt;/a&gt; para depuração. A Opera também disponibiliza templates e outras ferramentas específicas para televisores em &lt;a href=&quot;dev.opera.com/tv/&quot;&gt;Dev.Opera&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - tracking.js por Eduardo Lundgren</title>
+   <link href="http://blog.gri.fo/blog/05-trackingjs-eduardo-lundgren"/>
+   <updated>2012-08-30T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/05-trackingjs-eduardo-lundgren</id>
+   <content type="html">&lt;p&gt;Eduardo Lundgren, líder de desenvolvimento na Liferay, iniciou sua palestra falando sobre IHC e Realidade aumentada. Utilizou alguns exemplos de hardware que já são mais conhecidos, como Kinect, PS Move e Wii.&lt;/p&gt;
+
+&lt;p&gt;Eduardo apresentou uma API que está desenvolvendo em JavaScript para rastrear objetos em imagens da câmera do usuário. Sua utilização não depende de nenhum plugin e parece bem simples de se utilizar (em browsers modernos, obviamente).&lt;/p&gt;
+
+&lt;p&gt;Exemplo de utilização:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var videoCamera = new tracking.VideoCamera().render().renderVideoCanvas();
+
+videoCamera.track({
+    type: 'color',
+    color: 'magenta',
+    onFound: function(track) {
+        console.log(track.x, track.y, track.z);
+    },
+    onNotFound: function() {}
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Atualmente ele faz o rastreamento com identificação de cores e está em desenvolvimento um algoritmo nomeado como HAFT (Hand and Face Tracking) para identificar rosto e mãos das pessoas.&lt;/p&gt;
+
+&lt;p&gt;A API ainda não possui uma documentação, mas segundo o Eduardo é bem fácil entender como utilizar.&lt;/p&gt;
+
+&lt;p&gt;Mais informações sobre a API podem ser encontradas em: &lt;a href=&quot;http://trackingjs.com&quot;&gt;trackingjs.com&lt;/a&gt;
+Twitter do Eduardo: @eduardolundgren
+Para contribuir com o projeto, faça fork no repositório do &lt;a href=&quot;https://github.com/eduardolundgren/tracking.js&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - Web app ou aplicativo nativo por Renato Mangini</title>
+   <link href="http://blog.gri.fo/blog/04-web-app-ou-aplicativo-nativo-renato-mangini"/>
+   <updated>2012-08-30T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/04-web-app-ou-aplicativo-nativo-renato-mangini</id>
+   <content type="html">&lt;p&gt;Renato é engenheiro do Google alocado no Brasil e um dos responsáveis na gigante por levar o melhor da experiência nativa para um contexto web.&lt;/p&gt;
+
+&lt;p&gt;O meio são as &lt;em&gt;Chrome Packaged Apps&lt;/em&gt; que oferencem APIs com acesso a aspectos antes disponíveis apenas para aplicações nativas. Através de uma CPA, conceito ainda em desenvolvimento, é possível desenvolver com acesso direto ao hardware, por exemplo.&lt;/p&gt;
+
+&lt;p&gt;As CPA invertem a mentalidade de desenvolver &lt;em&gt;online first&lt;/em&gt; e depois adaptar para offline. A prática atual é custosa e inviável e as CPAs vem para tentar resolver isto.&lt;/p&gt;
+
+&lt;p&gt;As principais vantagens das CPAs são:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Out of browser - executa independente do browser&lt;/li&gt;
+&lt;li&gt;Look and Feel nativo&lt;/li&gt;
+&lt;li&gt;Mais &lt;em&gt;poder&lt;/em&gt; para o desenvolvedor&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Segurança&lt;/h3&gt;
+
+&lt;p&gt;Content Security Policy (CSP) - a segurança é mais restrita que aplicativos feitos para rodar no browser, pois é executado independentemente em uma &lt;em&gt;sandbox&lt;/em&gt;. Além disso, utiliza um modelo de permissão up front, evitando diálogos desnecessários com o usuário (permissão a cada vez que utilizar webcam, sistema de arquivos, etc).&lt;/p&gt;
+
+&lt;p&gt;Atualmente há suporte apenas para o Chrome Beta, Canary e Developer, mas futuramente estará disponível na versão estável.&lt;/p&gt;
+
+&lt;p&gt;A aprensentação terminou com uma demonstração impressionante de um CPA controlando as luzes do teatro.&lt;/p&gt;
+
+&lt;p&gt;Tudo e muito mais pode ser encontrado no &lt;a href=&quot;https://github.com/GoogleChrome/chrome-app-samples&quot;&gt;Github&lt;/a&gt; e também em &lt;a href=&quot;http://developer.chrome.com/apps/&quot;&gt;http://developer.chrome.com/apps&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - Mobile HTML5 por Maximiliano Firtman</title>
+   <link href="http://blog.gri.fo/blog/03-mobile-html5-maximiliano-firman"/>
+   <updated>2012-08-30T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/03-mobile-html5-maximiliano-firman</id>
+   <content type="html">&lt;p&gt;O argentino Maximiliano Firtman, &lt;em&gt;o cara entre nós e nosso almoço&lt;/em&gt;, como ele mesmo definiu, já trabalhou na Adobe e Nokia. Em sua primeira vez no Brasil, apresentou uma palestra bem humorada que chamou a atenção de todos os participantes.&lt;/p&gt;
+
+&lt;p&gt;Max já escreveu vários livros sobre mobile JavaScript e no final do ano irá lançar seu último livro pela editora O'Reilly chamado &lt;em&gt;Programming the Mobile Web&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mantenedor do site &lt;a href=&quot;http://mobilehtml5.org&quot;&gt;mobilehtml5&lt;/a&gt; e criador do iWebInspector, ferramenta de depuração remota, ele é atualmente chamado de &lt;em&gt;Godfather&lt;/em&gt; da web móvel.&lt;/p&gt;
+
+&lt;p&gt;Ele cita que 5% dos desenvolvedores web realmente desenvolvem, 40% deles tem a intenção de desenvolver e o restante não sabe nem por onde começar. É como andar em um campo minado, segundo Max.&lt;/p&gt;
+
+&lt;p&gt;Desenvolver web móvel não é a mesma coisa que desenvolver web desktop, é necessário reaprender algumas coisas, pois existem &lt;em&gt;zilhões&lt;/em&gt; de plataformas móveis diferentes para se lidar.&lt;/p&gt;
+
+&lt;p&gt;O grande problema é que, além de ser diferente, ainda existem divergências entre padrões e redes lentas , e isto não só no Brasil como no mundo todo. E além disto, temos os chamados pseudo browsers que nem executam JavaScript no aparelho.&lt;/p&gt;
+
+&lt;h3&gt;Público Alvo&lt;/h3&gt;
+
+&lt;p&gt;Algumas estatísticas mostram que a grande maioria do público americano usa iOS seguido de Android. Já no Brasil, o Android é líder, seguido de, acredite se quiser, Symbian S40 da Nokia, alguns desconhecidos e logo a seguir iOS. Evidenciando a importância de se estar atento ao público alvo.&lt;/p&gt;
+
+&lt;h3&gt;Native VS Web&lt;/h3&gt;
+
+&lt;p&gt;Ninguém tem a resposta. Você vê o browser como plataforma, os clientes não sabem o que querem e cabe ao desenvolvedor o que é adequado a cada caso. Não existe taxonomia neste caso. Ninguém sabe realmente o que é uma &lt;em&gt;native app&lt;/em&gt;, &lt;em&gt;web app&lt;/em&gt;, &lt;em&gt;hybrid app&lt;/em&gt;... e nem mesmo o que é HTML5.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&quot;typeof html5 != boolean&quot; - Max&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Algumas funcionalidades tem suporte, outras funcionam somente em alguns browsers e algumas são totalmente experimentais. As APIs de JavaScript sofrem do mesmo problema. Existem muitas funcionalidades mas nem todas servem para a sua aplicação.&lt;/p&gt;
+
+&lt;h3&gt;Fragmentação&lt;/h3&gt;
+
+&lt;p&gt;A plataforma mobile é recheada de tamanhos de tela diferentes, aspect ratio, densidade de pixels e testar tudo isto é um problema. Não há documentação oficial de qualidade dos fabricantes e muitas das descobertas vêm da comunidade.&lt;/p&gt;
+
+&lt;h3&gt;Então, o que usar para desenvolver?&lt;/h3&gt;
+
+&lt;p&gt;Podemos utilizar remote web inspector, atualmente disponível para browsers mais modernos, ou:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use o telefone dos amigos&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://labs.adobe.com/technologies/shadow/&quot;&gt;Adobe Shadow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mobilexweb.com/emulators&quot;&gt;mobilexweb.com/emulators&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://deviceanywhere.com&quot;&gt;deviceanywhere.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Futuro&lt;/h3&gt;
+
+&lt;p&gt;Podemos esperar para o futuro próximo, além da morte do Android 2.x, APIs web nativas, mais segurança, APIs de áudio web, detecção de voz, web NFC e muito mais.&lt;/p&gt;
+
+&lt;h3&gt;Últimas dicas&lt;/h3&gt;
+
+&lt;p&gt;Max finalizou sua apresentação com alguns conselhos, como, não seja mais um na multidão, performance é importante, tenha boas práticas, não seja um fanático, seja multi plataforma e &lt;a href=&quot;http://futurefriend.ly&quot;&gt;futurefriend.ly&lt;/a&gt;. Além de:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Use jQuery com cuidade em mobile - Max&lt;/p&gt;&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - Testes por Leonardo Balter</title>
+   <link href="http://blog.gri.fo/blog/02-testes-unitarios-leonardo-balter"/>
+   <updated>2012-08-30T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/02-testes-unitarios-leonardo-balter</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/leobalter/testing-sucks&quot; class=&quot;btn&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/braziljs-2012/leonardo-balter.jpg&quot; alt=&quot;Cynthia Zanoni e Leonardo Balter&quot; width=&quot;300&quot;&gt;
+  &lt;figcaption&gt;Cynthia Zanoni e Leonardo Balter&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Rolou há pouco a palestra do Léo Balter sobre testes unitários em JS.&lt;/p&gt;
+
+&lt;p&gt;Ele falou sobre a importância dos testes unitários nas aplicações e o quanto eles podem ser exaustivos quando executados em um projeto já desenvolvido.&lt;/p&gt;
+
+&lt;p&gt;Falou sobre ferramentas de teste online de código, JsHint e JsLint. Segundo sua opinião, são mais voltadas ao estilo de escrita do seu código e não para assegurar sua funcionalidade.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Se está funcionando não se deve mexer. Ok, funciona mas será que sua aplicação está fazendo o que deveria? - Balter&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;TESTES, testes e mais testes!&lt;/p&gt;
+
+&lt;p&gt;Outro grande foco da sua palestra foi a importância de desenvolver o fluxo de aplicação com um especificação bem definida.&lt;/p&gt;
+
+&lt;p&gt;Outras ferramentas de testes que você pode aplicar ao seu projeto são: Mocha, QUnit, Jasmine e NodeUnit.&lt;/p&gt;
+
+&lt;p&gt;Enfim, todos sabemos da importância dos testes e o que eles representam na rotina de um bom desenvolvedor. Uma boa opção é buscar otimizar e automatizar as rotinas de teste para que eles sejam executados de maneira mais natural e não forçada.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BrazilJS - Próximos anos da jQuery por Richard D. Worth</title>
+   <link href="http://blog.gri.fo/blog/01-proximos-anos-jquery-richard-worth"/>
+   <updated>2012-08-30T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/01-proximos-anos-jquery-richard-worth</id>
+   <content type="html">&lt;p&gt;&lt;figure&gt;
+  &lt;img src=&quot;/images/braziljs-2012/richard-worth.jpg&quot; alt=&quot;Jean Carlo e Richard D. Worth&quot; width=&quot;300&quot;&gt;
+  &lt;figcaption&gt;Jean Carlo e Richard D. Worth&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Richard inicia a palestra em português com muito bom humor contando um pouco de sua trajetória pelo Brasil.&lt;/p&gt;
+
+&lt;p&gt;Comida, música e futebol. Richard tenta provar que tudo isto é menos popular que jQuery segundo o &lt;a href=&quot;http://www.google.com/trends&quot;&gt;Google Trends&lt;/a&gt;. Nem os times de futebol se salvaram: Botafogo, Fluminense, Internacional e Grêmio.&lt;/p&gt;
+
+&lt;p&gt;Os números impressionam: 50% dos sites na internet usam jQuery. Muito graças a época em que a biblioteca surgiu, sua API e sua comunidade.&lt;/p&gt;
+
+&lt;p&gt;John Resig lançou a biblioteca em 2006 e a primeira reação da comunidade foi a indiferença. Durante os próximos três anos todo o suporte para que o projeto continuasse foi baseada na conta pessoal no Paypal de Resig. Em 2009 surge o&lt;a href=&quot;http://jquery.org&quot;&gt;jQuery Project&lt;/a&gt; com função de dar suporte a jQuery Core, jQuery UI, e jQuery Mobile.&lt;/p&gt;
+
+&lt;p&gt;Worh deixa claro que sua intenção é desenvolver ainda mais esta comunidade. Ele convida a todos para que apoiem o projeto através do e-mail membership@jquery.org.&lt;/p&gt;
+
+&lt;p&gt;O espaço aberto a perguntas logo levanta o assunto polêmico: jQuery 2.0 não dará suporte para IE 6/7/8. Worth explica que haverá um desenvolvimento em paralelo da versão 1.9 para estes navegadores. Sobre a situação da jQuery UI, não haverá versão específica.&lt;/p&gt;
+
+&lt;p&gt;A cooperação com Firefox OS, Mozilla, Apple, Microsoft e outras comunidades também uma das intenções da jQuery Foundation.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;jQuery precisa existir porque a API do DOM é horrível! - Richard&lt;/p&gt;&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mobile App - Bibliotecas Javascript</title>
+   <link href="http://blog.gri.fo/blog/mobile-app-biliotecas-javascript"/>
+   <updated>2012-08-24T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/mobile-app-biliotecas-javascript</id>
+   <content type="html">&lt;p&gt;Utilizar bibliotecas e frameworks javascript no desenvolvimento front-end já é uma prática comum há algum tempo. Quando comecei a me interessar pelo assunto a &lt;a href=&quot;http://prototypejs.org&quot;&gt;Prototypejs&lt;/a&gt; era bastante popular e já gerava &lt;a href=&quot;http://script.aculo.us&quot;&gt;filhos&lt;/a&gt;. Logo depois ouvi falar em &lt;a href=&quot;http://jquery.com&quot;&gt;jQuery&lt;/a&gt;, &lt;a href=&quot;http://mootools.net&quot;&gt;MooTools&lt;/a&gt;, &lt;a href=&quot;http://yuilibrary.com&quot;&gt;YUI&lt;/a&gt;...&lt;/p&gt;
+
+&lt;p&gt;E quando começamos a falar em mobile app, quais as possibilidades?&lt;/p&gt;
+
+&lt;h3&gt;Zepto&lt;/h3&gt;
+
+&lt;p&gt;A &lt;a href=&quot;http://zeptojs.com&quot;&gt;Zepto&lt;/a&gt; é uma biblioteca destinada unicamente a browsers modernos (&lt;a href=&quot;http://blog.jquery.com/2012/06/28/jquery-core-version-1-9-and-beyond&quot;&gt;talvez muito daquilo que jQuery quer se tornar na versão 2.0&lt;/a&gt;). Sua principal vantagem está em justamente ter alta compatibilidade com jQuery e se manter em menos de 10k.&lt;/p&gt;
+
+&lt;p&gt;O interessante de se trabalhar com Zepto é que o código é bastante acessível e bem escrito, uma consulta rápida aos fontes já tira qualquer dúvida.&lt;/p&gt;
+
+&lt;p&gt;Outro ponto forte são os &lt;a href=&quot;https://github.com/madrobby/zepto/blob/master/src/touch.js&quot;&gt;eventos simples para mobile&lt;/a&gt;. A bilioteca já mapeia &lt;a href=&quot;http://zeptojs.com/#touch&quot;&gt;taps e swipes&lt;/a&gt;. Tudo isto aliado a uma &lt;a href=&quot;http://zeptojs.com&quot;&gt;boa documentação&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Confesso que fiquei bastante empolgado com a bilioteca e o resultado foram dois plugins.&lt;/p&gt;
+
+&lt;h4&gt;Carousel&lt;/h4&gt;
+
+&lt;p&gt;A aplicação que estou fazendo tem uma seção com um carrossel que destaca um único item. Meus requisitos eram conseguir fazer com que isto funcionasse com um código enxuto e dando suporte a touch.&lt;/p&gt;
+
+&lt;p&gt;O mais próximo que encontrei foi o &lt;a href=&quot;http://www.mobify.com/mobifyjs/modules/carousel&quot;&gt;carousel do Mobify.js&lt;/a&gt;, que recomendo . Mas resolvi colocar mãos a massa e o resultado foi o &lt;strong&gt;&lt;a href=&quot;http://jcemer.com/zepto-carousel&quot;&gt;Zepto Carousel&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;O mais bacana foi que em meio ao desenvolvimento, publiquei no Github e um dos &lt;em&gt;forks&lt;/em&gt; acertou &lt;a href=&quot;https://github.com/rafBM/zepto-carousel/commit/2526c3e00446a55a102b6b8a8c088dccf8a50591&quot;&gt;um detalhe&lt;/a&gt; que eu havia deixado passar despercebido.&lt;/p&gt;
+
+&lt;h4&gt;Range&lt;/h4&gt;
+
+&lt;p&gt;Seguindo a mesma lógica do Carousel, nasceu o &lt;strong&gt;&lt;a href=&quot;http://jcemer.com/zepto-range/&quot;&gt;Zepto Range&lt;/a&gt;&lt;/strong&gt;. O plugin recebe um campo &lt;a href=&quot;http://www.w3.org/TR/html-markup/input.range.html&quot;&gt;input do tipo range&lt;/a&gt; e implementa uma interface mais agradável e mobile &lt;em&gt;friendly&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3&gt;jQuery Mobile&lt;/h3&gt;
+
+&lt;p&gt;Para aqueles que não querem abrir mão de jQuery e precisam de um framework mais completo para trabalhar com mobile, uma alternativa é usar &lt;a href=&quot;http://jquerymobile.com&quot;&gt;jQuery Mobile&lt;/a&gt;.&lt;/p&gt;
+
+&lt;br&gt;
+
+
+&lt;p&gt;Estas foram as bibliotecas que avaliei com mais atenção. Mas dei uma conferida rápida também em &lt;a href=&quot;http://xuijs.com&quot;&gt;xui&lt;/a&gt;, &lt;a href=&quot;http://jqtouch.com&quot;&gt;jQTouch&lt;/a&gt; e &lt;a href=&quot;http://www.sencha.com&quot;&gt;Sencha&lt;/a&gt;. No fim acabei usando a Zepto e não tive decepções.&lt;/p&gt;
+
+&lt;p&gt;E você, já usou alguma biblioteca com suporte a mobile? Deixe um comentário!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mobile App - Botões, bordas e sombras</title>
+   <link href="http://blog.gri.fo/blog/mobile-app-links-botoes-bordas-e-sombras"/>
+   <updated>2012-08-03T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/mobile-app-links-botoes-bordas-e-sombras</id>
+   <content type="html">&lt;p&gt;Terceiro post da &lt;a href=&quot;http://gri.fo/tags/#!mobile&quot;&gt;série&lt;/a&gt;, neste, que será o último sobre CSS, trataremos de como estilizar botões, utilizar sombras e muito mais. Vamos lá!&lt;/p&gt;
+
+&lt;p&gt;Nossa app tem botões semelhantes ao da imagem abaixo.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&lt;img src=&quot;/code/mobile-app/btn-simple.png&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Sabemos que algumas vezes este elemento representará botões de controle e outras links para outras seções.&lt;/p&gt;
+
+&lt;p&gt;Como vamos estilizar além de &lt;code&gt;a&lt;/code&gt; a tag &lt;code&gt;button&lt;/code&gt;, algumas precauções precisam ser tomadas. Aplicaremos &lt;code&gt;border: none&lt;/code&gt;, definiremos a altura com &lt;code&gt;line-height&lt;/code&gt; e colocaremos medidas para &lt;code&gt;margins&lt;/code&gt; e &lt;code&gt;paddings&lt;/code&gt;. Assim asseguramos que a aparência será única em diferentes dispositivos.&lt;/p&gt;
+
+&lt;p&gt;O gradiente de fundo será aplicado usando os mesmos &lt;em&gt;mixins&lt;/em&gt; dos &lt;a href=&quot;//gist.github.com/3130835&quot;&gt;outros posts&lt;/a&gt;. As bordas com diferentes cores serão com &lt;code&gt;border: solid 3px&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Bordas Arredondadas&lt;/h3&gt;
+
+&lt;p&gt;Até agora não precisamos estilizar nada que tivesse bordas arredondadas. Mas para browsers modernos isto não é problema, eles implementam a propriedade  &lt;code&gt;border-radius&lt;/code&gt;. O único detalhe é que precisamos adicionar &lt;a href=&quot;http://caniuse.com/#search=border-radius&quot;&gt;vendor prefix&lt;/a&gt; a propriedade.&lt;/p&gt;
+
+&lt;p&gt;Posto isto, é melhor criarmos um &lt;em&gt;mixin&lt;/em&gt; pro Less para nos auxiliar:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;no-highlight&quot;&gt;.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Vamos aplicar com &lt;strong&gt;6px&lt;/strong&gt; de curvatura.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;no-highlight&quot;&gt;.btn {
+    .border-radius(6px);
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h3&gt;Texto com Sombras&lt;/h3&gt;
+
+&lt;p&gt;O texto do botão tem um pouco de sombra, vamos usar &lt;code&gt;text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);&lt;/code&gt;. Isto define uma sombra com deslocamento de &lt;strong&gt;1px&lt;/strong&gt; para direita e rodapé, &lt;em&gt;blur&lt;/em&gt; de &lt;strong&gt;1px&lt;/strong&gt; e cor preta com opacidade de &lt;strong&gt;30%&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cores em RGBA dão um ótimo resultado quando aplicadas em sombras e bordas. Apenas é preciso cuidar com o &lt;a href=&quot;http://css-tricks.com/rgba-browser-support&quot;&gt;suporte dos navegadores&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Active (feedback)&lt;/h3&gt;
+
+&lt;p&gt;É sempre uma boa prática dar um &lt;em&gt;feedback&lt;/em&gt; para os usuários quando eles praticam uma ação. Para nossos botões, vamos definir um comportamento de &lt;code&gt;:active&lt;/code&gt; que será disparado quando o usuário clicar (ou tocar) no botão.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;no-highlight&quot;&gt;.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+         -o-box-shadow: @shadow;
+            box-shadow: @shadow;
+}
+
+.btn:active {
+    .box-shadow(inset 0 6px 20px rgba(0, 0, 0, .3))
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Além disso, podemos melhorar o efeito escurecendo um pouco a borda do topo, Less nos oferece o &lt;code&gt;darken&lt;/code&gt; para estes usos: &lt;code&gt;border-top-color: darken(@color-border-top, 5%)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4&gt;Tap Highlight&lt;/h4&gt;
+
+&lt;p&gt;Alguns aparelhos já &lt;a href=&quot;http://css-infos.net/property/-webkit-tap-highlight-color&quot;&gt;definem um comportamento&lt;/a&gt; para o &lt;em&gt;tap&lt;/em&gt; (toque). Como já definimos uma estilização através de &lt;code&gt;:active&lt;/code&gt;, vamos desabilitar o comportamento padrão anulando a cor aplicada da seguinte maneira:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;a, button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h4&gt;:active em Android&lt;/h4&gt;
+
+&lt;p&gt;Um problema recorrente é que &lt;em&gt;Android&lt;/em&gt; &lt;a href=&quot;//pervasivecode.blogspot.com.br/2011/11/android-phonegap-active-css-pseudo.html&quot;&gt;não reconhece a pseudo classe&lt;/a&gt; &lt;code&gt;:active&lt;/code&gt;. Vamos precisar simular o comportamento com JavaScript e classes no CSS.&lt;/p&gt;
+
+&lt;p&gt;O código abaixo requer &lt;a href=&quot;http://jquery.com&quot;&gt;jQuery&lt;/a&gt; ou &lt;a href=&quot;http://zeptojs.com&quot;&gt;Zepto&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;if (navigator.userAgent.toLowerCase().indexOf(&quot;android&quot;) &gt; -1) {
+    var selector = 'a, button';
+    $(document)
+        .on('touchstart', selector, function () {
+            $(this).addClass('active');
+        })
+        .on('touchend touchcancel', selector, function () {
+            $(this).removeClass('active');
+        });
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;No CSS precisaremos apenas adicionar mais um seletor à regra.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;.btn:active, .btn.active {
+    .box-shadow(inset 0 6px 20px rgba(0, 0, 0, .3))
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+&lt;br&gt;
+
+
+&lt;p&gt;O resultado final pode ser conferido no link abaixo.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsbin.com/amimof/5/edit&quot; class=&quot;btn&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;br&gt;
+
+
+&lt;p&gt;Nos próximos posts falaremos mais sobre bibliotecas e frameworks JavaScript para mobile e em como definir o comportamento e navegação entre seções em uma app. Até breve!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Code n' Bier - Primeira edição</title>
+   <link href="http://blog.gri.fo/blog/code-n-bier-primeira-edicao"/>
+   <updated>2012-08-01T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/code-n-bier-primeira-edicao</id>
+   <content type="html">&lt;p&gt;Na noite de ontem (01.08.2012), rolou a primeira edição do &lt;a href=&quot;//codenbier.com&quot;&gt;Code n' Bier&lt;/a&gt;. Um projeto que tem como intenção levar programação e pessoas para dentro de um bar com o objetivo de promover aprendizado, integração e diversão.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/558426_487435217951964_1110157710_n.jpg&quot; alt=&quot;Foto início do evento&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;As fotos do evento já estão na página da &lt;a href=&quot;//www.facebook.com/grifotecnologia&quot;&gt;Grifo no Facebook&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Dojo&lt;/h3&gt;
+
+&lt;p&gt;A atração principal desta primeira edição foi um &lt;a href=&quot;//codingdojo.org&quot;&gt;Dojo&lt;/a&gt;. Se você ainda não teve contato com Dojos, &lt;a href=&quot;//speakerdeck.com/u/jcemer/p/dojo-grifo&quot;&gt;confira a apresentação inicial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nosso problema era construir uma lista de múltiplos. A definição completa, resolução e frameworks de teste utilizados já estão no &lt;a href=&quot;//github.com/grifo/code-n-bier/tree/dojo-2012-08-01&quot;&gt;repositório git&lt;/a&gt; do evento, confira.&lt;/p&gt;
+
+&lt;p&gt;Como é de praxe em todo Dojo, vamos a retrospectiva:&lt;/p&gt;
+
+&lt;h4&gt;O que aprendemos&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JavaScript&lt;/li&gt;
+&lt;li&gt;Usar &lt;a href=&quot;//www.jslint.com/&quot;&gt;JSLint&lt;/a&gt; (ou &lt;a href=&quot;//www.jshint.com/&quot;&gt;JSHint&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;//developer.mozilla.org/en/JavaScript/Strict_mode&quot;&gt;&quot;use strict&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;testar antes de desenvolver&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;//en.wikipedia.org/wiki/Test-driven_development&quot;&gt;TDD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;//git-scm.com&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;//visionmedia.github.com/mocha&quot;&gt;Mocha&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;//chaijs.com&quot;&gt;Chai&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cerveja foi boa&lt;/li&gt;
+&lt;li&gt;'dá para desenvolver bebendo'&lt;/li&gt;
+&lt;li&gt;=== (comparador restrito)&lt;/li&gt;
+&lt;li&gt;usar o mac&lt;/li&gt;
+&lt;li&gt;muito mais gente vem no dojo quando é em um bar&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;O que gostamos&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;//coffeescript.org&quot;&gt;CoffeeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;música de fundo&lt;/li&gt;
+&lt;li&gt;cerveja&lt;/li&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;li&gt;adesivos do &lt;a href=&quot;//braziljs.com.br&quot;&gt;BrazilJS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;O que podemos melhorar&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ler mais o problema&lt;/li&gt;
+&lt;li&gt;letras maiores&lt;/li&gt;
+&lt;li&gt;mais cerveja&lt;/li&gt;
+&lt;li&gt;ctrl c ctrv v :(&lt;/li&gt;
+&lt;li&gt;definir melhor o problema&lt;/li&gt;
+&lt;li&gt;mais problemas&lt;/li&gt;
+&lt;li&gt;problemas mais complexos&lt;/li&gt;
+&lt;li&gt;mais cerveja&lt;/li&gt;
+&lt;li&gt;mais, hmmm, cerveja&lt;/li&gt;
+&lt;li&gt;mais mulheres&lt;/li&gt;
+&lt;li&gt;mulheres nuas progra… (deixa pra lá)&lt;/li&gt;
+&lt;li&gt;mais code n bier&lt;/li&gt;
+&lt;li&gt;melhorar o algoritmo de comparar números inteiros&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;//github.com/grifo/code-n-bier/tree/dojo-2012-08-01&quot; class=&quot;btn&quot;&gt;Repositório Git do Dojo&lt;/a&gt;&lt;/p&gt;
+
+&lt;br&gt;
+
+
+&lt;h3&gt;Desafios e Sorteios&lt;/h3&gt;
+
+&lt;p&gt;No fim do Dojo a galera foi desafiada a surpreender a platéia em cinco minutos valendo um ingresso pro &lt;a href=&quot;//braziljs.com.br&quot;&gt;BrazilJS&lt;/a&gt; e uma caneca da &lt;a href=&quot;//gri.fo&quot;&gt;Grifo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As ideias que surgiram de desafio foram as seguintes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;fizzbuzz&lt;/li&gt;
+&lt;li&gt;layer centralizada&lt;/li&gt;
+&lt;li&gt;project euler em node&lt;/li&gt;
+&lt;li&gt;circulos com canvas&lt;/li&gt;
+&lt;li&gt;circulo com divs de 1x1px&lt;/li&gt;
+&lt;li&gt;sistema operacional em js&lt;/li&gt;
+&lt;li&gt;fibonacci&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Os primeiros dois desafiados tentaram programar no interpretador do &lt;a href=&quot;//nodejs.org&quot;&gt;Node&lt;/a&gt; e não conseguiram finalizar o desafio.&lt;/p&gt;
+
+&lt;p&gt;A platéia resolveu dar uma segunda chance para eles e &lt;a href=&quot;//twitter.com/jmurowaniecki&quot;&gt;@jmurowaniecki&lt;/a&gt; resolveu &lt;a href=&quot;//gist.github.com/3236557&quot;&gt;fibonacci&lt;/a&gt; e &lt;a href=&quot;//twitter.com/n2liquid&quot;&gt;@n2liquid&lt;/a&gt; fez o famoso &lt;a href=&quot;https://gist.github.com/3236557&quot;&gt;fizzbuzz&lt;/a&gt; e emplacaram o desafio.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;//gist.github.com/3236557&quot; class=&quot;btn&quot;&gt;Soluções dos desafios&lt;/a&gt;&lt;/p&gt;
+
+&lt;br&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;http://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-snc7/292999_487434904618662_479875027_n.jpg&quot; alt=&quot;preliminares do eventos&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Sinta-se à vontade para nos mandar sugestões de temas e ideias para o próximo Code n' Bier!&lt;/p&gt;
+
+&lt;p&gt;Obrigado pela participação de todos e até a próxima edição.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mobile App - Tela, Sprites e Fontes</title>
+   <link href="http://blog.gri.fo/blog/mobile-app-parte-2"/>
+   <updated>2012-07-20T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/mobile-app-parte-2</id>
+   <content type="html">&lt;p&gt;Segundo post da série em que construímos do zero uma mobile web app.&lt;br&gt; É aconselhável conferir o &lt;a href=&quot;//gri.fo/blog/mobile-app-parte-1&quot;&gt;primeiro post&lt;/a&gt; para ficar por dentro dos primeiros passos.&lt;/p&gt;
+
+&lt;h3&gt;Altura da tela&lt;/h3&gt;
+
+&lt;p&gt;Chegamos no ponto de pensar na altura da app. Até agora eu estava aplicando o fundo no &lt;code&gt;html&lt;/code&gt; e &lt;code&gt;body&lt;/code&gt;. Se o conteúdo crescer, &lt;a href=&quot;http://jsbin.com/apotoz/1&quot;&gt;meu background recomeça ao fim do viewport&lt;/a&gt;. A solução é aplicar&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;html, body { height: 100%; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;E além disso, vou precisar de outro container com css &lt;code&gt;min-height: 100%&lt;/code&gt;. &lt;a href=&quot;http://jsbin.com/apotoz/2&quot;&gt;Nele é que vou aplicar os fundos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Imagens&lt;/h3&gt;
+
+&lt;p&gt;A tática que adotamos até o momento é desenvolver para a resolução de &lt;strong&gt;640px&lt;/strong&gt; e forçar os dispositivos a escalar esta medida para a largura total de suas telas. Tudo funciona bem para dispositivos com largura inferior a medida, mas para os contrários, as imagens ficam com baixa qualidade.&lt;/p&gt;
+
+&lt;p&gt;Duas soluções me parecem possíveis: salvar as imagens em um formato vetorial ou aumentar a resolução/tamanho do bitmap. A primeira me parece um tanto complicada e desconhecida, nem todas as imagens que usarei possuem porte para vetor.&lt;/p&gt;
+
+&lt;p&gt;Adotei a segunda solução e passei a salvar as imagens com o dobro do tamanho. Quando estas imagens compõe &lt;code&gt;background&lt;/code&gt;, precisei adicionar ao css &lt;code&gt;background-size: 100% 100%&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4&gt;Sprites&lt;/h4&gt;
+
+&lt;p&gt;Para &lt;a href=&quot;http://css-tricks.com/css-sprites&quot;&gt;sprites&lt;/a&gt; algumas regras adicionais precisaram ser seguidas. Neste caso, adotei dimensões quadradas de &lt;strong&gt;100x100&lt;/strong&gt; para cada item do sprite e utilizarei um item abaixo do outro.&lt;/p&gt;
+
+&lt;p&gt;O resultado é que sempre terei uma imagem com largura de &lt;strong&gt;100px&lt;/strong&gt;. E isto é que irá determinar o tamanho de meu background através da regra &lt;code&gt;background-size: 100% auto;&lt;/code&gt;. A posição também é calculada com base no número de itens que compõe o sprite, assim posso aplicar minhas imagens em qualquer container quadrado (e até retangular).&lt;/p&gt;
+
+&lt;h5&gt;Sprites em LESS&lt;/h5&gt;
+
+&lt;p&gt;Repare na medida de &lt;strong&gt;50px&lt;/strong&gt; nos &lt;em&gt;mixins&lt;/em&gt; abaixo. Lembre-se que estamos trabalhando com imagens com no mínimo o dobro de tamanho.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;no-highlight&quot;&gt;@sprite-lenght: 8;
+.sprite() {
+    width: 50px;
+    height: 50px;
+    background: url('../images/sprite.png');
+    background-size: 100% auto;
+}
+.sprite-pos(@num) {
+    @calc: (100% / @sprite-lenght) * @num;
+    background-position: 0 @calc, 0 0;
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h5&gt;Sprites em CSS&lt;/h5&gt;
+
+&lt;p&gt;O resultado é próximo de:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;no-highlight&quot;&gt;.icon {
+    width: 50px;
+    height: 50px;
+    background: url('../images/sprite.png');
+    background-size: 100% auto;
+}
+.icon01 { background-position: 0 0%; }
+.icon02 { background-position: 0 12.5%; }
+...
+.icon07 { background-position: 0 75%; }
+.icon08 { background-position: 0 87.5%, }&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h3&gt;Fontes&lt;/h3&gt;
+
+&lt;p&gt;A fonte usada na app está no &lt;a href=&quot;http://www.google.com/webfonts&quot;&gt;Google Web Fonts&lt;/a&gt;. Aplicar usando a tag &lt;code&gt;link&lt;/code&gt; quando se tem livre acesso ao html é mais &lt;a href=&quot;http://www.stevesouders.com/blog/2009/04/09/dont-use-import&quot;&gt;performático&lt;/a&gt;. É isto que iremos fazer. Outra abordagem interessante quando se utiliza &lt;em&gt;Less&lt;/em&gt; é criar variáveis com o nome da fonte. Cheked!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mobile App - Background</title>
+   <link href="http://blog.gri.fo/blog/mobile-app-parte-1"/>
+   <updated>2012-07-17T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/mobile-app-parte-1</id>
+   <content type="html">&lt;p&gt;Este é o primeiro de uma série de posts que irão mostrar na prática o desenvolvimento de uma mobile web app. O objetivo final é que nossa app funcione em iPhone, iPad e Android usando apenas html5 e css3. A distribuição do aplicativo precisará apenas de uma interface &lt;em&gt;web view&lt;/em&gt; nativa.&lt;/p&gt;
+
+&lt;h3&gt;Largura da tela&lt;/h3&gt;
+
+&lt;p&gt;Nossa app terá o mesmo layout tanto para iPad, Android e iPhone. A arte está com &lt;strong&gt;640px&lt;/strong&gt; de largura, vou seguir esta medida no projeto.&lt;/p&gt;
+
+&lt;p&gt;A primeira coisa que farei é adicionar no head a meta &lt;code&gt;&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=640px&quot;&amp;gt;&lt;/code&gt;. Assim os dispositivos vão preencher toda a tela com o conteúdo da app.&lt;/p&gt;
+
+&lt;p&gt;Vou aproveitar e criar um &lt;code&gt;#wrapper&lt;/code&gt; que define esta mesma largura. Por segurança, vou adicionar o css &lt;code&gt;margin:0 auto&lt;/code&gt; ao &lt;code&gt;#wrapper&lt;/code&gt; para os casos em que a meta tag não funcionar ou não for aplicável (&lt;em&gt;dispositivos convencionais&lt;/em&gt;). Para estes, o conteúdo será mostrado centralizado.&lt;/p&gt;
+
+&lt;p&gt;Vale lembrar que, para apps / websites com diferentes layouts com base em resolução, como é o caso deste blog, o ideal é usar &lt;a href=&quot;//mediaqueri.es&quot;&gt;Media Queries&lt;/a&gt;. Em nosso projeto da app não usaremos.&lt;/p&gt;
+
+&lt;h3&gt;Vertical Gradient Background&lt;/h3&gt;
+
+&lt;p&gt;O app tem um fundo em gradiente vertical que começa no topo e se torna cor sólida a partir dos &lt;strong&gt;520px&lt;/strong&gt; de altura. Usar gradiente como &lt;code&gt;background-image&lt;/code&gt; é um tanto complicado. Diferentes versões do mesmo browser implementam diferentes sintaxes, além dos prefixos para atender todos os browsers.&lt;/p&gt;
+
+&lt;p&gt;Uma referência que utilizo com frequência é o &lt;a href=&quot;//twitter.github.com/bootstrap&quot;&gt;bootstrap do twitter&lt;/a&gt;. Ele já tem uns &lt;a href=&quot;//github.com/twitter/bootstrap/blob/master/less/mixins.less#L360&quot;&gt;mixins&lt;/a&gt; em &lt;a href=&quot;//lesscss.org&quot;&gt;Less&lt;/a&gt; com diferentes gradientes: horizontal, vertical, directional. vertical-three-colos, radial, striped.&lt;/p&gt;
+
+&lt;p&gt;Só precisei adicionar &lt;code&gt;@colorStop&lt;/code&gt; e já tenho meu conjunto de &lt;a href=&quot;//gist.github.com/3130835&quot;&gt;mixins&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;no-highlight&quot;&gt;#gradient .vertical(#F00, #0F0, 520px);&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;O código acima indica que a transição entre as cores terminará em 520px e que o restante será preenchido com a segunda cor.&lt;/p&gt;
+
+&lt;h3&gt;Background Noise&lt;/h3&gt;
+
+&lt;p&gt;Outro detalhe do fundo da app é que ele tem &lt;em&gt;noise&lt;/em&gt;. Googlada rápida e logo encontro &lt;a href=&quot;//forrst.com/posts/Create_alpha_PNGs_of_noise-zm3&quot;&gt;alguém com o mesmo problema&lt;/a&gt;. Vou precisar usar &lt;a href=&quot;//www.css3.info/preview/multiple-backgrounds&quot;&gt;background múltiplo&lt;/a&gt; e aplicar a imagem que eu gerar em &lt;a href=&quot;http://noisepng.com&quot;&gt;http://noisepng.com&lt;/a&gt; em cima do meu gradiente.&lt;/p&gt;
+
+&lt;p&gt;Como &lt;em&gt;background-image&lt;/em&gt; não tem &lt;strong&gt;+=&lt;/strong&gt;, vou precisar criar outro mixin para adicionar &lt;code&gt;@noise,&lt;/code&gt; no início de todas as propriedades.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;no-highlight&quot;&gt;#gradient .vertical-noise(url('../images/noise.png'), #F00, #0F0, 520px);&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Neste caso, browsers que não aceitam múltiplo background estão descartados, mas é sempre bom avaliar se isto não é problema.&lt;/p&gt;
+
+&lt;h3&gt;Radial Gradient Background&lt;/h3&gt;
+
+&lt;p&gt;Por fim (hehe), o fundo tem um gradiente circular por cima de todos os outros efeitos. O gradiente é composto da mesma cor interna e externamente mas com diferentes transparências. Já temos um &lt;a href=&quot;//gist.github.com/3130835&quot;&gt;mixin&lt;/a&gt; e a transparência das cores iremos resolver usando &lt;a href=&quot;//www.w3.org/TR/css3-color/#rgba-color&quot;&gt;rgba&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Adicionar mais um múltiplo background e mexer no mixin não me parece prudente, tenho medo que fique complicado de depurar. Optei por aplicar o radial num pseudo elemento &lt;code&gt;:before&lt;/code&gt; posicionado absolutamente em todos os extremos do viewport (top, right, bottom e left).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;no-highlight&quot;&gt;#element:before {
+    #gradient .radial(rgba(255, 255, 0, .3), rgba(255, 255, 0, 0));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    top: 0;
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Um detalhe é que precisamos adicionar &lt;code&gt;content:''&lt;/code&gt; para que o pseudo elemento seja renderizado. Outro ponto importante é que não terei este background na parcela de conteúdo com dimensões maiores que a do viewport. Para nossa app isto não será problema. ;)&lt;/p&gt;
+
+&lt;br&gt;
+
+
+&lt;p&gt;Confira uma demonstração.&lt;br&gt;
+&lt;a href=&quot;//codepen.io/jcemer/pen/nBlog&quot; class=&quot;btn&quot;&gt;Demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;br&gt;
+
+
+&lt;p&gt;Leia o próximo &lt;a href=&quot;//gri.fo/blog/mobile-app-parte-2&quot;&gt;post da série&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Grifo Boilerplate</title>
+   <link href="http://blog.gri.fo/blog/grifo-boilerplate"/>
+   <updated>2012-07-16T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/grifo-boilerplate</id>
+   <content type="html">&lt;p&gt;Fazia tempo que usávamos uma adaptação do &lt;a href=&quot;http://html5boilerplate.com&quot;&gt;HTML5 Boilerplate&lt;/a&gt; em nossos projetos e nas últimas semanas estávamos pensando em divulgar.&lt;/p&gt;
+
+&lt;p&gt;Hoje organizei os códigos e pastas e joguei no &lt;a href=&quot;http://github.com/grifo/grifo-boilerplate&quot;&gt;GitHub&lt;/a&gt;. Por lá tem mais uma documentação de uso e algumas dicas. Sugiro uma atenção especial ao &lt;a href=&quot;https://github.com/grifo/grifo-boilerplate/blob/master/Cakefile&quot;&gt;Cakefile&lt;/a&gt;, pode ser bem útil.&lt;/p&gt;
+
+&lt;p&gt;É isto, acessem &lt;a href=&quot;http://github.com/grifo/grifo-boilerplate&quot;&gt;Grifo Boilerplate&lt;/a&gt; e confiram. Se usarem em algum projeto ou tiverem alguma sugestão de melhoria, deixem um comentário. ;)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>CSS transition com height auto</title>
+   <link href="http://blog.gri.fo/blog/css-transition-height-auto"/>
+   <updated>2012-06-27T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/css-transition-height-auto</id>
+   <content type="html">&lt;p&gt;Quem já está se aventurando nos transitions do CSS3 já deve ter passado por um problema que é animar a altura de um elemento sem conhecer a altura final dele, ou seja, um container com conteúdo dinâmico. Isso não funciona porque o transition só funciona com valores estáticos, como animar de 0 para 100px.&lt;/p&gt;
+
+&lt;p&gt;Agora você deve estar achando que é impossível fazer animações como slideUp e slideDown do jquery... Mas encontramos uma solução: o max-height. Ao invés de fazermos o transition no height, fazemos no max-height, pois a animação será feita de um valor estático para outro. Você só precisa cuidar para colocar uma altura segura que seu conteúdo nunca chegará.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;li { overflow: hidden; max-height: 500px; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+li.closed { max-height: 0; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Preste atenção no momento de escolher o tempo e o tipo (linear, ease, ease-in...) da animação utilizada para não ficar estranho, pois a animação será um pouco mais longa do que o usuário percebe. No nosso nosso exemplo do 0 ao 500, apesar de que o usuário só verá até a altura do conteúdo que poderá ser 100px, por exemplo.&lt;/p&gt;
+
+&lt;p&gt;Mandem suas dúvidas e sugestões nos comentários.&lt;/p&gt;
+
+&lt;p&gt;Abraços e até a próxima!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Jquery serialize state</title>
+   <link href="http://blog.gri.fo/blog/jquery-serialize-state"/>
+   <updated>2012-06-26T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/jquery-serialize-state</id>
+   <content type="html">&lt;p&gt;Hoje desenvolvemos um plugin que pode ser bem útil em projetos com funcionalidades de manipulação do DOM. A idéia do plugin é serializar o estados dos objetos, guardar em uma string e depois restaurar novamente. Este estado pode ficar guardado em location storage, cookie, ou até mesmo no objeto passado no &lt;a href=&quot;https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history#The_pushState().C2.A0method&quot;&gt;pushstate&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;O plugin pode ser baixado no nosso &lt;a href=&quot;https://github.com/grifo/grifo-jquery-plugins/blob/master/source/jquery.serializeState.js&quot;&gt;Git&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Exemplo que retorna um estado serializado em uma string:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var state = $('li').serializeState('class,style')
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;O exemplo acima irá guardar na string 'state' todos atributos 'class' e 'style' das lis retornadas no seletor. Podemos colocar qualquer atributo necessário separando por vírgula.&lt;/p&gt;
+
+&lt;p&gt;Agora vejamos como restaurar isso no DOM:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$('li').restoreState(state)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A função acima irá restaurar todas as classes e estilos que tínhamos nos elementos no momento que chamamos o serializeState.&lt;/p&gt;
+
+&lt;p&gt;Onde é útil: abas, accordions, menus, pushstate...&lt;/p&gt;
+
+&lt;p&gt;Mandem suas dúvidas e sugestões nos comentários.&lt;/p&gt;
+
+&lt;p&gt;Abraços e até a próxima!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Rede Infinita</title>
+   <link href="http://blog.gri.fo/blog/rede-infinita"/>
+   <updated>2011-10-31T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/rede-infinita</id>
+   <content type="html">&lt;p&gt;Hoje foi ao ar o projeto Rede Infinita baseado no conceito da Unisinos: Infinitas Possibilidades. O projeto criado pela agência Escala e desenvolvido pela Grifo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/rede-infinita/redeinfinita.jpg&quot; alt=&quot;Tela da Rede Infinita&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O aplicativo tem como objetivo agrupar pessoas com interesses semelhantes – quanto mais próximo você estiver de pessoas como você, mais fácil será se comunicar e trocar informações para criar novas possibilidades para o mundo.&lt;/p&gt;
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/Vc2tNIWNMr0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Esse projeto foi desenvolvido em HTML5, onde a funcionalidade mais interessante é a visualização da rede (http://redeinfinita.unisinos.br/user/renatho). Quando iniciamos o projeto, começamos a avaliar qual seria a melhor tecnologia, pois a ferramenta precisa suportar um número muito grande de usuários. A performance dessa visualização era um ponto crítico, devido à lógica envolvida que requer uma série de cálculos em tempo real no cliente.&lt;/p&gt;
+
+&lt;p&gt;Iniciamos os testes utilizando SVG e VML, onde teríamos um amplo suporte dos navegadores. Mas quando começamos a cadastrar usuários vimos que a performance ia por água abaixo, pois com VML são criados muitos elementos no DOM. Com mil usuários o navegador já começava a travar.&lt;/p&gt;
+
+&lt;p&gt;Nossa próxima tentativa seria utilizar tags &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; para fazer as bolinhas, como muitas ferramentas fazem em gráficos semelhantes a esse. Mas apesar de nada elegante também teríamos muitos elementos no DOM, então nossa segunda tentativa foi testar com canvas, mesmo sem ter bem definido qual seria a solução para o IE7 e 8 que não possuem suporte. Com o canvas ainda enfrentamos certa lentidão por estarmos desenhando as bolinhas com gradient.&lt;/p&gt;
+
+&lt;p&gt;Para começar a melhorar a performance, resolvemos desenhar as bolinhas como imagem, pois temos uma variação de 6 cores. Dessa forma não precisaríamos montar um objeto para o gradiente a cada usuário cadastrado. Isso melhorou muito a situação. Também fizemos um carregamento “faseado” em 6 tipos de usuários: cada tipo carregando em seu tempo, o que aliviou bastante as iterações do loop que monta o gráfico.&lt;/p&gt;
+
+&lt;p&gt;Mas e agora? E o IE? Começamos testando o ExplorerCanvas (que transforma o canvas para VML), mas assim voltávamos à estaca zero não resolvendo o problema. Então resolvemos testar o FlashCanvas e nos surpreendemos com a performance obtida, porém com uma série de bugs. Depois de muito tentar resolver os bugs, nosso desenvolvedor @jcemer resolveu testar a verão PRO e como num passe de mágica todos problemas estavam resolvidos! Valor da versão PRO: US$ 31. A justificativa do valor: “IE” ao contrário.&lt;/p&gt;
+
+&lt;p&gt;Este projeto, como todos os projetos da Grifo, contou com a colaboração de todos os desenvolvedores com opiniões e ótimas soluções. Parabéns ao @jcemer, @ricardobeat, @askoth, @vitor42, @mutly, @filipemedina e não menos importante: eu (@renatho) =P .&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>TweetRank.It</title>
+   <link href="http://blog.gri.fo/blog/tweetrank-it"/>
+   <updated>2011-07-18T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/tweetrank-it</id>
+   <content type="html">&lt;p&gt;Hoje a Grifo lançou um novo app para o Twitter, o TweetRank.It. Através do app, você pode rankear palavras positiva ou negativamente. Atualmente a ferramenta funciona com uma pontuação geral. A princípio, na nova versão terão filtros periódicos (diários, semanais, mensais…) e gráficos para que você possa acompanhar as estatísticas mais detalhadamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://tweetrank.it/images/tweetrankit.png&quot; alt=&quot;TweetRankIt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para utilizar a ferramenta você precisa enviar um tweet com a hashtag #TweetRankIt ou um mention ao @TweetRankIt. Depois de Tweetar, o @TweetRankIt irá seguí-lo e você estará participando do app.&lt;/p&gt;
+
+&lt;p&gt;Nesse momento o TweetRankIt pegará todos seus tweets com as marcas ++ e — (ex.: I love TweetRankIt++) e dará os devidos pontos à palavra rankeada. Sua palavra poderá entrar na lista dos #winning ou #fail no site ou seu usuário pode entrar na lista dos Top users. Participe!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GrifoCast #03/3 - Design para web</title>
+   <link href="http://blog.gri.fo/blog/grifocast-03-parte-3-dicas-de-design-para-web"/>
+   <updated>2011-01-14T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/grifocast-03-parte-3-dicas-de-design-para-web</id>
+   <content type="html">&lt;iframe id=&quot;vvq-360-vimeo-1&quot; src=&quot;http://player.vimeo.com/video/18713352?title=1&amp;amp;byline=1&amp;amp;portrait=0&amp;amp;fullscreen=1&quot; width=&quot;600&quot; height=&quot;450&quot; frameborder=&quot;0&quot;&gt;&amp;lt;a href=&quot;http://www.vimeo.com/18713352&quot;&amp;gt;http://www.vimeo.com/18713352&amp;lt;/a&amp;gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Final do GrifoCast com as Dicas de Design para web.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GrifoCast #03/2 - Design para web</title>
+   <link href="http://blog.gri.fo/blog/grifocast-03-parte-2-dicas-de-design-para-web"/>
+   <updated>2011-01-03T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/grifocast-03-parte-2-dicas-de-design-para-web</id>
+   <content type="html">&lt;iframe id=&quot;vvq-354-vimeo-1&quot; src=&quot;http://player.vimeo.com/video/18388666?title=1&amp;amp;byline=1&amp;amp;portrait=0&amp;amp;fullscreen=1&quot; width=&quot;600&quot; height=&quot;450&quot; frameborder=&quot;0&quot;&gt;&amp;lt;a href=&quot;http://www.vimeo.com/18388666&quot;&amp;gt;http://www.vimeo.com/18388666&amp;lt;/a&amp;gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Continuação do GrifoCast com as Dicas de Design para web.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GrifoCast #03/1 - Design para web</title>
+   <link href="http://blog.gri.fo/blog/grifocast-03-parte-1-dicas-de-design-para-web"/>
+   <updated>2010-12-24T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/grifocast-03-parte-1-dicas-de-design-para-web</id>
+   <content type="html">&lt;iframe id=&quot;vvq-350-vimeo-1&quot; src=&quot;http://player.vimeo.com/video/18147459?title=1&amp;amp;byline=1&amp;amp;portrait=0&amp;amp;fullscreen=1&quot; width=&quot;600&quot; height=&quot;450&quot; frameborder=&quot;0&quot;&gt;&amp;lt;a href=&quot;http://www.vimeo.com/18147459&quot;&amp;gt;http://www.vimeo.com/18147459&amp;lt;/a&amp;gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;O GrifoCast de hoje ficou tão grande, mas tão grande que vai ser dividido em três partes, mas o assunto é muito interessante e importante para todos os webdesigners e diretores de arte de web.&lt;/p&gt;
+
+&lt;p&gt;E claro o nosso Feliz Natal para todos vocês!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GrifoCast #02 - HTML5</title>
+   <link href="http://blog.gri.fo/blog/grifocast-02-html5"/>
+   <updated>2010-11-17T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/grifocast-02-html5</id>
+   <content type="html">&lt;iframe id=&quot;vvq-334-vimeo-1&quot; src=&quot;http://player.vimeo.com/video/16928610?title=1&amp;amp;byline=1&amp;amp;portrait=0&amp;amp;fullscreen=1&quot; width=&quot;600&quot; height=&quot;450&quot; frameborder=&quot;0&quot;&gt;&amp;lt;a href=&quot;http://www.vimeo.com/16928610&quot;&amp;gt;http://www.vimeo.com/16928610&amp;lt;/a&amp;gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Chegamos ao 2º episódio do GrifoCast. Hoje falaremos sobre HTML5 e a forma que utilizamos ele no nosso dia-a-dia. Falaremos também de CSS3Pie e Less.&lt;/p&gt;
+
+&lt;p&gt;Agora contamos com melhores equipamentos e a edição está mais direta e com menos cortes. Mas, é claro, ainda temos muito a melhorar! Portanto continuem nos enviando críticas, sugestões, dúvidas, sua opinião e é claro, temas que você acha importantes para serem discutidos nos próximos episódios.&lt;/p&gt;
+
+&lt;p&gt;E por favor, compartilhem com seus amigos e colegas de trabalho o GrifoCast para melhorarmos cada vez mais.&lt;/p&gt;
+
+&lt;h3&gt;Participantes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Renatho Rosa – &lt;a href=&quot;http://twitter.com/renatho&quot;&gt;@renatho&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ricardo Tomasi – &lt;a href=&quot;http://twitter.com/ricardobeat&quot;&gt;@ricardobeat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Marcelo Oliveira – &lt;a href=&quot;http://twitter.com/askoth&quot;&gt;@askoth&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Edição&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Filipe Medina – &lt;a href=&quot;http://twitter.com/filipemedina&quot;&gt;@filipemedina&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Gradientes no IE9</title>
+   <link href="http://blog.gri.fo/blog/gradientes-no-internet-explorer-9"/>
+   <updated>2010-11-08T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/gradientes-no-internet-explorer-9</id>
+   <content type="html">&lt;p&gt;Aqui na Grifo já estamos preparando nossos projetos para o IE9, usando o Beta/Platform Preview. É muito bom poder usar seletores CSS3, border-radius, shadow e tudo o mais.&lt;/p&gt;
+
+&lt;p&gt;Mas ainda falta uma peça crucial: background gradients. Não há menção pela Microsoft de suporte futuro a essa funcionalidade no IE9, o que nos preocupa bastante. Estamos usando o CSS3Pie em alguns projetos, que nos permite definir sombras, border radius e gradientes no CSS, que são renderizados via VML no IE 6, 7 e 8. Como o IE9 não suporta mais VML, ficamos de mão abanando.&lt;/p&gt;
+
+&lt;p&gt;Sorte nossa é que a versão 9 suporta SVG. A solução que encontramos utiliza CSS, SVG e um script server-side: geramos um gradiente dinamicamente a partir de parâmetros passados no CSS. O resultado no CSS é meio gordo mas funciona em praticamente todos os browsers, do IE6 ao Opera. Veja o código abaixo:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;gradient.php&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+    header( 'Content-type: image/svg+xml' );
+    function _get($k){  echo $_GET[$k] ? $_GET[$k] : 'fff'; }
+?&amp;gt;
+
+&amp;lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&amp;gt;
+&amp;lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&amp;gt;
+    &amp;lt;defs&amp;gt;
+        &amp;lt;linearGradient id=&quot;grad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;0%&quot; y2=&quot;100%&quot;&amp;gt;
+            &amp;lt;stop offset=&quot;0%&quot; style=&quot;stop-color:#&amp;lt;?php _get('from') ?&amp;gt;; stop-opacity:1&quot;/&amp;gt;
+            &amp;lt;stop offset=&quot;100%&quot; style=&quot;stop-color:#&amp;lt;?php _get('to') ?&amp;gt;; stop-opacity:1&quot;/&amp;gt;
+        &amp;lt;/linearGradient&amp;gt;
+    &amp;lt;/defs&amp;gt;
+    &amp;lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;url(#grad)&quot; /&amp;gt;
+&amp;lt;/svg&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;CSS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#xis {
+    background: #dbdbdb; // fallback para browsers sem suporte
+    background: url(gradient.php?from=ededed&amp;amp;to=d8d8d8); // IE9, Opera
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ededed), to(#d8d8d8)); //Chrome, Safari, Mobile Webkit
+    background: -moz-linear-gradient(top, #ededed, #d8d8d8); // Firefox
+    -pie-background: linear-gradient(#ededed, #d8d8d8); // IE 6-8
+    behavior: url(../js/PIE.php);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Uma baita mão escrever tudo isso só pra um gradiente, não? Por isso usamos o &lt;a href=&quot;http://lesscss.org&quot;&gt;LESS&lt;/a&gt; no desenvolvimento. Com esse mixin:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.gradient(@from, @to){
+    background: (@from+@to)/2;
+    @svgG: e(%('url(gradient.php?from=%d&amp;amp;to=%d)', @from, @to));
+    @svgGradient: e(`this.svgG.toJS().replace(/#/g, '')`); //svg IE9
+    background: @svgGradient;
+    background: e(%('-webkit-gradient(linear, 0% 0%, 0% 100%, from(%d), to(%d))', @from, @to));
+    background: e(%('-moz-linear-gradient(top, %d, %d)', @from, @to));
+    -pie-background: e(%('linear-gradient(%d, %d)', @from, @to));
+    .pie();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Só precisamos escrever isso no CSS:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#xis {
+  .gradient(#fcfcfc, #999999);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Exemplo &lt;a href=&quot;http://gri.fo/code/svg-gradient/CSS_SVG.html&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A limitação no momento é que só funcionam gradientes lineares verticais, mas é só alterar o código server-side que podemos gerar qualquer tipo de gradiente.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GrifoCast #01 - Semântica em listas</title>
+   <link href="http://blog.gri.fo/blog/grifocast-01-semantica-nas-listas"/>
+   <updated>2010-10-29T00:00:00-02:00</updated>
+   <id>http://blog.gri.fo/blog/grifocast-01-semantica-nas-listas</id>
+   <content type="html">&lt;p&gt;Seja bem-vindo ao mais novo canal de comunicação e entretenimento da Grifo. Esse, é nosso episódio piloto, portanto está bem amador ainda, mas nossa proposta é que ele seja semanal (espero que a gente possa cumprir essa meta) e que vá evoluindo a cada semana, seja em pauta, em equipamento de gravação e captação de áudio, enfim, em tudo.&lt;/p&gt;
+
+&lt;iframe id=&quot;vvq-308-vimeo-1&quot; src=&quot;http://player.vimeo.com/video/16320530?title=1&amp;amp;byline=1&amp;amp;portrait=0&amp;amp;fullscreen=1&quot; width=&quot;600&quot; height=&quot;450&quot; frameborder=&quot;0&quot;&gt;&amp;lt;a href=&quot;http://www.vimeo.com/16320530&quot;&amp;gt;http://www.vimeo.com/16320530&amp;lt;/a&amp;gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Seus comentários (desde que sejam construtivos) serão muito valiosos para nós.&lt;/p&gt;
+
+&lt;p&gt;Comentem, repassem e nos mandem assuntos a serem discutidos ou questões para serem respondidas, que a gente lê e responde.
+Bom, vamos ao que interessa, os tópicos do primeiro GrifoCast são:&lt;/p&gt;
+
+&lt;p&gt;1) A W3C documentou que no HTML5 a dl chama-se “description list” e não mais “definition list”, então agora ele pode ser usado para definir pares de valores e não mais somente dicionário de dados.&lt;/p&gt;
+
+&lt;p&gt;2) Sobre uso de ul ou ol em formulários: Qual o mais semântico? Qual o mais vantajoso?&lt;/p&gt;
+
+&lt;h3&gt;Participantes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Renatho Rosa – &lt;a href=&quot;http://twitter.com/renatho&quot;&gt;@renatho&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ricardo Tomasi – &lt;a href=&quot;http://twitter.com/ricardobeat&quot;&gt;@ricardobeat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Marcelo Oliveira – &lt;a href=&quot;http://twitter.com/askoth&quot;&gt;@askoth&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Edição&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Filipe Medina – &lt;a href=&quot;http://twitter.com/filipemedina&quot;&gt;@filipemedina&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>HTML5 não é Flash</title>
+   <link href="http://blog.gri.fo/blog/html5-nao-e-flash"/>
+   <updated>2010-09-14T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/html5-nao-e-flash</id>
+   <content type="html">&lt;p&gt;Estou muito feliz com o espaço que o HTML5 vem ganhando ultimamente. Através dele as pessoas estão COMEÇANDO dar o &lt;a href=&quot;http://gri.fo/blog/por-que-a-grifo/&quot;&gt;devido valor ao client-side&lt;/a&gt;. Vejo muitos tweets com artigos e novidades do HTML5, mas ainda vejo muitas pessoas confusas sobre o que realmente é o HTML5. A maioria desses tweets são comparações como se o &lt;a href=&quot;http://www.w3.org/TR/html5/&quot;&gt;HTML5&lt;/a&gt; fosse o novo &lt;a href=&quot;http://upload.wikimedia.org/wikipedia/en/2/22/Flash_Pack.jpg&quot;&gt;Flash&lt;/a&gt;, o que não é verdade.&lt;/p&gt;
+
+&lt;p&gt;O HTML5 pode sim fazer muita coisa que hoje é feito erroneamente com o Flash, mas tem muitas outras funcionalidades interessantes e as pessoas devem ver isso. Antes de seguir o post, gostaria de desabafar um pouco explicando o porque mencionei a palavra “erroneamente”:&lt;/p&gt;
+
+&lt;p&gt;Na minha visão o Flash foi feito para rodar aplicações isoladas e independentes, como por exemplo uma calculadora ou banners – para isto ele é muito bom, mas para sites inteiros como é usado em alguns casos hoje em dia não faz sentido nenhum. Ele é muito limitado em diversas questões como acessibilidade, SEO, usabilidade – O Flash não foi preparado para a evolução e para provar isso veja palavras do visionário Jobs falando sobre aparelhos touch:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;O Flash foi desenvolvido para computadores que usam mouse, não para telas sensíveis que usam dedos. Por exemplo, muitos sites em Flash dependem do “rollover”, que abrem menus ou outros elementos quando a seta do mouse passa sobre um local específico. A interface revolucionária multitoque da Apple não utiliza um mouse, e não há conceito de rollover (rolamento). A maioria dos sites Flash precisará ser reescrita para suportar aparelhos baseados em tecnologia touch. Se os desenvolvedores precisam reescrever seus sites Flash, por que não usar tecnologias modernas como HTML5, CSS e JavaScript?&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Bom, mas voltando ao HTML5… Há muitas features maravilhosas além de canvas e animações. Vou citar algumas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Código mais semântico e organizado (muito mais tags com significado);&lt;/li&gt;
+&lt;li&gt;Diversos tipos de campo em formulário (data, e-mail, numérico…)&lt;/li&gt;
+&lt;li&gt;Autofocus (foco automático nos campos)&lt;/li&gt;
+&lt;li&gt;Placeholder (descrição do campo no próprio valor)&lt;/li&gt;
+&lt;li&gt;Vídeo&lt;/li&gt;
+&lt;li&gt;Áudio&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Infelizmente não existe um momento “o HTML5 foi lançado e todos podem utilizá-lo à vontade”, mas algumas dessas features já podemos aplicar mesmo com os browsers mais antigos não dando suporte, pois não sofrerão impacto caso a funcionalidade não exista. Por exemplo: podemos definir um campo do tipo e-mail e quando ele não tiver suporte simplesmente assumirá o tipo texto.&lt;/p&gt;
+
+&lt;p&gt;Caso você seja desenvolvedor (ou não) e queira queira começar se aprofundar logo, segue a dica: &lt;a href=&quot;http://diveintohtml5.org/&quot;&gt;http://diveintohtml5.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;O HTML5 com suas diversas novas features, juntamente com o CSS3, obviamente vai dar uma alavancada no client-side dando espaço para novas profissões. Imaginando uns anos pra frente acredito que no client-side teremos programadores só de javascript (já existe hoje), programadores só de HTML (profissionais com foco em conteúdo e semântica), programadores CSS (quem sabe os próprios designers), animadores de CSS (Os animadores de flash de hoje); e também as muitas outras profissões especializadas que já surgiram como profissionais de SEO, acessibilidade, performance, entre outras.&lt;/p&gt;
+
+&lt;p&gt;Espero que tenham gostado do Post. Deixem suas opiniões nos comentários e vamos trocar experiências.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Input File - Formulários Personalizados</title>
+   <link href="http://blog.gri.fo/blog/input-file-formularios-personalizados"/>
+   <updated>2010-08-23T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/input-file-formularios-personalizados</id>
+   <content type="html">&lt;p&gt;Vamos para o último post da série formulários personalizados. Já mostramos como personalizar o &lt;a href=&quot;http://gri.fo/blog/radio-e-checkbox-formularios-personalizados/&quot;&gt;campos de radio e checkbox&lt;/a&gt; e também um elemento &lt;a href=&quot;http://gri.fo/blog/combobox-formularios-personalizados/&quot;&gt;select&lt;/a&gt;. Hoje iremos mostrar como personalizar um campo de arquivo, que é o mais simples.&lt;/p&gt;
+
+&lt;p&gt;As duas grandes sacadas para a personalização do input file são as seguintes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Utilizaremos o campo com opacidade 0 por cima do campo falso, assim como nos outros casos de personalização de formulário;&lt;/li&gt;
+&lt;li&gt;Se você já tentou fazer esse teste, provavelmente teve problemas para aumentar o tamanho do campo conforme o layout que está trabalhando. A forma de fazer isto é aumentando o tamanho da fonte.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Vamos montar um exemplo passo a passo e no final disponibilizaremos o link com o exemplo completo. Não trapaceie, monte o exemplo com suas próprias mãos e depois veja o link.&lt;/p&gt;
+
+&lt;p&gt;Começamos pelo HTML:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;inputFile&quot;&amp;gt;
+    &amp;lt;span&amp;gt;Selecione um arquivo&amp;lt;/span&amp;gt;
+    &amp;lt;input type=&quot;file&quot; name=&quot;arquivo&quot; id=&quot;arquivo&quot; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;O span será utilizado para mostrar o nome do arquivo selecionado.&lt;/p&gt;
+
+&lt;p&gt;Agora através do CSS vamos posicionar o input sobre o span e ocultá-lo com opacidade. Desta forma, quando o usuário clicar no span (que é o que estará visível), na verdade estará clicando no input.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.inputFile {
+    width: 185px;
+    height:40px;
+    position: relative;
+    overflow: hidden;
+    background: red;
+}
+.inputFile span {
+    display: block;
+    position: absolute;
+}
+.inputFile input {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    font-size: 100px; /* Aumenta tamanho do campo */
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note a propriedade font-size: 100px no input. Isto é utilizado para aumentar o tamanho do campo que não respeita as propriedades width e height em alguns browsers.&lt;/p&gt;
+
+&lt;p&gt;Agora só falta exibir no span o valor selecionado no input. Isto é feito com poucas linhas utilizando jquery:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&quot;#arquivo&quot;).change(function() {
+    $(this).prev().html($(this).val());
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;E está pronto. Simples não? Conseguiu se segurar e montar antes de abrir o link de exemplo? Então agora acesse &lt;a href=&quot;http://gri.fo/code/formulario-personalizado/input-file.html&quot;&gt;personalização de input file&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As técnicas mostradas foram testadas em IE6 e superiores, Firefox 3.6, Chrome e Safari. Qualquer problema que encontrarem em outras versões de browser, mobile ou outros do gênero nos avisem para tentarmos aprimorar a técnica. Sugestões de melhoria também são bem-vindas.&lt;/p&gt;
+
+&lt;p&gt;Abraços e até a próxima!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Solucionando o Code Golf + Maratona IG com Javascript</title>
+   <link href="http://blog.gri.fo/blog/solucionando-o-code-golf-maratona-ig-com-javascript"/>
+   <updated>2010-07-27T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/solucionando-o-code-golf-maratona-ig-com-javascript</id>
+   <content type="html">&lt;p&gt;Semana passada Porto Alegre recebeu o &lt;a href=&quot;http://fisl.softwarelivre.org/&quot;&gt;FISL&lt;/a&gt;, que reuniu mais de 8 mil pessoas no campus da PUC. Estivemos lá pra conferir as palestras envolvendo HTML5, CSS, Javascript, acessibilidade e novas tecnologias/projetos.&lt;/p&gt;
+
+&lt;p&gt;No meio tempo entre trabalho e palestras resolvi participar do &lt;a href=&quot;http://ignofisl.ig.com.br/2010/07/21/faq-do-code-golf/&quot;&gt;Code Golf&lt;/a&gt; do IG: resolver &lt;a href=&quot;http://ignofisl.ig.com.br/2010/07/22/problemas-do-code-golf/&quot;&gt;os 5 problemas&lt;/a&gt; dados com o menor código possível. O ganhador de cada categoria levou um iPod touch. Já que Javascript não era um opção, foi PHP mesmo. Depois de uma disputa acirrada e de ter ficado em segundo lugar até meia hora antes do final, a &lt;a href=&quot;http://ignofisl.ig.com.br/2010/07/23/ranking-code-golf/&quot;&gt;pontuação&lt;/a&gt; foi atualizada e terminei em primeiro!&lt;/p&gt;
+
+&lt;p&gt;Neste post vamos ver como ficaram as soluções em PHP, e também em Javascript. Pra isso vamos utilizar o &lt;a href=&quot;http://www.jsdb.org/&quot;&gt;JSDB&lt;/a&gt;, que interpreta Javascript usando a engine &lt;a href=&quot;http://www.mozilla.org/js/spidermonkey/&quot;&gt;SpiderMonkey&lt;/a&gt; da Mozilla e nos dá acesso ao sistema de arquivos, banco de dados e web. Ele roda em Linux, Mac e Windows e não exige instalação: é só baixar, descompactar e começar a usar. Vamos resolver também o problema da &lt;a href=&quot;http://ignofisl.ig.com.br/2010/07/22/desafio-maratona-ig/&quot;&gt;Maratona IG&lt;/a&gt; em menos de 15 minutos usando Javascript.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Soluções &lt;a href=&quot;#q1&quot;&gt;1&lt;/a&gt;, &lt;a href=&quot;#q2&quot;&gt;2&lt;/a&gt;, &lt;a href=&quot;#q3&quot;&gt;3&lt;/a&gt;, &lt;a href=&quot;#q4&quot;&gt;4&lt;/a&gt; e &lt;a href=&quot;#q5&quot;&gt;5&lt;/a&gt; do Code Golf&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#maratona&quot;&gt;Solução da Maratona&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Vamos ao código:&lt;/p&gt;
+
+&lt;h2 id=&quot;q1&quot;&gt;Questão 1&lt;/h2&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Dado o número de iterações exibir a sequência de Fibonacci até aquela iteração&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;entrada: 6
+saida: 1, 1, 2, 3, 5, 8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;PHP&lt;/h3&gt;
+
+&lt;p&gt;Esse foi o código final (pra economizar espaço, colocamos tudo dentro de um for loop):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for($a=$c=0,$b=1;$c&amp;lt;$argv[1];$x=$a,$a=$b,$b+=$x)echo(!$c++?'':', ').$b;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Começamos com 0 e 1 e somamos o último com o anterior até atingir o número de iterações. Em PHP é impossível fazer isso sem utilizar uma terceira variável. A solução mais simples em Javascript é utilizar um array:&lt;/p&gt;
+
+&lt;h3&gt;Javascript&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;var a = 0
+  , b = 1
+  , i = 0
+  , numeros = [1]
+
+while(++i &amp;lt; jsArguments[0]){
+    numeros.push( b=a+(a=b) )
+    /* isso é possível porque a variável &quot;a&quot; à esquerda
+    da expressão (a=b) continua com o valor antigo,
+    o que não acontece no PHP */
+}
+writeln(o)
+// $ ./jsdb q1.js 6 &amp;gt; 1, 1, 2, 3, 5, 8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Deixando o array – e a legibilidade do código – de lado, o resultado final é um pouco mais compacto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for(a=c=b=1;c++&amp;lt;=jsArguments[0];print((b=a+(a=b))-a+' '))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;q2&quot;&gt;Questão 2&lt;/h2&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Dado uma frase retornar se é um palíndrome ou não e listar os caracteres em ordem decrescente de número de incidências na mesma&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;entrada: “A mala nada na lama”
+saída:
+  Palíndrome
+  8 a
+  2 m
+  2 n
+  2 l
+  1 d
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;PHP&lt;/h3&gt;
+
+&lt;p&gt;As funções count_chars e strrev tornam o trabalho fácil:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$s=str_replace(' ','',$argv[1]);
+echo($s!=strrev($s)?&quot;Não é &quot;:&quot;&quot;).&quot;Palíndrome&quot;;$c=count_chars($s,1);
+arsort($c);foreach($c as $i=&amp;amp;gt;$v)echo&quot;\n$v &quot;.chr($i);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Javascript&lt;/h3&gt;
+
+&lt;p&gt;Já em Javascript a coisa é mais complicada. O método reverse() só existe para arrays. Temos que fazer a inversão da string e a contagem por nossa conta:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// removemos espaços e outros caracteres da string
+var str=jsArguments[0].toLowerCase().replace(/\W/g,'');
+
+// verificamos se o inverso é igual
+println( (str!=str.split('').reverse().join('') ? &quot;Não é &quot; : &quot;&quot;)+&quot;Palíndrome&quot;);
+
+// contamos os caracteres usando um array
+var chars = [];
+for(var i in str){ // não façam isso em casa
+    var key = str[i];
+    chars[key] = chars[key]+1 || 1;
+}
+
+// exibimos a contagem pra cada letra
+for(var n in chars){
+    println(chars[n]+&quot; &quot;+n);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;E depois transformamos de novo isso tudo em uma linha ininteligível:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;s=jsArguments[0].toLowerCase().replace(/\W/g,'');
+println((s!=s.split('').reverse().join('')?&quot;Não é &quot;:&quot;&quot;)+&quot;Palíndrome&quot;);
+c=[];for(i in s){k=s[i];c[k]=c[k]+1||1;}for(n in c)println(c[n]+&quot; &quot;+n);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;q3&quot;&gt;Questão 3&lt;/h2&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Dado um endereço IP e uma máscara de rede, retornar o endereço de broadcast e a conotação CIDR da rede&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;entrada: 201.94.10.19 255.255.255.0
+saída: 201.94.10.255 /24
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Essa é assustadora. Mas depois de consultar a Wikipedia sobre o assunto se descobre que a matemática é simples, e que &lt;a href=&quot;http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing&quot;&gt;CIDR&lt;/a&gt; é uma gambiarra que inventaram pra usar um mesmo IP em mais de uma máquina, em redes internas. Temos que fazer o seguinte:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Descobrir o complemento de cada pedaço da subnet mask (255.255.255.0), no caso do exemplo 0.0.0.255&lt;/li&gt;
+&lt;li&gt;Aplicar o operador &lt;a href=&quot;http://en.wikipedia.org/wiki/Bitwise_operation#OR&quot;&gt;bitwise OR&lt;/a&gt; à cada parte do IP e o complemento da máscara (ex: 255|0)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;O resultado disso é o endereço de broadcast. Depois, precisamos transformar o IP resultante em binário, e contar quantos bits “1″ ele contém. Essa é a conotação CIDR. Vamos ao código:&lt;/p&gt;
+
+&lt;h3&gt;PHP&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$b='';$c=0;$m=explode(&quot;.&quot;,$argv[2]);
+foreach(explode('.',$argv[1]) as $k=&amp;gt;$v){$b.=($k?'.':'').($v|255-$m[$k]);
+$c+=substr_count(decbin($m[$k]),1);}echo &quot;$b /$c&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Javascript&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;var
+    cidr = 0,
+    ip = jsArguments[0].split('.'),
+    mask = jsArguments[1].split('.');
+
+// encontramos o broadcast address
+// usando a fórmula descrita
+var broadcast = ip.map(function(val,key){
+    return val | (255-mask[key]);
+}).join('.');
+
+// e calculamos o CIDR por partes
+mask.forEach(function(val){
+    // primeiro convertemos o valor para Number
+    // e depois para string usando base 2 (binário)
+    // ex: 252 &amp;gt; 11111100
+    // e então contamos quantos &quot;1&quot;s na string
+    cidr += (+val).toString(2).split('1').length-1;
+});
+
+//saida
+writeln(broadcast+&quot; /&quot;+cidr);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;O resultado final é muito mais longo do que em PHP pelas várias chamadas de função, mas ainda pode ser reduzido:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;c=0;i=jsArguments[0].split('.');m=jsArguments[1].split('.');
+b=i.map(function(v,k){return v|(255-m[k])}).join('.');
+m.forEach(function(v){c+=(+v).toString(2).split('1').length-1});
+writeln(broadcast+&quot; /&quot;+cidr);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;q4&quot;&gt;Questão 4&lt;/h2&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Dados dois números naturais m e n e duas sequências ordenadas com m e n números inteiros, obter uma única sequência ordenada contendo todos os elementos das sequências originais sem repetição&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;entrada: 1,5,6,10,12  2,5,9,29
+saída: 1, 2, 5, 6, 9, 10, 12, 29
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mais uma vez as funções nativas do PHP fazem todo o trabalho. Em Javascript é mais divertido.&lt;/p&gt;
+
+&lt;h3&gt;PHP&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$a=array_unique(explode(',',$argv[1].','.$argv[2]));
+sort($a);echo implode(',',$a);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Javascript&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;var
+    resultado = [],
+    a1 = jsArguments[0].split(',')
+    a2 = jsArguments[1].split(','),
+    arr = a1.concat(a2);
+
+// inserir valor em unique somente se
+// ainda não existe valor igual no array
+arr.map(function(val){
+    if (resultado.indexOf(+val)&amp;lt;0)
+        resultado.push(+val);
+})
+// pôr em ordem numérica (asc)
+resultado = resultado.sort(function(a,b){
+    return a&amp;gt;b;
+});
+
+writeln(unique);
+// saída:
+// $ ./jsdb q4.js 1,4,2,5,6 1,2,6,3
+// 1, 2, 3, 4, 5, 6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Podemos pular algumas etapas pra encolher o código:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;u=[];a=jsArguments.join().split(',');
+a.map(function(v){u.indexOf(+v)&amp;lt;0&amp;amp;&amp;amp;u.push(+v)});
+u=u.sort(function(a,b){return a&amp;gt;b});writeln(u);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;q5&quot;&gt;Questão 5&lt;/h2&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Escreva uma função que recebe uma matriz de caracteres 8×8 representando um tabuleiro de xadrez e calcula o valor total das peças do jogo. Espaços vazios do tabuleiro são codificados como casas com ‘v’ e têm valor 0 (zero). O valor das demais peças é dado de acordo com a tabela: Peão (p): 1, Cavalo (c): 3, Bispo (b): 3, Torre (t): 5, Rainha (a): 10, Rei (r): 50, Vazio: (v)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;entrada: 
+  tcbarbct
+  pppppppp
+  vvvvvvvv
+  vvvvvvvv
+  vvvvvvvv
+  vvvvvvvv
+  pppppppp
+  tcbarbct
+saída: 180
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Não se preocupe com a idéia do tabuleiro, só precisamos traduzir o valor de cada caractere válido na string e ignorar o resto. Solução simples: fazer um loop com todos os caracteres e usar como chave pra buscar no array de valores. Em PHP nem isso precisa, a função count_chars() já faz a contagem:&lt;/p&gt;
+
+&lt;h3&gt;PHP&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$s=0;$v=Array('p'=&amp;gt;1,'c'=&amp;gt;3,'b'=&amp;gt;3,'t'=&amp;gt;5,'a'=&amp;gt;10,'r'=&amp;gt;50,'v'=&amp;gt;0);
+foreach(count_chars(preg_replace('/\W/','',$argv[1]),1) as $c=&amp;gt;$n){
+$s+=$v[chr($c)]*$n;};echo$s;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Javascript&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;var
+    valores = { p:1, c:3, b:3, t:5, a:10, r:50 },
+    // remover todos os caractere não alfanuméricos
+    pecas = jsArguments[0].replace(/\W/g,''),
+    pontos = 0;
+
+for(var i in pecas){
+    pontos += valores[ pecas[i] ] || 0;
+}
+writeln(pontos);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;E a versão condensada, usando o método replace() para o loop:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;v={p:1,c:3,b:3,t:5,a:10,r:50};p=jsArguments[c=0].replace(/\w/g,function(a){c+=v[a]||0});writeln(c);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;maratona&quot;&gt;Maratona IG&lt;/h2&gt;
+
+
+&lt;p&gt;O &lt;a href=&quot;http://ignofisl.ig.com.br/2010/07/22/desafio-maratona-ig/&quot;&gt;desafio da Maratona&lt;/a&gt; era o seguinte: a partir de um arquivo texto de 57Mb contendo tweets em JSON, fazer a contagem dos tweets contendo sentimentos “positivos” ou “negativos”. A contagem com a menor margem de erro vence. O problema maior aqui é deduzir qual o tipo de filtro utilizado como referência.&lt;/p&gt;
+
+&lt;p&gt;Uma olhada rápida no arquivo de dados nos mostra que as mensagens variam entre os termos feliz/amo/adoro e triste/odeio. Isso é tudo que precisamos saber, agora basta uma expressão regular. Como a chance de uma das palavras-chave aparecer em qualquer outro lugar do objeto é praticamente nula, nem precisamos interpretar o JSON.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var
+    positivo = /feliz|gosto|gostei|amo|amei|adoro|adorei/i,
+    negativo = /triste|odeio|odiei/i,
+    p = 0,
+    n = 0,
+    line, tweets;
+
+// carregamos o arquivo como Stream
+tweets = new Stream(jsArguments[0], 'rt');
+// e lemos linha por linha
+while (line = tweets.readLine())
+{
+    if(negativo.test(line))
+        n++;
+    else if(positivo.test(line))
+        p++;
+}
+
+writeln(&quot;Tweets Positivos:&quot;+p);
+writeln(&quot;Tweets Negativos:&quot;+n);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;E temos o resultado:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Tweets Positivos: 35507
+Tweets Negativos: 4307
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;No &lt;a href=&quot;http://ignofisl.ig.com.br/2010/07/24/resultado-da-maratona/&quot;&gt;resultado da maratona&lt;/a&gt; podemos calcular os números ideais:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Positivos: 35322
+Negativos: 4316
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A margem de erro do código acima é de 0.005% e 0.003% (positivos/negativos), e o código foi desenvolvido em menos de 15 minutos. A execução também é muito rápida, leva pouco mais de 5 segundos, e isso com SpiderMonkey que não é das engines JS mais rápidas.&lt;/p&gt;
+
+&lt;p&gt;O prêmio que a dupla vencedora levou: &lt;strong&gt;dois iPads&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Encontrou algum bug no código ou sabe de uma maneira melhor? Também acha que javascript deve ser uma opção nesse tipo de competição? Deixe um comentário abaixo.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Combobox – Formulários personalizados</title>
+   <link href="http://blog.gri.fo/blog/combobox-formularios-personalizados"/>
+   <updated>2010-07-01T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/combobox-formularios-personalizados</id>
+   <content type="html">&lt;p&gt;Dando sequencia à série de Posts de formulários personalizados, hoje falaremos do combobox (select). Esta é outra técnica que não perde acessibilidade, não perde usabilidade e utiliza &lt;a href=&quot;http://en.wikipedia.org/wiki/Unobtrusive_JavaScript&quot;&gt;javascript não-obstrutivo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;O resultado final do que explicaremos aqui será um select oculto com um span o sobrepondo e exibindo o valor. Ao clicar no select as opções dele são exibidas normalmente da forma nativa.&lt;/p&gt;
+
+&lt;p&gt;O único problema desta técnica é que não funciona no &lt;a href=&quot;http://ie6funeral.com/&quot;&gt;IE6&lt;/a&gt; (segundo o Jeremias: &lt;a href=&quot;http://www.youtube.com/watch?v=2hjnbraEL4A#t=0m30s&quot;&gt;“IE IE IE é safado tem q morrer“&lt;/a&gt;), pois ele &lt;del&gt;(browser burro)&lt;/del&gt; não suporta opacidade no select, então para IE6 podemos apenas colocar uma cor de fundo no select para não destoar muito do desenho – Isto chama-se &lt;em&gt;&lt;a href=&quot;http://www.css3.info/graceful-degradation/&quot;&gt;graceful degradation&lt;/a&gt;&lt;/em&gt; (que por sinal também merece um futuro post).&lt;/p&gt;
+
+&lt;p&gt;Como é de praxe, começamos pelo HTML:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;styleCombobox&quot;&amp;gt;
+    &amp;lt;select title=&quot;Selecione&quot;&amp;gt;
+        &amp;lt;option value=&quot;1&quot;&amp;gt;Opção 1&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&quot;2&quot;&amp;gt;Opção 2&amp;lt;/option&amp;gt;
+         &amp;lt;option value=&quot;3&quot;&amp;gt;Opção 3&amp;lt;/option&amp;gt;
+    &amp;lt;/select&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Utilizamos uma div encapsulando o select, pois através do script vamos inserir um span antes do select exibindo o valor selecionado. No atributo title podemos inserir um valor inicial (valor que não precisa aparecer nas opções da combobox – ex.: “Selecione uma opção”).&lt;/p&gt;
+
+&lt;p&gt;Agora vamos criar um CSS para os estilos da nossa combobox conforme o desenho. No nosso exemplo colocaremos apenas um background cinza para não sair do foco do post.&lt;/p&gt;
+
+&lt;p&gt;Além dos estilos do desenho, vamos deixar o select sem opacidade – Os browsers ocultam somente a parte do valor do select, então quando clicarmos nele as opções serão exibidas.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.styleCombobox {
+  width:200px;
+  background:gray;
+}
+.styleCombobox span {
+  position:absolute;
+}
+.styleCombobox select {
+  width:100%;
+  opacity:0;
+  filter:alpha(opacity=0);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;No script que estamos disponilibizando também colocamos a funcionalidade de foco para o select, então precisamos criar outro estilo para ele:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.comboboxFocus {
+  border:dotted 1px #CCC;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Como comentado no início do post, no caso do IE6 você pode criar hacks para alterar as cores do select para ficar mais próximo do desenho, mas não entraremos no mérito.&lt;/p&gt;
+
+&lt;p&gt;Agora você precisa baixar o plugin desenvolvido pela Grifo neste link &lt;a href=&quot;http://gri.fo/code/formulario-personalizado/jquery.styleCombobox.js&quot;&gt;styleCombobox&lt;/a&gt; e importá-lo na sua página. A chamada fica dessa forma:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&quot;.styleCombobox select&quot;).styleCombobox({
+    classFocus:&quot;comboboxFocus&quot;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para usuários com javascript desabilitado, vamos exibir os selects normais do browser com o noscript:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;noscript&amp;gt;
+  &amp;lt;style type=&quot;text/css&quot;&amp;gt;
+  .styleCombobox select {
+    filter:alpha(opacity=1);
+    opacity:1;
+  }
+  &amp;lt;/style&amp;gt;
+&amp;lt;/noscript&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As técnicas mostradas foram testadas em IE6 (apesar de neste funcionar parcialmente) e superiores, Firefox 3.6, Chrome e Safari. Qualquer problema que encontrarem em outras versões de browser, mobile ou outros do gênero nos avisem para tentarmos aprimorar a técnica. Sugestões de melhoria também são bem-vindas.&lt;/p&gt;
+
+&lt;p&gt;Veja um exemplo de &lt;a href=&quot;http://gri.fo/code/formulario-personalizado/jquery.styleCombobox.html&quot;&gt;personalização de combobox&lt;/a&gt; em funcionamento.&lt;/p&gt;
+
+&lt;p&gt;Abraços e até a próxima!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Radio e Checkbox – Formulários personalizados</title>
+   <link href="http://blog.gri.fo/blog/radio-e-checkbox-formularios-personalizados"/>
+   <updated>2010-06-25T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/radio-e-checkbox-formularios-personalizados</id>
+   <content type="html">&lt;p&gt;Neste post vou dar umas dicas de como personalizar campos de Radio e Checkbox, afinal os designers adoram nos sacanear. Quando terminar de ler aposto que você vai falar “como não pensei nisso antes?”, pois a solução além de super simples e óbvia, não perde acessibilidade, não perde usabilidade e foram utilizadas técnicas de javascript &lt;a href=&quot;http://en.wikipedia.org/wiki/Unobtrusive_JavaScript&quot;&gt;não-obstrutivo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Você já deve saber o clique em um label que referencia algum campo (Ex.: &lt;code&gt;&amp;lt;label for=&quot;idDoCampo&quot;&amp;gt;&lt;/code&gt;) tem a função de foco para este campo. E no caso dos checkbox e radios a função é o clique do campo (marcar / desmarcar). Esta é a essência da solução. Já começou cair a ficha né?&lt;/p&gt;
+
+&lt;p&gt;Nosso HTML será composto por uma label que encapsula o input e o texto, desta forma tudo que estiver dentro do label estará na área clicável.&lt;/p&gt;
+
+&lt;p&gt;Veja o código:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&quot;radioButton1&quot;&amp;gt;
+    &amp;lt;input type=&quot;radio&quot; name=&quot;radioButton&quot; id=&quot;radioButton1&quot; /&amp;gt; Radio 1
+&amp;lt;/label&amp;gt;
+&amp;lt;label for=&quot;radioButton2&quot;&amp;gt;
+    &amp;lt;input type=&quot;radio&quot; name=&quot;radioButton&quot; id=&quot;radioButton2&quot; /&amp;gt; Radio 2
+&amp;lt;/label&amp;gt;
+&amp;lt;label for=&quot;checkbox1&quot;&amp;gt;
+    &amp;lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; id=&quot;checkbox1&quot; /&amp;gt; Checkbox 1
+&amp;lt;/label&amp;gt;
+&amp;lt;label for=&quot;checkbox2&quot;&amp;gt;
+    &amp;lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; id=&quot;checkbox2&quot; /&amp;gt; Checkbox 2
+&amp;lt;/label&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Através do CSS vamos ocultar os inputs e fazer a personalização sacana que o designer desenhou.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.styleRadio input, .styleCheckbox input {
+   cursor:pointer;
+   filter:alpha(opacity=0);
+   opacity:0;
+}
+
+.styleRadio, .styleCheckbox {
+   cursor:pointer;
+   height:30px;
+   background:url(controls.gif) no-repeat;
+}
+
+.styleRadio {
+   background-position:0 -500px;
+}
+.styleCheckbox {
+   background-position:0 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Beleza! já tá funcionando, não está vendo ainda? Usuários cegos já, pois o código está acessível.&lt;/p&gt;
+
+&lt;p&gt;Ok, vamos deixar acessível sem screen reader também. Para isso a Grifo fez um plugin do jquery &lt;del&gt;exclusivamente&lt;/del&gt; para você, leitor do nosso blog. O plugin pode ser baixado neste link: &lt;a href=&quot;http://gri.fo/code/formulario-personalizado/jquery.styleRadioCheckbox.js&quot;&gt;styleRadioCheckbox&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;O plugin trabalha com a estrutura HTML que citamos acima. Você precisará criar 2 classes além da classe para estado normal dos inputs: uma classe para ele marcado e outra para o foco.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Exemplo:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.inputRadioChecked {
+   background-position:-500px -500px;
+}
+.inputCheckboxChecked {
+   background-position:-500px 0;
+}
+.inputFocus { /* Este está genérico nos para radio e checkbox, mas também pode ser uma classe para cada */
+   border:dotted 1px #CCC;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Agora só falta a chamada do plugin, onde passaremos por parâmetro as classes de estados criadas no passo anterior.&lt;/p&gt;
+
+&lt;p&gt;Código de chamada do plugin:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&quot;input:checkbox&quot;).styleRadioCheckbox({
+   classChecked:&quot;inputCheckboxChecked&quot;,
+   classFocus:&quot;inputFocus&quot;
+});
+$(&quot;input:radio&quot;).styleRadioCheckbox({
+   classChecked:&quot;inputRadioChecked&quot;,
+   classFocus:&quot;inputFocus&quot;
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pronto. Agora tudo está funcionando! Mas espere aí, no início do post não dizia que a técnica era feita com javascript não-obstrutivo? Desativando o javascript não está funcionando. – Pergunta pro usuário cego se não está funcionando, aposto que pra ele tá que é uma beleza. Mas ok, vamos achar uma solução para ficar acessível sem screen reader de novo.&lt;/p&gt;
+
+&lt;p&gt;Para solucionar este problema iremos inserir uma tag noscript que vai exibir os inputs novamente:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;noscript&amp;gt;
+  &amp;lt;style type=&quot;text/css&quot;&amp;gt;
+  .styleCheckbox input, .styleRadio input {
+     filter:alpha(opacity=1);
+     opacity:1;
+  }
+  &amp;lt;/style&amp;gt;
+&amp;lt;/noscript&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As técnicas mostradas foram testadas em IE6 e superiores, Firefox 3.6, Chrome e Safari. Qualquer problema que encontrarem em outras versões de browser, mobile ou outros do gênero nos avisem para tentarmos aprimorar a técnica. Sugestões de melhoria também são bem-vindas.&lt;/p&gt;
+
+&lt;p&gt;Veja um exemplo de &lt;a href=&quot;http://gri.fo/code/formulario-personalizado/jquery.styleRadioCheckbox.html&quot;&gt;personalização de radio e checkbox&lt;/a&gt; em funcionamento.&lt;/p&gt;
+
+&lt;p&gt;Abraços e até a próxima!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Por que a Grifo? E por que desenvolvimento client-side com inteligência?</title>
+   <link href="http://blog.gri.fo/blog/por-que-a-grifo"/>
+   <updated>2010-06-20T00:00:00-03:00</updated>
+   <id>http://blog.gri.fo/blog/por-que-a-grifo</id>
+   <content type="html">&lt;p&gt;Estava pensando sobre qual assunto falaria no primeiro Post do blog, então resolvi começar falando um pouco da Grifo e a importância de um desenvolvimento client-side bem pensado e com qualidade.&lt;/p&gt;
+
+&lt;p&gt;Desenvolvimento client-side é uma área que considero relativamente nova. Há poucos anos não haviam profissionais que trabalhassem com este foco (nem se enxergava essa necessidade). Quem fazia HTML eram os próprios programadores server-side ou até mesmo os designers. Sites eram criados com os &lt;del&gt;malditos&lt;/del&gt; editores &lt;a href=&quot;http://pt.wikipedia.org/wiki/WYSIWYG&quot;&gt;WYSIWYG&lt;/a&gt; apenas arrastando tabelas para um lado e para o outro.&lt;/p&gt;
+
+&lt;p&gt;Em meados de 2005, com a evolução da web, as empresas, os desenvolvedores e os usuários começaram perceber a necessidade de ter um site mais acessível, com um código otimizado para os mecanismos de busca, que tivesse funcionamento &lt;a href=&quot;http://pt.wikipedia.org/wiki/Cross-browser&quot;&gt;cross-browser&lt;/a&gt;, entre outras grandes necessidades. A partir daí começaram surgir os profissionais especializados nessa área, mas ainda muito escassos.&lt;/p&gt;
+
+&lt;p&gt;Talvez você não se recorde, mas antigamente sistemas como, por exemplo, a busca do Google não chegavam perto do que é hoje. Isto se deve principalmente ao crescimento da área de client-side que proporciona ao Google nos levar mais facilmente ao conteúdo que procuramos, identificar a localização das empresas, nos apresentar as sessões principais de um site, criar dicionário de dados, entre outras funcionalidades incríveis.&lt;/p&gt;
+
+&lt;p&gt;A qualidade de código segue evoluindo tornando os sites cada vez mais &lt;a href=&quot;http://pt.wikipedia.org/wiki/Web_sem%C3%A2ntica&quot;&gt;semânticos&lt;/a&gt;. Infelizmente a quantidade de profissionais qualificados ainda é pouca, então com esta grande necessidade do mercado, surgiu a Grifo – Uma empresa que busca tornar-se uma referência na área.&lt;/p&gt;
+
+&lt;p&gt;Finalizando, gostaria de dizer que utilizaremos este blog tanto para contar novidades sobre a Grifo, quanto pra postar artigos técnicos que ajudarão a formar novos desenvolvedores e servirão como referência para melhorar o conteúdo servido na Internet.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
