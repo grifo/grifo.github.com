@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html class="no-js" lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Grifo - Soluções digitais Web + Mobile</title>
@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="/assets/styles/styles.css">
     <link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-precomposed.png">
     <link rel="manifest" href="/manifest.json">
+
+    <script>
+        document.documentElement.className += "ontouchstart" in document.documentElement ? " touch" : " no-touch";
+        document.documentElement.className = document.documentElement.className.replace("no-js","js");
+    </script>
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
