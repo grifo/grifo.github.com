@@ -1,0 +1,13 @@
+{
+  "name": "Grifo - Soluções digitais Web + Mobile",
+  "short_name": "Grifo",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Adoramos inovar, amamos enfrentar desafios e nos sentimos o máximo tornando possível o que parecia impossível!",
+  "icons": [{
+    "src": "/assets/images/apple-touch-icon-precomposed.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }]
+}
